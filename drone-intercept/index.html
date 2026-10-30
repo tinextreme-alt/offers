@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ролик о перехвате дрона для Павла</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Тот же каркас, что у оффера KeyDay и клипа для Юлии; палитра «сталь и сигнальный оранжевый» */
+:root{
+  --bg:#EFF1F2; --surface:#FFFFFF; --fg:#171C20; --muted:#5A646B; --line:#D5DADD;
+  --pine:#2F4A5C; --pine-soft:#E1E8EC; --ember:#B4561F; --ember-soft:#F7E9DF;
+  --display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101416; --surface:#181E22; --fg:#E6EBEE; --muted:#9BA7AE; --line:#2B3439;
+  --pine:#9CBBCF; --pine-soft:#1F2A31; --ember:#EC9A63; --ember-soft:#2E2118; color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+.wrap{max-width:780px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(1.7rem,5vw,2.5rem);font-weight:700}
+h2{font-size:1.35rem;font-weight:700}
+h3{font-size:1.02rem;font-weight:500}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--pine)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:62ch}
+.note{font-size:.88rem;color:var(--muted)}
+ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:6px}
+.hero{display:flex;flex-direction:column;gap:16px;border-bottom:1px solid var(--line);padding-bottom:36px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .8rem/1 var(--mono);padding:7px 10px;border-radius:999px;background:var(--pine-soft);color:var(--pine)}
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.insight{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.insight b{font-weight:600}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px;background:var(--ember-soft);border:2px solid var(--ember);border-radius:14px;padding:24px;align-items:start}
+.offer .tag{font:500 .72rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ember)}
+.offer .sum{font:700 1.6rem/1.15 var(--display);font-variant-numeric:tabular-nums}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.offer ul{font-size:.95rem}
+.calc{display:flex;flex-direction:column;gap:6px;font-size:.9rem}
+.calc div{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-top:1px dashed var(--ember);padding-top:6px}
+.calc b{font:500 .85rem/1.3 var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.board{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.board header{padding:18px 20px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font:400 .8rem/1.4 var(--mono);color:var(--muted)}
+.shot{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:14px 20px;border-bottom:1px dashed var(--line)}
+.shot:last-of-type{border-bottom:0}
+.tc{font:500 .82rem/1.5 var(--mono);color:var(--ember);font-variant-numeric:tabular-nums}
+.shot div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ost{font-size:.88rem;color:var(--muted)}
+.ost i{font-style:normal;color:var(--pine);font-weight:600}
+.why{padding:14px 20px;background:var(--pine-soft);font-size:.9rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.step{border-top:2px solid var(--pine);padding-top:10px;display:flex;flex-direction:column;gap:4px;font-size:.92rem}
+.step b{font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--pine)}
+.prep{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+button{font:500 .9rem var(--body);padding:10px 16px;border-radius:999px;cursor:pointer;background:var(--surface);color:var(--fg);border:1px solid var(--line)}
+button:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
+.author{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:32px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:12px;overflow:hidden;background:var(--pine-soft)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%;max-width:none}
+.photo::after{content:"НА СЪЁМКЕ";position:absolute;right:10px;top:10px;font:500 .7rem/1 var(--mono);letter-spacing:.14em;color:#fff;background:#2F4A5C;padding:6px 8px;border-radius:4px}
+.author .info{display:flex;flex-direction:column;gap:12px;min-width:0}
+.author .name{font-size:clamp(1.3rem,3.4vw,1.8rem)}
+.kit{display:flex;flex-wrap:wrap;gap:8px}
+.kit span{font:400 .78rem/1 var(--mono);padding:6px 9px;border-radius:6px;background:var(--pine-soft);color:var(--pine)}
+.contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tel{font:500 clamp(1.2rem,2.6vw,1.55rem)/1.2 var(--mono);color:var(--fg);text-decoration:none;font-variant-numeric:tabular-nums}
+@media (max-width:640px){.author,.offer{grid-template-columns:1fr}.author .photo{max-width:300px}}
+@media (max-width:560px){
+  .wrap{gap:44px;padding-block:28px 56px}
+  .board header,.shot,.why{padding-left:16px;padding-right:16px}
+  button{width:100%;text-align:center}
+}
+@media (max-width:480px){.shot{grid-template-columns:1fr;gap:4px}}
+</style></head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Предложение для Павла · ролик для завода</span>
+  <h1>Ролик о том, как средства РЭП завода перехватывают дрон</h1>
+  <p class="lead">Снимаю перехват на заводе с земли и сам дрон в воздухе, пишу закадровый текст и монтирую готовый ролик. Зритель своими глазами видит, как дрон летит, попадает под действие РЭП и перестаёт выполнять задачу.</p>
+  <div class="chips"><span class="chip">съёмка с земли</span><span class="chip">съёмка дрона в воздухе</span><span class="chip">закадровый текст</span><span class="chip">монтаж · цвет</span><span class="chip">анимация · моушн-графика</span><span class="chip">звуковой ряд</span><span class="chip">2 круга правок</span></div>
+</header>
+
+<section>
+  <span class="eyebrow">Что делает такой ролик убедительным</span>
+  <h2>Приёмы, на которых строю ролик</h2>
+  <div class="insights">
+    <div class="insight"><b>Дрон виден, а не угадывается</b><p>На обычном объективе дрон в небе выглядит точкой. Телеобъектив Sony G Master приближает его так, что видно корпус и поведение в полёте.</p></div>
+    <div class="insight"><b>Один эпизод от начала до конца</b><p>Взлёт, подлёт, включение средств РЭП, реакция дрона. Цельная история доказывает результат лучше набора красивых кадров.</p></div>
+    <div class="insight"><b>Две точки зрения</b><p>На земле оборудование и люди за работой, в небе дрон. Монтаж между ними связывает действие и результат.</p></div>
+    <div class="insight"><b>Графика показывает невидимое</b><p>Радиоэфир глазами не увидеть. Анимация показывает, где действует РЭП и что происходит со связью дрона. Ставлю её там, где одного кадра мало.</p></div>
+    <div class="insight"><b>Текст ведёт зрителя</b><p>Закадровый голос коротко объясняет, что происходит и зачем это нужно. Формулировки и технические данные согласуем с вами.</p></div>
+    <div class="insight"><b>Звук добавляет напряжения</b><p>Гул винтов, музыка и звуковые акценты на ключевых моментах. Звуковой ряд собираю под готовый монтаж.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Стоимость</span>
+  <h2>Под ключ, вместе с арендой объектива</h2>
+  <div class="offer">
+    <div class="left">
+      <span class="tag">Ролик о перехвате</span>
+      <h3>Съёмка и монтаж</h3>
+      <span class="sum">23&nbsp;000–24&nbsp;000&nbsp;₽</span>
+      <div class="calc">
+        <div><span>Съёмка и монтаж</span><b>18 000 ₽</b></div>
+        <div><span>Аренда телеобъектива G Master для кадров в воздухе</span><b>5 000–6 000 ₽</b></div>
+      </div>
+      <p class="note">Оплата: 50% до съёмки, 50% после сдачи.</p>
+    </div>
+    <ul>
+      <li>Сценарий и раскадровка на согласование</li>
+      <li>Съёмка на заводе с земли</li>
+      <li>Съёмка дрона в воздухе на телеобъектив</li>
+      <li>Закадровый текст</li>
+      <li>Монтаж и цветокоррекция</li>
+      <li>Анимация и моушн-графика при необходимости</li>
+      <li>Звуковой ряд при необходимости</li>
+      <li>Готовый файл в 4K</li>
+      <li>2 круга правок</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Раскадровка</span>
+  <h2>Каким может быть ролик</h2>
+  <article class="board">
+    <header><h3>«Перехват»</h3>
+      <div class="meta"><span>около 60–90 сек</span><span>закадровый голос и музыка</span><span>телеобъектив · графика</span></div></header>
+    <div class="shot"><span class="tc">0–5 с</span><div><p>Небо и тишина. Издалека нарастает гул винтов, в кадр на длинном фокусе входит дрон.</p><p class="ost">Текст за кадром: <i>цепляющая первая фраза о задаче</i></p></div></div>
+    <div class="shot"><span class="tc">5–20 с</span><div><p>Завод и подготовка: общие планы, руки на оборудовании, команда на позициях. Склейки становятся короче.</p></div></div>
+    <div class="shot"><span class="tc">20–35 с</span><div><p>Дрон крупно идёт к цели. Монтаж чередует небо и землю, напряжение растёт.</p></div></div>
+    <div class="shot"><span class="tc">35–40 с</span><div><p>Включение средств РЭП. Крупный план оборудования, музыка на мгновение замирает.</p></div></div>
+    <div class="shot"><span class="tc">40–60 с</span><div><p>Реакция дрона на длинном фокусе: снимаем без постановки, так, как это происходит на самом деле. Графика поверх кадра показывает, что случилось со связью.</p></div></div>
+    <div class="shot"><span class="tc">60–90 с</span><div><p>Итог: дрон на земле или возвращается, команда, оборудование. Финальный общий план завода.</p><p class="ost">Текст: <i>название средства или завода, по вашему решению</i></p></div></div>
+    <p class="why">Почему сработает: в ролике есть завязка, напряжение и развязка, а настоящие кадры с телеобъектива служат доказательством. Зритель видит сам результат, а не обещание результата.</p>
+  </article>
+  <p class="note">Это отправная точка. Финальный сценарий и последовательность сцен соберём после разговора, под ваше оборудование и условия на площадке.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Подготовка</span>
+  <h2>Что понадобится от вас</h2>
+  <div class="prep"><ul>
+    <li>Разрешение на съёмку на территории завода и согласование полёта дрона и работы средств РЭП</li>
+    <li>Дрон и оператор для перехвата, сотрудники и оборудование в назначенное время</li>
+    <li>Факты для закадрового текста: что за средство, что важно сказать, для кого ролик</li>
+    <li>Перечень того, что нельзя показывать в кадре. Спорные места покажу вам перед сдачей</li>
+    <li>Основная дата съёмки и запасная: для кадров в воздухе нужна подходящая погода и хорошая видимость</li>
+  </ul></div>
+</section>
+
+<section>
+  <span class="eyebrow">Как работаем</span>
+  <h2>Этапы и сроки</h2>
+  <div class="steps">
+    <div class="step"><b>Шаг 1 · 1–2 дня</b>Созвон, сценарий и раскадровка на согласование</div>
+    <div class="step"><b>Шаг 2 · 1 съёмочный день</b>Съёмка на заводе и дрона в воздухе</div>
+    <div class="step"><b>Шаг 3 · 5–7 дней</b>Закадровый текст, монтаж, цвет, графика, звук</div>
+    <div class="step"><b>Шаг 4 · до 2 кругов</b>Правки и выдача готового ролика</div>
+  </div>
+</section>
+
+<section id="contact">
+  <span class="eyebrow">Исполнитель</span>
+  <div class="author">
+    <div class="photo"><img src="assets/author.webp" alt="Дмитрий Бровкин с камерой на стабилизаторе" onerror="this.remove()"></div>
+    <div class="info">
+      <h2 class="name">Бровкин Дмитрий Александрович</h2>
+      <p class="note">Видеограф. Съёмку, монтаж, звук и моушн-графику делаю сам, поэтому ролик выходит цельным и в короткие сроки.</p>
+      <div class="kit"><span>Sony FX3</span><span>4K 10-bit</span><span>Телеобъектив G Master</span><span>Стабилизатор</span><span>Монтаж и цвет</span><span>Моушн</span></div>
+      <div class="contact">
+        <a class="tel" href="tel:+79817779911" id="phone">+7 981 777-99-11</a>
+        <button id="copy-phone" type="button">Скопировать номер</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<script>
+document.getElementById('copy-phone').addEventListener('click',function(){
+  var b=this;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Номер выделен, нажмите Ctrl+C';}
+  try{navigator.clipboard.writeText('+79817779911').then(function(){b.textContent='Номер скопирован';},sel);}catch(e){sel();}
+});
+</script>
+</body></html>
