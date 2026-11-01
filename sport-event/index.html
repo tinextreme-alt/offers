@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Съёмка спортивного мероприятия для Ильи</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Тот же каркас, что у прошлых офферов; палитра «ринг»: тёмная, красный и бирюзовый из цвета Low Kick Championship */
+:root{
+  --bg:#0B1114; --surface:#141C20; --fg:#EEF3F5; --muted:#9FAEB5; --line:#27343A;
+  --pine:#62CFDA; --pine-soft:#12292F; --ember:#FF5A3C; --ember-soft:#2A1512;
+  --display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);padding-bottom:env(safe-area-inset-bottom,0px)}
+img,video{max-width:100%;display:block}
+a{color:var(--pine)}
+.cover{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,17,20,.15) 0%,rgba(11,17,20,.2) 40%,rgba(11,17,20,.94) 82%,var(--bg) 100%)}
+.hero{position:relative;z-index:1;width:100%;max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:120px max(16px,env(safe-area-inset-right,0px)) 28px max(16px,env(safe-area-inset-left,0px))}
+.wrap{max-width:880px;margin:0 auto;padding-block:32px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(1.7rem,5vw,2.7rem);font-weight:700}
+h2{font-size:1.35rem;font-weight:700}
+h3{font-size:1.02rem;font-weight:500}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--pine)}
+.lead{font-size:1.1rem;color:#D3DDE2;max-width:62ch}
+.note{font-size:.88rem;color:var(--muted)}
+ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .8rem/1 var(--mono);padding:7px 10px;border-radius:999px;background:var(--pine-soft);color:var(--pine)}
+.player{border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.player video{width:100%;height:auto;aspect-ratio:16/9}
+.frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.frames img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.insight{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.insight b{font-weight:600}
+.refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ref{display:flex;flex-direction:column;gap:8px;min-width:0}
+.ref iframe{width:100%;height:560px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.ref a{font:400 .78rem/1.3 var(--mono);overflow-wrap:anywhere}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px;background:var(--ember-soft);border:2px solid var(--ember);border-radius:14px;padding:24px;align-items:start}
+.offer .tag{font:500 .72rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ember)}
+.offer .sum{font:700 2.4rem/1 var(--display);font-variant-numeric:tabular-nums}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.offer ul{font-size:.95rem}
+.board{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.board header{padding:18px 20px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font:400 .8rem/1.4 var(--mono);color:var(--muted)}
+.shot{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:14px 20px;border-bottom:1px dashed var(--line)}
+.shot:last-of-type{border-bottom:0}
+.tc{font:500 .82rem/1.5 var(--mono);color:var(--ember)}
+.why{padding:14px 20px;background:var(--pine-soft);font-size:.9rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.step{border-top:2px solid var(--pine);padding-top:10px;display:flex;flex-direction:column;gap:4px;font-size:.92rem}
+.step b{font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--pine)}
+.prep{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+button{font:500 .9rem var(--body);padding:10px 16px;border-radius:999px;cursor:pointer;background:var(--surface);color:var(--fg);border:1px solid var(--line)}
+button:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
+.author{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:32px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:12px;overflow:hidden;background:var(--pine-soft)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%;max-width:none}
+.photo::after{content:"НА СЪЁМКЕ";position:absolute;right:10px;top:10px;font:500 .7rem/1 var(--mono);letter-spacing:.14em;color:#fff;background:#C93E25;padding:6px 8px;border-radius:4px}
+.author .info{display:flex;flex-direction:column;gap:12px;min-width:0}
+.author .name{font-size:clamp(1.3rem,3.4vw,1.8rem)}
+.kit{display:flex;flex-wrap:wrap;gap:8px}
+.kit span{font:400 .78rem/1 var(--mono);padding:6px 9px;border-radius:6px;background:var(--pine-soft);color:var(--pine)}
+.contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tel{font:500 clamp(1.2rem,2.6vw,1.55rem)/1.2 var(--mono);color:var(--fg);text-decoration:none;font-variant-numeric:tabular-nums}
+@media (max-width:720px){.refs{grid-template-columns:1fr}.ref{max-width:380px;width:100%;margin:0 auto}.ref iframe{height:600px}}
+@media (max-width:640px){.author,.offer{grid-template-columns:1fr}.author .photo{max-width:300px}}
+@media (max-width:560px){
+  .wrap{gap:44px;padding-block:24px 56px}
+  .board header,.shot,.why{padding-left:16px;padding-right:16px}
+  .offer .sum{font-size:2rem}
+  button{width:100%;text-align:center}
+  .frames{grid-template-columns:1fr}
+}
+@media (max-width:480px){.shot{grid-template-columns:1fr;gap:4px}}
+</style></head>
+<body>
+
+<div class="cover">
+  <img src="assets/lkc-stance.jpg" alt="Бой на Low Kick Championship: двое бойцов в стойке, контровой свет">
+  <header class="hero">
+    <span class="eyebrow">Предложение для Ильи</span>
+    <h1>Ролик о вашем спортивном мероприятии, который хочется пересматривать</h1>
+    <p class="lead">Снимаю мероприятие на две профессиональные камеры с двух ракурсов и монтирую мощный итоговый ролик под ключ: замедления, эффектные переходы, моушн-графика и музыка в ритм.</p>
+    <div class="chips"><span class="chip">съёмка до 1,5 часов</span><span class="chip">2 камеры · 2 ракурса</span><span class="chip">Sony A7 V · 4K</span><span class="chip">высокий битрейт</span><span class="chip">ролик 1,5–5 минут</span><span class="chip">под ключ</span></div>
+  </header>
+</div>
+
+<div class="wrap">
+
+<section>
+  <span class="eyebrow">Мой опыт · Low Kick Championship</span>
+  <h2>Я уже снимал бои: вот интро с турнира</h2>
+  <p>Low Kick Championship, Event #1: десять боёв формата «до отказа». Снимал весь турнир, сам монтировал, красил и делал графику. В зале с контровым светом, в тесноте и без вторых дублей: удар случается один раз, и камера уже должна стоять в нужном месте.</p>
+  <div class="player"><video src="assets/lkc-intro.mp4" poster="assets/lkc-poster-v2.jpg" controls playsinline preload="none"></video></div>
+  <div class="frames">
+    <img src="assets/lkc-faceoff.jpg" alt="Бойцы и судья перед боем, логотип Low Kick Championship на футболке" loading="lazy">
+    <img src="assets/lkc-kick.jpg" alt="Удар в движении, боец с номером 1051" loading="lazy">
+    <img src="assets/lkc-red.jpg" alt="Награждение победительницы в красном свете" loading="lazy">
+  </div>
+  <p class="note">Кадры из готового проекта, сданного заказчику.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Ваши примеры</span>
+  <h2>На такой результат ориентируемся</h2>
+  <p>Энергия, замедления и пластика борьбы, как в примерах ниже. Это работы других авторов: показываю их как ориентир по стилю, ваш ролик будет снят и собран с нуля.</p>
+  <div class="refs">
+    <div class="ref"><iframe src="https://www.instagram.com/reel/DdJhlDessxb/embed/" title="Референс: боевое самбо, yashin_evgeny_video" loading="lazy" allowfullscreen></iframe><a href="https://www.instagram.com/reel/DdJhlDessxb/" target="_blank" rel="noopener">@yashin_evgeny_video · открыть в Instagram</a></div>
+    <div class="ref"><iframe src="https://www.instagram.com/reel/DcL6Cw6MAff/embed/" title="Референс: эстетика самбо, yashin_evgeny_video" loading="lazy" allowfullscreen></iframe><a href="https://www.instagram.com/reel/DcL6Cw6MAff/" target="_blank" rel="noopener">@yashin_evgeny_video · открыть в Instagram</a></div>
+    <div class="ref"><iframe src="https://www.instagram.com/reel/DdizHRJul_h/embed/" title="Референс: боевое самбо, guru.fight" loading="lazy" allowfullscreen></iframe><a href="https://www.instagram.com/reel/DdizHRJul_h/" target="_blank" rel="noopener">@guru.fight · открыть в Instagram</a></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Что сделает ролик мощным</span>
+  <h2>Приёмы, на которых его строю</h2>
+  <div class="insights">
+    <div class="insight"><b>Слоу-мо на главном</b><p>Снимаю с высокой частотой кадров, поэтому удар, бросок или падение замедляются плавно, без рывков. Видно каждое движение и эмоцию.</p></div>
+    <div class="insight"><b>Рампинг скорости</b><p>Движение идёт в полную силу и резко замедляется в момент контакта, а затем снова разгоняется. Самый зрелищный приём в спортивном монтаже.</p></div>
+    <div class="insight"><b>Переходы на движении</b><p>Склейка прячется во взмахе, рывке или пролёте камеры. Эпизоды перетекают один в другой, ролик идёт на одном дыхании.</p></div>
+    <div class="insight"><b>Два ракурса</b><p>Общий план показывает весь эпизод, второй ракурс даёт крупно лица и детали. Один и тот же момент можно показать дважды, с разных сторон.</p></div>
+    <div class="insight"><b>Моушн-графика</b><p>Имена спортсменов, счёт, титры и логотип турнира встроены в динамику ролика, в едином фирменном стиле.</p></div>
+    <div class="insight"><b>Монтаж в ритм</b><p>Лицензионная музыка, склейки на долях бита, звуковые акценты на ударах и шум зала. Ролик работает и как рекламный, и как память о событии.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Стоимость</span>
+  <h2>Всё включено в одну цену</h2>
+  <div class="offer">
+    <div class="left">
+      <span class="tag">Съёмка и монтаж под ключ</span>
+      <h3>Две профессиональные камеры, два ракурса</h3>
+      <span class="sum">19&nbsp;000&nbsp;₽</span>
+      <p class="note">Оплата: 50% до съёмки, 50% после сдачи.</p>
+    </div>
+    <ul>
+      <li>Съёмка мероприятия до 1,5 часов</li>
+      <li>Две профессиональные камеры с двух ракурсов</li>
+      <li>Основная камера Sony A7 V, 4K с высоким битрейтом</li>
+      <li>Итоговый ролик от 1,5 до 5 минут</li>
+      <li>Монтаж и цветокоррекция</li>
+      <li>Слоу-мо, эффекты и переходы</li>
+      <li>Моушн-графика: титры, имена, логотип</li>
+      <li>Лицензионная музыка и звуковое оформление</li>
+      <li>Готовый файл в 4K</li>
+      <li>2 круга правок</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Раскадровка</span>
+  <h2>Каким может быть ролик</h2>
+  <article class="board">
+    <header><h3>«День турнира»</h3>
+      <div class="meta"><span>1,5–5 минут</span><span>музыка в ритм · шум зала</span><span>слоу-мо · переходы · графика</span></div></header>
+    <div class="shot"><span class="tc">Крючок</span><div><p>Самый сильный момент дня в замедлении, тишина, и первый удар музыки. На нём появляется логотип турнира.</p></div></div>
+    <div class="shot"><span class="tc">Подготовка</span><div><p>Разминка, бинты, сосредоточенные лица, полный зал. Короткие склейки, темп нарастает.</p></div></div>
+    <div class="shot"><span class="tc">Выход</span><div><p>Спортсмены выходят на площадку, крупно взгляды. Имена появляются моушн-графикой.</p></div></div>
+    <div class="shot"><span class="tc">Схватки</span><div><p>Лучшие эпизоды с двух ракурсов: разгон, замедление на контакте, снова разгон. Переходы на движении, склейки в бит.</p></div></div>
+    <div class="shot"><span class="tc">Кульминация</span><div><p>Решающий момент: музыка замирает, долгое слоу-мо, реакция зала и тренеров.</p></div></div>
+    <div class="shot"><span class="tc">Финал</span><div><p>Эмоции победителей, награждение, общий план зала. Логотип и финальный титр.</p></div></div>
+    <p class="why">Почему сработает: у ролика есть завязка, напряжение и развязка. Зритель смотрит не набор эпизодов, а историю, поэтому досматривает до конца и пересылает дальше.</p>
+  </article>
+  <p class="note">Это отправная точка. Длину и структуру подстроим под формат мероприятия и то, для чего нужен ролик.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Подготовка</span>
+  <h2>Что понадобится от вас</h2>
+  <div class="prep"><ul>
+    <li>Дата, место и расписание мероприятия. Если самое важное идёт дольше 1,5 часов, заранее выберем, что снимать</li>
+    <li>Доступ к площадке и возможность поставить камеры рядом с действием</li>
+    <li>Логотип и правильное написание имён спортсменов для графики</li>
+    <li>Пожелания: для чего ролик и где он будет опубликован</li>
+  </ul></div>
+</section>
+
+<section>
+  <span class="eyebrow">Как работаем</span>
+  <h2>Этапы и сроки</h2>
+  <div class="steps">
+    <div class="step"><b>Шаг 1 · 1 день</b>Созвон: формат, ракурсы и план съёмки</div>
+    <div class="step"><b>Шаг 2 · до 1,5 часов</b>Съёмка на двух камерах</div>
+    <div class="step"><b>Шаг 3 · 5–7 дней</b>Монтаж, цвет, графика, музыка и звук</div>
+    <div class="step"><b>Шаг 4 · до 2 кругов</b>Правки и выдача готового ролика</div>
+  </div>
+</section>
+
+<section id="contact">
+  <span class="eyebrow">Исполнитель</span>
+  <div class="author">
+    <div class="photo"><img src="assets/author.webp" alt="Дмитрий Бровкин с камерой на стабилизаторе" onerror="this.remove()"></div>
+    <div class="info">
+      <h2 class="name">Бровкин Дмитрий Александрович</h2>
+      <p class="note">Видеограф, снимал Low Kick Championship. Съёмку, монтаж, звук и моушн-графику делаю сам, поэтому ролик выходит цельным и в короткие сроки.</p>
+      <div class="kit"><span>Sony A7 V</span><span>4K 10-bit</span><span>Слоу-мо</span><span>Стабилизатор</span><span>Монтаж и цвет</span><span>Моушн</span></div>
+      <div class="contact">
+        <a class="tel" href="tel:+79817779911" id="phone">+7 981 777-99-11</a>
+        <button id="copy-phone" type="button">Скопировать номер</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<script>
+document.getElementById('copy-phone').addEventListener('click',function(){
+  var b=this;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Номер выделен, нажмите Ctrl+C';}
+  try{navigator.clipboard.writeText('+79817779911').then(function(){b.textContent='Номер скопирован';},sel);}catch(e){sel();}
+});
+</script>
+</body></html>
