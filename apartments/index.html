@@ -58,6 +58,7 @@ p{margin:0}
 /* интервью */
 .iv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 .iv svg{width:100%;height:auto;background:var(--card);border-radius:12px}
+.vh{margin:14px 0 10px;font-size:14px;color:var(--soft)}.vh:first-of-type{margin-top:4px}
 .qs{counter-reset:q;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .qs li{counter-increment:q;display:grid;grid-template-columns:26px 1fr;gap:8px;font-size:14px;color:var(--soft)}
 .qs li::before{content:counter(q);font:500 12px/1.7 var(--display);color:var(--ac2)}
@@ -181,7 +182,8 @@ p{margin:0}
   <p class="fn">Ещё бонус: проход через шкаф, мозаика и граммофон — готовые сюжеты для новых шортсов из этого же съёмочного дня.</p>
 
   <div class="gh"><span class="n">05</span><h2>Интервью в стиле «Вписки» и Дудя</h2></div>
-  <p class="gl">Отдельная сцена выпуска с постановкой света и двумя камерами. Разговор выглядит как студийное шоу, но в интерьере самой квартиры.</p>
+  <p class="gl">Отдельная сцена выпуска с постановкой света. Разговор выглядит как студийное шоу, но в интерьере самой квартиры. Предлагаю два варианта постановки.</p>
+  <h3 class="vh">Вариант 1 · две камеры</h3>
   <div class="iv">
     <svg viewBox="0 0 420 300" role="img" aria-label="Схема: две камеры, ключевой и контровой свет, ведущий и гостья">
       <rect x="0" y="0" width="420" height="300" fill="#14151B"/>
@@ -204,7 +206,30 @@ p{margin:0}
       <li>Камеры и звук сведены по времени, монтаж переключает планы на реакциях</li>
     </ul></div>
   </div>
-  <div class="box" style="margin-top:12px"><span class="tag">Вопросы-ориентиры (готовим вместе с Сергеем)</span><ol class="qs">
+  <h3 class="vh">Вариант 2 · три камеры, как в студии</h3>
+  <div class="iv">
+    <svg viewBox="0 0 420 300" role="img" aria-label="Схема: общий план и две камеры поясных планов на ведущего и гостью, свет на каждого">
+      <rect x="0" y="0" width="420" height="300" fill="#14151B"/>
+      <rect x="20" y="20" width="380" height="50" rx="8" fill="#1B1D25"/>
+      <text x="210" y="50" fill="#9A9DAB" font-family="Golos Text,sans-serif" font-size="12" text-anchor="middle">интерьер в глубине кадра: тёплые лампы квартиры</text>
+      <circle cx="130" cy="135" r="22" fill="#F2F1EC"/><text x="130" y="140" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle" fill="#14151B">Сергей</text>
+      <circle cx="290" cy="135" r="22" fill="#E5484D"/><text x="290" y="140" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle" fill="#fff">гостья</text>
+      <line x1="80" y1="232" x2="272" y2="150" stroke="#E5484D" stroke-dasharray="4 4"/><line x1="340" y1="232" x2="148" y2="150" stroke="#E5484D" stroke-dasharray="4 4"/><line x1="210" y1="240" x2="210" y2="150" stroke="#E5484D" stroke-dasharray="4 4"/>
+      <g fill="#E5484D"><rect x="48" y="232" width="64" height="28" rx="6"/><rect x="178" y="240" width="64" height="28" rx="6"/><rect x="308" y="232" width="64" height="28" rx="6"/></g>
+      <text x="80" y="251" font-family="Unbounded,sans-serif" font-size="11" text-anchor="middle" fill="#fff">B</text><text x="210" y="259" font-family="Unbounded,sans-serif" font-size="11" text-anchor="middle" fill="#fff">A</text><text x="340" y="251" font-family="Unbounded,sans-serif" font-size="11" text-anchor="middle" fill="#fff">C</text>
+      <text x="80" y="278" fill="#CFD0D6" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">поясной гостьи</text><text x="210" y="286" fill="#CFD0D6" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">общий план</text><text x="340" y="278" fill="#CFD0D6" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">поясной Сергея</text>
+      <rect x="20" y="150" width="26" height="18" rx="3" fill="#4F8BFF"/><rect x="374" y="150" width="26" height="18" rx="3" fill="#4F8BFF"/>
+      <text x="33" y="185" fill="#4F8BFF" font-family="Golos Text,sans-serif" font-size="10" text-anchor="middle">ключ</text><text x="387" y="185" fill="#4F8BFF" font-family="Golos Text,sans-serif" font-size="10" text-anchor="middle">ключ</text>
+      <circle cx="80" cy="95" r="7" fill="#4F8BFF"/><circle cx="340" cy="95" r="7" fill="#4F8BFF"/><text x="210" y="98" fill="#4F8BFF" font-family="Golos Text,sans-serif" font-size="10" text-anchor="middle">контровой свет на каждого</text>
+    </svg>
+    <div class="box"><span class="tag">Как снимаю</span><ul>
+      <li>Камера A — общий план: ведущий и гостья за столом или в креслах, видно квартиру</li>
+      <li>Камера B — поясной план гостьи из-за плеча ведущего</li>
+      <li>Камера C — поясной план ведущего из-за плеча гостьи</li>
+      <li>Свой ключевой и контровой свет на каждого: оба плана выглядят одинаково дорого</li>
+      <li>Монтаж переключает «вопрос — ответ — реакция», как в профессиональных студийных интервью</li>
+    </ul></div>
+  </div>  <div class="box" style="margin-top:12px"><span class="tag">Вопросы-ориентиры (готовим вместе с Сергеем)</span><ol class="qs">
     <li>Как вам досталась эта квартира и что здесь было до вас?</li>
     <li>Почему передумали делать хайтек? Кто первым сказал слово «Нарния»?</li>
     <li>Сколько длился ремонт и что оказалось самым сложным, включая согласование с соседями?</li>
