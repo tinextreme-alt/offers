@@ -1,0 +1,293 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение для Александра · съёмка выпусков о квартирах</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap"><style>
+/* Каркас и палитра — как у шоу-рила и страницы «Оборудование видеографа» */
+:root{--bg:#0B0C10;--card:#14151B;--card2:#1B1D25;--line:#262832;--fg:#F2F1EC;--muted:#9A9DAB;--soft:#CFD0D6;--ac:#F0824A;--ac-soft:#2A1A12;--ok:#7FD1A8;--display:'Unbounded',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.55 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.hero{display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);gap:32px;align-items:center;max-width:1040px;margin:0 auto;padding:44px 28px 14px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.hero .in{order:-1}
+.kick{font:500 11px var(--display);letter-spacing:.18em;color:var(--ac);text-transform:uppercase;margin-bottom:18px}
+h1{font:700 clamp(28px,3.7vw,40px)/1.1 var(--display);margin:0 0 18px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 22px/1.2 var(--display);margin:0;text-wrap:balance}
+h3{font:500 16px/1.3 var(--display);margin:0}
+p{margin:0}
+.lead{max-width:500px;color:var(--soft);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{font-size:12.5px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--soft)}
+.who{margin-top:20px;font-size:14px;color:var(--soft)}.who b{color:#fff;font-weight:600}.who a{color:var(--ac);text-decoration:none;white-space:nowrap}
+.gh{display:flex;gap:14px;align-items:baseline;margin:44px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.gh .n{font:500 11px var(--display);color:var(--ac);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 16px;font-size:14.5px;max-width:780px}
+.tag{font:500 10.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+/* цифры канала */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{background:var(--card);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.stat b{font:700 26px/1.1 var(--display);font-variant-numeric:tabular-nums}.stat span{color:var(--muted);font-size:13px;line-height:1.35}
+.two{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.box{background:var(--card);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;color:var(--soft);font-size:14px}
+.box.good{border-left:3px solid var(--ok)}.box.good .tag{color:var(--ok)}
+.box.grow{border-left:3px solid var(--ac)}
+/* ваш шортс + предметы */
+.next{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:24px;align-items:start}
+.yt{position:relative;aspect-ratio:9/16;background:#000;border-radius:14px;overflow:hidden;cursor:pointer}
+.yt.h{aspect-ratio:16/9;border-radius:0}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.88;transition:opacity .2s}.yt:hover img{opacity:1}
+.yt::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/26px no-repeat}
+.yt.on::after{display:none}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.objs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.obj{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.obj img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.obj div{padding:10px 12px 12px;display:flex;flex-direction:column;gap:3px}.obj b{font-weight:600;font-size:14px}.obj p{color:var(--muted);font-size:13px;line-height:1.4}
+.fn{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* раскадровка */
+.board{background:var(--card);border-radius:14px;overflow:hidden}
+.board header{padding:18px 20px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+.shot{display:grid;grid-template-columns:72px 92px 1fr;gap:16px;padding:14px 20px;border-bottom:1px dashed var(--line);align-items:start}
+.shot:last-of-type{border-bottom:0}
+.shot.noimg{grid-template-columns:72px 1fr}
+.tc{font:500 12.5px/1.5 var(--display);color:var(--ac);font-variant-numeric:tabular-nums}
+.shot img{width:92px;aspect-ratio:1/1;object-fit:cover;border-radius:8px}
+.shot b{font-weight:600}.shot p{color:var(--soft);font-size:14px}.shot .snd{color:var(--muted);font-size:13px;margin-top:4px}
+.shot .hook{display:inline-block;font:500 10px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#14151B;background:var(--ac);padding:3px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.why{padding:14px 20px;background:var(--ac-soft);font-size:14px;color:var(--soft)}
+.why b{color:var(--fg)}
+.board+.board{margin-top:16px}
+/* интервью */
+.iv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.iv svg{width:100%;height:auto;background:var(--card);border-radius:12px}
+.qs{counter-reset:q;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.qs li{counter-increment:q;display:grid;grid-template-columns:26px 1fr;gap:8px;font-size:14px;color:var(--soft)}
+.qs li::before{content:counter(q);font:500 12px/1.7 var(--display);color:var(--ac)}
+/* сравнение */
+.cmp{width:100%;border-collapse:collapse;font-size:14px}
+.cmp th,.cmp td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp th{font:500 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cmp td:first-child{font-weight:600;white-space:nowrap}.cmp td:nth-child(2){color:var(--muted)}.cmp td:nth-child(3){color:var(--fg)}
+.cmpw{background:var(--card);border-radius:12px;overflow:auto}
+/* цена */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:28px;background:var(--ac-soft);border:2px solid var(--ac);border-radius:16px;padding:26px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.sum{font:700 46px/1 var(--display);font-variant-numeric:tabular-nums}
+.old{font-size:14px;color:var(--soft)}
+.offer ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.note{font-size:13px;color:var(--muted)}
+/* работы */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.w{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.w .tx{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px}
+.w b{font:500 14.5px/1.3 var(--display)}.w p{color:var(--muted);font-size:13.5px;line-height:1.45}
+.w .cm{color:var(--soft);border-left:2px solid var(--ac);padding-left:10px}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.kitlink{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:500 15px var(--display)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.12)}
+.photo{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;margin-top:12px}
+.photo b{font:500 15px var(--display);display:block;margin-bottom:4px}.photo p{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:4px}
+.prep ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;color:var(--soft);font-size:14px}
+.btn{display:inline-block;margin-top:20px;background:var(--ac);color:#14151B;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;font-size:14px;transition:filter .2s}.btn:hover{filter:brightness(1.12)}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac);text-decoration:none}.foot b{color:#fff}
+@media(max-width:860px){.stats{grid-template-columns:1fr 1fr}.works{grid-template-columns:1fr 1fr}.objs{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}
+  .two,.iv,.offer,.links,.next{grid-template-columns:1fr}.next .yt{max-width:260px}.steps{grid-template-columns:1fr 1fr}.works{grid-template-columns:1fr}
+  h2{font-size:18px}.sum{font-size:38px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}
+  .shot{grid-template-columns:64px 1fr;padding:12px 16px}.shot img{grid-column:2;width:100%;max-width:200px}.shot>div{grid-column:2}.board header,.why{padding-left:16px;padding-right:16px}}
+</style></head><body>
+
+<header class="hero"><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"><div class="in">
+  <div class="kick">Предложение для Александра</div>
+  <h1>Длинные выпуски о квартирах, которые смотрят до конца</h1>
+  <p class="lead">Ваши шортсы уже собирают миллионы. Длинным выпускам нужна картинка и монтаж, которые удержат зрителя на 40–60 минут. Снимаю и монтирую под ключ: обзор квартиры, интервью с владельцем, графика и звук в стиле канала.</p>
+  <div class="chips"><span>съёмочный день без ограничения по часам</span><span>2 полнокадровые камеры</span><span>Sony A7 V · 4K 10-bit</span><span>свет для интервью</span><span>монтаж до 1 часа</span><span>под ключ</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+</div></header>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Разобрал ваш канал</h2></div>
+  <p class="gl">Цифры YouTube на 3 ноября 2026 года.</p>
+  <div class="stats">
+    <div class="stat"><b>15,7 тыс.</b><span>подписчиков у молодого канала</span></div>
+    <div class="stat"><b>2,29 млн</b><span>просмотров у шортса «Квартира-Эрмитаж»</span></div>
+    <div class="stat"><b>1,28 млн</b><span>у шортса «Квартира-Нарния», где будет ближайший выпуск</span></div>
+    <div class="stat"><b>113 тыс.</b><span>у длинного выпуска про коммуналку за три недели</span></div>
+  </div>
+  <div class="two">
+    <div class="box good"><span class="tag">Что уже работает</span><ul>
+      <li>Сами квартиры: необычные, с историей, каких не увидишь в объявлениях</li>
+      <li>Живой ведущий и хозяева, которые рассказывают с азартом</li>
+      <li>Предметы с легендой: печь «как в музее», мозаика, шкаф-проход</li>
+      <li>Короткие ролики дают охват, а зрители сами просят полную версию</li>
+    </ul></div>
+    <div class="box grow"><span class="tag">Что сдерживает длинные выпуски</span><ul>
+      <li>Снято неплохо, но на iPhone с рук: широкий модуль заваливает стены и вертикали, шаги дают тряску</li>
+      <li>Свет из окна и от ламп разной температуры, экспозиция прыгает при переходе из комнаты в комнату</li>
+      <li>Интервью снято одним планом, без света и второго ракурса, глазу не за что зацепиться</li>
+      <li>Выпуски по 1–1,8 часа почти без монтажа: нет интро, глав, графики и ритма, зритель уходит на середине</li>
+    </ul></div>
+  </div>
+
+  <div class="gh"><span class="n">02</span><h2>Квартира-Нарния: что в ней есть для сильного выпуска</h2></div>
+  <p class="gl">Вы снимаете ближайший выпуск в той же квартире, что и шортс. Пересмотрел его по кадрам и выписал всё, что станет крючками и сценами.</p>
+  <div class="next">
+    <div><div class="yt" data-id="DBF1sVDgHhw" data-v="1"><img src="https://i.ytimg.com/vi/DBF1sVDgHhw/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/DBF1sVDgHhw/hqdefault.jpg'" alt="Шортс «Обзор квартиры-Нарнии в Санкт-Петербурге»" loading="lazy"></div>
+      <p class="fn">Ваш шортс, 1,28 млн просмотров</p></div>
+    <div class="objs">
+      <div class="obj"><img src="assets/n-wardrobe.jpg" alt="Красный шкаф под антресолью" loading="lazy"><div><b>Шкаф-портал</b><p>Красные двери под антресолью, сквозь шубы проход в комнату брата. Главная тайна выпуска.</p></div></div>
+      <div class="obj"><img src="assets/n-mosaic.jpg" alt="Мозаика «Рождение Венеры» из смальты" loading="lazy"><div><b>Венера из смальты</b><p>Мозаика по Боттичелли в санузле. Макро и боковой свет покажут, как блестит каждый кусочек.</p></div></div>
+      <div class="obj"><img src="assets/n-fireplace.jpg" alt="Камин с лепниной и золотое зеркало" loading="lazy"><div><b>Камин и золотое зеркало</b><p>Огонь крупно, отражение в раме. Тёплая атмосферная перебивка.</p></div></div>
+      <div class="obj"><img src="assets/n-loft.jpg" alt="Антресоль над гостиной и окна" loading="lazy"><div><b>Антресоль и лестница</b><p>Подъём наверх и вид сверху на весь зал: лучший кадр, чтобы показать масштаб.</p></div></div>
+      <div class="obj"><img src="assets/n-chest.jpg" alt="Резной сундук" loading="lazy"><div><b>Граммофон и сундук</b><p>Граммофону около ста лет, и он играет. Заводим вживую, и пластинка становится музыкой интро.</p></div></div>
+      <div class="obj"><img src="assets/n-lamps.jpg" alt="Раздвижная дверь-зеркало на рельсе" loading="lazy"><div><b>Детали ремонта</b><p>Дверь-зеркало на рельсе, лепнина, кирпич, люстры. Каждая деталь — короткий слайд крупным планом.</p></div></div>
+    </div>
+  </div>
+  <p class="fn">Кадры из вашего шортса, снятого на iPhone. Использую их как карту объектов для раскадровки.</p>
+
+  <div class="gh"><span class="n">03</span><h2>Раскадровка: первые 40 секунд</h2></div>
+  <p class="gl">Интро решает, останется ли зритель. Начинаем не с приветствия, а с тайны: шкаф открывается, и мы не показываем, что внутри.</p>
+  <article class="board">
+    <header><h3>Холодное начало «Квартиры-Нарнии»</h3>
+      <div class="meta"><span>0:00–0:40</span><span>стабилизатор · макро · слоу-мо</span><span>звук предметов → музыка канала</span></div></header>
+    <div class="shot"><span class="tc">0:00</span><img src="assets/n-hall.jpg" alt="" loading="lazy"><div><p><span class="hook">крючок</span><b>Тишина и скрип.</b> Плавный проход на стабилизаторе через гостиную прямо к красным дверям. Двери открываются, камера входит в шубы, и наступает темнота.</p><p class="snd">Звук: скрип дверцы, шорох меха. Музыки пока нет.</p></div></div>
+    <div class="shot"><span class="tc">0:05</span><img src="assets/n-mosaic.jpg" alt="" loading="lazy"><div><p><b>Резкая склейка из темноты на макро.</b> Медленный проезд по мозаике Венеры: смальта вспыхивает в боковом свете. Хозяйка за кадром: «итальянские мастера придумали…»</p></div></div>
+    <div class="shot"><span class="tc">0:10</span><img src="assets/n-chest.jpg" alt="" loading="lazy"><div><p><b>Игла граммофона опускается на пластинку.</b> Треск, первые ноты, и они переходят в музыку интро канала.</p><p class="snd">Звук: живая пластинка становится саундтреком.</p></div></div>
+    <div class="shot"><span class="tc">0:14</span><img src="assets/n-fireplace.jpg" alt="" loading="lazy"><div><p><b>Огонь крупно, отражение в золотом зеркале.</b> Медленный наезд.</p></div></div>
+    <div class="shot"><span class="tc">0:17</span><img src="assets/n-owner.jpg" alt="" loading="lazy"><div><p><span class="hook">обещание</span><b>Сергей в кадре, одна фраза.</b> «Обычная петербургская квартира. Но в её шкафу — целая комната». Взгляд на красные двери.</p></div></div>
+    <div class="shot"><span class="tc">0:22</span><img src="assets/n-gramophone.jpg" alt="" loading="lazy"><div><p><b>Хозяйка, лучшая реплика из интервью.</b> «Изначально хотели хайтек» или «мы с мамой любим этот фильм». Её выбираем при монтаже.</p></div></div>
+    <div class="shot"><span class="tc">0:26</span><img src="assets/n-loft.jpg" alt="" loading="lazy"><div><p><b>Шесть кадров в бит.</b> Лестница на антресоль, вид сверху на зал, ванна на лапах, лепнина, люстра, дверь-зеркало едет по рельсу.</p><p class="snd">Звук: вжухи и щелчки на каждой склейке.</p></div></div>
+    <div class="shot"><span class="tc">0:33</span><img src="assets/n-wardrobe.jpg" alt="" loading="lazy"><div><p><b>Заставка канала.</b> Общий план с красными дверями, название «КВАРТИРА-НАРНИЯ» крупными буквами, как на ваших обложках. Плашка: район и год дома.</p></div></div>
+    <div class="shot"><span class="tc">0:40</span><img src="assets/n-coats.jpg" alt="" loading="lazy"><div><p><b>Звонок в дверь, начинается выпуск.</b> Знакомство с хозяйкой на пороге, плашка с именем.</p></div></div>
+    <p class="why"><b>Почему сработает:</b> за 40 секунд зритель видит самые дорогие кадры квартиры и получает вопрос без ответа: что за шкафом? Ответ мы покажем только в финале, поэтому выпуск досматривают.</p>
+  </article>
+
+  <div class="gh"><span class="n">04</span><h2>Раскадровка: весь выпуск</h2></div>
+  <p class="gl">Около 50 минут, разбито на главы. Каждые 2–3 минуты новый крючок: предмет, история, цифра или вопрос.</p>
+  <article class="board">
+    <header><h3>Структура выпуска</h3>
+      <div class="meta"><span>40–60 минут</span><span>главы в описании YouTube</span><span>графика и плашки в стиле канала</span></div></header>
+    <div class="shot noimg"><span class="tc">0:00</span><div><p><b>Интро</b> — раскадровка выше.</p></div></div>
+    <div class="shot noimg"><span class="tc">0:40</span><div><p><b>Знакомство и гостиная.</b> Как квартира досталась по наследству и почему сначала хотели разделить её и сдавать. Сергей замечает красные двери: «туда потом». Плашки-факты: площадь, высота потолков, год дома.</p></div></div>
+    <div class="shot noimg"><span class="tc">6:00</span><div><p><b>Кухня: от хайтека к классике.</b> Хозяйка рассказывает, как передумали. Монтаж «было → стало», если есть фото до ремонта, они появляются шторкой.</p></div></div>
+    <div class="shot noimg"><span class="tc">11:00</span><div><p><span class="hook">крючок</span><b>Антресоль.</b> Подъём по лестнице одним кадром, вид сверху на весь зал. Перед этим подводка: «самое дорогое помещение квартиры — санузел. Покажу через минуту».</p></div></div>
+    <div class="shot noimg"><span class="tc">15:00</span><div><p><b>Санузел-шедевр.</b> Мозаика «Рождение Венеры» из смальты: макро, история мастеров, сколько времени заняла работа. Ванна на лапах, старинный бачок с цепочкой.</p></div></div>
+    <div class="shot noimg"><span class="tc">21:00</span><div><p><b>Рубрика «Вещь с легендой».</b> Граммофон, сундук, зеркало, камин. Каждый предмет получает карточку в стиле музейной этикетки: что это, год, откуда.</p></div></div>
+    <div class="shot noimg"><span class="tc">27:00</span><div><p><span class="hook">сердце выпуска</span><b>Интервью сидя.</b> Свет, две камеры, разговор без спешки. Это то, чего не дают шортсы: личность хозяйки и честные ответы. Вопросы ниже.</p></div></div>
+    <div class="shot noimg"><span class="tc">42:00</span><div><p><span class="hook">развязка</span><b>Проход в Нарнию.</b> Сергей открывает шкаф, раздвигает шубы, и камера на стабилизаторе одним непрерывным кадром проходит в комнату брата. Реакция крупно со второй камеры.</p></div></div>
+    <div class="shot noimg"><span class="tc">47:00</span><div><p><b>Сколько стоит такая квартира.</b> Оценка Сергея как эксперта по недвижимости, плашка с цифрой. Приглашение на консультацию в агентство и аутро канала.</p></div></div>
+    <p class="why"><b>Почему сработает:</b> у выпуска есть завязка (шкаф), нарастание (комнаты и предметы), кульминация (интервью и проход) и польза (цена от эксперта). Зритель смотрит историю, а не экскурсию, и остаётся до конца, где стоит призыв в агентство.</p>
+  </article>
+  <p class="fn">Ещё бонус: проход через шкаф, мозаика и граммофон — готовые сюжеты для новых шортсов из этого же съёмочного дня.</p>
+
+  <div class="gh"><span class="n">05</span><h2>Интервью в стиле «Вписки» и Дудя</h2></div>
+  <p class="gl">Отдельная сцена выпуска с постановкой света и двумя камерами. Разговор выглядит как студийное шоу, но в интерьере самой квартиры.</p>
+  <div class="iv">
+    <svg viewBox="0 0 420 300" role="img" aria-label="Схема: две камеры, ключевой и контровой свет, ведущий и гостья">
+      <rect x="0" y="0" width="420" height="300" fill="#14151B"/>
+      <rect x="20" y="20" width="380" height="60" rx="8" fill="#1B1D25"/>
+      <text x="210" y="55" fill="#9A9DAB" font-family="Golos Text,sans-serif" font-size="12" text-anchor="middle">интерьер в глубине кадра: тёплые лампы квартиры</text>
+      <circle cx="140" cy="150" r="22" fill="#F2F1EC"/><text x="140" y="155" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle" fill="#14151B">Сергей</text>
+      <circle cx="280" cy="150" r="22" fill="#F0824A"/><text x="280" y="155" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle" fill="#14151B">гостья</text>
+      <g fill="#F0824A"><rect x="60" y="240" width="64" height="30" rx="6"/><rect x="300" y="240" width="64" height="30" rx="6"/></g>
+      <text x="92" y="260" font-family="Unbounded,sans-serif" font-size="11" text-anchor="middle" fill="#14151B">A</text><text x="332" y="260" font-family="Unbounded,sans-serif" font-size="11" text-anchor="middle" fill="#14151B">B</text>
+      <line x1="92" y1="240" x2="210" y2="170" stroke="#F0824A" stroke-dasharray="4 4"/><line x1="332" y1="240" x2="280" y2="175" stroke="#F0824A" stroke-dasharray="4 4"/>
+      <text x="92" y="288" fill="#CFD0D6" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">общий план двоих</text><text x="332" y="288" fill="#CFD0D6" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">крупно гостья</text>
+      <rect x="196" y="225" width="30" height="20" rx="3" fill="#7FD1A8"/><text x="211" y="262" fill="#7FD1A8" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">мягкий ключ</text>
+      <circle cx="350" cy="100" r="9" fill="#7FD1A8"/><text x="350" y="125" fill="#7FD1A8" font-family="Golos Text,sans-serif" font-size="11" text-anchor="middle">контровой</text>
+    </svg>
+    <div class="box"><span class="tag">Как снимаю</span><ul>
+      <li>Камера A — общий план двоих, видно атмосферу квартиры</li>
+      <li>Камера B — крупный план гостьи на светосильной оптике, фон мягко размыт</li>
+      <li>Мягкий ключевой свет на лица и контровой, чтобы люди отделились от фона. Тёплые лампы квартиры остаются в кадре</li>
+      <li>Радиомикрофоны на обоих и резервная запись: звук не потеряется</li>
+      <li>Камеры и звук сведены по времени, монтаж переключает планы на реакциях</li>
+    </ul></div>
+  </div>
+  <div class="box" style="margin-top:12px"><span class="tag">Вопросы-ориентиры (готовим вместе с Сергеем)</span><ol class="qs">
+    <li>Как вам досталась эта квартира и что здесь было до вас?</li>
+    <li>Почему передумали делать хайтек? Кто первым сказал слово «Нарния»?</li>
+    <li>Сколько длился ремонт и что оказалось самым сложным, включая согласование с соседями?</li>
+    <li>Во что обошлась мозаика, если готовы назвать?</li>
+    <li>Что говорят гости, когда впервые открывают шкаф?</li>
+    <li>Какую одну вещь вы вынесете из квартиры, если придётся?</li>
+    <li>Продали бы её? За какую сумму?</li>
+    <li>Блиц: пять быстрых вопросов, ответ одним словом.</li>
+  </ol></div>
+
+  <div class="gh"><span class="n">06</span><h2>Что изменится в картинке</h2></div>
+  <p class="gl">На iPhone вы уже доказали, что тема заходит. Профессиональная съёмка нужна, чтобы длинные выпуски выглядели как шоу и усиливали доверие к агентству.</p>
+  <div class="cmpw"><table class="cmp">
+    <thead><tr><th></th><th>Сейчас, iPhone</th><th>Со мной</th></tr></thead>
+    <tbody>
+      <tr><td>Камера</td><td>Маленькая матрица телефона, шумит в тёмных комнатах</td><td>Полнокадровые Sony A7 V и ZV-E1: чистая картинка и вечером, и в санузле без окон</td></tr>
+      <tr><td>Оптика</td><td>Широкий модуль 0,5× заваливает стены и искажает людей у краёв</td><td>Sony 16-35 GM II держит ровные вертикали в тесных комнатах, Sigma 35 f/1.4 даёт размытый фон на интервью</td></tr>
+      <tr><td>Движение</td><td>С рук, шаги ведущего видны в кадре</td><td>Стабилизатор DJI RS 4 Pro: плавные проходы, как в дорогих обзорах недвижимости</td></tr>
+      <tr><td>Свет и цвет</td><td>Экспозиция и баланс белого скачут от комнаты к комнате</td><td>Ручные настройки, 4K 10-bit, свет на интервью, единый цвет в DaVinci Resolve</td></tr>
+      <tr><td>Детали</td><td>Предметы снимаются мимоходом</td><td>Макро, слайды и замедления на мозаике, граммофоне и лепнине</td></tr>
+      <tr><td>Монтаж</td><td>Исходник почти целиком, 1–1,8 часа</td><td>Выпуск до часа с интро, главами, графикой, музыкой и звуковым дизайном</td></tr>
+    </tbody></table></div>
+
+  <div class="gh"><span class="n">07</span><h2>Стоимость пробного выпуска</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="tag">Съёмка и монтаж под ключ</span>
+      <h3>Первый выпуск — по пробной цене</h3>
+      <span class="sum">15&nbsp;000&nbsp;₽</span>
+      <p class="old">Это заметно ниже рынка. Хочу, чтобы вы увидели разницу на своём канале, а дальше обсудим постоянную работу.</p>
+      <p class="note">Оплата: 50% до съёмки, 50% после сдачи.</p>
+    </div>
+    <ul>
+      <li>Весь съёмочный день без ограничения по часам</li>
+      <li>Обзор квартиры: проходы на стабилизаторе, детали крупно, замедления</li>
+      <li>Интервью с владельцем в стиле «Вписки» и Дудя: постановка света, две камеры</li>
+      <li>Две полнокадровые камеры Sony, 4K 10-bit, светосильная оптика</li>
+      <li>Звук на радиомикрофоны, чистка голоса</li>
+      <li>Сведение камер и звука</li>
+      <li>Монтаж выпуска длиной до 1 часа, цветокоррекция</li>
+      <li>Интро, аутро и заставки в стилистике канала</li>
+      <li>Моушн-графика и плашки: имена, факты о квартире, цены, главы</li>
+      <li>Звуковые эффекты и лицензионная музыка</li>
+      <li>Готовый файл 4K для YouTube</li>
+      <li>2 круга правок</li>
+    </ul>
+  </div>
+  <div class="photo"><div><b>Фотографии — без проблем</b><p>Беру на себя фото квартиры с обработкой: для обложки выпуска, постов и объявления о продаже. При необходимости сделаю полноценную фотосессию.</p></div></div>
+
+  <div class="gh"><span class="n">08</span><h2>Похожие работы</h2></div>
+  <p class="gl">Интервью, недвижимость и интерьеры с историей.</p>
+  <div class="works">
+    <article class="w"><div class="yt h" data-id="ifr2-iQ0owY"><img src="https://i.ytimg.com/vi/ifr2-iQ0owY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ifr2-iQ0owY/hqdefault.jpg'" alt="Сергей Минаев на канале Александра Соколовского" loading="lazy"></div>
+      <div class="tx"><span class="tag">Студия · интервью</span><b>Сергей Минаев на канале Александра Соколовского</b><p>Студийное интервью, снято на несколько камер и сведено воедино.</p><p class="cm">Моя роль: оператор.</p></div></article>
+    <article class="w"><div class="yt h" data-id="xjLZg2eoKOU"><img src="https://i.ytimg.com/vi/xjLZg2eoKOU/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/xjLZg2eoKOU/hqdefault.jpg'" alt="Ход строительства ЖК «Новатория»" loading="lazy"></div>
+      <div class="tx"><span class="tag">Недвижимость · застройщик</span><b>Ход строительства ЖК «Новатория»</b><p>Ролик для застройщика: облёты, рассказ начальника участка, графика в фирменном стиле.</p><p class="cm">Снял несколько выпусков, подписан контракт на съёмку нового комплекса.</p></div></article>
+    <article class="w"><div class="yt h" data-id="ck_jixFOSdY"><img src="https://i.ytimg.com/vi/ck_jixFOSdY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ck_jixFOSdY/hqdefault.jpg'" alt="Выставка «Иван Яковлевич Билибин»" loading="lazy"></div>
+      <div class="tx"><span class="tag">Музей · интерьер</span><b>Иван Яковлевич Билибин</b><p>Ролик о мультимедийной выставке для Музея обороны и блокады Ленинграда: детали, фактуры, свет.</p><p class="cm">Черновая версия монтажа.</p></div></article>
+  </div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Все работы</b><br><span>Шоу-рил, примеры, шортсы</span></div><i>Открыть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>Камеры, оптика, свет и звук</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="gh"><span class="n">09</span><h2>Как работаем</h2></div>
+  <div class="steps">
+    <div><b>До пятницы</b>Созвон: адрес, время, вопросы для интервью, пожелания по стилю</div>
+    <div><b>Пятница</b>Съёмочный день: обзор, детали, интервью</div>
+    <div><b>7–10 дней</b>Монтаж, цвет, графика, музыка и звук</div>
+    <div><b>До 2 кругов</b>Правки и готовый файл для YouTube</div>
+  </div>
+  <div class="box prep" style="margin-top:16px"><span class="tag">Что понадобится от вас</span><ul>
+    <li>Адрес и время, согласие хозяйки на свет и небольшую перестановку на время интервью (около часа на установку)</li>
+    <li>Логотип и шрифты канала, если есть. Если нет, соберу стиль по вашим обложкам</li>
+    <li>Темы и вопросы, которые точно нужно задать, и что нельзя показывать в квартире</li>
+    <li>Фото квартиры до ремонта, если сохранились: сделаем «было → стало»</li>
+  </ul></div>
+
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+</div>
+
+<script>
+// видео грузится только по клику: страница остаётся лёгкой
+document.querySelectorAll('.yt').forEach(d=>{d.addEventListener('click',()=>{if(d.classList.contains('on'))return;d.classList.add('on');d.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${d.dataset.id}?autoplay=1&rel=0" title="Видео YouTube" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;});});
+</script>
+</body></html>
