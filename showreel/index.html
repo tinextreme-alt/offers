@@ -35,6 +35,14 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .intro video{width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;display:block}.intro p{margin:6px 0 0;color:var(--muted);font-size:14px}
 .frames{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.frames img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;display:block}
 .w .fn{font-size:12.5px}
+.ph{border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:12px}.phh p{margin:4px 0 0;color:var(--muted);font-size:14px}
+/* фото в рамке: светлое паспарту, как отпечаток */
+.pics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pics figure{margin:0;background:#EDEBE4;padding:7px 7px 22px;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.45);transition:transform .25s}
+.pics figure:nth-child(odd){transform:rotate(-1.2deg)}.pics figure:nth-child(even){transform:rotate(1deg)}.pics figure:hover{transform:rotate(0) scale(1.04)}
+.pics img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}
+.photo{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;margin-top:10px}
+.photo b{font:500 15px var(--display);display:block;margin-bottom:4px}.photo p{margin:0;color:var(--muted);font-size:14px}
 .sc{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.sc div{border:1px solid var(--line);border-radius:12px;padding:15px 18px}
 .sc b{font:500 13.5px/1.3 var(--display);display:block;margin-bottom:6px}.sc p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.42}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:4px}
@@ -42,7 +50,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .kitlink b{font:500 16px var(--display)}.kitlink span{color:var(--muted);font-size:14px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:11px 18px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.12)}
 .btn{display:inline-block;margin-top:20px;background:var(--ac);color:#14151B;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;font-size:14px;transition:filter .2s}.btn:hover{filter:brightness(1.12)}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:40px}.foot a{color:var(--ac);text-decoration:none}
-@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro{grid-template-columns:1fr}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro{grid-template-columns:1fr}.pics{grid-template-columns:repeat(3,1fr)}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
 </style></head><body>
 
 <header class="hero"><img src="img/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"><div class="in">
@@ -70,6 +78,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
     <div><b>Цвет и графика</b><p>Цветокоррекция в DaVinci Resolve, титры и плашки в стиле заказчика.</p></div>
     <div><b>Звук</b><p>Чистка голоса, лицензионная музыка, саунд-дизайн, громкость под площадку.</p></div>
   </div>
+  <div class="photo"><div><b>Фотографии — без проблем</b><p>Беру на себя фото с обработкой по тематике съёмки: для использования в видео и для ваших задач. При необходимости сделаю полноценную фотосессию.</p></div></div>
 
   <div class="gh"><h2>Как работаем</h2></div>
   <div class="steps">
@@ -93,9 +102,9 @@ const WORKS = [
   {id:'ck_jixFOSdY', tag:'Музей · выставка', title:'Иван Яковлевич Билибин', about:'Ролик о мультимедийной выставке, посвящённой творчеству Ивана Билибина, для Государственного мемориального музея обороны и блокады Ленинграда.', note:'Черновая версия монтажа.'},
   {id:'D200MIp57PU', tag:'Спорт · мероприятие', title:'Low Kick Championship, Event #1', about:'Турнир по кикбоксингу: десять боёв формата «до отказа». Снимал весь турнир, сам монтировал, красил и делал графику. Зал с контровым светом, теснота и никаких вторых дублей.', note:'',
    wide:true, intro:{src:'img/lkc-intro.mp4', poster:'img/lkc-poster-v2.jpg', title:'Интро турнира', text:'Открывающая заставка: замедления, свет зала и графика турнира.'},
-   frames:[['img/lkc-faceoff.jpg','Бойцы и судья перед боем'],['img/lkc-kick.jpg','Удар в движении'],['img/lkc-red.jpg','Награждение в красном свете']], framesNote:'Кадры из готового проекта, сданного заказчику.'},
-  {id:'xjLZg2eoKOU', tag:'Стройка · застройщик', title:'Ход строительства ЖК «Новатория»', about:'Отчётный ролик для застройщика об этапах работ: облёты объекта, рассказ начальника участка, проценты готовности по каждому виду работ в фирменном стиле сайта ЖК.', note:'Серия: снял несколько таких выпусков по ходу стройки.'},
-  {id:'ifr2-iQ0owY', tag:'Студия · интервью', title:'Сергей Минаев на канале Александра Соколовского', about:'Студийное интервью, снятое на несколько камер и сведённое мультикамом.', note:'Моя роль: оператор.'},
+   photos:['img/lkc-p1.jpg','img/lkc-p2.jpg','img/lkc-p3.jpg','img/lkc-p4.jpg','img/lkc-p5.jpg'], photosTitle:'Портреты бойцов', photosNote:'Снимал и обрабатывал на турнире вместе с видео.'},
+  {id:'xjLZg2eoKOU', tag:'Стройка · застройщик', title:'Ход строительства ЖК «Новатория»', about:'Отчётный ролик для застройщика об этапах работ: облёты объекта, рассказ начальника участка, проценты готовности по каждому виду работ в фирменном стиле сайта ЖК.', note:'Снял несколько таких выпусков по ходу стройки. Подписан контракт на съёмку нового комплекса.'},
+  {id:'ifr2-iQ0owY', tag:'Студия · интервью', title:'Сергей Минаев на канале Александра Соколовского', about:'Студийное интервью, снято на несколько камер и сведено воедино.', note:'Моя роль: оператор.'},
   // {id:'', tag:'Стройка', title:'', about:'', note:''},
 ];
 // =====================================================================================
@@ -118,6 +127,7 @@ const box=document.getElementById('works');
     c.classList.add('wide');
     const x=document.createElement('div');x.className='ex';
     if(w.intro)x.innerHTML+=`<div class="intro"><video src="${w.intro.src}" poster="${w.intro.poster}" controls playsinline preload="none"></video><div><span class="tag">${w.intro.title}</span><p>${w.intro.text}</p></div></div>`;
+    if(w.photos)x.innerHTML+=`<div class="ph"><div class="phh"><span class="tag">${w.photosTitle}</span><p>${w.photosNote}</p></div><div class="pics">${w.photos.map(p=>`<figure><img src="${p}" alt="Портрет бойца Low Kick Championship" loading="lazy"></figure>`).join('')}</div></div>`;
     if(w.frames)x.innerHTML+=`<div class="frames">${w.frames.map(f=>`<img src="${f[0]}" alt="${f[1]}" loading="lazy">`).join('')}</div>${w.framesNote?`<p class="fn">${w.framesNote}</p>`:''}`;
     c.append(x);
   }
