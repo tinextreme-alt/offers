@@ -41,8 +41,17 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .ph{border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:12px}.phh p{margin:4px 0 0;color:var(--muted);font-size:14px}
 /* фото в рамке: светлое паспарту, как отпечаток */
 .pics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.pics figure{margin:0;background:#EDEBE4;padding:7px 7px 22px;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.45);transition:transform .25s}
-.pics figure:nth-child(odd){transform:rotate(-1.2deg)}.pics figure:nth-child(even){transform:rotate(1deg)}.pics figure:hover{transform:rotate(0) scale(1.04)}
+.pics figure{margin:0;background:#EDEBE4;padding:7px 7px 22px;border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;cursor:zoom-in;position:relative}
+.pics figure:nth-child(odd){transform:rotate(-1.2deg)}.pics figure:nth-child(even){transform:rotate(1deg)}
+.pics figure:hover,.pics figure:focus-visible{transform:rotate(0) scale(1.18);z-index:2;box-shadow:0 24px 50px rgba(0,0,0,.7);outline:0}
+/* просмотр в высоком разрешении */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(6,7,10,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;cursor:zoom-out}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:92vw;max-height:92vh;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.8);transform:scale(.96);transition:transform .3s}.lb.on img{transform:scale(1)}
+.lb button{position:absolute;background:rgba(20,21,27,.8);color:var(--fg);border:1px solid var(--line);width:48px;height:48px;border-radius:50%;font:400 22px/1 var(--body);cursor:pointer}
+.lb button:hover{border-color:var(--ac);color:var(--ac)}
+.lb .x{top:20px;right:20px}.lb .pv{left:20px;top:50%;margin-top:-24px}.lb .nx{right:20px;top:50%;margin-top:-24px}
+.lb .cnt{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:var(--muted);font-size:13px}
 .pics img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}
 .photo{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;margin-top:10px}
 .photo b{font:500 15px var(--display);display:block;margin-bottom:4px}.photo p{margin:0;color:var(--muted);font-size:14px}
@@ -141,7 +150,7 @@ const box=document.getElementById('works');
     c.classList.add('wide');
     const x=document.createElement('div');x.className='ex';
     if(w.intro)x.innerHTML+=`<div class="intro"><video src="${w.intro.src}" poster="${w.intro.poster}" controls playsinline preload="none"></video><div><span class="tag">${w.intro.title}</span><p>${w.intro.text}</p></div></div>`;
-    if(w.photos)x.innerHTML+=`<div class="ph"><div class="phh"><span class="tag">${w.photosTitle}</span><p>${w.photosNote}</p></div><div class="pics">${w.photos.map(p=>`<figure><img src="${p}" alt="Портрет бойца Low Kick Championship" loading="lazy"></figure>`).join('')}</div></div>`;
+    if(w.photos)x.innerHTML+=`<div class="ph"><div class="phh"><span class="tag">${w.photosTitle}</span><p>${w.photosNote}</p></div><div class="pics">${w.photos.map((p,i)=>`<figure data-hd="${p.replace('.jpg','-hd.jpg')}" data-i="${i}" tabindex="0" role="button" aria-label="Открыть фото в высоком разрешении"><img src="${p}" alt="Портрет бойца Low Kick Championship" loading="lazy"></figure>`).join('')}</div></div>`;
     if(w.frames)x.innerHTML+=`<div class="frames">${w.frames.map(f=>`<img src="${f[0]}" alt="${f[1]}" loading="lazy">`).join('')}</div>${w.framesNote?`<p class="fn">${w.framesNote}</p>`:''}`;
     c.append(x);
   }
@@ -158,6 +167,23 @@ if(SHORTS.length){
     c.append(t);sb.append(c);
   });
 }
+// просмотр портретов: клик — большое фото, стрелки листают, Esc или клик по фону закрывает
+(function(){
+  const figs=[...document.querySelectorAll('.pics figure')];if(!figs.length)return;
+  const lb=document.createElement('div');lb.className='lb';
+  lb.innerHTML='<img alt="Портрет бойца в высоком разрешении"><button class="x" aria-label="Закрыть">×</button><button class="pv" aria-label="Предыдущее">‹</button><button class="nx" aria-label="Следующее">›</button><div class="cnt"></div>';
+  document.body.append(lb);
+  const im=lb.querySelector('img'),cnt=lb.querySelector('.cnt');let cur=0;
+  const show=i=>{cur=(i+figs.length)%figs.length;im.src=figs[cur].dataset.hd;cnt.textContent=(cur+1)+' / '+figs.length;};
+  const open=i=>{show(i);lb.classList.add('on');};
+  const close=()=>lb.classList.remove('on');
+  figs.forEach((f,i)=>{f.onclick=()=>open(i);f.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i);}};});
+  lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))close();};
+  lb.querySelector('.pv').onclick=e=>{e.stopPropagation();show(cur-1);};
+  lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(cur+1);};
+  im.onclick=e=>{e.stopPropagation();show(cur+1);};
+  addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
+})();
 document.getElementById('topics').innerHTML=[...new Set([...WORKS,...SHORTS].map(w=>w.tag))].map(s=>`<span>${s}</span>`).join('');
 </script>
 </body></html>
