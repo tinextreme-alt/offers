@@ -1,0 +1,200 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение для Юлии · ролик агентства недвижимости</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap"><style>
+/* Каркас как у шоу-рила и прошлых офферов; палитра: латунь (главный акцент) и мятный (второй) */
+:root{--bg:#0B0C10;--card:#14151B;--line:#262832;--fg:#F2F1EC;--muted:#9A9DAB;--soft:#CFD0D6;--ac:#E0A85E;--ac-soft:#261D12;--ac2:#7CC4AE;--ac2-soft:#11231F;--display:'Unbounded',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.55 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.hero{display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);gap:32px;align-items:center;max-width:1040px;margin:0 auto;padding:44px 28px 14px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.hero .in{order:-1}
+.kick{font:500 11px var(--display);letter-spacing:.18em;color:var(--ac2);text-transform:uppercase;margin-bottom:18px}
+h1{font:700 clamp(28px,3.7vw,40px)/1.1 var(--display);margin:0 0 18px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 22px/1.2 var(--display);margin:0;text-wrap:balance}
+h3{font:500 16px/1.3 var(--display);margin:0}
+p{margin:0}
+.lead{max-width:500px;color:var(--soft);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{font-size:12.5px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--soft)}
+.who{margin-top:20px;font-size:14px;color:var(--soft)}.who b{color:#fff;font-weight:600}.who a{color:var(--ac);text-decoration:none;white-space:nowrap}
+.gh{display:flex;gap:14px;align-items:baseline;margin:44px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.gh .n{font:500 11px var(--display);color:var(--ac2);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 16px;font-size:14.5px;max-width:780px}
+.tag{font:500 10.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ac2)}
+.box{background:var(--card);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;color:var(--soft);font-size:14px}
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.insight{background:var(--card);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.insight b{font:500 14.5px/1.3 var(--display)}.insight p{color:var(--muted);font-size:13.5px;line-height:1.45}
+/* опыт */
+.exp{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}
+.yt{position:relative;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;cursor:pointer}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.88;transition:opacity .2s}.yt:hover img{opacity:1}
+.yt::after{content:"";position:absolute;left:50%;top:50%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/28px no-repeat}
+.yt.on::after{display:none}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fn{font-size:12.5px;color:var(--muted);margin-top:10px}
+.facts{display:flex;flex-direction:column;gap:10px}
+.fact{background:var(--card);border-left:3px solid var(--ac);border-radius:10px;padding:14px 16px}
+.fact b{font:500 14px/1.3 var(--display);display:block;margin-bottom:4px}.fact p{color:var(--muted);font-size:13.5px;line-height:1.45}
+/* форматы */
+.fmts{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr) minmax(0,1.3fr);gap:16px;align-items:end}
+.frm{border:2px solid var(--line);border-radius:12px;background:linear-gradient(160deg,#1E2029,#101116);display:flex;align-items:flex-end;padding:12px;position:relative;overflow:hidden}
+.frm.h{aspect-ratio:16/9}.frm.v{aspect-ratio:9/16}
+.frm::before{content:"";position:absolute;left:50%;top:22%;width:38%;max-width:120px;aspect-ratio:1/1.3;transform:translateX(-50%);border-radius:50% 50% 12px 12px;background:#2A2C36}
+.frm.v::before{width:62%}
+.frm span{position:relative;font:500 11px var(--display);letter-spacing:.12em;color:var(--ac);background:rgba(11,12,16,.75);padding:5px 8px;border-radius:5px}
+.frm i{position:absolute;right:10px;top:10px;font:400 11px var(--body);font-style:normal;color:var(--muted)}
+.fmts .box{align-self:stretch}
+/* раскадровка */
+.board{background:var(--card);border-radius:14px;overflow:hidden}
+.board header{padding:18px 20px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+.shot{display:grid;grid-template-columns:84px 1fr;gap:16px;padding:14px 20px;border-bottom:1px dashed var(--line);align-items:start}
+.shot:last-of-type{border-bottom:0}
+.tc{font:500 12.5px/1.5 var(--display);color:var(--ac);font-variant-numeric:tabular-nums}
+.shot b{font-weight:600}.shot p{color:var(--soft);font-size:14px}.shot .vo{color:var(--ac2);font-size:13.5px;margin-top:4px}.shot .snd{color:var(--muted);font-size:13px;margin-top:2px}
+.shot .hook{display:inline-block;font:500 10px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#14151B;background:var(--ac);padding:3px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.why{padding:14px 20px;background:var(--ac-soft);font-size:14px;color:var(--soft)}.why b{color:var(--fg)}
+/* цена */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:28px;background:var(--ac-soft);border:2px solid var(--ac);border-radius:16px;padding:26px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}.offer .tag{color:var(--ac)}
+.sum{font:700 46px/1 var(--display);font-variant-numeric:tabular-nums}
+.old{font-size:14px;color:var(--soft)}
+.offer ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.note{font-size:13px;color:var(--muted)}
+.date{display:flex;gap:16px;align-items:center;background:var(--ac2-soft);border:1px solid #24453C;border-radius:12px;padding:16px 20px;margin-top:12px}
+.date svg{flex:none}.date b{font:500 15px var(--display);display:block;margin-bottom:4px}.date p{color:var(--soft);font-size:14px}
+.photo{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac2);border-radius:12px;padding:18px 22px;margin-top:12px}
+.photo b{font:500 15px var(--display);display:block;margin-bottom:4px}.photo p{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac2);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac2);margin-bottom:4px}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:500 15px var(--display)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.12)}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac);text-decoration:none}.foot b{color:#fff}
+@media(max-width:860px){.insights{grid-template-columns:1fr 1fr}.fmts{grid-template-columns:1.6fr .7fr}.fmts .box{grid-column:1/-1}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}
+  .exp,.offer,.links,.insights{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}
+  h2{font-size:18px}.sum{font-size:38px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}
+  .shot{grid-template-columns:64px 1fr;padding:12px 16px}.board header,.why{padding-left:16px;padding-right:16px}}
+</style></head><body>
+
+<header class="hero"><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"><div class="in">
+  <div class="kick">Предложение для Юлии</div>
+  <h1>Ролик о вашем агентстве: живой офис и живые люди за 30 секунд</h1>
+  <p class="lead">Снимаю офис и команду в Петербурге на профессиональную камеру и собираю динамичный клиповый ролик под закадровую начитку: красивая картинка, переходы на движении и аккуратная моушн-графика, которая подхватывает текст.</p>
+  <div class="chips"><span>20–30 секунд</span><span>клиповый монтаж</span><span>Sony A7 V · 4K 10-bit</span><span>моушн-графика</span><span>горизонталь 16:9 + вертикаль 9:16</span><span>под ключ</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+</div></header>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Я в теме недвижимости</h2></div>
+  <p class="gl">Плотно работаю с застройщиками: снимаю объекты, облёты, людей на площадке и собираю отчётные ролики в фирменном стиле. Знаю, как показать недвижимость так, чтобы ей доверяли, и как говорит с клиентом рынок.</p>
+  <div class="exp">
+    <div><div class="yt" data-id="xjLZg2eoKOU"><img src="https://i.ytimg.com/vi/xjLZg2eoKOU/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/xjLZg2eoKOU/hqdefault.jpg'" alt="Ролик «Ход строительства ЖК Новатория»" loading="lazy"></div>
+      <p class="fn">Ход строительства ЖК «Новатория» — ролик для застройщика, графика в стиле сайта ЖК.</p></div>
+    <div class="facts">
+      <div class="fact"><b>Серия роликов для застройщика</b><p>Несколько выпусков по ходу стройки: облёты, рассказ начальника участка, проценты готовности в фирменном стиле.</p></div>
+      <div class="fact"><b>Подписан новый контракт</b><p>Застройщик продолжает работу со мной: впереди съёмка нового жилого комплекса.</p></div>
+      <div class="fact"><b>Интерьеры и люди</b><p>Снимаю квартиры, офисы и интервью: ровные стены без завалов, естественные лица, единый цвет.</p></div>
+    </div>
+  </div>
+
+  <div class="gh"><span class="n">02</span><h2>Каким будет ролик</h2></div>
+  <p class="gl">Главная цель — показать, что агентство живое: здесь работают настоящие люди, общаются с клиентами, улыбаются, держат ключи от новых квартир. Графики ровно столько, чтобы подчеркнуть начитку, но не спорить с людьми в кадре.</p>
+  <div class="insights">
+    <div class="insight"><b>Клиповый ритм</b><p>Короткие планы по 1–2 секунды, склейки в бит музыки. За 30 секунд зритель видит весь офис и всю команду.</p></div>
+    <div class="insight"><b>Переходы на движении</b><p>Открытая дверь, взмах руки, пролёт камеры: склейка прячется в движении, и ролик идёт на одном дыхании.</p></div>
+    <div class="insight"><b>Живые люди</b><p>Не постановочные «улыбки в камеру», а работа: встреча с клиентом, звонок, рукопожатие, обсуждение у планировки.</p></div>
+    <div class="insight"><b>Минимальная графика</b><p>Ключевые слова и цифры из начитки, логотип и контакты. Чисто, в цветах агентства, без «всплывашек».</p></div>
+    <div class="insight"><b>Красивая картинка</b><p>Полнокадровая камера, стабилизатор, мягкий размытый фон и единая цветокоррекция. Офис выглядит дорого.</p></div>
+    <div class="insight"><b>Звук</b><p>Чистая начитка, лицензионная музыка и звуковые акценты на переходах и графике.</p></div>
+  </div>
+
+  <div class="gh"><span class="n">03</span><h2>Раскадровка: 30 секунд</h2></div>
+  <p class="gl">Отправная точка. Текст начитки и акценты согласуем до съёмки, под него и выстрою план кадров.</p>
+  <article class="board">
+    <header><h3>«Живой офис»</h3>
+      <div class="meta"><span>0:00–0:30</span><span>стабилизатор · слоу-мо · переходы</span><span>начитка + музыка в ритм</span></div></header>
+    <div class="shot"><span class="tc">0:00</span><div><p><span class="hook">крючок</span><b>Ключи в руке крупно, в замедлении.</b> Рука передаёт связку ключей, на звуке ключей стартует музыка.</p><p class="vo">Начитка: «Новая квартира начинается с людей, которым вы доверяете».</p></div></div>
+    <div class="shot"><span class="tc">0:03</span><div><p><b>Вход в офис одним проходом.</b> Стабилизатор, дверь открывается, камера входит в зал. Переход на движении двери.</p><p class="snd">Графика: логотип агентства проявляется на стекле или стене.</p></div></div>
+    <div class="shot"><span class="tc">0:07</span><div><p><b>Команда в работе, шесть кадров в бит.</b> Звонок, ноутбук, планировка на столе, кофе, смех коллег, обсуждение у экрана.</p><p class="vo">Начитка: «Наша команда каждый день…»</p></div></div>
+    <div class="shot"><span class="tc">0:13</span><div><p><b>Встреча с клиентом.</b> Агент показывает варианты, клиент кивает. Крупно лица и руки, фон мягко размыт.</p><p class="snd">Графика: одна-две цифры из начитки (лет на рынке, сделок), аккуратно рядом с людьми.</p></div></div>
+    <div class="shot"><span class="tc">0:19</span><div><p><b>Рукопожатие в замедлении.</b> Главная эмоция ролика: сделка, доверие.</p></div></div>
+    <div class="shot"><span class="tc">0:22</span><div><p><b>Общий план команды.</b> Все вместе в офисе, камера плавно отъезжает.</p><p class="vo">Начитка: «Агентство … Мы рядом на каждом шаге».</p></div></div>
+    <div class="shot"><span class="tc">0:26</span><div><p><b>Финальный титр.</b> Логотип, телефон, сайт или адрес офиса в Петербурге.</p><p class="snd">Звук: мягкий акцент на логотипе, музыка заканчивается вместе с роликом.</p></div></div>
+    <p class="why"><b>Почему сработает:</b> первые секунды цепляют деталью (ключи), дальше ритм не даёт отвлечься, а в центре ролика — люди и доверие. Зритель запоминает не офис, а команду, к которой хочется прийти.</p>
+  </article>
+
+  <div class="gh"><span class="n">04</span><h2>Два формата из одной съёмки</h2></div>
+  <p class="gl">Сразу снимаю с расчётом и на горизонталь, и на вертикаль, поэтому вертикальная версия — не обрезка, а полноценный ролик.</p>
+  <div class="fmts">
+    <div class="frm h"><span>16:9</span><i>сайт · YouTube · презентации</i></div>
+    <div class="frm v"><span>9:16</span><i>Reels · Shorts</i></div>
+    <div class="box"><span class="tag">Как делаю</span><ul>
+      <li>Снимаю в 4K и строю кадр так, чтобы главное помещалось в обе рамки</li>
+      <li>Ключевые моменты дополнительно снимаю вертикально</li>
+      <li>Графику и титры раскладываю отдельно под каждый формат, ничего не уходит под кнопки соцсетей</li>
+    </ul></div>
+  </div>
+
+  <div class="gh"><span class="n">05</span><h2>Стоимость</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="tag">Съёмка и монтаж под ключ</span>
+      <h3>Презентационный ролик агентства, два формата</h3>
+      <span class="sum">8&nbsp;000&nbsp;₽</span>
+      <p class="old">Одна цена за всё: съёмку, монтаж, графику, звук и обе версии ролика.</p>
+      <p class="note">Оплата: 50% до съёмки, 50% после сдачи.</p>
+    </div>
+    <ul>
+      <li>Съёмка офиса и команды в Санкт-Петербурге</li>
+      <li>Профессиональная полнокадровая камера Sony A7 V, 4K 10-bit</li>
+      <li>Стабилизатор: плавные проходы по офису</li>
+      <li>Клиповый динамичный монтаж 20–30 секунд</li>
+      <li>Переходы на движении и замедления</li>
+      <li>Моушн-графика под начитку: ключевые слова, цифры, логотип, контакты</li>
+      <li>Сведение закадровой начитки, чистка голоса</li>
+      <li>Лицензионная музыка и звуковые акценты</li>
+      <li>Цветокоррекция</li>
+      <li>Две версии: горизонтальная 16:9 и вертикальная 9:16</li>
+      <li>2 круга правок</li>
+    </ul>
+  </div>
+  <div class="date">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7CC4AE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15l2 2 4-4"/></svg>
+    <div><b>Дату съёмки согласуем заранее</b><p>Чтобы в офисе была вся команда, а сотрудники и клиенты были готовы к камере. Предлагаю зафиксировать день и время за несколько дней до съёмки.</p></div>
+  </div>
+  <div class="photo"><div><b>Фотографии — без проблем</b><p>Беру на себя фото офиса и команды с обработкой: для сайта, соцсетей и карточек агентов. При необходимости сделаю полноценную фотосессию.</p></div></div>
+
+  <div class="gh"><span class="n">06</span><h2>Что понадобится от вас</h2></div>
+  <div class="box"><ul>
+    <li>Дата и время съёмки, согласованные заранее, и адрес офиса</li>
+    <li>Сотрудники в офисе в день съёмки; если в кадре будут клиенты — их согласие на съёмку</li>
+    <li>Текст начитки или тезисы — помогу довести текст под 20–30 секунд</li>
+    <li>Голос для начитки: сотрудник агентства или диктор, решим вместе</li>
+    <li>Логотип, фирменные цвета и шрифт, контакты для финального титра</li>
+    <li>Чистый офис без документов и личных данных клиентов на столах и экранах</li>
+  </ul></div>
+
+  <div class="gh"><span class="n">07</span><h2>Как работаем</h2></div>
+  <div class="steps">
+    <div><b>Заранее</b>Созвон: текст начитки, план кадров, дата и время</div>
+    <div><b>День съёмки</b>Офис, команда, встречи, детали</div>
+    <div><b>3–5 дней</b>Монтаж, графика, цвет, музыка и звук</div>
+    <div><b>До 2 кругов</b>Правки и готовые файлы 16:9 и 9:16</div>
+  </div>
+
+  <div class="gh"><span class="n">08</span><h2>Мои работы и техника</h2></div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Шоу-рил и примеры работ</b><br><span>Застройщик, выставки, спорт, интервью, шортсы</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование видеографа</b><br><span>Камеры, оптика, свет, звук, стабилизатор</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+</div>
+
+<script>
+// видео грузится только по клику: страница остаётся лёгкой
+document.querySelectorAll('.yt').forEach(d=>{d.addEventListener('click',()=>{if(d.classList.contains('on'))return;d.classList.add('on');d.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${d.dataset.id}?autoplay=1&rel=0" title="Видео YouTube" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;});});
+</script>
+</body></html>
