@@ -35,6 +35,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .w .lnk{font-size:12.5px;color:var(--muted);text-decoration:none;margin-top:4px}.w .lnk:hover{color:var(--ac)}
 .frames{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.frames img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block}
 .sc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.sc div{border:1px solid var(--line);border-radius:12px;padding:15px 18px}
+.sc div:first-child,.sc div:last-child{grid-column:span 2}
 .sc b{font:500 13.5px/1.3 var(--display);display:block;margin-bottom:6px}.sc p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.42}
 .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.ex span{background:var(--card);border-radius:10px;padding:12px 14px;font-size:13.5px;color:#CFD0D6}.ex span i{font-style:normal;color:var(--ac);font-weight:600;margin-right:6px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:4px}
@@ -45,8 +46,8 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .kitlink{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;text-decoration:none}
 .kitlink b{font:500 15px var(--display)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:44px}.foot a{color:var(--ac);text-decoration:none}
-@media(max-width:900px){.sc,.ex{grid-template-columns:1fr 1fr}.more{grid-template-columns:1fr}}
-@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.hero img{aspect-ratio:4/4.4}.reels.n2{grid-template-columns:1fr 1fr}.sc,.ex{grid-template-columns:1fr}.frames{grid-template-columns:repeat(3,1fr)}.frames img:nth-child(n+4){display:none}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+@media(max-width:900px){.sc,.ex{grid-template-columns:1fr 1fr}.sc div:last-child{grid-column:auto}.more{grid-template-columns:1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.hero img{aspect-ratio:4/4.4}.reels.n2{grid-template-columns:1fr 1fr}.sc,.ex{grid-template-columns:1fr}.sc div:first-child,.sc div:last-child{grid-column:auto}.frames{grid-template-columns:repeat(3,1fr)}.frames img:nth-child(n+4){display:none}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
 </style></head><body>
 
 <header class="hero"><img src="img/hero.jpg" alt="Сергей Николаевич Шаповалов в операционной, в бинокулярной оптике"><div class="in">
@@ -86,6 +87,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
     <div><b>Съёмка в операционной</b><p>Подготовка бригады, работа в оптике, инструменты. Без постановки и без помех для операции.</p></div>
     <div><b>Замедления</b><p>Снято в 4K, 50 кадров в секунду: движения плавные, без рывков.</p></div>
     <div><b>Монтаж под музыку</b><p>Склейки в такт треку, спокойный кинематографичный ритм. Музыка лицензионная.</p></div>
+    <div><b>Переходы</b><p>Аккуратные переходы между кадрами: мягкие, без резких скачков, точно в ритм музыки.</p></div>
     <div><b>Цвет</b><p>Единый стиль на всю серию, ровный баланс белого и естественная кожа.</p></div>
     <div><b>Графика</b><p>Плашка с ФИО, субтитры, QR-код с переходом на сайт doctor-shapovalov.ru.</p></div>
     <div><b>Деликатность</b><p>Интимные зоны аккуратно размыты в каждом кадре.</p></div>
@@ -115,7 +117,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 // ver — пометка версии на обложке. Пока link пустой — карточка с пометкой «скоро».
 const REELS = [
   {link:'https://www.youtube.com/shorts/DeftgE3lcsY', ver:'Версия 1', poster:'img/p-or.jpg', tag:'Шоурил', title:'Работа в операционной', about:'Подготовка бригады, работа в оптике, инструменты. В финале QR-код на сайт.'},
-  {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', ver:'Версия 1', poster:'img/p-who.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
+  {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', ver:'Версия 1', poster:'img/p-who2.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
 ];
 // =====================================================================================
 const esc=s=>(s||'').replace(/"/g,'&quot;');
