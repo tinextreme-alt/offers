@@ -1,0 +1,149 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Проект рилсов · Шаповалов Сергей Николаевич</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;600&display=swap"><style>
+/* Каркас — как у офферов и страницы оборудования; акцент — розовый из графики рилсов */
+:root{--bg:#0B0C10;--card:#14151B;--line:#262832;--fg:#F2F1EC;--muted:#9A9DAB;--ac:#FF8FB1;--display:'Unbounded',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.5 var(--body)}a{color:inherit}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.hero{display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);gap:40px;align-items:center;max-width:1040px;margin:0 auto;padding:44px 28px 14px}
+.hero img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.hero .in{order:-1}
+.kick{font:500 11px var(--display);letter-spacing:.18em;color:var(--ac);text-transform:uppercase;margin-bottom:18px}
+h1{font:700 clamp(28px,3.6vw,40px)/1.1 var(--display);margin:0 0 18px;letter-spacing:-.015em}
+h1 span{color:var(--ac)}
+.lead{max-width:540px;color:#CFD0D6;font-size:16px;margin:0}
+.draft{display:flex;gap:12px;align-items:flex-start;margin-top:20px;max-width:540px;border:1px dashed var(--ac);border-radius:12px;padding:13px 16px;font-size:14px;color:#CFD0D6}
+.draft b{color:var(--ac);font:500 11px var(--display);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding-top:2px}
+.who{margin-top:20px;font-size:14px;color:#CFD0D6}.who b{color:#fff;font-weight:600}.who a{color:var(--ac);text-decoration:none;white-space:nowrap}
+.btn{display:inline-block;margin-top:20px;background:var(--ac);color:#14151B;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;font-size:14px;transition:filter .2s}.btn:hover{filter:brightness(1.08)}
+h2{font:700 22px/1.2 var(--display);margin:0}
+.gh{display:flex;gap:14px;align-items:baseline;margin:44px 0 4px;padding-top:16px;border-top:1px solid var(--line)}
+.gl{color:var(--muted);margin:0 0 16px;font-size:14px;max-width:760px}
+/* плеер: грузится только по клику */
+.yt{position:relative;aspect-ratio:9/16;background:#000;overflow:hidden;cursor:pointer}
+.yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .2s}.yt:hover img{opacity:1}
+.yt::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/26px no-repeat}
+.yt.on::after,.yt.wait::after{display:none}.yt iframe,.yt video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.yt.wait{cursor:default}.yt.wait img{opacity:.55}
+.yt .soon{position:absolute;left:12px;right:12px;bottom:12px;font:500 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(11,12,16,.72);border:1px solid var(--line);border-radius:8px;padding:9px 10px;text-align:center}
+.ver{position:absolute;top:12px;left:12px;z-index:1;font:500 10px var(--display);letter-spacing:.12em;text-transform:uppercase;background:rgba(11,12,16,.75);color:var(--ac);border:1px solid rgba(255,143,177,.5);border-radius:6px;padding:6px 8px;pointer-events:none}
+.yt.on .ver{display:none}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.reels.n2{grid-template-columns:repeat(2,minmax(0,330px))}
+.w{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.w .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px}
+.tag{font:500 10.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+.w b{font:500 15px/1.3 var(--display)}.w p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.45}
+.w .lnk{font-size:12.5px;color:var(--muted);text-decoration:none;margin-top:4px}.w .lnk:hover{color:var(--ac)}
+.frames{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.frames img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block}
+.sc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.sc div{border:1px solid var(--line);border-radius:12px;padding:15px 18px}
+.sc b{font:500 13.5px/1.3 var(--display);display:block;margin-bottom:6px}.sc p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.42}
+.ex{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.ex span{background:var(--card);border-radius:10px;padding:12px 14px;font-size:13.5px;color:#CFD0D6}.ex span i{font-style:normal;color:var(--ac);font-weight:600;margin-right:6px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:4px}
+.photo{display:flex;gap:18px;align-items:center;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px}
+.photo b{font:500 15px var(--display);display:block;margin-bottom:4px}.photo p{margin:0;color:var(--muted);font-size:14px}
+/* плашка со ссылками: шоу-рил и оборудование отдельно */
+.more{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;text-decoration:none}
+.kitlink b{font:500 15px var(--display)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
+.foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:44px}.foot a{color:var(--ac);text-decoration:none}
+@media(max-width:900px){.sc,.ex{grid-template-columns:1fr 1fr}.more{grid-template-columns:1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.hero img{aspect-ratio:4/4.4}.reels.n2{grid-template-columns:1fr 1fr}.sc,.ex{grid-template-columns:1fr}.frames{grid-template-columns:repeat(3,1fr)}.frames img:nth-child(n+4){display:none}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+</style></head><body>
+
+<header class="hero"><img src="img/hero.jpg" alt="Сергей Николаевич Шаповалов в операционной, в бинокулярной оптике"><div class="in">
+  <div class="kick">Проект рилсов · рабочие версии</div>
+  <h1>Рилсы для <span>Сергея Николаевича Шаповалова</span></h1>
+  <p class="lead">Сергей Николаевич, здесь первые рилсы по нашей съёмке в клинике и операционной. Посмотрите, как они ощущаются, и напишите, что поменять.</p>
+  <div class="draft"><b>Проект</b><span>Это рабочие версии, а не финал. Кадры, музыку, надписи и длину можно поменять. После ваших правок пришлю готовые файлы для Instagram.</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+  <a class="btn" href="#reels">Смотреть рилсы ↓</a>
+</div></header>
+
+<div class="sheet">
+  <div class="gh" id="reels"><h2>Рилсы</h2></div>
+  <p class="gl">Нажмите на ролик, чтобы посмотреть. Остальные рилсы серии добавлю сюда по мере готовности.</p>
+  <div class="reels" id="reel-list"></div>
+
+  <div class="gh"><h2>Как дать правки</h2></div>
+  <p class="gl">Пишите как удобно, хоть голосовым. Проще всего указать секунду и что поменять, например:</p>
+  <div class="ex">
+    <span><i>0:12</i>этот кадр заменить</span>
+    <span><i>0:25</i>убрать надпись</span>
+    <span><i>Музыка</i>спокойнее</span>
+  </div>
+
+  <div class="gh"><h2>Кадры со съёмки</h2></div>
+  <p class="gl">Стоп-кадры из рилсов: цвет и свет в одном стиле для всей серии.</p>
+  <div class="frames">
+    <img src="img/f1.jpg" alt="Хирургические инструменты на стерильном столе, размытый фон" loading="lazy">
+    <img src="img/f2.jpg" alt="Операционная сестра готовит инструменты" loading="lazy">
+    <img src="img/f3.jpg" alt="Сергей Николаевич у стойки администратора клиники" loading="lazy">
+    <img src="img/f4.jpg" alt="Врачи клиники сквозь листья растения" loading="lazy">
+    <img src="img/f5.jpg" alt="Сергей Николаевич идёт по коридору клиники" loading="lazy">
+  </div>
+
+  <div class="gh"><h2>Что уже сделано</h2></div>
+  <div class="sc">
+    <div><b>Съёмка в операционной</b><p>Подготовка бригады, работа в оптике, инструменты. Без постановки и без помех для операции.</p></div>
+    <div><b>Замедления</b><p>Снято в 4K, 50 кадров в секунду: движения плавные, без рывков.</p></div>
+    <div><b>Монтаж под музыку</b><p>Склейки в такт треку, спокойный кинематографичный ритм. Музыка лицензионная.</p></div>
+    <div><b>Цвет</b><p>Единый стиль на всю серию, ровный баланс белого и естественная кожа.</p></div>
+    <div><b>Графика</b><p>Плашка с ФИО, субтитры, QR-код с переходом на сайт doctor-shapovalov.ru.</p></div>
+    <div><b>Деликатность</b><p>Пациентки неузнаваемы: лица и интимные зоны аккуратно размыты в каждом кадре.</p></div>
+  </div>
+
+  <div class="gh"><h2>Что дальше</h2></div>
+  <div class="steps">
+    <div><b>Шаг 1</b>Вы смотрите рабочие версии</div>
+    <div><b>Шаг 2</b>Присылаете правки</div>
+    <div><b>Шаг 3</b>Вношу правки и показываю ещё раз</div>
+    <div><b>Шаг 4</b>Готовые файлы для Instagram</div>
+  </div>
+  <div class="photo" style="margin-top:16px"><div><b>Фотографии — тоже могу</b><p>Фото врача и клиники с обработкой для сайта и соцсетей, при необходимости полноценная фотосессия.</p></div></div>
+
+  <div class="gh"><h2>Обо мне</h2></div>
+  <p class="gl">Другие мои работы и техника, на которую снимаю, — на отдельных страницах.</p>
+  <div class="more">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Шоу-рил и работы</b><br><span>Ролики для других заказчиков</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>Камеры, оптика, свет, звук</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="foot"><b style="color:#fff">Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
+</div>
+
+<script>
+// ===== Рилсы. link — ссылка на рилс: YouTube Shorts, Instagram (instagram.com/reel/…) или файл .mp4 рядом со страницей.
+// ver — пометка версии на обложке. Пока link пустой — карточка с пометкой «скоро».
+const REELS = [
+  {link:'https://www.youtube.com/shorts/DeftgE3lcsY', ver:'Версия 1', poster:'img/p-or.jpg', tag:'Шоурил', title:'Работа в операционной', about:'Подготовка бригады, работа в оптике, инструменты. В финале QR-код на сайт.'},
+  {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', ver:'Версия 1', poster:'img/p-who.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
+];
+// =====================================================================================
+const esc=s=>(s||'').replace(/"/g,'&quot;');
+function parse(link){
+  if(!link)return null;
+  let m=link.match(/instagram\.com\/(?:[\w.]+\/)?(?:reel|reels|p)\/([\w-]+)/);
+  if(m)return {embed:`https://www.instagram.com/reel/${m[1]}/embed/`,open:`https://www.instagram.com/reel/${m[1]}/`,site:'Instagram'};
+  m=link.match(/(?:youtu\.be\/|shorts\/|v=|embed\/)([\w-]{11})/);
+  if(m)return {embed:`https://www.youtube-nocookie.com/embed/${m[1]}?autoplay=1&rel=0`,open:`https://youtube.com/shorts/${m[1]}`,site:'YouTube',yt:m[1]};
+  return {video:link,open:link,site:''};
+}
+function player(src,r){
+  const d=document.createElement('div');d.className='yt';
+  const poster=r.poster||(src&&src.yt?`https://i.ytimg.com/vi/${src.yt}/oardefault.jpg`:'');
+  d.innerHTML=`<img src="${poster}" alt="${esc(r.title)}" loading="lazy">${r.ver?`<span class="ver">${r.ver}</span>`:''}`;
+  if(!src){d.classList.add('wait');d.insertAdjacentHTML('beforeend','<div class="soon">Скоро</div>');return d;}
+  d.onclick=()=>{d.classList.add('on');d.innerHTML=src.video
+    ?`<video src="${src.video}" controls autoplay playsinline></video>`
+    :`<iframe src="${src.embed}" title="${esc(r.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen scrolling="no"></iframe>`;};
+  return d;
+}
+const rl=document.getElementById('reel-list');if(REELS.length<3)rl.classList.add('n2');
+REELS.forEach(r=>{
+  const s=parse(r.link),c=document.createElement('article');c.className='w';
+  c.append(player(s,r));
+  const t=document.createElement('div');t.className='tx';
+  t.innerHTML=`<span class="tag">${r.tag}</span><b>${r.title}</b><p>${r.about}</p>${s&&s.site?`<a class="lnk" href="${s.open}" target="_blank" rel="noopener">Открыть в ${s.site} ↗</a>`:''}`;
+  c.append(t);rl.append(c);
+});
+</script>
+</body></html>
