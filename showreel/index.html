@@ -30,7 +30,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .w .cm{color:#CFD0D6;border-left:2px solid var(--ac);padding-left:10px;margin-top:4px}
 .w .lnk{font-size:12.5px;color:var(--muted);text-decoration:none;margin-top:4px}.w .lnk:hover{color:var(--ac)}
 .w.wide{grid-column:1/-1}
-.shorts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.shorts{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}.shorts>.w{flex:0 0 calc((100% - 54px)/4);min-width:0}
 .yt.v{aspect-ratio:9/16}.yt.v::after{width:52px;height:52px;margin:-26px 0 0 -26px;background-size:24px}
 .w.s b{font-size:14.5px}.w.s p{font-size:13px}
 .w .ex{padding:0 18px 18px;display:flex;flex-direction:column;gap:12px}
@@ -62,7 +62,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .kitlink b{font:500 16px var(--display)}.kitlink span{color:var(--muted);font-size:14px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:11px 18px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.12)}
 .btn{display:inline-block;margin-top:20px;background:var(--ac);color:#14151B;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;font-size:14px;transition:filter .2s}.btn:hover{filter:brightness(1.12)}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:40px}.foot a{color:var(--ac);text-decoration:none}
-@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro{grid-template-columns:1fr}.pics{grid-template-columns:repeat(3,1fr)}.shorts{grid-template-columns:1fr 1fr}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro{grid-template-columns:1fr}.pics{grid-template-columns:repeat(3,1fr)}.shorts>.w{flex-basis:calc(50% - 9px)}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
 </style></head><body>
 
 <header class="hero"><img src="img/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"><div class="in">
@@ -125,15 +125,18 @@ const WORKS = [
 ];
 // вертикальные: Shorts / Reels
 const SHORTS = [
+  {id:'DeftgE3lcsY', poster:'img/sh-or.jpg', tag:'Медицина', title:'Работа в операционной', about:'Шоурил пластического хирурга Сергея Шаповалова: подготовка бригады, работа в оптике, инструменты. Склейки в такт музыке, замедления, в финале QR-код на сайт врача.', note:''},
+  {id:'VlgynYsPtS0', poster:'img/sh-face.jpg', tag:'Медицина', title:'Круговая подтяжка лица и шеи', about:'Операционный день хирурга: перед операцией врач рассказывает план, дальше кадры из операционной и кинетические субтитры.', note:''},
+  {id:'sf0o9UW7ozE', poster:'img/sh-mammo.jpg', tag:'Медицина', title:'Редукционная маммопластика', about:'Разметка перед операцией и план врача: какой объём убираем и к какому результату идём. Интимные зоны аккуратно закрыты.', note:''},
   {id:'jd-aYzfN4LQ', tag:'Обзор техники', title:'Sony FE 28-70 mm f/2 GM', about:'Шортс о новом объективе Sony для зарубежного канала ToldbyNick.', note:'Моя роль: монтажёр.'},
   {id:'Pq_KoY_X9-U', tag:'Авто', title:'Volkswagen Golf R', about:'Шортс о главной фишке Golf R для автоканала IGORIAN TODAY.', note:'Моя роль: монтажёр.'},
   {id:'8XGqhe2ljXo', tag:'Авто', title:'Nissan Skyline GT-R R34', about:'Рилс с эффектным переходом для автоблога Ангелины Димовой.', note:''},
   {id:'FNOuaIVyYOc', tag:'Спорт · танцы', title:'Чемпионат России по танцам', about:'Рилс с чемпионата для канала танцовщицы Дарьи Есауловой.', note:''},
 ];
 // =====================================================================================
-function yt(id,title,v){
+function yt(id,title,v,poster){
   const d=document.createElement('div');d.className='yt'+(v?' v':'');
-  d.innerHTML=`<img src="https://i.ytimg.com/vi/${id}/${v?'oardefault':'maxresdefault'}.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${id}/hqdefault.jpg'" alt="${title||''}" loading="lazy">`;
+  d.innerHTML=`<img src="${poster||`https://i.ytimg.com/vi/${id}/${v?'oardefault':'maxresdefault'}.jpg`}" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${id}/hqdefault.jpg'" alt="${title||''}" loading="lazy">`;
   d.onclick=()=>{d.classList.add('on');d.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="${title||''}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;};
   return d;
 }
@@ -161,7 +164,7 @@ if(SHORTS.length){
   const sb=document.getElementById('shorts');
   SHORTS.forEach(w=>{
     const c=document.createElement('article');c.className='w s';
-    c.append(yt(w.id,w.title,true));
+    c.append(yt(w.id,w.title,true,w.poster));
     const t=document.createElement('div');t.className='tx';
     t.innerHTML=`<span class="tag">${w.tag}</span><b>${w.title}</b><p>${w.about}</p>${w.note?`<p class="cm">${w.note}</p>`:''}<a class="lnk" href="https://youtube.com/shorts/${w.id}" target="_blank" rel="noopener">Открыть на YouTube ↗</a>`;
     c.append(t);sb.append(c);
