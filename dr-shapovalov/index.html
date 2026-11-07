@@ -27,7 +27,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .yt .soon{position:absolute;left:12px;right:12px;bottom:12px;font:500 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(11,12,16,.72);border:1px solid var(--line);border-radius:8px;padding:9px 10px;text-align:center}
 .ver{position:absolute;top:12px;left:12px;z-index:1;font:500 10px var(--display);letter-spacing:.12em;text-transform:uppercase;background:rgba(11,12,16,.75);color:var(--ac);border:1px solid rgba(255,143,177,.5);border-radius:6px;padding:6px 8px;pointer-events:none}
 .yt.on .ver{display:none}
-.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.reels.n2{grid-template-columns:repeat(2,minmax(0,330px))}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.reels.n2{grid-template-columns:repeat(2,minmax(0,330px))}.reels.n4{grid-template-columns:repeat(4,1fr);gap:14px}.reels.n4 .w .tx{padding:14px 14px 16px}
 .w{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
 .w .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px}
 .tag{font:500 10.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
@@ -47,7 +47,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .kitlink b{font:500 15px var(--display)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:44px}.foot a{color:var(--ac);text-decoration:none}
 @media(max-width:900px){.sc,.ex{grid-template-columns:1fr 1fr}.sc div:last-child{grid-column:auto}.more{grid-template-columns:1fr}}
-@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.hero img{aspect-ratio:4/4.4}.reels.n2{grid-template-columns:1fr 1fr}.sc,.ex{grid-template-columns:1fr}.sc div:first-child,.sc div:last-child{grid-column:auto}.frames{grid-template-columns:repeat(3,1fr)}.frames img:nth-child(n+4){display:none}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.hero img{aspect-ratio:4/4.4}.reels.n2,.reels.n4{grid-template-columns:1fr 1fr}.sc,.ex{grid-template-columns:1fr}.sc div:first-child,.sc div:last-child{grid-column:auto}.frames{grid-template-columns:repeat(3,1fr)}.frames img:nth-child(n+4){display:none}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
 
 /* Telegram */
 .tg{--tg-ac:var(--ember,var(--ac,var(--pine,#2AABEE)));display:flex;gap:18px;align-items:center}
@@ -131,6 +131,7 @@ const REELS = [
   {link:'https://www.youtube.com/shorts/DeftgE3lcsY', ver:'Версия 1', poster:'img/p-or.jpg', tag:'Шоурил', title:'Работа в операционной', about:'Подготовка бригады, работа в оптике, инструменты. В финале QR-код на сайт.'},
   {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', ver:'Версия 1', poster:'img/p-who3.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
   {link:'https://www.youtube.com/shorts/x4j2uOJ3C_w', ver:'Версия 1', poster:'img/p-path2.jpg', tag:'История пациентки', title:'Путь пациентки', about:'Консультация, разметка, операция и результат: вся история одной пациентки от первой встречи до операционной.'},
+  {link:'https://www.youtube.com/shorts/VlgynYsPtS0', ver:'Версия 1', poster:'img/p-face.jpg', tag:'Операционный день', title:'Круговая подтяжка лица и шеи', about:'Перед операцией Вы рассказываете план: СМАС-платизмопластика, височный лифтинг, подтяжка лба и фейслифтинг D-plane.'},
 ];
 // =====================================================================================
 const esc=s=>(s||'').replace(/"/g,'&quot;');
@@ -152,7 +153,7 @@ function player(src,r){
     :`<iframe src="${src.embed}" title="${esc(r.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen scrolling="no"></iframe>`;};
   return d;
 }
-const rl=document.getElementById('reel-list');if(REELS.length<3)rl.classList.add('n2');
+const rl=document.getElementById('reel-list');if(REELS.length<3)rl.classList.add('n2');if(REELS.length===4)rl.classList.add('n4');
 REELS.forEach(r=>{
   const s=parse(r.link),c=document.createElement('article');c.className='w';
   c.append(player(s,r));
