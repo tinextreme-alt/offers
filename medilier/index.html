@@ -1,0 +1,254 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение для клиники «Медильер» · рилсы и портреты врачей</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap"><style>
+/* Каркас прошлых офферов; палитра и шрифты — с сайта medilier.ru: белый, тёплый графит #4F4C48, коралл #F57441, Playfair Display + Inter */
+:root{--bg:#FFFFFF;--bg2:#F7F5F3;--card:#F5F5F5;--line:#E5E1DD;--fg:#2E2C2A;--text:#4F4C48;--muted:#8A847E;--ac:#F57441;--ac-d:#D85A28;--ac-soft:#FFF0EA;--sand:#F5E8E3;--display:'Playfair Display',Georgia,serif;--body:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.6 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.top{background:var(--bg2);border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);gap:36px;align-items:center;max-width:1040px;margin:0 auto;padding:48px 28px 40px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.kick{font:500 11.5px var(--body);letter-spacing:.2em;color:var(--ac);text-transform:uppercase;margin-bottom:16px}
+h1{font:500 clamp(30px,4vw,44px)/1.12 var(--display);color:var(--fg);margin:0 0 18px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--ac)}
+h2{font:500 26px/1.2 var(--display);color:var(--fg);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--body);color:var(--fg);margin:0}
+p{margin:0}
+.lead{max-width:540px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chips span{font-size:12.5px;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--text)}
+.who{margin-top:22px;font-size:14px}.who b{color:var(--fg);font-weight:600}.who a{color:var(--ac-d);text-decoration:none;white-space:nowrap}
+.gh{display:flex;gap:14px;align-items:baseline;margin:52px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
+.gh .n{font:500 12px var(--body);color:var(--ac);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 18px;font-size:14.5px;max-width:780px}
+.k{font:600 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+/* итог в цифрах */
+.big{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.big div{background:var(--card);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:6px}
+.big strong{font:500 40px/1 var(--display);color:var(--fg)}.big b{font:600 14.5px var(--body);color:var(--fg)}.big p{font-size:13.5px;color:var(--muted);line-height:1.45}
+/* опыт */
+.exp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,1.25fr);gap:14px;align-items:start}
+.reel{display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.reel .pic{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
+.reel .pic img{width:100%;height:100%;object-fit:cover}
+.reel .pic i{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s}
+.reel:hover .pic i{transform:scale(1.08)}
+.reel b{font:600 14px/1.3 var(--body);color:var(--fg)}.reel span{font-size:13px;color:var(--muted);line-height:1.4}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px}.gal img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px}
+.gal p{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+/* что входит */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pack{background:var(--card);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.pack h3{font:500 21px/1.25 var(--display)}
+.pack ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:7px;font-size:14px}
+.pack .price{font:500 15px var(--body);color:var(--ac-d)}
+/* портреты */
+.ref{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pcard{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#FFFFFF 0%,#EEF1F4 45%,#D9DEE4 100%)}
+.pcard::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.0) 0 38px,rgba(255,255,255,.55) 38px 70px);filter:blur(14px);opacity:.8}
+.pcard svg{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:78%;height:auto}
+.pcard .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(46,44,42,.55))}
+.pcard .cap small{display:block;font-size:11px;color:rgba(255,255,255,.8)}.pcard .cap b{font:600 14px var(--body);color:#fff}
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.fact{border-top:2px solid var(--ac);padding-top:10px}
+.fact b{font:600 14px/1.3 var(--body);color:var(--fg);display:block;margin-bottom:4px}.fact p{color:var(--muted);font-size:13.5px;line-height:1.45}
+/* план рилсов */
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.col{background:var(--card);border-radius:14px;padding:18px 20px}
+.col h3{font:500 18px var(--display);margin-bottom:10px}
+.col ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;counter-reset:r}
+.col li{display:grid;grid-template-columns:28px 1fr;gap:8px;font-size:13.5px;line-height:1.45}
+.col li span{font:600 12px/1.6 var(--body);color:var(--ac);font-variant-numeric:tabular-nums}
+.col li b{color:var(--fg);font-weight:600;display:block}
+.fn{font-size:12.5px;color:var(--muted);margin-top:12px;font-style:italic}
+/* деликатность */
+.care{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.care div{background:var(--ac-soft);border-radius:12px;padding:16px 18px}
+.care b{font:600 14px/1.3 var(--body);color:var(--fg);display:block;margin-bottom:4px}.care p{font-size:13.5px;line-height:1.45}
+/* цена */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:18px;padding:28px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.sum{font:500 50px/1 var(--display);color:var(--fg);font-variant-numeric:tabular-nums}
+.calc{display:flex;flex-direction:column;font-size:14.5px}
+.calc div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed #F0C2AE}
+.calc div span:last-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+.calc div.tot{border-bottom:0;border-top:2px solid var(--ac);margin-top:4px;padding-top:14px}
+.calc div.tot span{font:500 22px var(--display)!important;color:var(--fg)}
+.calc i{font-style:normal;color:var(--muted);font-size:13px;display:block}
+.pay{font-size:14px;border-left:3px solid var(--ac);padding:4px 0 4px 12px;background:#fff;border-radius:0 8px 8px 0}.pay b{display:block;font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ac-d);margin-bottom:4px}
+.note{font-size:13px;color:var(--muted)}
+.date{display:flex;gap:16px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+.date svg{flex:none}.date b{font:600 15px var(--body);color:var(--fg);display:block;margin-bottom:4px}.date p{font-size:14px}
+.box{background:var(--card);border-radius:14px;padding:18px 22px}.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:600 12px var(--body);letter-spacing:.06em;color:var(--ac-d);margin-bottom:4px;text-transform:uppercase}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:var(--card);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:600 15px var(--body);color:var(--fg)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#fff;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac-d);text-decoration:none}.foot b{color:var(--fg)}
+@media(max-width:860px){.exp{grid-template-columns:1fr 1fr}.exp .gal{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.specs{grid-template-columns:1fr 1fr}.plan{grid-template-columns:1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:20px;padding:26px 16px 26px}.hero>img{order:-1}
+  .big,.two,.care,.offer,.links{grid-template-columns:1fr}.ref{grid-template-columns:1fr 1fr 1fr;gap:6px}.pcard .cap{padding:24px 8px 8px}.pcard .cap small{display:none}.pcard .cap b{font-size:11px}
+  .exp .gal{grid-template-columns:repeat(4,1fr);gap:5px}.gal img{border-radius:6px}.steps{grid-template-columns:1fr 1fr}
+  h2{font-size:22px}.sum{font-size:42px}.big strong{font-size:34px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}.offer{padding:20px}}
+/* Telegram */
+.tg{--tg-ac:var(--ac);display:flex;gap:18px;align-items:center}
+.tg-qr{flex:none;width:128px;height:128px;padding:4px;background:#fff;border-radius:14px;display:block;box-shadow:0 0 0 1px var(--line)}
+.tg-qr svg{display:block;width:100%;height:100%}
+.tg-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tg-cap{font:600 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tg-ac)}
+.tg-link{font:500 1.35rem/1.2 var(--display);color:var(--fg);text-decoration:none}
+.tg-link:hover{color:var(--tg-ac)}
+.tg-note{font-size:.85rem;line-height:1.4;color:var(--muted)}
+.tg-card{background:var(--card);border-radius:14px;padding:18px;margin-top:44px}
+</style></head><body>
+
+<div class="top"><header class="hero"><div class="in">
+  <div class="kick">Предложение для клиники «Медильер»</div>
+  <h1>Фото и видео для клиники: <em>12 рилсов</em> и портреты всей команды врачей</h1>
+  <p class="lead">Снимаю клинику так, чтобы пациент ещё до консультации увидел врачей, пространство и уровень работы: живые рилсы о пластической хирургии, стоматологии и диагностике — и единые портреты всех врачей для сайта и соцсетей.</p>
+  <div class="chips"><span>12 рилсов под ключ</span><span>портреты 35 врачей</span><span>Sony A7 V · 4K 10-bit</span><span>слоумо 50 к/с</span><span>монтаж, цвет, звук, графика</span><span>опыт съёмки в клинике</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a></div>
+</div><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"></header></div>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Что Вы получите</h2></div>
+  <div class="big">
+    <div><span class="k">Видео</span><strong>12</strong><b>Рилсов для Instagram, VK и сайта</b><p>Вертикаль 9:16, 4K. Съёмка, монтаж, цвет, звук, субтитры и графика в стиле клиники.</p></div>
+    <div><span class="k">Фото</span><strong>35</strong><b>Портретов врачей в едином стиле</b><p>Светлый размытый фон клиники, белые халаты, открытые улыбки — одинаково для всей команды.</p></div>
+    <div><span class="k">Подход</span><strong>1</strong><b>Визуальный язык на всё</b><p>Рилсы и портреты в одной палитре с сайтом: светлые тона, тёплая кожа, коралловый акцент.</p></div>
+  </div>
+
+  <div class="gh"><span class="n">02</span><h2>Я уже снимаю для пластического хирурга</h2></div>
+  <p class="gl">Серия рилсов для хирурга Сергея Шаповалова: операционный день, подготовка бригады, работа в оптике, консультации и пролёты по клинике. Знаю, как работать в операционной, не мешая бригаде, и как деликатно показывать пациентов.</p>
+  <div class="exp">
+    <a class="reel" href="https://www.youtube.com/shorts/DeftgE3lcsY" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-or.jpg" alt="Хирург в оптике во время операции" loading="lazy"><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#F57441"/></svg></i></div><b>Работа в операционной</b><span>Шоурил хирурга: склейки в такт музыке, замедления, QR-код на сайт врача в финале</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/VlgynYsPtS0" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-face.jpg" alt="Хирург приветствует зрителей перед операцией" loading="lazy"><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#F57441"/></svg></i></div><b>Круговая подтяжка лица и шеи</b><span>Врач рассказывает план операции, дальше — кадры из операционной и субтитры</span></a>
+    <div class="gal">
+      <img src="assets/clinic1.jpg" alt="Хирургические инструменты на столе" loading="lazy">
+      <img src="assets/clinic2.jpg" alt="Операционная сестра готовит инструменты" loading="lazy">
+      <img src="assets/clinic3.jpg" alt="Врач у стойки администратора" loading="lazy">
+      <img src="assets/clinic5.jpg" alt="Врач идёт по коридору клиники" loading="lazy">
+      <p>Кадры из того же проекта: детали, бригада, интерьер клиники.</p>
+    </div>
+  </div>
+
+  <div class="gh"><span class="n">03</span><h2>Что входит</h2></div>
+  <div class="two">
+    <div class="pack">
+      <span class="k">Видео</span><h3>12 рилсов под ключ</h3>
+      <ul>
+        <li>Сценарий и хук для каждого рилса: о чём, кто в кадре, что показываем</li>
+        <li>Съёмка в клинике на Sony A7 V со стабилизатором, замедления 50 к/с</li>
+        <li>Радиопетлички Hollyland на врачей, чистка и выравнивание голоса</li>
+        <li>Монтаж в ритме Reels, переходы, субтитры в фирменных шрифтах</li>
+        <li>Цветокоррекция в DaVinci Resolve: естественная кожа, светлая картинка</li>
+        <li>Лицензионная музыка и звуковое оформление</li>
+        <li>Обложка для каждого рилса, 2 круга правок</li>
+      </ul>
+      <span class="price">3 000 ₽ за рилс</span>
+    </div>
+    <div class="pack">
+      <span class="k">Фото</span><h3>Портреты 35 врачей под ключ</h3>
+      <ul>
+        <li>Съёмка в интерьере клиники, один сет-ап света на всех — единый вид команды</li>
+        <li>Поясной портрет: халат, улыбка, взгляд в камеру</li>
+        <li>Подбор лучшего кадра и ретушь каждого врача</li>
+        <li>Карточка для сайта 4:5 и квадрат для соцсетей</li>
+        <li>Короткий видеопортрет врача для рилса о команде — бонусом</li>
+      </ul>
+      <span class="price">10 000 ₽ за всю команду</span>
+    </div>
+  </div>
+
+  <div class="gh"><span class="n">04</span><h2>Портреты — как на Вашем референсе</h2></div>
+  <p class="gl">Светлый мягко размытый фон клиники, белые халаты, поясной план, открытая улыбка, имя и должность поверх кадра. Все 35 врачей — в одном свете и одной крупности, поэтому страница «Врачи» смотрится цельно.</p>
+  <div class="ref">
+    <div class="pcard"><svg viewBox="0 0 200 220" aria-hidden="true"><ellipse cx="100" cy="62" rx="30" ry="36" fill="#C9CED4"/><path d="M20 220c4-62 36-96 80-96s76 34 80 96z" fill="#fff"/><path d="M88 124l12 40 12-40" fill="#9FB4CC"/></svg><div class="cap"><small>Пластический хирург</small><b>Имя Фамилия</b></div></div>
+    <div class="pcard"><svg viewBox="0 0 200 220" aria-hidden="true"><ellipse cx="100" cy="62" rx="30" ry="36" fill="#C9CED4"/><path d="M20 220c4-62 36-96 80-96s76 34 80 96z" fill="#fff"/><path d="M88 124l12 40 12-40" fill="#9FB4CC"/></svg><div class="cap"><small>Стоматолог-ортопед</small><b>Имя Фамилия</b></div></div>
+    <div class="pcard"><svg viewBox="0 0 200 220" aria-hidden="true"><ellipse cx="100" cy="62" rx="30" ry="36" fill="#C9CED4"/><path d="M20 220c4-62 36-96 80-96s76 34 80 96z" fill="#fff"/><path d="M88 124l12 40 12-40" fill="#9FB4CC"/></svg><div class="cap"><small>Врач УЗИ-диагностики</small><b>Имя Фамилия</b></div></div>
+  </div>
+  <div class="specs">
+    <div class="fact"><b>Фон</b><p>Коридор или холл клиники на открытой диафрагме — светлое мягкое размытие.</p></div>
+    <div class="fact"><b>Свет</b><p>Мягкий ключ и заполнение — ровная кожа без теней под глазами.</p></div>
+    <div class="fact"><b>Поток</b><p>3–5 минут на врача: 35 человек укладываются в один день.</p></div>
+    <div class="fact"><b>Ретушь</b><p>Естественная: кожа, блики, халат. Без «пластмассы».</p></div>
+  </div>
+
+  <div class="gh"><span class="n">05</span><h2>Идеи для 12 рилсов</h2></div>
+  <p class="gl">По три направления клиники — так рилсы ведут пациента к каждому отделению.</p>
+  <div class="plan">
+    <div class="col"><h3>Пластическая хирургия</h3><ol>
+      <li><span>01</span><div><b>Операционный день</b>Подготовка бригады, оптика, инструменты — шоурил в такт музыке</div></li>
+      <li><span>02</span><div><b>Хирург разбивает миф</b>Один вопрос пациента — короткий честный ответ</div></li>
+      <li><span>03</span><div><b>Путь пациентки</b>Консультация → разметка → восстановление, с её согласия</div></li>
+      <li><span>04</span><div><b>Восстановление</b>Что происходит в первые дни после операции</div></li>
+    </ol></div>
+    <div class="col"><h3>Стоматология</h3><ol>
+      <li><span>05</span><div><b>Улыбка от начала до конца</b>Виниры или отбеливание процессом, «было → стало»</div></li>
+      <li><span>06</span><div><b>Имплантация без страха</b>Врач спокойно объясняет, как это проходит</div></li>
+      <li><span>07</span><div><b>Детский приём</b>Как ребёнок привыкает к креслу и врачу</div></li>
+      <li><span>08</span><div><b>Техника кабинета</b>Сканер, микроскоп, детали — эффектный клип</div></li>
+    </ol></div>
+    <div class="col"><h3>Диагностика и клиника</h3><ol>
+      <li><span>09</span><div><b>Обследование за визит</b>УЗИ и консультации: путь пациента по клинике</div></li>
+      <li><span>10</span><div><b>Программа «Преображение 360°»</b>Что входит и как она проходит</div></li>
+      <li><span>11</span><div><b>Добро пожаловать</b>Пролёт по пространству на Петроградской в слоумо</div></li>
+      <li><span>12</span><div><b>Наша команда</b>Врачи на портретной съёмке — живые видеопортреты</div></li>
+    </ol></div>
+  </div>
+  <p class="fn">Это пример, один из вариантов. Темы и порядок подстроим под Ваш контент-план и врачей.</p>
+
+  <div class="gh"><span class="n">06</span><h2>Деликатность</h2></div>
+  <div class="care">
+    <div><b>Согласие пациентов</b><p>В кадр попадают только пациенты, давшие согласие. Остальных не снимаю.</p></div>
+    <div><b>Интимные зоны</b><p>Аккуратно размыты в каждом кадре — ролики проходят модерацию соцсетей.</p></div>
+    <div><b>Тихо в операционной</b><p>Одна камера на стабилизаторе, без света и лишних людей — бригада работает как обычно.</p></div>
+  </div>
+
+  <div class="gh"><span class="n">07</span><h2>Стоимость</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="k">Фото и видео комплектом</span>
+      <h3>12 рилсов под ключ и портреты 35 врачей</h3>
+      <span class="sum">46&nbsp;000&nbsp;₽</span>
+      <p class="note">Съёмка входит в стоимость. Никаких доплат за выезд и технику.</p>
+      <p class="pay"><b>Порядок оплаты</b>50% — в день съёмки, по её итогу<br>50% — при сдаче готовых материалов</p>
+    </div>
+    <div class="calc">
+      <div><span>Рилсы под ключ<i>12 × 3 000 ₽: сценарий, съёмка, монтаж, цвет, звук, графика</i></span><span>36&nbsp;000&nbsp;₽</span></div>
+      <div><span>Портреты врачей под ключ<i>35 врачей: съёмка, отбор, ретушь, две нарезки</i></span><span>10&nbsp;000&nbsp;₽</span></div>
+      <div><span>Видеопортреты врачей<i>для рилса о команде</i></span><span>в подарок</span></div>
+      <div class="tot"><span>Итого</span><span>46&nbsp;000&nbsp;₽</span></div>
+    </div>
+  </div>
+  <div class="date">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F57441" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15l2 2 4-4"/></svg>
+    <div><b>Даты согласуем заранее</b><p>Портреты — в один день, когда в клинике большинство врачей. Рилсы снимаем по расписанию отделений и операций, объединяя несколько тем в один съёмочный день.</p></div>
+  </div>
+
+  <div class="gh"><span class="n">08</span><h2>Что понадобится от Вас</h2></div>
+  <div class="box"><ul>
+    <li>Список врачей с должностями и график, когда они в клинике</li>
+    <li>Согласия пациентов, которые появятся в кадре</li>
+    <li>Расписание операций и процедур, которые можно снимать</li>
+    <li>Логотип, фирменные шрифты и пожелания к темам рилсов</li>
+  </ul></div>
+
+  <div class="gh"><span class="n">09</span><h2>Как работаем</h2></div>
+  <div class="steps">
+    <div><b>Заранее</b>Созвон: темы рилсов, врачи, даты съёмок</div>
+    <div><b>Съёмка</b>Портретный день и съёмочные дни для рилсов</div>
+    <div><b>Монтаж</b>Рилсы и ретушь портретов — до 10 дней после съёмки</div>
+    <div><b>Правки</b>Два круга правок и готовые файлы</div>
+  </div>
+
+  <div class="gh"><span class="n">10</span><h2>Мои работы и техника</h2></div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Шоу-рил</b><br><span>Медицина, интервью, мероприятия, спорт</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>На что снимаю</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="tg tg-card"><a class="tg-qr" href="https://t.me/T1nEx" target="_blank" rel="noopener" aria-label="Открыть Telegram @T1nEx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" role="img" aria-label="QR-код Telegram @T1nEx"><rect width="33" height="33" fill="#fff"/><g fill="#111"><circle cx="11.5" cy="2.5" r="0.43"/><circle cx="13.5" cy="2.5" r="0.43"/><circle cx="14.5" cy="2.5" r="0.43"/><circle cx="15.5" cy="2.5" r="0.43"/><circle cx="17.5" cy="2.5" r="0.43"/><circle cx="18.5" cy="2.5" r="0.43"/><circle cx="19.5" cy="2.5" r="0.43"/><circle cx="21.5" cy="2.5" r="0.43"/><circle cx="22.5" cy="2.5" r="0.43"/><circle cx="10.5" cy="3.5" r="0.43"/><circle cx="16.5" cy="3.5" r="0.43"/><circle cx="17.5" cy="3.5" r="0.43"/><circle cx="21.5" cy="3.5" r="0.43"/><circle cx="11.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="4.5" r="0.43"/><circle cx="16.5" cy="4.5" r="0.43"/><circle cx="17.5" cy="4.5" r="0.43"/><circle cx="19.5" cy="4.5" r="0.43"/><circle cx="20.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="5.5" r="0.43"/><circle cx="13.5" cy="5.5" r="0.43"/><circle cx="15.5" cy="5.5" r="0.43"/><circle cx="18.5" cy="5.5" r="0.43"/><circle cx="20.5" cy="5.5" r="0.43"/><circle cx="12.5" cy="6.5" r="0.43"/><circle cx="15.5" cy="6.5" r="0.43"/><circle cx="18.5" cy="6.5" r="0.43"/><circle cx="19.5" cy="6.5" r="0.43"/><circle cx="20.5" cy="6.5" r="0.43"/><circle cx="10.5" cy="7.5" r="0.43"/><circle cx="11.5" cy="7.5" r="0.43"/><circle cx="16.5" cy="7.5" r="0.43"/><circle cx="18.5" cy="7.5" r="0.43"/><circle cx="19.5" cy="7.5" r="0.43"/><circle cx="21.5" cy="7.5" r="0.43"/><circle cx="22.5" cy="7.5" r="0.43"/><circle cx="10.5" cy="8.5" r="0.43"/><circle cx="12.5" cy="8.5" r="0.43"/><circle cx="14.5" cy="8.5" r="0.43"/><circle cx="16.5" cy="8.5" r="0.43"/><circle cx="18.5" cy="8.5" r="0.43"/><circle cx="20.5" cy="8.5" r="0.43"/><circle cx="22.5" cy="8.5" r="0.43"/><circle cx="10.5" cy="9.5" r="0.43"/><circle cx="11.5" cy="9.5" r="0.43"/><circle cx="12.5" cy="9.5" r="0.43"/><circle cx="14.5" cy="9.5" r="0.43"/><circle cx="15.5" cy="9.5" r="0.43"/><circle cx="16.5" cy="9.5" r="0.43"/><circle cx="17.5" cy="9.5" r="0.43"/><circle cx="18.5" cy="9.5" r="0.43"/><circle cx="21.5" cy="9.5" r="0.43"/><circle cx="22.5" cy="9.5" r="0.43"/><circle cx="6.5" cy="10.5" r="0.43"/><circle cx="7.5" cy="10.5" r="0.43"/><circle cx="8.5" cy="10.5" r="0.43"/><circle cx="9.5" cy="10.5" r="0.43"/><circle cx="12.5" cy="10.5" r="0.43"/><circle cx="13.5" cy="10.5" r="0.43"/><circle cx="17.5" cy="10.5" r="0.43"/><circle cx="18.5" cy="10.5" r="0.43"/><circle cx="22.5" cy="10.5" r="0.43"/><circle cx="24.5" cy="10.5" r="0.43"/><circle cx="25.5" cy="10.5" r="0.43"/><circle cx="29.5" cy="10.5" r="0.43"/><circle cx="3.5" cy="11.5" r="0.43"/><circle cx="6.5" cy="11.5" r="0.43"/><circle cx="9.5" cy="11.5" r="0.43"/><circle cx="11.5" cy="11.5" r="0.43"/><circle cx="13.5" cy="11.5" r="0.43"/><circle cx="14.5" cy="11.5" r="0.43"/><circle cx="16.5" cy="11.5" r="0.43"/><circle cx="17.5" cy="11.5" r="0.43"/><circle cx="20.5" cy="11.5" r="0.43"/><circle cx="21.5" cy="11.5" r="0.43"/><circle cx="26.5" cy="11.5" r="0.43"/><circle cx="28.5" cy="11.5" r="0.43"/><circle cx="29.5" cy="11.5" r="0.43"/><circle cx="30.5" cy="11.5" r="0.43"/><circle cx="3.5" cy="12.5" r="0.43"/><circle cx="5.5" cy="12.5" r="0.43"/><circle cx="6.5" cy="12.5" r="0.43"/><circle cx="8.5" cy="12.5" r="0.43"/><circle cx="12.5" cy="12.5" r="0.43"/><circle cx="14.5" cy="12.5" r="0.43"/><circle cx="18.5" cy="12.5" r="0.43"/><circle cx="19.5" cy="12.5" r="0.43"/><circle cx="21.5" cy="12.5" r="0.43"/><circle cx="23.5" cy="12.5" r="0.43"/><circle cx="25.5" cy="12.5" r="0.43"/><circle cx="30.5" cy="12.5" r="0.43"/><circle cx="2.5" cy="13.5" r="0.43"/><circle cx="3.5" cy="13.5" r="0.43"/><circle cx="6.5" cy="13.5" r="0.43"/><circle cx="7.5" cy="13.5" r="0.43"/><circle cx="12.5" cy="13.5" r="0.43"/><circle cx="19.5" cy="13.5" r="0.43"/><circle cx="21.5" cy="13.5" r="0.43"/><circle cx="22.5" cy="13.5" r="0.43"/><circle cx="23.5" cy="13.5" r="0.43"/><circle cx="25.5" cy="13.5" r="0.43"/><circle cx="26.5" cy="13.5" r="0.43"/><circle cx="29.5" cy="13.5" r="0.43"/><circle cx="30.5" cy="13.5" r="0.43"/><circle cx="4.5" cy="14.5" r="0.43"/><circle cx="5.5" cy="14.5" r="0.43"/><circle cx="7.5" cy="14.5" r="0.43"/><circle cx="8.5" cy="14.5" r="0.43"/><circle cx="9.5" cy="14.5" r="0.43"/><circle cx="11.5" cy="14.5" r="0.43"/><circle cx="20.5" cy="14.5" r="0.43"/><circle cx="22.5" cy="14.5" r="0.43"/><circle cx="25.5" cy="14.5" r="0.43"/><circle cx="30.5" cy="14.5" r="0.43"/><circle cx="2.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="15.5" r="0.43"/><circle cx="4.5" cy="15.5" r="0.43"/><circle cx="10.5" cy="15.5" r="0.43"/><circle cx="11.5" cy="15.5" r="0.43"/><circle cx="22.5" cy="15.5" r="0.43"/><circle cx="24.5" cy="15.5" r="0.43"/><circle cx="26.5" cy="15.5" r="0.43"/><circle cx="28.5" cy="15.5" r="0.43"/><circle cx="29.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="16.5" r="0.43"/><circle cx="4.5" cy="16.5" r="0.43"/><circle cx="6.5" cy="16.5" r="0.43"/><circle cx="7.5" cy="16.5" r="0.43"/><circle cx="8.5" cy="16.5" r="0.43"/><circle cx="10.5" cy="16.5" r="0.43"/><circle cx="11.5" cy="16.5" r="0.43"/><circle cx="23.5" cy="16.5" r="0.43"/><circle cx="24.5" cy="16.5" r="0.43"/><circle cx="26.5" cy="16.5" r="0.43"/><circle cx="30.5" cy="16.5" r="0.43"/><circle cx="2.5" cy="17.5" r="0.43"/><circle cx="4.5" cy="17.5" r="0.43"/><circle cx="7.5" cy="17.5" r="0.43"/><circle cx="9.5" cy="17.5" r="0.43"/><circle cx="10.5" cy="17.5" r="0.43"/><circle cx="22.5" cy="17.5" r="0.43"/><circle cx="23.5" cy="17.5" r="0.43"/><circle cx="24.5" cy="17.5" r="0.43"/><circle cx="25.5" cy="17.5" r="0.43"/><circle cx="27.5" cy="17.5" r="0.43"/><circle cx="5.5" cy="18.5" r="0.43"/><circle cx="8.5" cy="18.5" r="0.43"/><circle cx="9.5" cy="18.5" r="0.43"/><circle cx="10.5" cy="18.5" r="0.43"/><circle cx="11.5" cy="18.5" r="0.43"/><circle cx="12.5" cy="18.5" r="0.43"/><circle cx="21.5" cy="18.5" r="0.43"/><circle cx="25.5" cy="18.5" r="0.43"/><circle cx="29.5" cy="18.5" r="0.43"/><circle cx="30.5" cy="18.5" r="0.43"/><circle cx="2.5" cy="19.5" r="0.43"/><circle cx="3.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="19.5" r="0.43"/><circle cx="6.5" cy="19.5" r="0.43"/><circle cx="7.5" cy="19.5" r="0.43"/><circle cx="9.5" cy="19.5" r="0.43"/><circle cx="11.5" cy="19.5" r="0.43"/><circle cx="12.5" cy="19.5" r="0.43"/><circle cx="13.5" cy="19.5" r="0.43"/><circle cx="21.5" cy="19.5" r="0.43"/><circle cx="22.5" cy="19.5" r="0.43"/><circle cx="25.5" cy="19.5" r="0.43"/><circle cx="26.5" cy="19.5" r="0.43"/><circle cx="27.5" cy="19.5" r="0.43"/><circle cx="28.5" cy="19.5" r="0.43"/><circle cx="30.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="20.5" r="0.43"/><circle cx="6.5" cy="20.5" r="0.43"/><circle cx="8.5" cy="20.5" r="0.43"/><circle cx="9.5" cy="20.5" r="0.43"/><circle cx="10.5" cy="20.5" r="0.43"/><circle cx="11.5" cy="20.5" r="0.43"/><circle cx="13.5" cy="20.5" r="0.43"/><circle cx="18.5" cy="20.5" r="0.43"/><circle cx="22.5" cy="20.5" r="0.43"/><circle cx="27.5" cy="20.5" r="0.43"/><circle cx="30.5" cy="20.5" r="0.43"/><circle cx="4.5" cy="21.5" r="0.43"/><circle cx="6.5" cy="21.5" r="0.43"/><circle cx="9.5" cy="21.5" r="0.43"/><circle cx="10.5" cy="21.5" r="0.43"/><circle cx="12.5" cy="21.5" r="0.43"/><circle cx="17.5" cy="21.5" r="0.43"/><circle cx="18.5" cy="21.5" r="0.43"/><circle cx="19.5" cy="21.5" r="0.43"/><circle cx="27.5" cy="21.5" r="0.43"/><circle cx="29.5" cy="21.5" r="0.43"/><circle cx="2.5" cy="22.5" r="0.43"/><circle cx="3.5" cy="22.5" r="0.43"/><circle cx="4.5" cy="22.5" r="0.43"/><circle cx="5.5" cy="22.5" r="0.43"/><circle cx="6.5" cy="22.5" r="0.43"/><circle cx="7.5" cy="22.5" r="0.43"/><circle cx="8.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="22.5" r="0.43"/><circle cx="12.5" cy="22.5" r="0.43"/><circle cx="15.5" cy="22.5" r="0.43"/><circle cx="17.5" cy="22.5" r="0.43"/><circle cx="18.5" cy="22.5" r="0.43"/><circle cx="19.5" cy="22.5" r="0.43"/><circle cx="21.5" cy="22.5" r="0.43"/><circle cx="22.5" cy="22.5" r="0.43"/><circle cx="23.5" cy="22.5" r="0.43"/><circle cx="24.5" cy="22.5" r="0.43"/><circle cx="25.5" cy="22.5" r="0.43"/><circle cx="26.5" cy="22.5" r="0.43"/><circle cx="27.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="23.5" r="0.43"/><circle cx="11.5" cy="23.5" r="0.43"/><circle cx="13.5" cy="23.5" r="0.43"/><circle cx="14.5" cy="23.5" r="0.43"/><circle cx="17.5" cy="23.5" r="0.43"/><circle cx="18.5" cy="23.5" r="0.43"/><circle cx="19.5" cy="23.5" r="0.43"/><circle cx="22.5" cy="23.5" r="0.43"/><circle cx="26.5" cy="23.5" r="0.43"/><circle cx="28.5" cy="23.5" r="0.43"/><circle cx="30.5" cy="23.5" r="0.43"/><circle cx="10.5" cy="24.5" r="0.43"/><circle cx="11.5" cy="24.5" r="0.43"/><circle cx="12.5" cy="24.5" r="0.43"/><circle cx="14.5" cy="24.5" r="0.43"/><circle cx="15.5" cy="24.5" r="0.43"/><circle cx="16.5" cy="24.5" r="0.43"/><circle cx="20.5" cy="24.5" r="0.43"/><circle cx="21.5" cy="24.5" r="0.43"/><circle cx="22.5" cy="24.5" r="0.43"/><circle cx="24.5" cy="24.5" r="0.43"/><circle cx="26.5" cy="24.5" r="0.43"/><circle cx="29.5" cy="24.5" r="0.43"/><circle cx="30.5" cy="24.5" r="0.43"/><circle cx="10.5" cy="25.5" r="0.43"/><circle cx="11.5" cy="25.5" r="0.43"/><circle cx="12.5" cy="25.5" r="0.43"/><circle cx="13.5" cy="25.5" r="0.43"/><circle cx="14.5" cy="25.5" r="0.43"/><circle cx="15.5" cy="25.5" r="0.43"/><circle cx="17.5" cy="25.5" r="0.43"/><circle cx="18.5" cy="25.5" r="0.43"/><circle cx="19.5" cy="25.5" r="0.43"/><circle cx="20.5" cy="25.5" r="0.43"/><circle cx="21.5" cy="25.5" r="0.43"/><circle cx="22.5" cy="25.5" r="0.43"/><circle cx="26.5" cy="25.5" r="0.43"/><circle cx="27.5" cy="25.5" r="0.43"/><circle cx="30.5" cy="25.5" r="0.43"/><circle cx="10.5" cy="26.5" r="0.43"/><circle cx="12.5" cy="26.5" r="0.43"/><circle cx="17.5" cy="26.5" r="0.43"/><circle cx="18.5" cy="26.5" r="0.43"/><circle cx="19.5" cy="26.5" r="0.43"/><circle cx="21.5" cy="26.5" r="0.43"/><circle cx="22.5" cy="26.5" r="0.43"/><circle cx="23.5" cy="26.5" r="0.43"/><circle cx="24.5" cy="26.5" r="0.43"/><circle cx="25.5" cy="26.5" r="0.43"/><circle cx="26.5" cy="26.5" r="0.43"/><circle cx="29.5" cy="26.5" r="0.43"/><circle cx="11.5" cy="27.5" r="0.43"/><circle cx="12.5" cy="27.5" r="0.43"/><circle cx="13.5" cy="27.5" r="0.43"/><circle cx="14.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="27.5" r="0.43"/><circle cx="16.5" cy="27.5" r="0.43"/><circle cx="19.5" cy="27.5" r="0.43"/><circle cx="25.5" cy="27.5" r="0.43"/><circle cx="29.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="28.5" r="0.43"/><circle cx="16.5" cy="28.5" r="0.43"/><circle cx="21.5" cy="28.5" r="0.43"/><circle cx="22.5" cy="28.5" r="0.43"/><circle cx="23.5" cy="28.5" r="0.43"/><circle cx="28.5" cy="28.5" r="0.43"/><circle cx="29.5" cy="28.5" r="0.43"/><circle cx="30.5" cy="28.5" r="0.43"/><circle cx="12.5" cy="29.5" r="0.43"/><circle cx="16.5" cy="29.5" r="0.43"/><circle cx="18.5" cy="29.5" r="0.43"/><circle cx="20.5" cy="29.5" r="0.43"/><circle cx="25.5" cy="29.5" r="0.43"/><circle cx="27.5" cy="29.5" r="0.43"/><circle cx="29.5" cy="29.5" r="0.43"/><circle cx="30.5" cy="29.5" r="0.43"/><circle cx="12.5" cy="30.5" r="0.43"/><circle cx="14.5" cy="30.5" r="0.43"/><circle cx="15.5" cy="30.5" r="0.43"/><circle cx="16.5" cy="30.5" r="0.43"/><circle cx="24.5" cy="30.5" r="0.43"/><circle cx="26.5" cy="30.5" r="0.43"/><circle cx="27.5" cy="30.5" r="0.43"/><circle cx="28.5" cy="30.5" r="0.43"/><circle cx="29.5" cy="30.5" r="0.43"/></g><path fill="#111" fill-rule="evenodd" d="M4.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M26.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM26.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="26" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M4.2 24h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 25h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="26" width="3" height="3" rx="1" fill="#111"/><circle cx="16.5" cy="16.5" r="3.6" fill="#111"/><polygon points="14.623,16.390 18.322,14.954 17.659,18.128 16.583,17.328 16.058,17.852 16.003,17.024 17.494,15.700 15.644,16.804" fill="#fff" stroke="#fff" stroke-width="0.193" stroke-linejoin="round"/></svg></a><div class="tg-txt"><span class="tg-cap">Telegram</span><a class="tg-link" href="https://t.me/T1nEx" target="_blank" rel="noopener">@T1nEx</a><span class="tg-note">Наведите камеру телефона на код или нажмите на ник, чтобы написать мне</span></div></div>
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a></div>
+</div>
+</body></html>
