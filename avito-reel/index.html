@@ -35,6 +35,13 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .2s}.yt:hover img{opacity:1}
 .yt::after{content:"";position:absolute;left:50%;top:50%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/28px no-repeat}
 .yt.on::after{display:none}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* полный экран: чёрный слой с вертикальным плеером по высоте экрана */
+.fs{position:fixed;inset:0;z-index:100;background:#000;display:flex;align-items:center;justify-content:center}
+.fs .box{position:relative;height:min(100dvh,177.78vw);aspect-ratio:9/16;max-width:100vw}
+.fs iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fs .x{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:14px;z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,21,27,.75);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.fs .x:hover{border-color:var(--ac);color:var(--ac)}
+body.lock{overflow:hidden}
 .soon{aspect-ratio:9/16;border-radius:16px;border:1px dashed var(--line);background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px;color:var(--muted);font-size:14px}
 .soon i{width:60px;height:60px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/28px no-repeat;opacity:.5}
 .vside{display:flex;flex-direction:column;gap:14px}
@@ -117,10 +124,29 @@ h2{font:700 22px/1.2 var(--display);margin:0}
   <div class="foot"><b style="color:#fff">Бровкин Дмитрий</b> · видеограф · <a href="https://t.me/T1nEx">@T1nEx</a> · <a href="tel:+79817779911">+7 981 777-99-11</a></div>
 </div>
 <script>
-document.querySelectorAll('.yt[data-id]').forEach(function(el){el.addEventListener('click',function(){
-  if(el.classList.contains('on'))return;el.classList.add('on');
-  el.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+el.dataset.id+'?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Reels для Авито, черновой монтаж"></iframe>';
-});});
+/* По нажатию рилс открывается на весь экран и сразу играет.
+   Компьютер и Android — настоящий полноэкранный режим; iPhone его для таких элементов не даёт — там чёрный слой на весь экран. */
+function openReel(id){
+  var fs=document.createElement('div');fs.className='fs';
+  fs.innerHTML='<div class="box"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Reels для Авито, черновой монтаж"></iframe></div>'
+    +'<button class="x" type="button" aria-label="Закрыть"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
+  document.body.appendChild(fs);document.body.classList.add('lock');
+  var closed=false;
+  function close(){if(closed)return;closed=true;
+    if(document.fullscreenElement===fs&&document.exitFullscreen)document.exitFullscreen().catch(function(){});
+    document.removeEventListener('keydown',esc);document.removeEventListener('fullscreenchange',fsc);
+    fs.remove();document.body.classList.remove('lock');}
+  function esc(e){if(e.key==='Escape')close();}
+  function fsc(){if(!document.fullscreenElement)close();}
+  fs.querySelector('.x').addEventListener('click',close);
+  document.addEventListener('keydown',esc);
+  if(fs.requestFullscreen){fs.requestFullscreen().then(function(){document.addEventListener('fullscreenchange',fsc);},function(){});}
+}
+document.querySelectorAll('.yt[data-id]').forEach(function(el){
+  el.addEventListener('click',function(){openReel(el.dataset.id);});
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openReel(el.dataset.id);}});
+  el.tabIndex=0;
+});
 </script>
 </body>
 </html>
