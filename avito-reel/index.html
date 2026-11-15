@@ -44,9 +44,21 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 body.lock{overflow:hidden}
 .soon{aspect-ratio:9/16;border-radius:16px;border:1px dashed var(--line);background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px;color:var(--muted);font-size:14px}
 .soon i{width:60px;height:60px;border-radius:50%;background:var(--ac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%2314151B'/%3E%3C/svg%3E") center/28px no-repeat;opacity:.5}
-.vside{display:flex;flex-direction:column;gap:14px}
-.vside .lnk{font-size:13px;color:var(--muted);text-decoration:none}.vside .lnk:hover{color:var(--ac)}
-.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+/* версии ролика рядом */
+.vers{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:20px}
+.ver{display:flex;flex-direction:column;gap:10px}
+.ver .vt{display:flex;flex-direction:column;gap:2px}
+.ver .vt b{font:500 15px var(--display)}.ver .vt span{font-size:13px;color:var(--muted)}
+.ver .lnk{font-size:13px;color:var(--muted);text-decoration:none}.ver .lnk:hover{color:var(--ac)}
+.fh{font:500 15px var(--display);margin:28px 0 12px}
+.frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+/* скачать */
+.dls{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dl{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:12px;padding:16px 20px;text-decoration:none;transition:border-color .2s}
+.dl:hover{border-color:var(--ac)}
+.dl .ic{flex:none;width:44px;height:44px;border-radius:10px;background:var(--ac);color:#14151B;display:flex;align-items:center;justify-content:center}
+.dl b{font:500 15px var(--display);display:block;margin-bottom:2px}.dl span{color:var(--muted);font-size:13.5px}
+.dl.off{opacity:.45;pointer-events:none}.dl.off .ic{background:var(--line);color:var(--muted)}
 .frames figure{margin:0}.frames img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block;background:var(--card)}
 .frames figcaption{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
 /* связь */
@@ -65,7 +77,7 @@ body.lock{overflow:hidden}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:40px}.foot a{color:var(--ac);text-decoration:none}
 @media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}
-  .sc,.kitlinks,.vid{grid-template-columns:1fr}.vid .yt,.vid .soon{max-width:300px;width:100%;margin:0 auto}
+  .sc,.kitlinks,.dls{grid-template-columns:1fr}.vers{grid-template-columns:1fr 1fr;gap:12px}.ver .vt b{font-size:13px}
   .frames{grid-template-columns:repeat(3,1fr);gap:8px}h2{font-size:18px}.draft{padding:16px 18px;align-items:flex-start}
   .contact{grid-template-columns:1fr}.tg{justify-content:flex-start}}
 </style>
@@ -102,12 +114,14 @@ body.lock{overflow:hidden}
     <div><b>Голос и звуки</b>Голос очищен от шума улицы и выровнен. Каблуки озвучены в такт шагам, у переходов и удара сумки свои звуки.</div>
   </div>
 
-  <div class="gh" id="video"><h2>Черновая версия</h2></div>
-  <p class="gl">Посмотрите ролик и напишите мне в Telegram, что поменять: секунда ролика и что не так, этого достаточно. Обновлённая версия появится по этой же ссылке.</p>
-  <div class="vid">
-    <div class="yt" data-id="jytYFN6CGCQ" role="button" aria-label="Смотреть ролик"><img src="img/poster_v3.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/jytYFN6CGCQ/hqdefault.jpg'"></div>
-    <div class="vside"><a class="lnk" href="https://youtube.com/shorts/jytYFN6CGCQ" target="_blank" rel="noopener">Открыть на YouTube →</a><b style="font:500 15px var(--display)">Основные кадры</b><div class="frames"><figure><img src="img/frame_01.jpg" alt="0:03 · проход по Конюшенной" loading="lazy"><figcaption>0:03 · проход по Конюшенной</figcaption></figure><figure><img src="img/frame_02.jpg" alt="0:07 · ведущая крупно" loading="lazy"><figcaption>0:07 · ведущая крупно</figcaption></figure><figure><img src="img/frame_03.jpg" alt="0:09 · каблуки в такт" loading="lazy"><figcaption>0:09 · каблуки в такт</figcaption></figure><figure><img src="img/frame_04.jpg" alt="0:15 · реакция Юли" loading="lazy"><figcaption>0:15 · реакция Юли</figcaption></figure><figure><img src="img/frame_05.jpg" alt="0:19 · падение сумки, слоумо" loading="lazy"><figcaption>0:19 · падение сумки, слоумо</figcaption></figure><figure><img src="img/frame_06.jpg" alt="0:36 · «С помощью Авито»" loading="lazy"><figcaption>0:36 · «С помощью Авито»</figcaption></figure><figure><img src="img/frame_07.jpg" alt="0:46 · уход по аллее" loading="lazy"><figcaption>0:46 · уход по аллее</figcaption></figure><figure><img src="img/frame_08.jpg" alt="0:52 · сумочку прихватила" loading="lazy"><figcaption>0:52 · сумочку прихватила</figcaption></figure><figure><img src="img/frame_10.jpg" alt="0:58 · уходят под руку" loading="lazy"><figcaption>0:58 · уходят под руку</figcaption></figure></div></div>
-  </div>
+  <div class="gh" id="video"><h2>Черновые версии</h2></div>
+  <p class="gl">Две версии: одна и та же сборка, покрашена по-разному. Посмотрите и напишите мне в Telegram, что поменять: секунда ролика и что не так, этого достаточно. Обновлённая версия появится по этой же ссылке.</p>
+  <div class="vers"><div class="ver"><div class="yt" data-id="jytYFN6CGCQ" role="button" aria-label="Смотреть: Основная версия"><img src="img/poster_v3.jpg" alt="" loading="lazy"></div><div class="vt"><b>Основная версия</b><span>Тёплый вечерний цвет</span></div></div><div class="ver"><div class="yt" data-id="MD7Vqr4xX14" role="button" aria-label="Смотреть: Покрашено иначе"><img src="img/poster_c2.jpg" alt="" loading="lazy"></div><div class="vt"><b>Покрашено иначе</b><span>Холоднее и контрастнее</span></div><a class="lnk" href="https://disk.yandex.ru/i/L1RwDjBkcY9gTw" target="_blank" rel="noopener">Скачать с Яндекс.Диска →</a></div></div>
+  <div class="fh">Основные кадры</div><div class="frames"><figure><img src="img/frame_01.jpg" alt="0:03 · проход по Конюшенной" loading="lazy"><figcaption>0:03 · проход по Конюшенной</figcaption></figure><figure><img src="img/frame_02.jpg" alt="0:07 · ведущая крупно" loading="lazy"><figcaption>0:07 · ведущая крупно</figcaption></figure><figure><img src="img/frame_03.jpg" alt="0:09 · каблуки в такт" loading="lazy"><figcaption>0:09 · каблуки в такт</figcaption></figure><figure><img src="img/frame_04.jpg" alt="0:15 · реакция Юли" loading="lazy"><figcaption>0:15 · реакция Юли</figcaption></figure><figure><img src="img/frame_05.jpg" alt="0:19 · падение сумки, слоумо" loading="lazy"><figcaption>0:19 · падение сумки, слоумо</figcaption></figure><figure><img src="img/frame_06.jpg" alt="0:36 · «С помощью Авито»" loading="lazy"><figcaption>0:36 · «С помощью Авито»</figcaption></figure><figure><img src="img/frame_07.jpg" alt="0:46 · уход по аллее" loading="lazy"><figcaption>0:46 · уход по аллее</figcaption></figure><figure><img src="img/frame_08.jpg" alt="0:52 · сумочку прихватила" loading="lazy"><figcaption>0:52 · сумочку прихватила</figcaption></figure><figure><img src="img/frame_10.jpg" alt="0:58 · уходят под руку" loading="lazy"><figcaption>0:58 · уходят под руку</figcaption></figure></div>
+
+  <div class="gh" id="download"><h2>Скачать Reels</h2></div>
+  <p class="gl">Файлы лежат на Яндекс.Диске, качество 4K.</p>
+  <div class="dls"><div class="dl off"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><div><b>Основная версия</b><span>С музыкой · ссылка скоро появится</span></div></div><a class="dl" href="https://disk.yandex.ru/i/JrXe81IL61Mpaw" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><div><b>Основная версия</b><span>Без музыки · 4K · Яндекс.Диск</span></div></a><a class="dl" href="https://disk.yandex.ru/i/L1RwDjBkcY9gTw" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><div><b>Покрашено иначе</b><span>С музыкой · 4K · Яндекс.Диск</span></div></a></div>
 
   <div class="gh" id="contact"><h2>Связь</h2></div>
   <div class="contact">
