@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B0C10">
+<title>Новатория: подводки к планировкам для Reels</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0B0C10;--card:#14151B;--line:#262832;--fg:#F2F1EC;--muted:#9A9DAB;--ac:#F0824A;--holo:#6FDCFF;--display:'Unbounded',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.5 var(--body)}a{color:inherit}
+.sheet{max-width:1120px;margin:0 auto;padding:0 28px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:center;padding:48px 0 10px}
+.kick{font:500 11px var(--display);letter-spacing:.18em;color:var(--ac);text-transform:uppercase;margin-bottom:18px}
+h1{font:700 clamp(28px,3.9vw,44px)/1.08 var(--display);margin:0 0 18px;letter-spacing:-.015em;text-wrap:balance}
+.lead{max-width:560px;color:#CFD0D6;font-size:16px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{font-size:12.5px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#CFD0D6}
+.hero-art{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.hero-art svg{width:100%;height:auto;border-radius:10px;display:block}
+.hero-art svg:nth-child(2){transform:translateY(-18px)}
+h2{font:700 22px/1.2 var(--display);margin:0}
+.gh{display:flex;gap:14px;align-items:baseline;margin:48px 0 6px;padding-top:18px;border-top:1px solid var(--line)}
+.gh .n{font:500 12px var(--display);color:var(--ac)}
+.gl{color:var(--muted);margin:0 0 18px;font-size:14px;max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{position:relative;background:#0E1016}
+.card .art svg{display:block;width:100%;height:auto}
+.card .num{position:absolute;left:10px;top:10px;font:500 11px var(--display);color:var(--fg);background:rgba(11,12,16,.7);border:1px solid var(--line);border-radius:6px;padding:3px 7px}
+.card .mine{position:absolute;right:10px;top:10px;font:500 10px var(--display);letter-spacing:.06em;color:#14151B;background:var(--ac);border-radius:6px;padding:4px 7px;text-transform:uppercase}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font:500 15px/1.25 var(--display);margin:0}
+.card .ln{font-size:13.5px;line-height:1.45;color:#CFD0D6;margin:0}
+.card .ln b{display:block;font:600 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.card .tip{margin-top:auto;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:9px}
+.card .tip i{font-style:normal;color:var(--holo)}
+.card .len{font-size:12px;color:var(--ac);font-weight:600}
+.formulas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fm{border:1px solid var(--line);border-radius:14px;padding:18px}
+.fm b{font:500 15px var(--display);display:block;margin-bottom:12px}
+.tl{display:flex;flex-direction:column;gap:6px}
+.tl div{display:grid;grid-template-columns:64px 1fr;gap:10px;font-size:13.5px;color:#CFD0D6}
+.tl div span{color:var(--ac);font-weight:600;font-variant-numeric:tabular-nums}
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.rules div{border-left:3px solid var(--holo);background:var(--card);border-radius:10px;padding:14px 18px}
+.rules b{font:500 14px var(--display);display:block;margin-bottom:5px}.rules p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.45}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px var(--display);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+td:first-child{color:var(--ac);font-weight:600;white-space:nowrap}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.pipe div{border-top:2px solid var(--ac);padding-top:10px;font-size:13.5px;line-height:1.45;color:#CFD0D6}.pipe b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:6px}
+.foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:48px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.hero-art{max-width:340px}.formulas,.pipe{grid-template-columns:1fr}.rules{grid-template-columns:1fr}}
+@media(max-width:600px){.sheet{padding:0 16px}.grid{grid-template-columns:1fr 1fr;gap:10px}.card .bd{padding:12px}.card h3{font-size:13px}.card .ln{font-size:12.5px}h2{font-size:18px}
+  table{font-size:12.5px}th,td{padding:8px 6px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <radialGradient id="spill" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6FDCFF" stop-opacity=".28"/><stop offset="1" stop-color="#6FDCFF" stop-opacity="0"/></radialGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151823"/><stop offset="1" stop-color="#0D0F15"/></linearGradient>
+</defs></svg>
+
+<div class="sheet">
+<header class="hero">
+  <div>
+    <div class="kick">ЖК Новатория · Reels · планировки</div>
+    <h1>Подводки к планировкам: что снять в офисе</h1>
+    <p class="lead">Набор коротких сцен для съёмочного дня в офисе продаж. В каждой человек делает одно понятное движение: щёлкает пальцами, жмёт на джойстик, открывает ладонь. Потом на это движение встаёт анимация планировки, а закадровый голос рассказывает про квартиру. Сняв один раз 20–30 подводок, можно собирать из них рилсы под любую планировку.</p>
+    <div class="chips"><span>9:16 · 4K · 50 fps</span><span>6 интро</span><span>16 подводок</span><span>6 аутро</span><span>1 съёмочный день</span></div>
+  </div>
+  <div class="hero-art" id="heroArt"></div>
+</header>
+
+<div class="gh"><span class="n">01</span><h2>Интро: первые 1–2 секунды</h2></div>
+<p class="gl">Крючок. Зритель сразу видит что-то необычное, ещё до того, как понял, что это реклама квартир. Каждое интро заканчивается движением, после которого можно сразу показать планировку.</p>
+<div class="grid" id="g-intro"></div>
+
+<div class="gh"><span class="n">02</span><h2>Подводки: показываем планировку</h2></div>
+<p class="gl">Основа рилса. На одну подводку приходится одна планировка на 6–10 секунд: контур рисуется, стены поднимаются, по комнатам выходят площади. Жест в кадре = смена планировки, поэтому одну подводку можно повторить 2–3 раза подряд с разными квартирами.</p>
+<div class="grid" id="g-main"></div>
+
+<div class="gh"><span class="n">03</span><h2>Аутро: призыв и логотип</h2></div>
+<p class="gl">Финал на 2–3 секунды: планировка «убирается» тем же жестом, остаётся логотип ЖК и призыв записаться на просмотр.</p>
+<div class="grid" id="g-outro"></div>
+
+<div class="gh"><span class="n">04</span><h2>Как собрать рилс из подводок</h2></div>
+<p class="gl">Три готовые схемы. Все рассчитаны на 25–35 секунд, голос за кадром начинает говорить с первой секунды.</p>
+<div class="formulas">
+  <div class="fm"><b>Одна квартира</b><div class="tl">
+    <div><span>0–2 с</span>Интро «Щелчок, гаснет свет»</div>
+    <div><span>2–12 с</span>Джойстик: план рисуется, поворот в 3D</div>
+    <div><span>12–22 с</span>Ладонь: зум в кухню-гостиную, площади</div>
+    <div><span>22–28 с</span>Пол под ногами: «вот здесь будет диван»</div>
+    <div><span>28–31 с</span>Аутро «Ключи в камеру»</div>
+  </div></div>
+  <div class="fm"><b>Три планировки подряд</b><div class="tl">
+    <div><span>0–2 с</span>Интро «Окно в будущее»</div>
+    <div><span>2–10 с</span>Щелчок 1: студия 26 м²</div>
+    <div><span>10–18 с</span>Щелчок 2: евро-двушка 42 м²</div>
+    <div><span>18–26 с</span>Щелчок 3: тройка 68 м²</div>
+    <div><span>26–30 с</span>Аутро «Какая ваша?»</div>
+  </div></div>
+  <div class="fm"><b>Диалог двоих</b><div class="tl">
+    <div><span>0–2 с</span>«Нам нужна комната для ребёнка»</div>
+    <div><span>2–10 с</span>Она джойстиком выводит двушку</div>
+    <div><span>10–18 с</span>Он перехватывает голограмму, тройка</div>
+    <div><span>18–26 с</span>Вместе на плане на полу</div>
+    <div><span>26–30 с</span>Аутро «Пауза. Ваш ход»</div>
+  </div></div>
+</div>
+
+<div class="gh"><span class="n">05</span><h2>Как снимать, чтобы потом вставить</h2></div>
+<p class="gl">Чем меньше движется камера и чем лучше свет «подыгрывает» голограмме, тем реалистичнее выглядит вставка и тем проще её сделать.</p>
+<div class="rules">
+  <div><b>Камера на штативе</b><p>Большинство подводок снимаем статично. Если камера движется — на стене и столе небольшие метки для трекинга, потом убираем.</p></div>
+  <div><b>Чистый фон перед каждым дублем</b><p>3 секунды того же кадра без человека. Из него собирается маска и тень, если голограмма уходит за человека.</p></div>
+  <div><b>Свет от голограммы</b><p>Главное для реализма. Ассистент за кадром держит голубую светодиодную палку там, где будет план, и включает её в момент щелчка. На лице и руках появляется настоящий отсвет.</p></div>
+  <div><b>Куда смотреть</b><p>На месте будущей планировки — метка (скотч на стекле, шарик на стойке). Взгляд и руки попадают в одну точку, а голограмма потом встаёт ровно туда.</p></div>
+  <div><b>Пауза после жеста</b><p>Щёлкнул — держит позу 1–2 секунды и смотрит на план. Так есть время на появление анимации и место для голоса.</p></div>
+  <div><b>50 fps и запас</b><p>Всё на 50 кадров, чтобы жест можно было замедлить. По 3 дубля, каждый с запасом 2 секунды до и после.</p></div>
+  <div><b>Два плана на подводку</b><p>Общий и крупно руки (джойстик, ладонь, щелчок). Чередуем их — рилс сразу выглядит дороже.</p></div>
+  <div><b>Звук отдельно</b><p>Щелчок, клик джойстика, звон ключей записываем петличкой крупно. Остальной звук сделаем в монтаже.</p></div>
+</div>
+
+<div class="gh"><span class="n">06</span><h2>План съёмочного дня</h2></div>
+<table>
+  <tr><th>Время</th><th>Что снимаем</th><th>Кто</th></tr>
+  <tr><td>0:00–0:30</td><td>Свет, затемнение офиса, метки для взгляда, пробный дубль со светодиодной палкой</td><td>команда</td></tr>
+  <tr><td>0:30–1:30</td><td>Подводки сидя: джойстик, планшет, голограмма над столом, кубик-маркер, кофе</td><td>девушка</td></tr>
+  <tr><td>1:30–2:30</td><td>Подводки стоя: щелчок, свайп, ладонь, проектор, рулетка, маркер на стекле</td><td>парень</td></tr>
+  <tr><td>2:30–3:15</td><td>Вдвоём: передача голограммы, диалог, план на полу (камера сверху)</td><td>оба</td></tr>
+  <tr><td>3:15–3:45</td><td>Интро и аутро: свет гаснет, жалюзи, ключи, дверь-портал</td><td>оба</td></tr>
+  <tr><td>3:45–4:00</td><td>Чистые фоны, детали офиса, макет ЖК крупно для перебивок</td><td>оператор</td></tr>
+</table>
+
+<div class="gh"><span class="n">07</span><h2>Что дальше после съёмки</h2></div>
+<div class="pipe">
+  <div><b>Планировки</b>Беру у застройщика планы в PDF или с сайта и перевожу в векторный чертёж.</div>
+  <div><b>Анимация</b>Одна шаблонная сцена: контур рисуется, стены выдавливаются, по комнатам выходят площади. Меняется только чертёж.</div>
+  <div><b>Вставка</b>Анимация садится в подводку по меткам, со свечением и отражением на столе и стекле.</div>
+  <div><b>Голос и звук</b>Закадровый голос, тихий электронный пульс, звуки на каждый щелчок и появление.</div>
+  <div><b>Серия</b>Одна съёмка → рилс на каждую планировку. Новая квартира — только новый чертёж.</div>
+</div>
+
+<div class="foot">Это набор идей для съёмки, а не окончательный сценарий: выберем лучшие 15–20 подводок под офис и героев. Дмитрий Бровкин, видеограф.</div>
+</div>
+
+<script>
+// ---------- мини-сцены 9:16 ----------
+const H='#6FDCFF';
+function plan(x,y,w,h){
+  const a=x+w*.58,b=y+h*.5,c=y+h*.38;
+  return `<g filter="url(#glow)" stroke="${H}" fill="none" stroke-width="1.1" stroke-linejoin="round">
+    <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${H}" fill-opacity=".09"/>
+    <path d="M${a} ${y}V${y+h*.3}M${a} ${y+h*.45}V${y+h}M${x} ${b}H${x+w*.2}M${x+w*.36} ${b}H${a}M${a} ${c}H${x+w}" stroke-width=".8"/>
+  </g>`;
+}
+function isoPlan(cx,cy,s){return `<g transform="translate(${cx} ${cy}) scale(1 .55) rotate(45)">${plan(-s/2,-s/2,s,s)}</g>`}
+function spill(cx,cy,r){return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#spill)"/>`}
+function person(cx,pose,arm){
+  const P='#2A2E3B',S='#343949';
+  if(pose==='sit') return `<path d="M${cx-14} 128h28M${cx-12} 128v20M${cx+12} 128v20" stroke="#232633" stroke-width="2.4"/>
+    <rect x="${cx-11}" y="92" width="22" height="34" rx="9" fill="${P}"/><circle cx="${cx}" cy="84" r="7" fill="${S}"/>
+    <path d="M${cx-9} 124h-6v20M${cx+9} 124h6v20" stroke="${P}" stroke-width="5" stroke-linecap="round" fill="none"/>${arm||''}`;
+  if(pose==='top') return `<circle cx="${cx}" cy="96" r="6" fill="${S}"/><ellipse cx="${cx}" cy="96" rx="12" ry="7" fill="none" stroke="${P}" stroke-width="5"/>`;
+  return `<rect x="${cx-11}" y="72" width="22" height="46" rx="9" fill="${P}"/><circle cx="${cx}" cy="63" r="7" fill="${S}"/>
+    <path d="M${cx-5} 116v32M${cx+5} 116v32" stroke="${P}" stroke-width="6" stroke-linecap="round"/>${arm||''}`;
+}
+function armTo(cx,sy,hx,hy){return `<path d="M${cx+8} ${sy}Q${(cx+8+hx)/2} ${Math.max(sy,hy)+4} ${hx} ${hy}" stroke="#2A2E3B" stroke-width="4.5" stroke-linecap="round" fill="none"/><circle cx="${hx}" cy="${hy}" r="2.6" fill="#343949"/>`}
+function burst(x,y){return `<g stroke="#F0824A" stroke-width="1" stroke-linecap="round">${[0,45,90,135,180,225,270,315].map(a=>{const r=a*Math.PI/180;return `<line x1="${x+Math.cos(r)*4}" y1="${y+Math.sin(r)*4}" x2="${x+Math.cos(r)*7}" y2="${y+Math.sin(r)*7}"/>`}).join('')}</g>`}
+function scene(s){
+  let o=`<rect width="90" height="160" fill="url(#wall)"/><path d="M0 134H90" stroke="#1E2230"/>`;
+  if(s.window) o+=`<rect x="54" y="14" width="28" height="44" rx="2" fill="#141826" stroke="#232838"/>`;
+  if(s.dark) o=`<rect width="90" height="160" fill="#07080B"/>`;
+  if(s.table) o+=`<path d="M8 118H82" stroke="#2B3040" stroke-width="3"/><path d="M14 118v30M76 118v30" stroke="#20242F" stroke-width="2"/>`;
+  if(s.door) o+=`<rect x="${s.door}" y="56" width="26" height="78" fill="#0D1220" stroke="#2B3040"/>`;
+  if(s.floor) o+=isoPlan(45,122,46)+spill(45,122,34);
+  if(s.p) o+=spill(s.p[0]+s.p[2]/2,s.p[1]+s.p[3]/2,s.p[2]*.9)+plan(...s.p);
+  if(s.iso) o+=spill(s.iso[0],s.iso[1],s.iso[2]*.8)+isoPlan(...s.iso);
+  if(s.beam) o+=`<path d="M${s.beam[0]} ${s.beam[1]}L${s.beam[2]} ${s.beam[3]}L${s.beam[2]} ${s.beam[4]}Z" fill="${H}" fill-opacity=".12"/>`;
+  if(s.who){const [cx,pose,ax,ay]=s.who;o+=person(cx,pose,ax!=null?armTo(cx,pose==='sit'?98:78,ax,ay):'')}
+  if(s.who2){const [cx,pose,ax,ay]=s.who2;o+=`<g transform="translate(${2*cx} 0) scale(-1 1)">${person(cx,pose,ax!=null?armTo(cx,pose==='sit'?98:78,2*cx-ax,ay):'')}</g>`}
+  if(s.pad) o+=`<rect x="${s.pad[0]-6}" y="${s.pad[1]-3}" width="12" height="6" rx="3" fill="#F0824A"/>`;
+  if(s.sheet) o+=`<rect x="${s.sheet[0]}" y="${s.sheet[1]}" width="${s.sheet[2]}" height="${s.sheet[3]}" rx="1.5" fill="#E9ECF2" opacity=".9"/>`+plan(s.sheet[0]+4,s.sheet[1]+4,s.sheet[2]-8,s.sheet[3]-8).replace(new RegExp(H,'g'),'#2A3B55').replace('filter="url(#glow)"','');
+  if(s.snap) o+=burst(...s.snap);
+  if(s.swipe) o+=`<path d="M${s.swipe[0]} ${s.swipe[1]}q14 -8 28 0" stroke="#F0824A" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/><path d="M${s.swipe[0]+28} ${s.swipe[1]}l-4 -3m4 3l-4 2" stroke="#F0824A" stroke-width="1.2"/>`;
+  if(s.obj) o+=`<rect x="${s.obj[0]-3}" y="${s.obj[1]-6}" width="6" height="6" rx="1" fill="#F0824A"/>`;
+  if(s.keys) o+=`<g stroke="#F0824A" stroke-width="1.4" fill="none"><circle cx="${s.keys[0]}" cy="${s.keys[1]}" r="3.5"/><path d="M${s.keys[0]+3.5} ${s.keys[1]}h8m-3 0v3m-2 -3v2"/></g>`;
+  if(s.text) o+=`<text x="45" y="${s.text[1]}" fill="#F2F1EC" font-family="Unbounded" font-size="${s.text[2]||6}" text-anchor="middle" font-weight="700">${s.text[0]}</text>`;
+  return `<svg viewBox="0 0 90 160" xmlns="http://www.w3.org/2000/svg">${o}</svg>`;
+}
+
+// ---------- варианты ----------
+const D={
+intro:[
+ {t:'Щелчок — гаснет свет',shot:'Парень смотрит в камеру, щёлкает пальцами. В этот момент в офисе выключают свет, остаётся одна подсветка за ним.',ins:'В темноте на стене загорается светящийся контур ЖК, из него вылетает первая планировка.',tip:'Свет гасим <i>по-настоящему</i>, рубильником на щелчок',len:'1,5 с',s:{dark:1,who:[38,'stand',56,64],snap:[57,62],p:[54,30,30,40]}},
+ {t:'Квартира вырастает из стола',shot:'Девушка медленно проводит ладонью по пустому столу слева направо.',ins:'За ладонью по столу бежит светящаяся линия, из неё поднимаются стены квартиры в изометрии.',tip:'Светодиодная лента под краем стола <i>включается вслед за рукой</i>',len:'2 с',s:{table:1,who:[22,'sit',50,116],iso:[60,106,30]}},
+ {t:'Поворот ключа',shot:'Крупно: рука вставляет ключ в воздух перед камерой и поворачивает.',ins:'Поворот ключа = поворот кадра: мы «влетаем» в планировку, она разворачивается из точки.',tip:'Сделать и вариант, где ключ <i>в настоящем замке</i> двери офиса',len:'1 с',s:{who:[30,'stand',56,92],keys:[60,92],p:[50,22,32,42]}},
+ {t:'Окно в будущее',shot:'Девушка подходит к окну офиса и раздвигает жалюзи, смотрит наружу.',ins:'За окном вместо улицы — ночной вид будущего дома, в окнах этажа загораются планировки.',tip:'Камера статична, окно потом <i>заменяем целиком</i>',len:'2 с',s:{window:1,who:[34,'stand',56,40],p:[56,18,24,36]}},
+ {t:'Сдуть с ладони',shot:'Крупно: человек подносит раскрытую ладонь к лицу и сдувает с неё, как пыль.',ins:'С ладони летят светящиеся частицы, в воздухе они собираются в чертёж квартиры.',tip:'Можно сдуть <i>настоящую</i> горсть блёсток или муки для фактуры',len:'1,5 с',s:{who:[30,'stand',50,70],snap:[52,68],p:[56,40,28,36]}},
+ {t:'Взгляд на зрителя',shot:'Человек сидит спиной, резко разворачивается на кресле к камере и говорит: «Выбираете квартиру?»',ins:'На развороте за ним вспыхивает стена с сеткой планировок, как табло.',tip:'Единственное интро <i>с репликой в кадр</i>, остальное — закадр',len:'2 с',s:{who:[45,'sit'],p:[14,18,62,40],text:['?',128,10]}}
+],
+main:[
+ {mine:1,t:'Джойстик',shot:'Девушка в кресле с геймпадом. Нажимает кнопку, двигает стики, жмёт триггер.',ins:'Перед ней в воздухе загорается план. Стик вращает 3D-квартиру, кнопка — следующая планировка, как выбор персонажа в игре.',tip:'Снять отдельно крупно пальцы на стиках, <i>клик записать звуком</i>',len:'6–10 с',s:{who:[24,'sit',38,104],pad:[38,104],p:[46,40,36,46]}},
+ {mine:1,t:'Щелчок пальцами',shot:'Парень стоит, щёлкает пальцами, смотрит на место рядом с собой.',ins:'На щелчок рядом появляется планировка. Каждый следующий щелчок — новая квартира, закадровый голос рассказывает.',tip:'Щёлкать <i>3 раза подряд с паузой 3 с</i>: три планировки одним дублем',len:'по 5–8 с',s:{who:[28,'stand',50,66],snap:[51,64],p:[54,34,30,40]}},
+ {t:'Свайп по воздуху',shot:'Человек смахивает рукой в воздухе справа налево, как листают экран.',ins:'Планировки висят каруселью, жест прокручивает их. Остановился — выбранная увеличивается.',tip:'Метка на высоте глаз, чтобы <i>рука шла по одной линии</i>',len:'4–6 с',s:{who:[45,'stand',66,70],swipe:[30,46],p:[8,26,22,28]}},
+ {t:'Лист в руках',shot:'Человек держит перед собой чистый белый лист А3 или планшет для бумаг, поворачивает его к камере.',ins:'На листе — планировка, которая «оживает»: стены поднимаются над бумагой.',tip:'Самая надёжная вставка: <i>4 метки по углам листа</i>',len:'5–8 с',s:{who:[45,'stand'],sheet:[30,76,30,40]}},
+ {t:'Планшет с зумом',shot:'Крупно: руки держат планшет с зелёным экраном, тапают, разводят двумя пальцами.',ins:'В планшете план; разведение пальцев — зум в комнату, кадр «проваливается» в экран на весь рилс.',tip:'Зелёный экран + <i>яркость на минимум</i>, чтобы не бликовал',len:'5–8 с',s:{table:1,sheet:[26,92,38,24]}},
+ {t:'Голограмма над столом',shot:'Двое за столом переговоров, смотрят на центр стола, один показывает рукой.',ins:'Над столом медленно вращается 3D-квартира, на ней загораются подписи комнат.',tip:'Отсвет на лицах — <i>светодиодная палка под столешницей</i>',len:'6–10 с',s:{table:1,who:[14,'sit'],who2:[76,'sit'],iso:[45,94,28]}},
+ {t:'Кубик-маркер',shot:'Человек ставит на стол маленький кубик или фишку с логотипом ЖК и убирает руку.',ins:'Из кубика вверх раскрывается квартира, как макет. Повернул кубик — повернулась квартира.',tip:'Кубик с <i>контрастным рисунком</i> — по нему трекинг',len:'5–8 с',s:{table:1,who:[24,'sit',52,116],obj:[54,118],iso:[60,96,26]}},
+ {t:'Проектор-кликер',shot:'Человек направляет кликер презентации на стену и нажимает.',ins:'Из кликера луч, на стене разворачивается план во всю стену. Клик — следующий.',tip:'На стене <i>ничего не вешать</i>, ровный светлый участок',len:'5–8 с',s:{who:[20,'stand',36,80],beam:[37,80,84,30,90],p:[50,28,34,48]}},
+ {t:'Квартира на ладони',shot:'Человек раскрывает ладонь перед собой и смотрит на неё.',ins:'Над ладонью маленькая квартира крутится, как игрушка. Сжал ладонь — исчезла, раскрыл — другая.',tip:'Ладонь держать <i>неподвижно 3 секунды</i>',len:'4–6 с',s:{who:[30,'stand',54,88],iso:[58,76,20]}},
+ {t:'Рулетка',shot:'Человек вытягивает строительную рулетку на всю длину рук.',ins:'Лента превращается в светящуюся стену, отсчитываются метры, выходит «42 м²» и вся планировка.',tip:'Хороший приём <i>для площадей и метража</i>',len:'4–6 с',s:{who:[45,'stand',70,82],swipe:[22,84],text:['42 м²',40,8]}},
+ {t:'Передача голограммы',shot:'Двое стоят напротив. Один «бросает» другому что-то невидимое, тот ловит.',ins:'Планировка перелетает от одного к другому и на ловле меняется на другую.',tip:'Для диалога <i>«нам надо побольше»</i> — смена на тройку',len:'4–6 с',s:{who:[18,'stand',34,74],who2:[72,'stand',56,74],p:[34,46,22,26]}},
+ {t:'Дверь-портал',shot:'Человек подходит к двери переговорной, открывает её и шагает внутрь. Камера идёт следом.',ins:'За дверью вместо переговорной — светящаяся планировка, камера влетает в неё.',tip:'Снять и <i>чистый фон двери</i> до и после человека',len:'3 с',s:{door:46,who:[30,'stand',46,92],p:[50,64,18,32]}},
+ {t:'Маркер на стекле',shot:'Человек проводит маркером одну линию по стеклянной перегородке.',ins:'От линии дорисовывается вся планировка, будто чертит один росчерк.',tip:'Маркер <i>без чернил</i>, стекло чистое',len:'4–6 с',s:{who:[24,'stand',46,50],p:[46,30,36,48]}},
+ {t:'Под ногами',shot:'Камера сверху. Человек стоит на светлом полу офиса и делает пару шагов.',ins:'На полу светится план в натуральную величину. Он идёт «из кухни в спальню», комнаты подсвечиваются под шагами.',tip:'Камера на стойке или <i>с балкона</i>, строго сверху',len:'5–8 с',s:{floor:1,who:[38,'top']}},
+ {t:'Чашка кофе',shot:'Крупно: человек ставит чашку на стол, по поверхности расходится круг.',ins:'Круг от чашки превращается в светящийся контур планировки, кухня — там, где стоит чашка.',tip:'Подводка <i>к кухне-гостиной</i>',len:'3–5 с',s:{table:1,obj:[45,118],iso:[45,112,34]}},
+ {t:'Перебивки в подводке',shot:'Детали офиса: макет ЖК крупно, ручка, ключи на столе, буклет, подсветка.',ins:'Между планировками 1-секундные перебивки с тем же светом, чтобы рилс не был одним планом.',tip:'Снять <i>по 10 секунд</i> каждую деталь, медленным проездом',len:'1 с',s:{table:1,keys:[30,112],obj:[60,118]}}
+],
+outro:[
+ {t:'Ключи в камеру',shot:'Человек протягивает связку ключей прямо в объектив.',ins:'Ключи закрывают кадр, переход на логотип ЖК и «Запись на просмотр».',tip:'Объектив <i>на расстоянии ладони</i>, фокус на ключах',len:'2 с',s:{who:[45,'stand',50,96],keys:[46,96],text:['НОВАТОРИЯ',140,6]}},
+ {t:'Щелчок — всё гаснет',shot:'Парень щёлкает в последний раз, свет в офисе выключается.',ins:'В темноте остаётся только логотип и адрес, планировка гаснет вместе со светом.',tip:'Пара к интро «Щелчок» — <i>рилс закольцован</i>',len:'2 с',s:{dark:1,who:[45,'stand',62,66],snap:[63,64],text:['НОВАТОРИЯ',40,6]}},
+ {t:'В карман',shot:'Человек сжимает «голограмму» в ладони и кладёт её в карман пиджака, улыбается.',ins:'Квартира сжимается в светящуюся точку и исчезает в кармане. «Ваша — уже ждёт».',tip:'Улыбка <i>в камеру</i> в самом конце',len:'2 с',s:{who:[45,'stand',56,96],snap:[57,96]}},
+ {t:'Ваш ход',shot:'Девушка откладывает джойстик, поворачивается на кресле к камере.',ins:'Экран «Пауза» в игровом стиле, кнопка «Выбрать квартиру» и логотип.',tip:'Пара к подводке <i>«Джойстик»</i>',len:'2,5 с',s:{who:[45,'sit'],pad:[66,128],text:['ВАШ ХОД',40,7]}},
+ {t:'Закрыть папку',shot:'Менеджер закрывает папку с документами или ноутбук и кладёт на неё ладонь.',ins:'На обложке папки проявляется логотип ЖК и телефон отдела продаж.',tip:'Спокойный финал <i>для серьёзных планировок</i>',len:'2 с',s:{table:1,who:[45,'sit',45,112],sheet:[32,108,26,9]}},
+ {t:'Все квартиры сразу',shot:'Общий план офиса, человек отходит, смотрит на стену.',ins:'Все показанные в рилсе планировки собираются в фасад дома, дом подсвечивается.',tip:'Кадр <i>шире всех остальных</i>, с воздухом',len:'3 с',s:{window:1,who:[20,'stand'],p:[40,20,40,54]}}
+]};
+
+function card(v,i){
+  return `<div class="card"><div class="art">${scene(v.s)}<span class="num">${String(i+1).padStart(2,'0')}</span>${v.mine?'<span class="mine">ваша идея</span>':''}</div>
+  <div class="bd"><h3>${v.t}</h3><span class="len">${v.len}</span>
+  <p class="ln"><b>Снимаем</b>${v.shot}</p><p class="ln"><b>Вставляем</b>${v.ins}</p><div class="tip">${v.tip}</div></div></div>`;
+}
+for(const k of ['intro','main','outro']) document.getElementById('g-'+k).innerHTML=D[k].map(card).join('');
+document.getElementById('heroArt').innerHTML=[D.main[0],D.main[1],D.main[13]].map(v=>scene(v.s)).join('');
+</script>
+</body>
+</html>
