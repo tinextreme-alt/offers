@@ -1,0 +1,319 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение · регулярная съёмка контента для соцсетей</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&display=swap"><style>
+/* Каркас оффера «dance»; палитра «финтех»: белый, графит, синий акцент #2F5BD3 */
+:root{--bg:#FFFFFF;--bg2:#F5F7FB;--card:#F2F4F8;--line:#E1E6EF;--fg:#141821;--text:#3A404C;--muted:#7B8392;--ac:#2F5BD3;--ac-d:#1F43A8;--ac-soft:#EEF2FC;--display:'Unbounded',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.6 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.top{background:var(--bg2);border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);gap:36px;align-items:center;max-width:1040px;margin:0 auto;padding:48px 28px 40px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.kick{font:500 11.5px var(--body);letter-spacing:.2em;color:var(--ac);text-transform:uppercase;margin-bottom:16px}
+h1{font:500 clamp(26px,3.4vw,38px)/1.18 var(--display);color:var(--fg);margin:0 0 18px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--ac)}
+h2{font:500 22px/1.25 var(--display);color:var(--fg);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--body);color:var(--fg);margin:0}
+p{margin:0}
+.lead{max-width:540px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chips span{font-size:12.5px;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--text)}
+.who{margin-top:22px;font-size:14px}.who b{color:var(--fg);font-weight:600}.who a{color:var(--ac-d);text-decoration:none;white-space:nowrap}
+.down{display:inline-flex;gap:8px;align-items:center;margin-top:14px;font:500 13.5px var(--body);color:var(--ac-d);text-decoration:none}
+.gh{display:flex;gap:14px;align-items:baseline;margin:52px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
+.gh .n{font:500 12px var(--body);color:var(--ac);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 18px;font-size:14.5px;max-width:780px}
+.k{font:600 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+/* ответы по пунктам */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qa a{display:flex;gap:14px;background:var(--card);border-radius:14px;padding:16px 18px;text-decoration:none;transition:box-shadow .2s}
+.qa a:hover{box-shadow:0 0 0 1.5px var(--ac)}
+.qa .num{flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ac);font:600 13px/30px var(--body);text-align:center;box-shadow:0 0 0 1px var(--line)}
+.qa b{display:block;font:600 14.5px/1.35 var(--body);color:var(--fg);margin-bottom:3px}.qa p{font-size:13.5px;color:var(--text);line-height:1.45}
+/* постановка */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pack{background:var(--card);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.pack h3{font:500 18px/1.3 var(--display)}
+.pack ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:7px;font-size:14px}
+/* оборудование */
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kit div{background:var(--card);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px}
+.kit svg{margin-bottom:4px}.kit b{font:600 14.5px/1.3 var(--body);color:var(--fg)}.kit p{font-size:13px;color:var(--muted);line-height:1.45}
+.inline-link{display:flex;gap:12px;align-items:center;margin-top:12px;font-size:14px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.inline-link a{color:var(--ac-d);font-weight:600;text-decoration:none;white-space:nowrap}
+/* тарифы */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tier{position:relative;background:var(--card);border-radius:16px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:6px;border:1.5px solid transparent}
+.tier.hit{background:#fff;border-color:var(--ac);box-shadow:0 10px 30px -18px rgba(47,91,211,.55)}
+.tier .badge{position:absolute;top:-11px;left:18px;font:600 10.5px var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--ac);color:#fff;padding:5px 9px;border-radius:6px}
+.tier .name{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.tier .tp{font:500 26px/1.15 var(--display);color:var(--fg);margin-top:6px;font-variant-numeric:tabular-nums}
+.tier .per{font-size:13.5px;color:var(--ac-d);font-weight:600}
+.tier .sub{font-size:13.5px;color:var(--text)}
+.tier ul{margin:8px 0 0;padding-left:1.05em;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);line-height:1.4}
+/* расчёт */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:18px;padding:28px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.offer .left ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.calc{display:flex;flex-direction:column;font-size:14.5px}
+.calc div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed #C5D2F3}
+.calc div span:last-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.calc div.hd{font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ac-d);border-bottom:2px solid var(--ac);padding-top:0}
+.calc div.hd span:last-child{font:inherit;color:inherit}
+.calc i{font-style:normal;color:var(--muted);font-size:13px;display:block}
+.note{font-size:13px;color:var(--muted)}
+.extra{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.extra div{background:var(--card);border-radius:12px;padding:14px 16px}.extra b{display:block;font:500 17px/1.25 var(--display);color:var(--fg);margin-bottom:4px}.extra p{font-size:13px;color:var(--muted);line-height:1.4}
+/* ИИ */
+.ai{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ai div{background:var(--card);border-radius:14px;padding:18px 20px}
+.ai b{display:block;font:600 14.5px/1.3 var(--body);color:var(--fg);margin-bottom:4px}.ai p{font-size:13.5px;color:var(--text);line-height:1.45}.ai p i{font-style:normal;color:var(--muted)}
+.honest{margin-top:12px;font-size:14px;border-left:3px solid var(--ac);padding:10px 0 10px 14px;background:var(--bg2);border-radius:0 10px 10px 0}
+/* сроки */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:600 12px var(--body);letter-spacing:.06em;color:var(--ac-d);margin-bottom:4px;text-transform:uppercase}
+.steps strong{display:block;font:500 20px/1.2 var(--display);color:var(--fg);margin-bottom:4px}
+.box{background:var(--card);border-radius:14px;padding:18px 22px}.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+/* работы */
+.exp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.reel{display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.reel .pic{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
+.reel .pic img{width:100%;height:100%;object-fit:cover}
+.pic i{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s}
+.pic em{position:absolute;left:10px;top:10px;font:600 10.5px var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--fg);padding:5px 8px;border-radius:6px}
+.reel:hover .pic i,.wide:hover .pic i{transform:scale(1.08)}
+.reel b{font:600 14px/1.3 var(--body);color:var(--fg)}.reel span{font-size:13px;color:var(--muted);line-height:1.4}
+.wide{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:center;background:var(--card);border-radius:16px;padding:14px;margin-top:14px;text-decoration:none}
+.wide .pic{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}.wide .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.wide b{font:600 16px/1.3 var(--body);color:var(--fg);display:block;margin:6px 0}.wide p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.case{display:flex;flex-direction:column;gap:10px;background:var(--card);border-radius:14px;padding:14px;text-decoration:none;transition:box-shadow .2s}
+.case:hover{box-shadow:0 0 0 1.5px var(--ac)}
+.case .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.case .thumbs img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.case .k{margin-top:2px}.case b{font:600 15px/1.3 var(--body);color:var(--fg)}.case p{font-size:13px;color:var(--muted);line-height:1.45}
+.case i{font:600 13px var(--body);font-style:normal;color:var(--ac-d);margin-top:auto}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:var(--card);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:600 15px var(--body);color:var(--fg)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#fff;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
+.call{display:flex;gap:18px;align-items:center;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:16px;padding:20px 24px;margin-top:44px}
+.call svg{flex:none}.call b{display:block;font:500 18px/1.3 var(--display);color:var(--fg);margin-bottom:4px}.call p{font-size:14px}
+.call a{color:var(--ac-d);font-weight:600;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac-d);text-decoration:none}.foot b{color:var(--fg)}
+@media(max-width:900px){.tiers,.kit,.extra{grid-template-columns:1fr 1fr}.tiers{gap:20px 12px}.ai,.cases{grid-template-columns:1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:20px;padding:26px 16px 26px}.hero>img{order:-1}
+  .qa,.two,.offer,.links,.wide{grid-template-columns:1fr}.exp{gap:8px}.reel b{font-size:12.5px}.reel span{font-size:11.5px}.reel .pic i{width:42px;height:42px;margin:-21px 0 0 -21px}.reel .pic em{font-size:9px;padding:4px 6px;left:6px;top:6px}
+  .steps{grid-template-columns:1fr 1fr}.tiers{grid-template-columns:1fr}
+  h2{font-size:19px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}.offer{padding:20px}.call{flex-direction:column;align-items:flex-start}}
+/* Telegram */
+.tg{--tg-ac:var(--ac);display:flex;gap:18px;align-items:center}
+.tg-qr{flex:none;width:128px;height:128px;padding:4px;background:#fff;border-radius:14px;display:block;box-shadow:0 0 0 1px var(--line)}
+.tg-qr svg{display:block;width:100%;height:100%}
+.tg-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tg-cap{font:600 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tg-ac)}
+.tg-link{font:500 1.2rem/1.2 var(--display);color:var(--fg);text-decoration:none}
+.tg-link:hover{color:var(--tg-ac)}
+.tg-note{font-size:.85rem;line-height:1.4;color:var(--muted)}
+.tg-card{background:var(--card);border-radius:14px;padding:18px;margin-top:20px}
+</style></head><body>
+
+<div class="top"><header class="hero"><div class="in">
+  <div class="kick">Коммерческое предложение · видеограф</div>
+  <h1>Регулярная съёмка <em>экспертного контента</em> для соцсетей</h1>
+  <p class="lead">Снимаю говорящие головы так, чтобы их хотелось досмотреть: помогаю спикерам с постановкой и подачей, ставлю свет и звук, монтирую в ритме Reels. Вы и SMM-менеджер получаете готовые ролики и исходники, без лишних встреч и согласований.</p>
+  <div class="chips"><span>1–2 спикера в кадре</span><span>Sony A7 V · 4K 10-bit</span><span>светосильная оптика</span><span>2 камеры</span><span>петлички Hollyland</span><span>свой свет</span><span>монтаж в DaVinci Resolve</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · Санкт-Петербург · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a></div>
+  <a class="down" href="#works"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Портфолио и оборудование — внизу страницы</a>
+</div><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"></header></div>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Коротко по Вашим вопросам</h2></div>
+  <p class="gl">Ответы по порядку. Нажмите на пункт — откроется подробный блок.</p>
+  <div class="qa">
+    <a href="#works"><span class="num">1</span><div><b>Портфолио и примеры</b><p>Экспертные рилсы, корпоративные ролики, студийное интервью и динамичная реклама — внизу страницы, со ссылками на шоу-рил.</p></div></a>
+    <a href="#kit"><span class="num">2</span><div><b>Своё оборудование</b><p>Да, всё своё и только лучшее: топовые камеры, светосильная оптика, радиопетлички, свет. Перечень — по ссылке внизу.</p></div></a>
+    <a href="#price"><span class="num">3</span><div><b>Час и смена 4–8 часов</b><p>Час — 5 000 ₽, 4 часа — 25 000 ₽, 8 часов — 40 000 ₽. Монтаж готовых роликов уже в цене.</p></div></a>
+    <a href="#edit"><span class="num">4</span><div><b>Монтаж</b><p>Да, под ключ: монтаж, цвет, звук, субтитры, музыка. Дополнительный ролик — от 5 000 ₽.</p></div></a>
+    <a href="#ai"><span class="num">5</span><div><b>ИИ-инструменты</b><p>Да, каждый день: Claude, ChatGPT, Gemini, Midjourney, Runway, Kling, ElevenLabs и другие. Примеры есть.</p></div></a>
+    <a href="#terms"><span class="num">6</span><div><b>Сроки</b><p>Готовые ролики — в среднем около недели, зависит от сложности. Исходники — на Ваш диск.</p></div></a>
+    <a href="#regular"><span class="num">7</span><div><b>Регулярное сотрудничество</b><p>Да, готов. Единый стиль, понятный график съёмок, работаю напрямую с SMM-менеджером.</p></div></a>
+    <a href="#location"><span class="num">8</span><div><b>Локация</b><p>Да, порекомендую проверенные студии с отличным светом. В офисе тоже сниму.</p></div></a>
+  </div>
+
+  <div class="gh"><span class="n">02</span><h2>Работа со спикерами</h2></div>
+  <p class="gl">Большинство экспертов в кадре зажаты, и это видно. Моя задача — чтобы спикер говорил так же свободно, как на встрече с клиентом.</p>
+  <div class="two">
+    <div class="pack">
+      <span class="k">Постановка</span><h3>Как человек выглядит в кадре</h3>
+      <ul>
+        <li>Подбираю ракурс и крупность под спикера: где он смотрится увереннее</li>
+        <li>Посадка, руки, взгляд: в камеру или на собеседника</li>
+        <li>Одежда и фон: что сливается, что бликует, что отвлекает</li>
+        <li>Для двух спикеров — диалог, обмен репликами, общий план и крупные</li>
+      </ul>
+    </div>
+    <div class="pack">
+      <span class="k">Подача</span><h3>Как человек говорит</h3>
+      <ul>
+        <li>Первая фраза — сильная: перед дублем вместе формулируем хук</li>
+        <li>Разбиваем текст на короткие куски, без зубрёжки и суфлёра</li>
+        <li>Снимаем несколько дублей, сбился — пауза и заново, остальное вырежу</li>
+        <li>Подсказываю темп, интонацию и где улыбнуться</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gh" id="kit"><span class="n">03</span><h2>Оборудование — всё своё, только лучшее</h2></div>
+  <div class="kit">
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h1l2-3h8l2 3h1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2"/><circle cx="12" cy="13" r="3.5"/></svg><b>Камеры</b><p>Sony A7 V — полный кадр, 4K 10-bit. Вторая камера — для второго ракурса или второго спикера.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6v10a3 3 0 0 1-6 0z"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg><b>Звук</b><p>Радиопетлички Hollyland на каждого спикера, чистка и выравнивание голоса.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3"/></svg><b>Свет</b><p>Мягкий ключевой, заполняющий и контровой свет — ровная кожа и отделение от фона.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12M8 7h8M12 7l-4 6M12 7l4 6"/></svg><b>Стабилизатор и оптика</b><p>DJI RS 4 Pro для проходов и динамичных планов, светосильные объективы.</p></div>
+  </div>
+  <div class="inline-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg><span>Полный перечень с фотографиями техники — <a href="#links">по ссылке внизу страницы</a></span></div>
+
+  <div class="gh" id="price"><span class="n">04</span><h2>Стоимость съёмки</h2></div>
+  <p class="gl">Все тарифы — под ключ: съёмка, своя техника, помощь спикерам, монтаж, цветокоррекция и музыка. Платите за готовый результат, а не за отдельные услуги.</p>
+  <div class="tiers">
+    <div class="tier"><span class="k">1 час</span><span class="name">Reels</span><span class="tp">5&nbsp;000&nbsp;₽</span><span class="sub">Одно вертикальное видео под ключ</span><ul><li>Съёмка до 1 часа</li><li>Монтаж</li><li>Цветокоррекция</li><li>Музыка</li></ul></div>
+    <div class="tier"><span class="k">2 часа</span><span class="name">Visual storytelling</span><span class="tp">15&nbsp;000&nbsp;₽</span><span class="sub">Два горизонтальных видео под ключ</span><ul><li>Съёмка до 2 часов</li><li>Визуальная концепция</li><li>Монтаж двух видео</li><li>Цветокоррекция</li><li>Музыкальное оформление</li></ul></div>
+    <div class="tier hit"><span class="badge">Смена 4 часа</span><span class="k">до 4 часов</span><span class="name">Content shoot</span><span class="tp">25&nbsp;000&nbsp;₽</span><span class="sub">Контент-съёмка для бренда</span><ul><li>До 4 часов съёмки</li><li>Несколько сюжетов</li><li>3–4 видео под ключ</li><li>Цветокоррекция</li><li>Музыкальное оформление</li></ul></div>
+    <div class="tier"><span class="k">до 8 часов</span><span class="name">Full shooting day</span><span class="tp">40&nbsp;000&nbsp;₽</span><span class="sub">Полноценный съёмочный день</span><ul><li>До 8 часов съёмки</li><li>Работа над визуальным контентом бренда</li><li>Несколько сюжетов и локаций</li><li>Количество и формат роликов — обсуждаем</li></ul></div>
+  </div>
+
+  <div class="gh" id="hours"><span class="n">05</span><h2>Час съёмки и смена 4–8 часов</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="k">Что входит в цену</span>
+      <h3>Любой тариф</h3>
+      <ul>
+        <li>Выезд в офис или на локацию в Петербурге</li>
+        <li>Две камеры, свет, петлички — без доплат за технику</li>
+        <li>Помощь спикерам с постановкой и подачей</li>
+        <li>Монтаж, цветокоррекция, лицензионная музыка</li>
+        <li>Исходники всех дублей — на Ваш диск</li>
+      </ul>
+      <p class="note">Аренда студии, если она нужна, оплачивается отдельно по прайсу площадки.</p>
+    </div>
+    <div class="calc">
+      <div class="hd"><span>Съёмка</span><span>Готовых роликов · цена</span></div>
+      <div><span>1 час<i>Reels</i></span><span>1 вертикальный · 5&nbsp;000&nbsp;₽</span></div>
+      <div><span>2 часа<i>Visual storytelling</i></span><span>2 горизонтальных · 15&nbsp;000&nbsp;₽</span></div>
+      <div><span>4 часа<i>Content shoot</i></span><span>3–4 ролика · 25&nbsp;000&nbsp;₽</span></div>
+      <div><span>5–7 часов<i>Content shoot + дополнительные часы</i></span><span>25&nbsp;000 ₽ + 5&nbsp;000&nbsp;₽/ч</span></div>
+      <div><span>8 часов<i>Full shooting day</i></span><span>по договорённости · 40&nbsp;000&nbsp;₽</span></div>
+    </div>
+  </div>
+  <div class="extra">
+    <div><b>5 000 ₽</b><p>Дополнительный час съёмки</p></div>
+    <div><b>от 5 000 ₽</b><p>Дополнительное готовое видео</p></div>
+    <div><b>+30%</b><p>Срочный монтаж</p></div>
+    <div><b>по договорённости</b><p>Выезд за пределы города</p></div>
+  </div>
+
+  <div class="gh" id="edit"><span class="n">06</span><h2>Монтаж</h2></div>
+  <p class="gl">Монтаж входит в каждый тариф. Если из одной съёмки нужно больше роликов, чем в тарифе, — каждый дополнительный от 5 000 ₽.</p>
+  <div class="box"><ul>
+    <li>Чистка речи: оговорки, паузы и неудачные дубли — бережно, без «рваных» фраз</li>
+    <li>Смена ракурсов и крупности, динамика в ритме Reels</li>
+    <li>Субтитры в фирменных шрифтах и цветах, плашки, простая графика</li>
+    <li>Цветокоррекция в DaVinci Resolve: естественная кожа, единый вид всех роликов</li>
+    <li>Студийный звук голоса, лицензионная музыка и звуковое оформление</li>
+    <li>Вертикаль 9:16 для Reels, Shorts, VK Клипов и горизонталь 16:9 для YouTube</li>
+    <li>2 круга правок</li>
+  </ul></div>
+
+  <div class="gh" id="ai"><span class="n">07</span><h2>ИИ-инструменты</h2></div>
+  <p class="gl">ИИ работает у меня каждый день: на нём рутина, а у меня остаётся время на идею и качество. Поэтому монтаж быстрее, а правки — в тот же день.</p>
+  <div class="ai">
+    <div><b>Монтаж с ИИ-ассистентом</b><p>Claude управляет DaVinci Resolve: раскладывает дубли, находит оговорки по расшифровке, собирает черновик. <i>Я проверяю и довожу руками.</i></p></div>
+    <div><b>Расшифровка и субтитры</b><p>Распознавание речи с точным временем каждого слова: субтитры без ошибок в терминах, быстрые нарезки из длинного интервью.</p></div>
+    <div><b>Студийный голос</b><p>Auphonic: убирает шум офиса, эхо и выравнивает громкость. Петличка звучит как студийный микрофон.</p></div>
+    <div><b>Графика и эффекты</b><p>Анимация кодом: субтитры, плашки, интерфейсы, QR-коды, переходы. Делаю под фирменный стиль, а не шаблоны.</p></div>
+    <div><b>Стабилизация и трекинг</b><p>Gyroflow для плавности, трекинг для размытия лишнего в кадре: документов, экранов, лиц.</p></div>
+    <div><b>Нейросети</b><p>Claude и ChatGPT — сценарии, хуки, тексты и монтаж; Gemini — анализ роликов; Midjourney, Runway и Kling — генерация сцен и фонов по согласованию; ElevenLabs — озвучка; Topaz — улучшение качества.</p></div>
+  </div>
+  <p class="honest">Примеры: рилсы для пластического хирурга ниже — субтитры, графика, финальная анимация с QR-кодом на сайт и звук сделаны с этими инструментами.</p>
+
+  <div class="gh" id="terms"><span class="n">08</span><h2>Сроки</h2></div>
+  <div class="steps">
+    <div><b>Готовые ролики</b><strong>около недели</strong>В среднем, зависит от сложности</div>
+    <div><b>Исходники</b><strong>на Ваш диск</strong>Снимаю в высоком битрейте и лог-профиле — объём большой, по облаку не передать</div>
+    <div><b>Правки</b><strong>1–2 дня</strong>На каждый круг правок</div>
+    <div><b>Срочно</b><strong>+30%</strong>Ролик в день съёмки или на следующий</div>
+  </div>
+
+  <div class="gh" id="regular"><span class="n">09</span><h2>Регулярное сотрудничество</h2></div>
+  <div class="two">
+    <div class="pack">
+      <span class="k">Да, готов</span><h3>Как это выглядит</h3>
+      <ul>
+        <li>Съёмочный день раз в неделю или две — контент на весь период вперёд</li>
+        <li>Единый стиль: свет, цвет, субтитры и графика одинаковые во всех роликах</li>
+        <li>Спикеры привыкают к камере — с каждой съёмкой подача заметно лучше</li>
+        <li>Для регулярных съёмок обсудим удобный месячный пакет</li>
+      </ul>
+    </div>
+    <div class="pack">
+      <span class="k">С SMM-менеджером</span><h3>Удалённо и без потерь</h3>
+      <ul>
+        <li>Перед съёмкой — список тем и хуков от SMM, я готовлю план дня</li>
+        <li>Готовые и черновые версии — на отдельной странице, удобно смотреть с телефона</li>
+        <li>Правки — таймкодом или сообщением в Telegram</li>
+        <li>Обложки и форматы под каждую площадку</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gh" id="location"><span class="n">10</span><h2>Локация</h2></div>
+  <div class="two">
+    <div class="pack">
+      <span class="k">В офисе</span><h3>Сниму у Вас</h3>
+      <ul>
+        <li>Заранее смотрю место по фото или видео: окна, шум, фон</li>
+        <li>Нахожу 2–3 точки съёмки, чтобы ролики не были одинаковыми</li>
+        <li>Свет привожу свой — картинка не зависит от погоды и офисных ламп</li>
+      </ul>
+    </div>
+    <div class="pack">
+      <span class="k">Аренда</span><h3>Проверенные студии</h3>
+      <ul>
+        <li>Порекомендую проверенные студии в Петербурге с отличным светом</li>
+        <li>Тихие, с глубиной фона и почасовой арендой</li>
+        <li>Для экспертного контента — спокойный интерьер: кабинет, библиотека, светлый лофт</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gh" id="works"><span class="n">11</span><h2>Мои работы</h2></div>
+  <p class="gl">Экспертный, корпоративный и динамичный контент. Нажмите на обложку — ролик откроется на YouTube.</p>
+  <div class="exp">
+    <a class="reel" href="https://www.youtube.com/shorts/VlgynYsPtS0" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-face.jpg" alt="Пластический хирург рассказывает о предстоящей операции"><em>Эксперт</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><b>Эксперт в кадре: врач о своей работе</b><span>Говорящая голова, кинетические субтитры, перебивки</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/DeftgE3lcsY" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-or.jpg" alt="Хирург в оптике во время операции"><em>Имидж</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><b>Шоурил специалиста</b><span>Склейки в такт музыке, замедления, QR-код на сайт в финале</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/MD7Vqr4xX14" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-avito.jpg" alt="Героини рекламного рилса для Авито"><em>Реклама</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><b>Рекламный рилс для Авито</b><span>Два человека в кадре, диалог, переходы и саунд-дизайн</span></a>
+  </div>
+  <a class="wide" href="https://www.youtube.com/watch?v=ifr2-iQ0owY" target="_blank" rel="noopener"><div class="pic"><img src="assets/yt-ifr2-iQ0owY.jpg" alt="Студийное интервью"><em>Интервью</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><div><span class="k">Две говорящие головы</span><b>Студийное интервью: Сергей Минаев у Александра Соколовского</b><p>Снято на несколько камер и сведено воедино. Моя роль — оператор.</p></div></a>
+  <a class="wide" href="https://www.youtube.com/watch?v=xjLZg2eoKOU" target="_blank" rel="noopener"><div class="pic"><img src="assets/yt-xjLZg2eoKOU.jpg" alt="Ход строительства ЖК Новатория"><em>Корпоративный</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><div><span class="k">Для застройщика</span><b>Ход строительства ЖК «Новатория»</b><p>Отчётный ролик: рассказ начальника участка, облёты объекта, графика в фирменном стиле сайта. Снял серию выпусков, подписан контракт на новый комплекс.</p></div></a>
+  <a class="wide" href="https://www.youtube.com/watch?v=MKzVItGNrjQ" target="_blank" rel="noopener"><div class="pic"><img src="assets/yt-MKzVItGNrjQ.jpg" alt="Мастер-класс по сервису станции Астра 5"><em>Обучение</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2F5BD3"/></svg></i></div><div><span class="k">Экспертный · бизнес</span><b>Мастер-класс для компании Kaesyambo</b><p>Эксперт в кадре объясняет обслуживание станции биоочистки шаг за шагом: ясность, ракурсы, графика.</p></div></a>
+
+  <div class="gh"><span class="n">12</span><h2>Как я показываю работу клиентам</h2></div>
+  <p class="gl">Готовые и черновые версии отдаю отдельной страницей: все ролики в одном месте, удобно смотреть с телефона и передавать правки — Вам и SMM-менеджеру.</p>
+  <div class="cases">
+    <a class="case" href="https://tinextreme-alt.github.io/offers/dr-shapovalov/" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/sh-face.jpg" alt="Хирург перед операцией"><img src="assets/sh-or.jpg" alt="Хирург в операционной"><img src="assets/clinic3.jpg" alt="Врач у стойки клиники"></div><span class="k">Серия рилсов</span><b>Рилсы для пластического хирурга</b><p>Рабочие версии, обложки, кадры со съёмки и как дать правки.</p><i>Открыть →</i></a>
+    <a class="case" href="https://tinextreme-alt.github.io/offers/avito-reel/" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/av-2.jpg" alt="Кадр рилса для Авито"><img src="assets/av-5.jpg" alt="Кадр рилса для Авито"><img src="assets/av-8.jpg" alt="Кадр рилса для Авито"></div><span class="k">Черновой монтаж</span><b>Рилс для Авито: версии на выбор</b><p>Варианты ролика рядом, раскадровка и файлы для скачивания.</p><i>Открыть →</i></a>
+    <a class="case" href="https://da-spb.art/disk/13-11-2026-foto-personala-kliniki-medilier-w2vxs5" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/med-1.jpg" alt="Портрет сотрудницы клиники"><img src="assets/med-5.jpg" alt="Портрет сотрудницы клиники"><img src="assets/med-17.jpg" alt="Портрет сотрудницы клиники"></div><span class="k">Фото команды</span><b>Портреты персонала клиники</b><p>Галерея для клиента: фото в едином стиле. Портреты спикеров для соцсетей тоже сниму.</p><i>Открыть →</i></a>
+  </div>
+
+  <div class="gh" id="links"><span class="n">13</span><h2>Портфолио и оборудование</h2></div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Портфолио · шоу-рил</b><br><span>Реклама, интервью, бизнес, медицина, спорт</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>Полный перечень техники с фото</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="call">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2F5BD3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <div><b>Созвонимся на 10–15 минут</b><p>Я всегда на связи — выберите удобное время и способ: <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></p></div>
+  </div>
+
+<div class="tg tg-card"><a class="tg-qr" href="https://t.me/T1nEx" target="_blank" rel="noopener" aria-label="Открыть Telegram @T1nEx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" role="img" aria-label="QR-код Telegram @T1nEx"><rect width="33" height="33" fill="#fff"/><g fill="#111"><circle cx="11.5" cy="2.5" r="0.43"/><circle cx="13.5" cy="2.5" r="0.43"/><circle cx="14.5" cy="2.5" r="0.43"/><circle cx="15.5" cy="2.5" r="0.43"/><circle cx="17.5" cy="2.5" r="0.43"/><circle cx="18.5" cy="2.5" r="0.43"/><circle cx="19.5" cy="2.5" r="0.43"/><circle cx="21.5" cy="2.5" r="0.43"/><circle cx="22.5" cy="2.5" r="0.43"/><circle cx="10.5" cy="3.5" r="0.43"/><circle cx="16.5" cy="3.5" r="0.43"/><circle cx="17.5" cy="3.5" r="0.43"/><circle cx="21.5" cy="3.5" r="0.43"/><circle cx="11.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="4.5" r="0.43"/><circle cx="16.5" cy="4.5" r="0.43"/><circle cx="17.5" cy="4.5" r="0.43"/><circle cx="19.5" cy="4.5" r="0.43"/><circle cx="20.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="5.5" r="0.43"/><circle cx="13.5" cy="5.5" r="0.43"/><circle cx="15.5" cy="5.5" r="0.43"/><circle cx="18.5" cy="5.5" r="0.43"/><circle cx="20.5" cy="5.5" r="0.43"/><circle cx="12.5" cy="6.5" r="0.43"/><circle cx="15.5" cy="6.5" r="0.43"/><circle cx="18.5" cy="6.5" r="0.43"/><circle cx="19.5" cy="6.5" r="0.43"/><circle cx="20.5" cy="6.5" r="0.43"/><circle cx="10.5" cy="7.5" r="0.43"/><circle cx="11.5" cy="7.5" r="0.43"/><circle cx="16.5" cy="7.5" r="0.43"/><circle cx="18.5" cy="7.5" r="0.43"/><circle cx="19.5" cy="7.5" r="0.43"/><circle cx="21.5" cy="7.5" r="0.43"/><circle cx="22.5" cy="7.5" r="0.43"/><circle cx="10.5" cy="8.5" r="0.43"/><circle cx="12.5" cy="8.5" r="0.43"/><circle cx="14.5" cy="8.5" r="0.43"/><circle cx="16.5" cy="8.5" r="0.43"/><circle cx="18.5" cy="8.5" r="0.43"/><circle cx="20.5" cy="8.5" r="0.43"/><circle cx="22.5" cy="8.5" r="0.43"/><circle cx="10.5" cy="9.5" r="0.43"/><circle cx="11.5" cy="9.5" r="0.43"/><circle cx="12.5" cy="9.5" r="0.43"/><circle cx="14.5" cy="9.5" r="0.43"/><circle cx="15.5" cy="9.5" r="0.43"/><circle cx="16.5" cy="9.5" r="0.43"/><circle cx="17.5" cy="9.5" r="0.43"/><circle cx="18.5" cy="9.5" r="0.43"/><circle cx="21.5" cy="9.5" r="0.43"/><circle cx="22.5" cy="9.5" r="0.43"/><circle cx="6.5" cy="10.5" r="0.43"/><circle cx="7.5" cy="10.5" r="0.43"/><circle cx="8.5" cy="10.5" r="0.43"/><circle cx="9.5" cy="10.5" r="0.43"/><circle cx="12.5" cy="10.5" r="0.43"/><circle cx="13.5" cy="10.5" r="0.43"/><circle cx="17.5" cy="10.5" r="0.43"/><circle cx="18.5" cy="10.5" r="0.43"/><circle cx="22.5" cy="10.5" r="0.43"/><circle cx="24.5" cy="10.5" r="0.43"/><circle cx="25.5" cy="10.5" r="0.43"/><circle cx="29.5" cy="10.5" r="0.43"/><circle cx="3.5" cy="11.5" r="0.43"/><circle cx="6.5" cy="11.5" r="0.43"/><circle cx="9.5" cy="11.5" r="0.43"/><circle cx="11.5" cy="11.5" r="0.43"/><circle cx="13.5" cy="11.5" r="0.43"/><circle cx="14.5" cy="11.5" r="0.43"/><circle cx="16.5" cy="11.5" r="0.43"/><circle cx="17.5" cy="11.5" r="0.43"/><circle cx="20.5" cy="11.5" r="0.43"/><circle cx="21.5" cy="11.5" r="0.43"/><circle cx="26.5" cy="11.5" r="0.43"/><circle cx="28.5" cy="11.5" r="0.43"/><circle cx="29.5" cy="11.5" r="0.43"/><circle cx="30.5" cy="11.5" r="0.43"/><circle cx="3.5" cy="12.5" r="0.43"/><circle cx="5.5" cy="12.5" r="0.43"/><circle cx="6.5" cy="12.5" r="0.43"/><circle cx="8.5" cy="12.5" r="0.43"/><circle cx="12.5" cy="12.5" r="0.43"/><circle cx="14.5" cy="12.5" r="0.43"/><circle cx="18.5" cy="12.5" r="0.43"/><circle cx="19.5" cy="12.5" r="0.43"/><circle cx="21.5" cy="12.5" r="0.43"/><circle cx="23.5" cy="12.5" r="0.43"/><circle cx="25.5" cy="12.5" r="0.43"/><circle cx="30.5" cy="12.5" r="0.43"/><circle cx="2.5" cy="13.5" r="0.43"/><circle cx="3.5" cy="13.5" r="0.43"/><circle cx="6.5" cy="13.5" r="0.43"/><circle cx="7.5" cy="13.5" r="0.43"/><circle cx="12.5" cy="13.5" r="0.43"/><circle cx="19.5" cy="13.5" r="0.43"/><circle cx="21.5" cy="13.5" r="0.43"/><circle cx="22.5" cy="13.5" r="0.43"/><circle cx="23.5" cy="13.5" r="0.43"/><circle cx="25.5" cy="13.5" r="0.43"/><circle cx="26.5" cy="13.5" r="0.43"/><circle cx="29.5" cy="13.5" r="0.43"/><circle cx="30.5" cy="13.5" r="0.43"/><circle cx="4.5" cy="14.5" r="0.43"/><circle cx="5.5" cy="14.5" r="0.43"/><circle cx="7.5" cy="14.5" r="0.43"/><circle cx="8.5" cy="14.5" r="0.43"/><circle cx="9.5" cy="14.5" r="0.43"/><circle cx="11.5" cy="14.5" r="0.43"/><circle cx="20.5" cy="14.5" r="0.43"/><circle cx="22.5" cy="14.5" r="0.43"/><circle cx="25.5" cy="14.5" r="0.43"/><circle cx="30.5" cy="14.5" r="0.43"/><circle cx="2.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="15.5" r="0.43"/><circle cx="4.5" cy="15.5" r="0.43"/><circle cx="10.5" cy="15.5" r="0.43"/><circle cx="11.5" cy="15.5" r="0.43"/><circle cx="22.5" cy="15.5" r="0.43"/><circle cx="24.5" cy="15.5" r="0.43"/><circle cx="26.5" cy="15.5" r="0.43"/><circle cx="28.5" cy="15.5" r="0.43"/><circle cx="29.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="16.5" r="0.43"/><circle cx="4.5" cy="16.5" r="0.43"/><circle cx="6.5" cy="16.5" r="0.43"/><circle cx="7.5" cy="16.5" r="0.43"/><circle cx="8.5" cy="16.5" r="0.43"/><circle cx="10.5" cy="16.5" r="0.43"/><circle cx="11.5" cy="16.5" r="0.43"/><circle cx="23.5" cy="16.5" r="0.43"/><circle cx="24.5" cy="16.5" r="0.43"/><circle cx="26.5" cy="16.5" r="0.43"/><circle cx="30.5" cy="16.5" r="0.43"/><circle cx="2.5" cy="17.5" r="0.43"/><circle cx="4.5" cy="17.5" r="0.43"/><circle cx="7.5" cy="17.5" r="0.43"/><circle cx="9.5" cy="17.5" r="0.43"/><circle cx="10.5" cy="17.5" r="0.43"/><circle cx="22.5" cy="17.5" r="0.43"/><circle cx="23.5" cy="17.5" r="0.43"/><circle cx="24.5" cy="17.5" r="0.43"/><circle cx="25.5" cy="17.5" r="0.43"/><circle cx="27.5" cy="17.5" r="0.43"/><circle cx="5.5" cy="18.5" r="0.43"/><circle cx="8.5" cy="18.5" r="0.43"/><circle cx="9.5" cy="18.5" r="0.43"/><circle cx="10.5" cy="18.5" r="0.43"/><circle cx="11.5" cy="18.5" r="0.43"/><circle cx="12.5" cy="18.5" r="0.43"/><circle cx="21.5" cy="18.5" r="0.43"/><circle cx="25.5" cy="18.5" r="0.43"/><circle cx="29.5" cy="18.5" r="0.43"/><circle cx="30.5" cy="18.5" r="0.43"/><circle cx="2.5" cy="19.5" r="0.43"/><circle cx="3.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="19.5" r="0.43"/><circle cx="6.5" cy="19.5" r="0.43"/><circle cx="7.5" cy="19.5" r="0.43"/><circle cx="9.5" cy="19.5" r="0.43"/><circle cx="11.5" cy="19.5" r="0.43"/><circle cx="12.5" cy="19.5" r="0.43"/><circle cx="13.5" cy="19.5" r="0.43"/><circle cx="21.5" cy="19.5" r="0.43"/><circle cx="22.5" cy="19.5" r="0.43"/><circle cx="25.5" cy="19.5" r="0.43"/><circle cx="26.5" cy="19.5" r="0.43"/><circle cx="27.5" cy="19.5" r="0.43"/><circle cx="28.5" cy="19.5" r="0.43"/><circle cx="30.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="20.5" r="0.43"/><circle cx="6.5" cy="20.5" r="0.43"/><circle cx="8.5" cy="20.5" r="0.43"/><circle cx="9.5" cy="20.5" r="0.43"/><circle cx="10.5" cy="20.5" r="0.43"/><circle cx="11.5" cy="20.5" r="0.43"/><circle cx="13.5" cy="20.5" r="0.43"/><circle cx="18.5" cy="20.5" r="0.43"/><circle cx="22.5" cy="20.5" r="0.43"/><circle cx="27.5" cy="20.5" r="0.43"/><circle cx="30.5" cy="20.5" r="0.43"/><circle cx="4.5" cy="21.5" r="0.43"/><circle cx="6.5" cy="21.5" r="0.43"/><circle cx="9.5" cy="21.5" r="0.43"/><circle cx="10.5" cy="21.5" r="0.43"/><circle cx="12.5" cy="21.5" r="0.43"/><circle cx="17.5" cy="21.5" r="0.43"/><circle cx="18.5" cy="21.5" r="0.43"/><circle cx="19.5" cy="21.5" r="0.43"/><circle cx="27.5" cy="21.5" r="0.43"/><circle cx="29.5" cy="21.5" r="0.43"/><circle cx="2.5" cy="22.5" r="0.43"/><circle cx="3.5" cy="22.5" r="0.43"/><circle cx="4.5" cy="22.5" r="0.43"/><circle cx="5.5" cy="22.5" r="0.43"/><circle cx="6.5" cy="22.5" r="0.43"/><circle cx="7.5" cy="22.5" r="0.43"/><circle cx="8.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="22.5" r="0.43"/><circle cx="12.5" cy="22.5" r="0.43"/><circle cx="15.5" cy="22.5" r="0.43"/><circle cx="17.5" cy="22.5" r="0.43"/><circle cx="18.5" cy="22.5" r="0.43"/><circle cx="19.5" cy="22.5" r="0.43"/><circle cx="21.5" cy="22.5" r="0.43"/><circle cx="22.5" cy="22.5" r="0.43"/><circle cx="23.5" cy="22.5" r="0.43"/><circle cx="24.5" cy="22.5" r="0.43"/><circle cx="25.5" cy="22.5" r="0.43"/><circle cx="26.5" cy="22.5" r="0.43"/><circle cx="27.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="23.5" r="0.43"/><circle cx="11.5" cy="23.5" r="0.43"/><circle cx="13.5" cy="23.5" r="0.43"/><circle cx="14.5" cy="23.5" r="0.43"/><circle cx="17.5" cy="23.5" r="0.43"/><circle cx="18.5" cy="23.5" r="0.43"/><circle cx="19.5" cy="23.5" r="0.43"/><circle cx="22.5" cy="23.5" r="0.43"/><circle cx="26.5" cy="23.5" r="0.43"/><circle cx="28.5" cy="23.5" r="0.43"/><circle cx="30.5" cy="23.5" r="0.43"/><circle cx="10.5" cy="24.5" r="0.43"/><circle cx="11.5" cy="24.5" r="0.43"/><circle cx="12.5" cy="24.5" r="0.43"/><circle cx="14.5" cy="24.5" r="0.43"/><circle cx="15.5" cy="24.5" r="0.43"/><circle cx="16.5" cy="24.5" r="0.43"/><circle cx="20.5" cy="24.5" r="0.43"/><circle cx="21.5" cy="24.5" r="0.43"/><circle cx="22.5" cy="24.5" r="0.43"/><circle cx="24.5" cy="24.5" r="0.43"/><circle cx="26.5" cy="24.5" r="0.43"/><circle cx="29.5" cy="24.5" r="0.43"/><circle cx="30.5" cy="24.5" r="0.43"/><circle cx="10.5" cy="25.5" r="0.43"/><circle cx="11.5" cy="25.5" r="0.43"/><circle cx="12.5" cy="25.5" r="0.43"/><circle cx="13.5" cy="25.5" r="0.43"/><circle cx="14.5" cy="25.5" r="0.43"/><circle cx="15.5" cy="25.5" r="0.43"/><circle cx="17.5" cy="25.5" r="0.43"/><circle cx="18.5" cy="25.5" r="0.43"/><circle cx="19.5" cy="25.5" r="0.43"/><circle cx="20.5" cy="25.5" r="0.43"/><circle cx="21.5" cy="25.5" r="0.43"/><circle cx="22.5" cy="25.5" r="0.43"/><circle cx="26.5" cy="25.5" r="0.43"/><circle cx="27.5" cy="25.5" r="0.43"/><circle cx="30.5" cy="25.5" r="0.43"/><circle cx="10.5" cy="26.5" r="0.43"/><circle cx="12.5" cy="26.5" r="0.43"/><circle cx="17.5" cy="26.5" r="0.43"/><circle cx="18.5" cy="26.5" r="0.43"/><circle cx="19.5" cy="26.5" r="0.43"/><circle cx="21.5" cy="26.5" r="0.43"/><circle cx="22.5" cy="26.5" r="0.43"/><circle cx="23.5" cy="26.5" r="0.43"/><circle cx="24.5" cy="26.5" r="0.43"/><circle cx="25.5" cy="26.5" r="0.43"/><circle cx="26.5" cy="26.5" r="0.43"/><circle cx="29.5" cy="26.5" r="0.43"/><circle cx="11.5" cy="27.5" r="0.43"/><circle cx="12.5" cy="27.5" r="0.43"/><circle cx="13.5" cy="27.5" r="0.43"/><circle cx="14.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="27.5" r="0.43"/><circle cx="16.5" cy="27.5" r="0.43"/><circle cx="19.5" cy="27.5" r="0.43"/><circle cx="25.5" cy="27.5" r="0.43"/><circle cx="29.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="28.5" r="0.43"/><circle cx="16.5" cy="28.5" r="0.43"/><circle cx="21.5" cy="28.5" r="0.43"/><circle cx="22.5" cy="28.5" r="0.43"/><circle cx="23.5" cy="28.5" r="0.43"/><circle cx="28.5" cy="28.5" r="0.43"/><circle cx="29.5" cy="28.5" r="0.43"/><circle cx="30.5" cy="28.5" r="0.43"/><circle cx="12.5" cy="29.5" r="0.43"/><circle cx="16.5" cy="29.5" r="0.43"/><circle cx="18.5" cy="29.5" r="0.43"/><circle cx="20.5" cy="29.5" r="0.43"/><circle cx="25.5" cy="29.5" r="0.43"/><circle cx="27.5" cy="29.5" r="0.43"/><circle cx="29.5" cy="29.5" r="0.43"/><circle cx="30.5" cy="29.5" r="0.43"/><circle cx="12.5" cy="30.5" r="0.43"/><circle cx="14.5" cy="30.5" r="0.43"/><circle cx="15.5" cy="30.5" r="0.43"/><circle cx="16.5" cy="30.5" r="0.43"/><circle cx="24.5" cy="30.5" r="0.43"/><circle cx="26.5" cy="30.5" r="0.43"/><circle cx="27.5" cy="30.5" r="0.43"/><circle cx="28.5" cy="30.5" r="0.43"/><circle cx="29.5" cy="30.5" r="0.43"/></g><path fill="#111" fill-rule="evenodd" d="M4.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M26.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM26.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="26" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M4.2 24h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 25h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="26" width="3" height="3" rx="1" fill="#111"/><circle cx="16.5" cy="16.5" r="3.6" fill="#111"/><polygon points="14.623,16.390 18.322,14.954 17.659,18.128 16.583,17.328 16.058,17.852 16.003,17.024 17.494,15.700 15.644,16.804" fill="#fff" stroke="#fff" stroke-width="0.193" stroke-linejoin="round"/></svg></a><div class="tg-txt"><span class="tg-cap">Telegram</span><a class="tg-link" href="https://t.me/T1nEx" target="_blank" rel="noopener">@T1nEx</a><span class="tg-note">Наведите камеру телефона на код или нажмите на ник, чтобы написать мне</span></div></div>
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></div>
+</div>
+</body></html>
