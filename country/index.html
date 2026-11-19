@@ -1,0 +1,334 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение · видео для загородной недвижимости</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&display=swap"><style>
+/* Каркас оффера «dance»; палитра «финтех»: белый, графит, синий акцент #2E6A4F */
+:root{--bg:#FFFFFF;--bg2:#F5F7FB;--card:#F2F4F8;--line:#E1E6EF;--fg:#141821;--text:#3A404C;--muted:#7B8392;--ac:#2E6A4F;--ac-d:#1F4E39;--ac-soft:#EEF5F0;--display:'Unbounded',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.6 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.top{background:var(--bg2);border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);gap:36px;align-items:center;max-width:1040px;margin:0 auto;padding:48px 28px 40px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.kick{font:500 11.5px var(--body);letter-spacing:.2em;color:var(--ac);text-transform:uppercase;margin-bottom:16px}
+h1{font:500 clamp(26px,3.4vw,38px)/1.18 var(--display);color:var(--fg);margin:0 0 18px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--ac)}
+h2{font:500 22px/1.25 var(--display);color:var(--fg);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--body);color:var(--fg);margin:0}
+p{margin:0}
+.lead{max-width:540px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chips span{font-size:12.5px;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--text)}
+.who{margin-top:22px;font-size:14px}.who b{color:var(--fg);font-weight:600}.who a{color:var(--ac-d);text-decoration:none;white-space:nowrap}
+.down{display:inline-flex;gap:8px;align-items:center;margin-top:14px;font:500 13.5px var(--body);color:var(--ac-d);text-decoration:none}
+.gh{display:flex;gap:14px;align-items:baseline;margin:52px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
+.gh .n{font:500 12px var(--body);color:var(--ac);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 18px;font-size:14.5px;max-width:780px}
+.k{font:600 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+/* ответы по пунктам */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qa a{display:flex;gap:14px;background:var(--card);border-radius:14px;padding:16px 18px;text-decoration:none;transition:box-shadow .2s}
+.qa a:hover{box-shadow:0 0 0 1.5px var(--ac)}
+.qa .num{flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ac);font:600 13px/30px var(--body);text-align:center;box-shadow:0 0 0 1px var(--line)}
+.qa b{display:block;font:600 14.5px/1.35 var(--body);color:var(--fg);margin-bottom:3px}.qa p{font-size:13.5px;color:var(--text);line-height:1.45}
+/* постановка */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pack{background:var(--card);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.pack h3{font:500 18px/1.3 var(--display)}
+.pack ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:7px;font-size:14px}
+/* оборудование */
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kit div{background:var(--card);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px}
+.kit svg{margin-bottom:4px}.kit b{font:600 14.5px/1.3 var(--body);color:var(--fg)}.kit p{font-size:13px;color:var(--muted);line-height:1.45}
+.inline-link{display:flex;gap:12px;align-items:center;margin-top:12px;font-size:14px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.inline-link a{color:var(--ac-d);font-weight:600;text-decoration:none;white-space:nowrap}
+/* тарифы */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tier{position:relative;background:var(--card);border-radius:16px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:6px;border:1.5px solid transparent}
+.tier.hit{background:#fff;border-color:var(--ac);box-shadow:0 10px 30px -18px rgba(46,106,79,.5)}
+.tier .badge{position:absolute;top:-11px;left:18px;font:600 10.5px var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--ac);color:#fff;padding:5px 9px;border-radius:6px}
+.tier .name{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.tier .tp{font:500 26px/1.15 var(--display);color:var(--fg);margin-top:6px;font-variant-numeric:tabular-nums}
+.tier .per{font-size:13.5px;color:var(--ac-d);font-weight:600}
+.tier .sub{font-size:13.5px;color:var(--text)}
+.tier ul{margin:8px 0 0;padding-left:1.05em;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);line-height:1.4}
+/* расчёт */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:18px;padding:28px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.offer .left ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.calc{display:flex;flex-direction:column;font-size:14.5px}
+.calc div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed #BFD6C8}
+.calc div span:last-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.calc div.hd{font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ac-d);border-bottom:2px solid var(--ac);padding-top:0}
+.calc div.hd span:last-child{font:inherit;color:inherit}
+.calc i{font-style:normal;color:var(--muted);font-size:13px;display:block}
+.note{font-size:13px;color:var(--muted)}
+.extra{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.extra div{background:var(--card);border-radius:12px;padding:14px 16px}.extra b{display:block;font:500 17px/1.25 var(--display);color:var(--fg);margin-bottom:4px}.extra p{font-size:13px;color:var(--muted);line-height:1.4}
+/* ИИ */
+.ai{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ai div{background:var(--card);border-radius:14px;padding:18px 20px}
+.ai b{display:block;font:600 14.5px/1.3 var(--body);color:var(--fg);margin-bottom:4px}.ai p{font-size:13.5px;color:var(--text);line-height:1.45}.ai p i{font-style:normal;color:var(--muted)}
+.honest{margin-top:12px;font-size:14px;border-left:3px solid var(--ac);padding:10px 0 10px 14px;background:var(--bg2);border-radius:0 10px 10px 0}
+/* сроки */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:600 12px var(--body);letter-spacing:.06em;color:var(--ac-d);margin-bottom:4px;text-transform:uppercase}
+.steps strong{display:block;font:500 20px/1.2 var(--display);color:var(--fg);margin-bottom:4px}
+.box{background:var(--card);border-radius:14px;padding:18px 22px}.box ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+/* работы */
+.exp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.reel{display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.reel .pic{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
+.reel .pic img{width:100%;height:100%;object-fit:cover}
+.pic i{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s}
+.pic em{position:absolute;left:10px;top:10px;font:600 10.5px var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--fg);padding:5px 8px;border-radius:6px}
+.reel:hover .pic i,.wide:hover .pic i{transform:scale(1.08)}
+.reel b{font:600 14px/1.3 var(--body);color:var(--fg)}.reel span{font-size:13px;color:var(--muted);line-height:1.4}
+.wide{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:center;background:var(--card);border-radius:16px;padding:14px;margin-top:14px;text-decoration:none}
+.wide .pic{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}.wide .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.wide b{font:600 16px/1.3 var(--body);color:var(--fg);display:block;margin:6px 0}.wide p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.case{display:flex;flex-direction:column;gap:10px;background:var(--card);border-radius:14px;padding:14px;text-decoration:none;transition:box-shadow .2s}
+.case:hover{box-shadow:0 0 0 1.5px var(--ac)}
+.case .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.case .thumbs img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.case .k{margin-top:2px}.case b{font:600 15px/1.3 var(--body);color:var(--fg)}.case p{font-size:13px;color:var(--muted);line-height:1.45}
+.case i{font:600 13px var(--body);font-style:normal;color:var(--ac-d);margin-top:auto}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:var(--card);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:600 15px var(--body);color:var(--fg)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#fff;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
+.call{display:flex;gap:18px;align-items:center;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:16px;padding:20px 24px;margin-top:44px}
+.call svg{flex:none}.call b{display:block;font:500 18px/1.3 var(--display);color:var(--fg);margin-bottom:4px}.call p{font-size:14px}
+.call a{color:var(--ac-d);font-weight:600;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac-d);text-decoration:none}.foot b{color:var(--fg)}
+@media(max-width:900px){.tiers,.kit,.extra{grid-template-columns:1fr 1fr}.tiers{gap:20px 12px}.ai,.cases{grid-template-columns:1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:20px;padding:26px 16px 26px}.hero>img{order:-1}
+  .qa,.two,.offer,.links,.wide{grid-template-columns:1fr}.exp{gap:8px}.reel b{font-size:12.5px}.reel span{font-size:11.5px}.reel .pic i{width:42px;height:42px;margin:-21px 0 0 -21px}.reel .pic em{font-size:9px;padding:4px 6px;left:6px;top:6px}
+  .steps{grid-template-columns:1fr 1fr}.tiers{grid-template-columns:1fr}
+  h2{font-size:19px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}.offer{padding:20px}.call{flex-direction:column;align-items:flex-start}}
+/* Telegram */
+.tg{--tg-ac:var(--ac);display:flex;gap:18px;align-items:center}
+.tg-qr{flex:none;width:128px;height:128px;padding:4px;background:#fff;border-radius:14px;display:block;box-shadow:0 0 0 1px var(--line)}
+.tg-qr svg{display:block;width:100%;height:100%}
+.tg-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tg-cap{font:600 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tg-ac)}
+.tg-link{font:500 1.2rem/1.2 var(--display);color:var(--fg);text-decoration:none}
+.tg-link:hover{color:var(--tg-ac)}
+.tg-note{font-size:.85rem;line-height:1.4;color:var(--muted)}
+.tg-card{background:var(--card);border-radius:14px;padding:18px;margin-top:20px}
+</style></head><body>
+<style>
+/* дополнения к каркасу */
+.hero>img{object-position:50% 40%}
+.vdt{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vdt .pack.me{background:var(--ac-soft);border:1.5px solid var(--ac)}
+.story{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.story div{display:grid;grid-template-columns:110px minmax(0,1fr) minmax(0,1.1fr);gap:18px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:baseline}
+.story b{font:600 13px var(--body);color:var(--ac-d);font-variant-numeric:tabular-nums}
+.story strong{color:var(--fg);font-weight:600}
+.story span{color:var(--muted)}
+.ex{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+.rl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.rl div{background:var(--card);border-radius:14px;padding:16px 18px}.rl b{display:block;font:600 14.5px/1.3 var(--body);color:var(--fg);margin-bottom:4px}.rl p{font-size:13.5px;line-height:1.45}
+.host{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.host .price{background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.host .price .tp{font:500 30px/1.1 var(--display);color:var(--fg)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.wide .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.wide .shots img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.tiers.t3{grid-template-columns:repeat(3,1fr)}.cases.c2{grid-template-columns:1fr 1fr}@media(max-width:900px){.three{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.vdt,.host,.three,.rl,.tiers.t3,.cases.c2{grid-template-columns:1fr}.tiers.t3{gap:20px}.story div{grid-template-columns:70px 1fr;gap:4px 12px}.story span{grid-column:2}}
+</style>
+
+<div class="top"><header class="hero"><div class="in">
+  <div class="kick">Коммерческое предложение · видеограф</div>
+  <h1>Видео для <em>загородной недвижимости</em>: дома, участки, жизнь за городом</h1>
+  <p class="lead">Сам выезжаю на объекты в Петербурге и области, снимаю, пишу сценарий и монтирую. С каждого объекта — обзорный ролик и Reels из той же съёмки. Уже снимаю недвижимость для застройщика.</p>
+  <div class="chips"><span>Sony A7 V · 4K 10-bit</span><span>дрон</span><span>стабилизатор DJI RS 4 Pro</span><span>светосильная оптика</span><span>петлички Hollyland</span><span>ведущая в кадре — по желанию</span><span>DaVinci Resolve</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · Санкт-Петербург · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a></div>
+  <a class="down" href="#works"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Примеры работ, портфолио и оборудование — внизу страницы</a>
+</div><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"></header></div>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Коротко по Вашим вопросам</h2></div>
+  <p class="gl">Ответы по порядку. Нажмите на пункт — откроется подробный блок.</p>
+  <div class="qa">
+    <a href="#shoot"><span class="num">1</span><div><b>Стоимость съёмки</b><p>Час — 4 000 ₽, объект (до 4 часов) — 15 000 ₽, смена 8 часов — 25 000 ₽. Техника, дрон и выезд по ЛО до 50 км от КАД — в цене.</p></div></a>
+    <a href="#edit"><span class="num">2</span><div><b>Стоимость монтажа</b><p>Reels / Shorts — 5 000 ₽, обзор 3–5 минут — 15 000 ₽, обзор 5–7 минут — 20 000 ₽. Цвет, звук, музыка и титры — в цене.</p></div></a>
+    <a href="#script"><span class="num">3</span><div><b>Сценарий</b><p>Пишу сам: раскадровку под каждый объект готовлю до выезда. По Вашему ТЗ тоже работаю.</p></div></a>
+    <a href="#terms"><span class="num">4</span><div><b>Сроки</b><p>Reels — 3–5 дней, обзорный ролик — около недели от съёмки до готового файла.</p></div></a>
+    <a href="#contract"><span class="num">5</span><div><b>Условия</b><p>Договор, самозанятость. 50 % предоплата, 50 % по факту выполненной работы.</p></div></a>
+    <a href="#package"><span class="num">6</span><div><b>Регулярная работа и скидки</b><p>Да, 2–4 объекта в месяц и больше. Пакет «объект под ключ» и скидки за объём до 10 %.</p></div></a>
+    <a href="#works"><span class="num">7</span><div><b>Примеры работ</b><p>Недвижимость для застройщика, динамичные Reels с переходами и саунд-дизайном — внизу страницы.</p></div></a>
+    <a href="#host"><span class="num">+</span><div><b>Ведущая в кадре</b><p>Возможна съёмка с ведущей, как на канале VDT, — дополнительно 2 500 ₽ в час.</p></div></a>
+  </div>
+
+  <div class="gh" id="exp"><span class="n">02</span><h2>Я уже снимаю недвижимость</h2></div>
+  <p class="gl">Для застройщика ЖК «Новатория» снимаю серию роликов о ходе строительства: облёты, фасады, интерьеры, рассказ начальника участка и графика в фирменном стиле сайта. Сделал выпуски по двум объектам, подписан контракт на съёмку нового комплекса.</p>
+  <a class="wide" href="https://www.youtube.com/watch?v=xjLZg2eoKOU" target="_blank" rel="noopener" style="margin-top:0"><div class="pic"><img src="assets/yt-xjLZg2eoKOU.jpg" alt="Ход строительства ЖК Новатория"><em>Недвижимость</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2E6A4F"/></svg></i></div><div><span class="k">Для застройщика</span><b>Ход строительства ЖК «Новатория»</b><p>Сценарий, съёмка, монтаж, цвет, графика и музыка — мои. Архитектура без завалов, ровные вертикали, единый цвет во всех выпусках.</p><div class="shots"><img src="assets/nov-1.jpg" alt="Фасады ЖК снизу"><img src="assets/nov-3.jpg" alt="Вид с кровли на дворы"><img src="assets/nov-2.jpg" alt="Фасад крупно"></div></div></a>
+
+  <div class="gh" id="vdt"><span class="n">03</span><h2>Канал VDT: что берём и где сделаем сильнее</h2></div>
+  <p class="gl">Посмотрел канал. VDT — авторский влог агента Алексея Аверьянова о премиальных домах: ведущий сам водит по дому, ролики по 50–110 минут, у лучших 200–460 тысяч просмотров. Подача у них правда сильная — берём её основу и подстраиваем под Ваш ритм: 2–4 объекта в месяц.</p>
+  <div class="vdt">
+    <div class="pack">
+      <span class="k">Что работает у VDT</span><h3>Берём в Ваши ролики</h3>
+      <ul>
+        <li>Живой человек в кадре ведёт по дому — зритель «идёт» вместе с ним</li>
+        <li>Цифры в названии и на экране: площадь, спальни, баня, бассейн</li>
+        <li>Детали и инженерия крупно: материалы, свет, решения, «фишки» дома</li>
+        <li>Shorts-хиты — не нарезка из обзора, а отдельная мысль: POV, юмор, «сколько стоит такой дом?»</li>
+      </ul>
+    </div>
+    <div class="pack me">
+      <span class="k">Так и даже лучше</span><h3>Что добавлю я</h3>
+      <ul>
+        <li>Обзор на 3–7 минут без воды: самый сильный кадр дома и цифры — в первые 5 секунд</li>
+        <li>Дрон: участок, лес, вода, дорога — за город покупают локацию, а не только стены</li>
+        <li>Графика на кадре: план дома и участка, площади, минуты до КАД</li>
+        <li>С каждого объекта — 2–3 Reels из той же съёмки, придуманные заранее, а не нарезанные потом</li>
+        <li>Единый цвет и стиль во всех роликах — канал узнаётся с первого кадра</li>
+        <li>Съёмка в лучший свет: золотой час, тёплые окна в сумерках, снег, туман над участком</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gh" id="script"><span class="n">04</span><h2>Сценарий: пишу сам</h2></div>
+  <p class="gl">До выезда смотрю фото, планировку и бриф по объекту, пишу раскадровку и список Reels. На объекте снимаем по плану — без лишних часов. Если у Вас есть своё ТЗ или раскадровка, работаю по ним.</p>
+  <div class="story">
+    <div><b>0:00–0:05</b><strong>Крючок</strong><span>Дрон выходит из-за деревьев на дом, на экране — «420 м², баня, 25 соток у леса»</span></div>
+    <div><b>0:05–0:30</b><strong>Локация</strong><span>Дорога, посёлок, лес и вода сверху; плашка «35 минут от КАД»</span></div>
+    <div><b>0:30–1:30</b><strong>Участок и фасад</strong><span>Проход со стабилизатором от калитки к дому, терраса, барбекю, баня</span></div>
+    <div><b>1:30–4:00</b><strong>Дом изнутри</strong><span>Гостиная, кухня, спальни: проходы, детали и план этажа графикой</span></div>
+    <div><b>4:00–4:40</b><strong>Жизнь за городом</strong><span>Утро на террасе, вечерний свет в окнах — зачем сюда переезжать</span></div>
+    <div><b>4:40–5:00</b><strong>Финал</strong><span>Цена или «записаться на просмотр», контакты, логотип</span></div>
+  </div>
+  <p class="ex">Это пример, а не шаблон: под каждый объект и Вашу подачу соберём своё.</p>
+  <div class="rl">
+    <div><b>Reels «Дом за 30 секунд»</b><p>Динамичный тур под бит: склейки на долях, переходы сквозь двери и окна.</p></div>
+    <div><b>Reels «Одна деталь»</b><p>Фишка объекта крупно: панорамное окно, камин, баня у воды — и вопрос к зрителю.</p></div>
+    <div><b>Reels «Сколько стоит?»</b><p>Ведущая проходит по дому, в конце — цена. У VDT такие Shorts — одни из самых просматриваемых.</p></div>
+  </div>
+
+  <div class="gh" id="host"><span class="n">05</span><h2>Съёмка с ведущей</h2></div>
+  <div class="host">
+    <div class="pack">
+      <span class="k">По желанию</span><h3>Человек в кадре ведёт по дому</h3>
+      <ul>
+        <li>Ведущая рассказывает о доме и участке, показывает детали, задаёт вопросы владельцу или агенту</li>
+        <li>Звук — радиопетлички, голос чистый даже на улице</li>
+        <li>Подойдёт и Ваш сотрудник: помогу с подачей прямо на съёмке</li>
+      </ul>
+    </div>
+    <div class="price"><span class="k">Услуги ведущей</span><span class="tp">+2&nbsp;500&nbsp;₽ / час</span><p class="note">Дополнительно к стоимости съёмки, по времени на объекте.</p></div>
+  </div>
+
+  <div class="gh" id="shoot"><span class="n">06</span><h2>Стоимость съёмки</h2></div>
+  <p class="gl">Только съёмка, монтаж — отдельно, ниже. Своя техника, дрон и выезд по Петербургу и области до 50 км от КАД — без доплат.</p>
+  <div class="tiers t3">
+    <div class="tier"><span class="k">Почасово</span><span class="name">Час съёмки</span><span class="tp">4&nbsp;000&nbsp;₽</span><span class="sub">Досъёмка, короткий визит, сезонные кадры</span><ul><li>Камера, оптика, стабилизатор</li><li>Дрон</li><li>Звук</li></ul></div>
+    <div class="tier hit"><span class="badge">Основной</span><span class="k">до 4 часов</span><span class="name">Объект</span><span class="tp">15&nbsp;000&nbsp;₽</span><span class="sub">Всё для обзора и Reels с одного выезда</span><ul><li>Дом, интерьеры, участок, локация</li><li>Облёт дроном</li><li>Проходы со стабилизатором</li><li>Детали и кадры под Reels</li><li>Исходники — на Ваш диск</li></ul></div>
+    <div class="tier"><span class="k">до 8 часов</span><span class="name">Смена</span><span class="tp">25&nbsp;000&nbsp;₽</span><span class="sub">Два объекта в один день, если рядом</span><ul><li>Всё, что во «Объекте»</li><li>Съёмка в лучший свет: утро и закат</li><li>Сумерки с тёплыми окнами</li></ul></div>
+  </div>
+  <div class="extra">
+    <div><b>+2 500 ₽/ч</b><p>Ведущая в кадре</p></div>
+    <div><b>без доплаты</b><p>Выезд по СПб и ЛО до 50 км от КАД</p></div>
+    <div><b>по договорённости</b><p>Дальше 50 км — дорога, согласуем заранее</p></div>
+    <div><b>+30%</b><p>Срочный монтаж</p></div>
+  </div>
+
+  <div class="gh" id="edit"><span class="n">07</span><h2>Стоимость монтажа</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="k">Что входит в каждый ролик</span>
+      <ul>
+        <li>Монтажный план по раскадровке</li>
+        <li>Цветокоррекция в DaVinci Resolve, единый стиль всех объектов</li>
+        <li>Лицензионная музыка, звук и саунд-дизайн</li>
+        <li>Титры, плашки с площадями, план дома графикой</li>
+        <li>Вертикаль 9:16 и горизонталь 16:9 под площадку</li>
+        <li>2 круга правок</li>
+      </ul>
+    </div>
+    <div class="calc">
+      <div class="hd"><span>Формат</span><span>Цена за ролик</span></div>
+      <div><span>Reels / Shorts<i>до 60 секунд, вертикаль</i></span><span>5&nbsp;000&nbsp;₽</span></div>
+      <div><span>Обзорный ролик<i>3–5 минут</i></span><span>15&nbsp;000&nbsp;₽</span></div>
+      <div><span>Обзорный ролик<i>5–7 минут</i></span><span>20&nbsp;000&nbsp;₽</span></div>
+      <div><span>Ведущая в кадре<i>к съёмке, по времени</i></span><span>+2&nbsp;500&nbsp;₽/ч</span></div>
+    </div>
+  </div>
+
+  <div class="gh" id="package"><span class="n">08</span><h2>Объект под ключ и скидки за объём</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="k">Пакет</span><h3>Объект под ключ</h3>
+      <ul>
+        <li>Раскадровка до выезда</li>
+        <li>Съёмка объекта до 4 часов с дроном</li>
+        <li>Обзорный ролик 3–5 минут</li>
+        <li>2 Reels / Shorts из той же съёмки</li>
+      </ul>
+      <p class="note">Ведущая — дополнительно, 2 500 ₽ в час.</p>
+    </div>
+    <div class="calc">
+      <div class="hd"><span>Расчёт</span><span>Сумма</span></div>
+      <div><span>Съёмка объекта</span><span>15&nbsp;000&nbsp;₽</span></div>
+      <div><span>Обзор 3–5 минут</span><span>15&nbsp;000&nbsp;₽</span></div>
+      <div><span>2 Reels × 5 000 ₽</span><span>10&nbsp;000&nbsp;₽</span></div>
+      <div><span><b style="color:var(--fg)">Пакет «объект под ключ»</b><i>вместо 40 000 ₽</i></span><span>35&nbsp;000&nbsp;₽</span></div>
+      <div><span>2–3 объекта в месяц</span><span>−5&nbsp;%</span></div>
+      <div><span>4 объекта в месяц и больше</span><span>−10&nbsp;%</span></div>
+    </div>
+  </div>
+
+  <div class="gh" id="terms"><span class="n">09</span><h2>Сроки</h2></div>
+  <div class="steps">
+    <div><b>Раскадровка</b><strong>1–2 дня</strong>До выезда, по фото и планировке</div>
+    <div><b>Reels</b><strong>3–5 дней</strong>От съёмки до готового файла</div>
+    <div><b>Обзорный ролик</b><strong>около недели</strong>В среднем, зависит от сложности</div>
+    <div><b>Правки</b><strong>1–2 дня</strong>На каждый круг</div>
+  </div>
+
+  <div class="gh" id="contract"><span class="n">10</span><h2>Условия сотрудничества</h2></div>
+  <div class="three">
+    <div class="pack"><span class="k">Оформление</span><h3>Договор</h3><ul><li>Работаю по договору</li><li>Самозанятый: чек на каждую оплату</li></ul></div>
+    <div class="pack"><span class="k">Оплата</span><h3>50 / 50</h3><ul><li>50 % — предоплата</li><li>50 % — по факту выполненной работы</li></ul></div>
+    <div class="pack"><span class="k">Регулярно</span><h3>2–4 объекта в месяц</h3><ul><li>Готов к регулярной работе и росту объёма</li><li>Скидки за объём — до 10 %</li><li>Базируюсь в Петербурге, выезды за город — норма</li></ul></div>
+  </div>
+
+  <div class="gh" id="kit"><span class="n">11</span><h2>Оборудование — всё своё</h2></div>
+  <div class="kit">
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h1l2-3h8l2 3h1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2"/><circle cx="12" cy="13" r="3.5"/></svg><b>Камеры и оптика</b><p>Sony A7 V — полный кадр, 4K 10-bit. Широкоугольная и светосильная оптика: стены без завалов и искажений.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M5 5l5 5M19 5l-5 5M5 19l5-5M19 19l-5-5"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg><b>Дрон</b><p>Облёты дома, участка и локации: лес, вода, дорога, посёлок сверху.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12M8 7h8M12 7l-4 6M12 7l4 6"/></svg><b>Стабилизатор</b><p>DJI RS 4 Pro — плавные проходы по дому и участку, как у VDT.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6v10a3 3 0 0 1-6 0z"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg><b>Звук</b><p>Радиопетлички Hollyland для ведущей и владельца, чистка голоса.</p></div>
+  </div>
+  <div class="inline-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg><span>Полный перечень с фотографиями техники — <a href="#links">по ссылке внизу страницы</a></span></div>
+
+  <div class="gh" id="works"><span class="n">12</span><h2>Примеры работ</h2></div>
+  <p class="gl">Недвижимость — выше, в блоке 02. Здесь — динамичный монтаж: склейки в такт, переходы, саунд-дизайн. Нажмите на обложку — ролик откроется на YouTube.</p>
+  <div class="exp">
+    <a class="reel" href="https://www.youtube.com/shorts/MD7Vqr4xX14" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-avito.jpg" alt="Героини рекламного рилса для Авито"><em>Реклама</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2E6A4F"/></svg></i></div><b>Рекламный рилс для Авито</b><span>Сценарий, съёмка, переходы, цвет и саунд-дизайн</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/DeftgE3lcsY" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-or.jpg" alt="Хирург в оптике во время операции"><em>Шоурил</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2E6A4F"/></svg></i></div><b>Шоурил специалиста</b><span>Склейки в такт музыке, замедления, QR-код в финале</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/8XGqhe2ljXo" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-r34.jpg" alt="Nissan Skyline GT-R R34 на парковке"><em>Авто</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2E6A4F"/></svg></i></div><b>Nissan Skyline GT-R R34</b><span>Рилс с эффектным переходом для автоблога</span></a>
+  </div>
+
+  <div class="gh"><span class="n">13</span><h2>Как я показываю работу клиентам</h2></div>
+  <p class="gl">Готовые и черновые версии отдаю отдельной страницей: все ролики объекта в одном месте, удобно смотреть с телефона и передавать правки.</p>
+  <div class="cases c2">
+    <a class="case" href="https://tinextreme-alt.github.io/offers/avito-reel/" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/av-2.jpg" alt="Кадр рилса для Авито"><img src="assets/av-5.jpg" alt="Кадр рилса для Авито"><img src="assets/av-8.jpg" alt="Кадр рилса для Авито"></div><span class="k">Черновой монтаж</span><b>Рилс для Авито: версии на выбор</b><p>Варианты ролика рядом, раскадровка и файлы для скачивания.</p><i>Открыть →</i></a>
+    <a class="case" href="https://tinextreme-alt.github.io/offers/dr-shapovalov/" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/sh-face.jpg" alt="Хирург перед операцией"><img src="assets/sh-or.jpg" alt="Хирург в операционной"><img src="assets/clinic3.jpg" alt="Врач у стойки клиники"></div><span class="k">Серия роликов</span><b>Рилсы для пластического хирурга</b><p>Рабочие версии, обложки, кадры со съёмки и как дать правки.</p><i>Открыть →</i></a>
+  </div>
+
+  <div class="gh" id="links"><span class="n">14</span><h2>Портфолио и оборудование</h2></div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Портфолио · шоу-рил</b><br><span>Недвижимость, реклама, интервью, бизнес, спорт</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>Полный перечень техники с фото</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="call">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2E6A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <div><b>Пришлите первый объект — подготовлю раскадровку</b><p>Я всегда на связи: <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></p></div>
+  </div>
+
+<div class="tg tg-card"><a class="tg-qr" href="https://t.me/T1nEx" target="_blank" rel="noopener" aria-label="Открыть Telegram @T1nEx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" role="img" aria-label="QR-код Telegram @T1nEx"><rect width="33" height="33" fill="#fff"/><g fill="#111"><circle cx="11.5" cy="2.5" r="0.43"/><circle cx="13.5" cy="2.5" r="0.43"/><circle cx="14.5" cy="2.5" r="0.43"/><circle cx="15.5" cy="2.5" r="0.43"/><circle cx="17.5" cy="2.5" r="0.43"/><circle cx="18.5" cy="2.5" r="0.43"/><circle cx="19.5" cy="2.5" r="0.43"/><circle cx="21.5" cy="2.5" r="0.43"/><circle cx="22.5" cy="2.5" r="0.43"/><circle cx="10.5" cy="3.5" r="0.43"/><circle cx="16.5" cy="3.5" r="0.43"/><circle cx="17.5" cy="3.5" r="0.43"/><circle cx="21.5" cy="3.5" r="0.43"/><circle cx="11.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="4.5" r="0.43"/><circle cx="16.5" cy="4.5" r="0.43"/><circle cx="17.5" cy="4.5" r="0.43"/><circle cx="19.5" cy="4.5" r="0.43"/><circle cx="20.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="5.5" r="0.43"/><circle cx="13.5" cy="5.5" r="0.43"/><circle cx="15.5" cy="5.5" r="0.43"/><circle cx="18.5" cy="5.5" r="0.43"/><circle cx="20.5" cy="5.5" r="0.43"/><circle cx="12.5" cy="6.5" r="0.43"/><circle cx="15.5" cy="6.5" r="0.43"/><circle cx="18.5" cy="6.5" r="0.43"/><circle cx="19.5" cy="6.5" r="0.43"/><circle cx="20.5" cy="6.5" r="0.43"/><circle cx="10.5" cy="7.5" r="0.43"/><circle cx="11.5" cy="7.5" r="0.43"/><circle cx="16.5" cy="7.5" r="0.43"/><circle cx="18.5" cy="7.5" r="0.43"/><circle cx="19.5" cy="7.5" r="0.43"/><circle cx="21.5" cy="7.5" r="0.43"/><circle cx="22.5" cy="7.5" r="0.43"/><circle cx="10.5" cy="8.5" r="0.43"/><circle cx="12.5" cy="8.5" r="0.43"/><circle cx="14.5" cy="8.5" r="0.43"/><circle cx="16.5" cy="8.5" r="0.43"/><circle cx="18.5" cy="8.5" r="0.43"/><circle cx="20.5" cy="8.5" r="0.43"/><circle cx="22.5" cy="8.5" r="0.43"/><circle cx="10.5" cy="9.5" r="0.43"/><circle cx="11.5" cy="9.5" r="0.43"/><circle cx="12.5" cy="9.5" r="0.43"/><circle cx="14.5" cy="9.5" r="0.43"/><circle cx="15.5" cy="9.5" r="0.43"/><circle cx="16.5" cy="9.5" r="0.43"/><circle cx="17.5" cy="9.5" r="0.43"/><circle cx="18.5" cy="9.5" r="0.43"/><circle cx="21.5" cy="9.5" r="0.43"/><circle cx="22.5" cy="9.5" r="0.43"/><circle cx="6.5" cy="10.5" r="0.43"/><circle cx="7.5" cy="10.5" r="0.43"/><circle cx="8.5" cy="10.5" r="0.43"/><circle cx="9.5" cy="10.5" r="0.43"/><circle cx="12.5" cy="10.5" r="0.43"/><circle cx="13.5" cy="10.5" r="0.43"/><circle cx="17.5" cy="10.5" r="0.43"/><circle cx="18.5" cy="10.5" r="0.43"/><circle cx="22.5" cy="10.5" r="0.43"/><circle cx="24.5" cy="10.5" r="0.43"/><circle cx="25.5" cy="10.5" r="0.43"/><circle cx="29.5" cy="10.5" r="0.43"/><circle cx="3.5" cy="11.5" r="0.43"/><circle cx="6.5" cy="11.5" r="0.43"/><circle cx="9.5" cy="11.5" r="0.43"/><circle cx="11.5" cy="11.5" r="0.43"/><circle cx="13.5" cy="11.5" r="0.43"/><circle cx="14.5" cy="11.5" r="0.43"/><circle cx="16.5" cy="11.5" r="0.43"/><circle cx="17.5" cy="11.5" r="0.43"/><circle cx="20.5" cy="11.5" r="0.43"/><circle cx="21.5" cy="11.5" r="0.43"/><circle cx="26.5" cy="11.5" r="0.43"/><circle cx="28.5" cy="11.5" r="0.43"/><circle cx="29.5" cy="11.5" r="0.43"/><circle cx="30.5" cy="11.5" r="0.43"/><circle cx="3.5" cy="12.5" r="0.43"/><circle cx="5.5" cy="12.5" r="0.43"/><circle cx="6.5" cy="12.5" r="0.43"/><circle cx="8.5" cy="12.5" r="0.43"/><circle cx="12.5" cy="12.5" r="0.43"/><circle cx="14.5" cy="12.5" r="0.43"/><circle cx="18.5" cy="12.5" r="0.43"/><circle cx="19.5" cy="12.5" r="0.43"/><circle cx="21.5" cy="12.5" r="0.43"/><circle cx="23.5" cy="12.5" r="0.43"/><circle cx="25.5" cy="12.5" r="0.43"/><circle cx="30.5" cy="12.5" r="0.43"/><circle cx="2.5" cy="13.5" r="0.43"/><circle cx="3.5" cy="13.5" r="0.43"/><circle cx="6.5" cy="13.5" r="0.43"/><circle cx="7.5" cy="13.5" r="0.43"/><circle cx="12.5" cy="13.5" r="0.43"/><circle cx="19.5" cy="13.5" r="0.43"/><circle cx="21.5" cy="13.5" r="0.43"/><circle cx="22.5" cy="13.5" r="0.43"/><circle cx="23.5" cy="13.5" r="0.43"/><circle cx="25.5" cy="13.5" r="0.43"/><circle cx="26.5" cy="13.5" r="0.43"/><circle cx="29.5" cy="13.5" r="0.43"/><circle cx="30.5" cy="13.5" r="0.43"/><circle cx="4.5" cy="14.5" r="0.43"/><circle cx="5.5" cy="14.5" r="0.43"/><circle cx="7.5" cy="14.5" r="0.43"/><circle cx="8.5" cy="14.5" r="0.43"/><circle cx="9.5" cy="14.5" r="0.43"/><circle cx="11.5" cy="14.5" r="0.43"/><circle cx="20.5" cy="14.5" r="0.43"/><circle cx="22.5" cy="14.5" r="0.43"/><circle cx="25.5" cy="14.5" r="0.43"/><circle cx="30.5" cy="14.5" r="0.43"/><circle cx="2.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="15.5" r="0.43"/><circle cx="4.5" cy="15.5" r="0.43"/><circle cx="10.5" cy="15.5" r="0.43"/><circle cx="11.5" cy="15.5" r="0.43"/><circle cx="22.5" cy="15.5" r="0.43"/><circle cx="24.5" cy="15.5" r="0.43"/><circle cx="26.5" cy="15.5" r="0.43"/><circle cx="28.5" cy="15.5" r="0.43"/><circle cx="29.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="16.5" r="0.43"/><circle cx="4.5" cy="16.5" r="0.43"/><circle cx="6.5" cy="16.5" r="0.43"/><circle cx="7.5" cy="16.5" r="0.43"/><circle cx="8.5" cy="16.5" r="0.43"/><circle cx="10.5" cy="16.5" r="0.43"/><circle cx="11.5" cy="16.5" r="0.43"/><circle cx="23.5" cy="16.5" r="0.43"/><circle cx="24.5" cy="16.5" r="0.43"/><circle cx="26.5" cy="16.5" r="0.43"/><circle cx="30.5" cy="16.5" r="0.43"/><circle cx="2.5" cy="17.5" r="0.43"/><circle cx="4.5" cy="17.5" r="0.43"/><circle cx="7.5" cy="17.5" r="0.43"/><circle cx="9.5" cy="17.5" r="0.43"/><circle cx="10.5" cy="17.5" r="0.43"/><circle cx="22.5" cy="17.5" r="0.43"/><circle cx="23.5" cy="17.5" r="0.43"/><circle cx="24.5" cy="17.5" r="0.43"/><circle cx="25.5" cy="17.5" r="0.43"/><circle cx="27.5" cy="17.5" r="0.43"/><circle cx="5.5" cy="18.5" r="0.43"/><circle cx="8.5" cy="18.5" r="0.43"/><circle cx="9.5" cy="18.5" r="0.43"/><circle cx="10.5" cy="18.5" r="0.43"/><circle cx="11.5" cy="18.5" r="0.43"/><circle cx="12.5" cy="18.5" r="0.43"/><circle cx="21.5" cy="18.5" r="0.43"/><circle cx="25.5" cy="18.5" r="0.43"/><circle cx="29.5" cy="18.5" r="0.43"/><circle cx="30.5" cy="18.5" r="0.43"/><circle cx="2.5" cy="19.5" r="0.43"/><circle cx="3.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="19.5" r="0.43"/><circle cx="6.5" cy="19.5" r="0.43"/><circle cx="7.5" cy="19.5" r="0.43"/><circle cx="9.5" cy="19.5" r="0.43"/><circle cx="11.5" cy="19.5" r="0.43"/><circle cx="12.5" cy="19.5" r="0.43"/><circle cx="13.5" cy="19.5" r="0.43"/><circle cx="21.5" cy="19.5" r="0.43"/><circle cx="22.5" cy="19.5" r="0.43"/><circle cx="25.5" cy="19.5" r="0.43"/><circle cx="26.5" cy="19.5" r="0.43"/><circle cx="27.5" cy="19.5" r="0.43"/><circle cx="28.5" cy="19.5" r="0.43"/><circle cx="30.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="20.5" r="0.43"/><circle cx="6.5" cy="20.5" r="0.43"/><circle cx="8.5" cy="20.5" r="0.43"/><circle cx="9.5" cy="20.5" r="0.43"/><circle cx="10.5" cy="20.5" r="0.43"/><circle cx="11.5" cy="20.5" r="0.43"/><circle cx="13.5" cy="20.5" r="0.43"/><circle cx="18.5" cy="20.5" r="0.43"/><circle cx="22.5" cy="20.5" r="0.43"/><circle cx="27.5" cy="20.5" r="0.43"/><circle cx="30.5" cy="20.5" r="0.43"/><circle cx="4.5" cy="21.5" r="0.43"/><circle cx="6.5" cy="21.5" r="0.43"/><circle cx="9.5" cy="21.5" r="0.43"/><circle cx="10.5" cy="21.5" r="0.43"/><circle cx="12.5" cy="21.5" r="0.43"/><circle cx="17.5" cy="21.5" r="0.43"/><circle cx="18.5" cy="21.5" r="0.43"/><circle cx="19.5" cy="21.5" r="0.43"/><circle cx="27.5" cy="21.5" r="0.43"/><circle cx="29.5" cy="21.5" r="0.43"/><circle cx="2.5" cy="22.5" r="0.43"/><circle cx="3.5" cy="22.5" r="0.43"/><circle cx="4.5" cy="22.5" r="0.43"/><circle cx="5.5" cy="22.5" r="0.43"/><circle cx="6.5" cy="22.5" r="0.43"/><circle cx="7.5" cy="22.5" r="0.43"/><circle cx="8.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="22.5" r="0.43"/><circle cx="12.5" cy="22.5" r="0.43"/><circle cx="15.5" cy="22.5" r="0.43"/><circle cx="17.5" cy="22.5" r="0.43"/><circle cx="18.5" cy="22.5" r="0.43"/><circle cx="19.5" cy="22.5" r="0.43"/><circle cx="21.5" cy="22.5" r="0.43"/><circle cx="22.5" cy="22.5" r="0.43"/><circle cx="23.5" cy="22.5" r="0.43"/><circle cx="24.5" cy="22.5" r="0.43"/><circle cx="25.5" cy="22.5" r="0.43"/><circle cx="26.5" cy="22.5" r="0.43"/><circle cx="27.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="23.5" r="0.43"/><circle cx="11.5" cy="23.5" r="0.43"/><circle cx="13.5" cy="23.5" r="0.43"/><circle cx="14.5" cy="23.5" r="0.43"/><circle cx="17.5" cy="23.5" r="0.43"/><circle cx="18.5" cy="23.5" r="0.43"/><circle cx="19.5" cy="23.5" r="0.43"/><circle cx="22.5" cy="23.5" r="0.43"/><circle cx="26.5" cy="23.5" r="0.43"/><circle cx="28.5" cy="23.5" r="0.43"/><circle cx="30.5" cy="23.5" r="0.43"/><circle cx="10.5" cy="24.5" r="0.43"/><circle cx="11.5" cy="24.5" r="0.43"/><circle cx="12.5" cy="24.5" r="0.43"/><circle cx="14.5" cy="24.5" r="0.43"/><circle cx="15.5" cy="24.5" r="0.43"/><circle cx="16.5" cy="24.5" r="0.43"/><circle cx="20.5" cy="24.5" r="0.43"/><circle cx="21.5" cy="24.5" r="0.43"/><circle cx="22.5" cy="24.5" r="0.43"/><circle cx="24.5" cy="24.5" r="0.43"/><circle cx="26.5" cy="24.5" r="0.43"/><circle cx="29.5" cy="24.5" r="0.43"/><circle cx="30.5" cy="24.5" r="0.43"/><circle cx="10.5" cy="25.5" r="0.43"/><circle cx="11.5" cy="25.5" r="0.43"/><circle cx="12.5" cy="25.5" r="0.43"/><circle cx="13.5" cy="25.5" r="0.43"/><circle cx="14.5" cy="25.5" r="0.43"/><circle cx="15.5" cy="25.5" r="0.43"/><circle cx="17.5" cy="25.5" r="0.43"/><circle cx="18.5" cy="25.5" r="0.43"/><circle cx="19.5" cy="25.5" r="0.43"/><circle cx="20.5" cy="25.5" r="0.43"/><circle cx="21.5" cy="25.5" r="0.43"/><circle cx="22.5" cy="25.5" r="0.43"/><circle cx="26.5" cy="25.5" r="0.43"/><circle cx="27.5" cy="25.5" r="0.43"/><circle cx="30.5" cy="25.5" r="0.43"/><circle cx="10.5" cy="26.5" r="0.43"/><circle cx="12.5" cy="26.5" r="0.43"/><circle cx="17.5" cy="26.5" r="0.43"/><circle cx="18.5" cy="26.5" r="0.43"/><circle cx="19.5" cy="26.5" r="0.43"/><circle cx="21.5" cy="26.5" r="0.43"/><circle cx="22.5" cy="26.5" r="0.43"/><circle cx="23.5" cy="26.5" r="0.43"/><circle cx="24.5" cy="26.5" r="0.43"/><circle cx="25.5" cy="26.5" r="0.43"/><circle cx="26.5" cy="26.5" r="0.43"/><circle cx="29.5" cy="26.5" r="0.43"/><circle cx="11.5" cy="27.5" r="0.43"/><circle cx="12.5" cy="27.5" r="0.43"/><circle cx="13.5" cy="27.5" r="0.43"/><circle cx="14.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="27.5" r="0.43"/><circle cx="16.5" cy="27.5" r="0.43"/><circle cx="19.5" cy="27.5" r="0.43"/><circle cx="25.5" cy="27.5" r="0.43"/><circle cx="29.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="28.5" r="0.43"/><circle cx="16.5" cy="28.5" r="0.43"/><circle cx="21.5" cy="28.5" r="0.43"/><circle cx="22.5" cy="28.5" r="0.43"/><circle cx="23.5" cy="28.5" r="0.43"/><circle cx="28.5" cy="28.5" r="0.43"/><circle cx="29.5" cy="28.5" r="0.43"/><circle cx="30.5" cy="28.5" r="0.43"/><circle cx="12.5" cy="29.5" r="0.43"/><circle cx="16.5" cy="29.5" r="0.43"/><circle cx="18.5" cy="29.5" r="0.43"/><circle cx="20.5" cy="29.5" r="0.43"/><circle cx="25.5" cy="29.5" r="0.43"/><circle cx="27.5" cy="29.5" r="0.43"/><circle cx="29.5" cy="29.5" r="0.43"/><circle cx="30.5" cy="29.5" r="0.43"/><circle cx="12.5" cy="30.5" r="0.43"/><circle cx="14.5" cy="30.5" r="0.43"/><circle cx="15.5" cy="30.5" r="0.43"/><circle cx="16.5" cy="30.5" r="0.43"/><circle cx="24.5" cy="30.5" r="0.43"/><circle cx="26.5" cy="30.5" r="0.43"/><circle cx="27.5" cy="30.5" r="0.43"/><circle cx="28.5" cy="30.5" r="0.43"/><circle cx="29.5" cy="30.5" r="0.43"/></g><path fill="#111" fill-rule="evenodd" d="M4.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M26.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM26.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="26" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M4.2 24h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 25h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="26" width="3" height="3" rx="1" fill="#111"/><circle cx="16.5" cy="16.5" r="3.6" fill="#111"/><polygon points="14.623,16.390 18.322,14.954 17.659,18.128 16.583,17.328 16.058,17.852 16.003,17.024 17.494,15.700 15.644,16.804" fill="#fff" stroke="#fff" stroke-width="0.193" stroke-linejoin="round"/></svg></a><div class="tg-txt"><span class="tg-cap">Telegram</span><a class="tg-link" href="https://t.me/T1nEx" target="_blank" rel="noopener">@T1nEx</a><span class="tg-note">Наведите камеру телефона на код или нажмите на ник, чтобы написать мне</span></div></div>
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></div>
+</div>
+</body></html>
