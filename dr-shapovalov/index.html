@@ -34,6 +34,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .w .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px}
 .tag{font:500 10.5px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
 .w b{font:500 15px/1.3 var(--display)}.w p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.45}
+.reels>.w{display:flex;flex-direction:column}.reels>.w>.tx{flex:1}.w .dl{margin-top:10px;align-self:flex-start;display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid var(--ac);border-radius:8px;color:var(--ac);text-decoration:none;font-size:13px;font-weight:600;transition:background .2s,color .2s}.w .dl:hover{background:var(--ac);color:#14151B}.reels .w .lnk{margin-top:auto}
 .w .lnk{font-size:12.5px;color:var(--muted);text-decoration:none;margin-top:4px}.w .lnk:hover{color:var(--ac)}
 .frames{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.frames img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block}
 .sc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.sc div{border:1px solid var(--line);border-radius:12px;padding:15px 18px}
@@ -135,14 +136,14 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 // ===== Рилсы. link — ссылка на рилс: YouTube Shorts, Instagram (instagram.com/reel/…) или файл .mp4 рядом со страницей.
 // ver — пометка версии на обложке. Пока link пустой — карточка с пометкой «скоро».
 const REELS = [
-  {link:'https://www.youtube.com/shorts/DeftgE3lcsY', ver:'Версия 1', poster:'img/p-or.jpg', tag:'Шоурил', title:'Работа в операционной', about:'Подготовка бригады, работа в оптике, инструменты. В финале QR-код на сайт.'},
-  {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', ver:'Версия 1', poster:'img/p-who3.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
-  {link:'https://www.youtube.com/shorts/x4j2uOJ3C_w', ver:'Версия 1', poster:'img/p-path2.jpg', tag:'История пациентки', title:'Путь пациентки', about:'Консультация, разметка, операция и результат: вся история одной пациентки от первой встречи до операционной.'},
-  {link:'https://www.youtube.com/shorts/VlgynYsPtS0', ver:'Версия 1', poster:'img/p-face.jpg', tag:'Операционный день', title:'Круговая подтяжка лица и шеи', about:'Перед операцией Вы рассказываете план: СМАС-платизмопластика, височный лифтинг, подтяжка лба и фейслифтинг D-plane.'},
-  {link:'https://www.youtube.com/watch?v=710kT92FuCk', ver:'Версия 1', poster:'img/p-dress.jpg', tag:'После операции', title:'Перевязка: что делать после пластики', about:'Результат на следующий день, уход дома, дренажи, бандаж и сроки. Короткая инструкция для пациенток.'},
-  {link:'https://youtu.be/sf0o9UW7ozE', ver:'Версия 1', poster:'img/p-mammo.jpg', tag:'Операционный день', title:'Редукционная маммопластика', about:'Разметка перед операцией и план: какой объём убираем и к какому результату идём. Перед входом в операционную.'},
-  {link:'https://youtu.be/FazRI08Fsh0', ver:'Обновлено', poster:'img/p-card2.jpg', tag:'Рилс 7 · Визитка', title:'Обновлённая визитка доктора', about:'Вы рассказываете о себе, подходе к работе и безопасности. Кабинет, операционная, ключевые слова в субтитрах, в финале QR-код на сайт и запись на бесплатную консультацию.'},
-  {link:'https://youtu.be/XLvAyY_bIXs', ver:'Версия 1', poster:'img/p-olga.jpg', tag:'Рилс 8 · История пациентки', title:'Подготовка к подтяжке лица', about:'Ольга, 39 лет, рассказывает, почему решилась. Вы на консультации объясняете план — круговая подтяжка лица и шеи, СМАС-платизмопластика, височный лифтинг — и делаете разметку перед операцией.'},
+  {link:'https://www.youtube.com/shorts/DeftgE3lcsY', dl:'Работа в операционной рилс 1.mov', ver:'Версия 1', poster:'img/p-or.jpg', tag:'Шоурил', title:'Работа в операционной', about:'Подготовка бригады, работа в оптике, инструменты. В финале QR-код на сайт.'},
+  {link:'https://www.youtube.com/shorts/Xt1VlaumEl4', dl:'Кто и где оперирует рилс 2.mov', ver:'Версия 1', poster:'img/p-who3.jpg', tag:'Знакомство', title:'Кто и где оперирует', about:'Вы рассказываете о себе и клинике: коридоры, ресепшен, кабинет, операционная.'},
+  {link:'https://www.youtube.com/shorts/x4j2uOJ3C_w', dl:'Путь пациентки рилс 3.mov', ver:'Версия 1', poster:'img/p-path2.jpg', tag:'История пациентки', title:'Путь пациентки', about:'Консультация, разметка, операция и результат: вся история одной пациентки от первой встречи до операционной.'},
+  {link:'https://www.youtube.com/shorts/VlgynYsPtS0', dl:'Подтяжка лица — рилс 4.mov', ver:'Версия 1', poster:'img/p-face.jpg', tag:'Операционный день', title:'Круговая подтяжка лица и шеи', about:'Перед операцией Вы рассказываете план: СМАС-платизмопластика, височный лифтинг, подтяжка лба и фейслифтинг D-plane.'},
+  {link:'https://www.youtube.com/watch?v=710kT92FuCk', dl:'Перевязка — рилс 5.mov', ver:'Версия 1', poster:'img/p-dress.jpg', tag:'После операции', title:'Перевязка: что делать после пластики', about:'Результат на следующий день, уход дома, дренажи, бандаж и сроки. Короткая инструкция для пациенток.'},
+  {link:'https://youtu.be/sf0o9UW7ozE', dl:'Маммопластика рилс 6.mov', ver:'Версия 1', poster:'img/p-mammo.jpg', tag:'Операционный день', title:'Редукционная маммопластика', about:'Разметка перед операцией и план: какой объём убираем и к какому результату идём. Перед входом в операционную.'},
+  {link:'https://youtu.be/FazRI08Fsh0', dl:'Визитка доктора — Рилс 7.mov', ver:'Обновлено', poster:'img/p-card2.jpg', tag:'Рилс 7 · Визитка', title:'Обновлённая визитка доктора', about:'Вы рассказываете о себе, подходе к работе и безопасности. Кабинет, операционная, ключевые слова в субтитрах, в финале QR-код на сайт и запись на бесплатную консультацию.'},
+  {link:'https://youtu.be/XLvAyY_bIXs', dl:'Подготовка к подтяжке рилс 8.mov', ver:'Версия 1', poster:'img/p-olga.jpg', tag:'Рилс 8 · История пациентки', title:'Подготовка к подтяжке лица', about:'Ольга, 39 лет, рассказывает, почему решилась. Вы на консультации объясняете план — круговая подтяжка лица и шеи, СМАС-платизмопластика, височный лифтинг — и делаете разметку перед операцией.'},
 ];
 // =====================================================================================
 const esc=s=>(s||'').replace(/"/g,'&quot;');
@@ -164,12 +165,13 @@ function player(src,r){
     :`<iframe src="${src.embed}" title="${esc(r.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen scrolling="no"></iframe>`;};
   return d;
 }
+const DISK='https://disk.yandex.ru/d/CMirwJcSwWxZxQ/';const DL_ICO='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>';
 const rl=document.getElementById('reel-list');if(REELS.length<3)rl.classList.add('n2');if(REELS.length===4)rl.classList.add('n4');
 REELS.forEach(r=>{
   const s=parse(r.link),c=document.createElement('article');c.className='w';
   c.append(player(s,r));
   const t=document.createElement('div');t.className='tx';
-  t.innerHTML=`<span class="tag">${r.tag}</span><b>${r.title}</b><p>${r.about}</p>${s&&s.site?`<a class="lnk" href="${s.open}" target="_blank" rel="noopener">Открыть в ${s.site} ↗</a>`:''}`;
+  t.innerHTML=`<span class="tag">${r.tag}</span><b>${r.title}</b><p>${r.about}</p>${s&&s.site?`<a class="lnk" href="${s.open}" target="_blank" rel="noopener">Открыть в ${s.site} ↗</a>`:''}${r.dl?`<a class="dl" href="${DISK}${encodeURIComponent(r.dl)}" target="_blank" rel="noopener">${DL_ICO}Скачать исходник</a>`:''}`;
   c.append(t);rl.append(c);
 });
 </script>
