@@ -1,0 +1,299 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><title>Предложение · съёмка открытого урока</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&display=swap"><style>
+/* Каркас оффера «packaging»; палитра «студия»: белый, графит, фиолетовый акцент #6A3FD4 */
+:root{--bg:#FFFFFF;--bg2:#F7F5FC;--card:#F2EFF8;--line:#E3DEEF;--fg:#17142A;--text:#3C3850;--muted:#7F7A92;--ac:#6A3FD4;--ac-d:#5229B8;--ac-soft:#F3EFFC;--dash:#CFC4EC;--display:'Unbounded',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.6 var(--body)}a{color:inherit}
+img{max-width:100%;display:block}
+.sheet{max-width:1040px;margin:0 auto;padding:0 28px}
+.top{background:var(--bg2);border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);gap:36px;align-items:center;max-width:1040px;margin:0 auto;padding:48px 28px 40px}
+.hero>img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.kick{font:500 11.5px var(--body);letter-spacing:.2em;color:var(--ac);text-transform:uppercase;margin-bottom:16px}
+h1{font:500 clamp(26px,3.4vw,38px)/1.18 var(--display);color:var(--fg);margin:0 0 18px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--ac)}
+h2{font:500 22px/1.25 var(--display);color:var(--fg);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--body);color:var(--fg);margin:0}
+p{margin:0}
+.lead{max-width:540px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chips span{font-size:12.5px;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--text)}
+.who{margin-top:22px;font-size:14px}.who b{color:var(--fg);font-weight:600}.who a{color:var(--ac-d);text-decoration:none;white-space:nowrap}
+.down{display:inline-flex;gap:8px;align-items:center;margin-top:14px;font:500 13.5px var(--body);color:var(--ac-d);text-decoration:none}
+.gh{display:flex;gap:14px;align-items:baseline;margin:52px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
+.gh .n{font:500 12px var(--body);color:var(--ac);letter-spacing:.14em}
+.gl{color:var(--muted);margin:0 0 18px;font-size:14.5px;max-width:780px}
+.k{font:600 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+/* путь */
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.path div{background:var(--card);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.path .num{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ac);font:600 13px/30px var(--body);text-align:center;box-shadow:0 0 0 1px var(--line);margin-bottom:4px}
+.path b{font:600 15px/1.3 var(--body);color:var(--fg)}.path p{font-size:13.5px;line-height:1.45}
+/* идеи */
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ideas div{background:var(--card);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.ideas svg{margin-bottom:2px}.ideas b{font:600 14.5px/1.3 var(--body);color:var(--fg)}.ideas p{font-size:13.5px;line-height:1.45}
+/* хуки */
+.hooks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hook{background:var(--card);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 14px;align-items:start}
+.hook .hn{grid-row:span 3;width:34px;height:34px;border-radius:10px;background:var(--ac);color:#fff;font:600 13px/34px var(--display);text-align:center}
+.hook b{font:600 14.5px/1.3 var(--body);color:var(--fg)}
+.hook p{font-size:13.5px;line-height:1.45}
+.hook q{display:block;font-size:13.5px;color:var(--ac-d);font-weight:600;quotes:"«" "»"}
+/* раскадровка */
+.sb{display:flex;flex-direction:column;background:var(--card);border-radius:16px;padding:6px 22px}
+.sb div{display:grid;grid-template-columns:92px minmax(0,1fr) minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px dashed var(--dash);font-size:14px;line-height:1.45}
+.sb div:last-child{border-bottom:0}
+.sb .t{font:500 14px var(--display);color:var(--ac-d);font-variant-numeric:tabular-nums}
+.sb b{color:var(--fg);font-weight:600}.sb i{font-style:normal;color:var(--muted)}
+.sbnote{margin-top:10px;font-size:13px;color:var(--muted)}
+.sbh{display:flex;flex-direction:column;gap:4px;font:500 17px/1.3 var(--display);margin:30px 0 12px}
+.sbh:first-of-type{margin-top:8px}
+/* тарифы */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tier{position:relative;background:var(--card);border-radius:16px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:6px;border:1.5px solid transparent}
+.tier.hit{background:#fff;border-color:var(--ac);box-shadow:0 10px 30px -18px rgba(106,63,212,.6)}
+.tier .badge{position:absolute;top:-11px;left:18px;font:600 10.5px var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--ac);color:#fff;padding:5px 9px;border-radius:6px}
+.tier .name{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.tier .tp{font:500 26px/1.15 var(--display);color:var(--fg);margin-top:6px;font-variant-numeric:tabular-nums}
+.tier .per{font-size:13.5px;color:var(--ac-d);font-weight:600}
+.tier ul{margin:8px 0 0;padding-left:1.05em;display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--text);line-height:1.4}
+/* расчёт */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:18px;padding:28px;align-items:start}
+.offer .left{display:flex;flex-direction:column;gap:12px}
+.offer .left ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.calc{display:flex;flex-direction:column;font-size:14.5px}
+.calc div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--dash)}
+.calc div span:last-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.calc div.hd{font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ac-d);border-bottom:2px solid var(--ac);padding-top:0}
+.calc div.hd span:last-child{font:inherit;color:inherit}
+.calc i{font-style:normal;color:var(--muted);font-size:13px;display:block}
+.note{font-size:13px;color:var(--muted)}
+/* оборудование */
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kit div{background:var(--card);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px}
+.kit svg{margin-bottom:4px}.kit b{font:600 14.5px/1.3 var(--body);color:var(--fg)}.kit p{font-size:13px;color:var(--muted);line-height:1.45}
+.inline-link{display:flex;gap:12px;align-items:center;margin-top:12px;font-size:14px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.inline-link a{color:var(--ac-d);font-weight:600;text-decoration:none;white-space:nowrap}
+/* сроки */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:600 12px var(--body);letter-spacing:.06em;color:var(--ac-d);margin-bottom:4px;text-transform:uppercase}
+.steps strong{display:block;font:500 20px/1.2 var(--display);color:var(--fg);margin-bottom:4px}
+.date{display:flex;gap:16px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:14px}
+.date svg{flex:none}.date b{font:600 15px var(--body);color:var(--fg);display:block;margin-bottom:4px}.date p{font-size:14px}
+/* работы */
+.exp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.reel{display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.reel .pic{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000}
+.reel .pic img{width:100%;height:100%;object-fit:cover}
+.pic i{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s}
+.pic em{position:absolute;left:10px;top:10px;font:600 10.5px var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--fg);padding:5px 8px;border-radius:6px}
+.reel:hover .pic i{transform:scale(1.08)}
+.reel b{font:600 14px/1.3 var(--body);color:var(--fg)}.reel span{font-size:13px;color:var(--muted);line-height:1.4}
+.wide{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:center;background:var(--card);border-radius:16px;padding:14px;margin-top:14px;text-decoration:none}
+.wide .pic{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}.wide .pic img,.wide .pic video{width:100%;height:100%;object-fit:cover;display:block}
+.wide b{font:600 16px/1.3 var(--body);color:var(--fg);display:block;margin:6px 0}.wide p{font-size:13.5px;color:var(--muted);line-height:1.5}
+/* показ работы */
+.doc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:18px;padding:18px;text-decoration:none}
+.doc .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.doc .thumbs img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px}
+.doc b{display:block;font:500 19px/1.3 var(--display);color:var(--fg);margin:6px 0 10px}
+.doc ul{margin:0 0 14px;padding-left:1.1em;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.doc i{display:inline-block;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#fff;padding:10px 16px;border-radius:8px;transition:filter .2s}.doc:hover i{filter:brightness(1.08)}
+.case{display:flex;gap:16px;align-items:center;background:var(--card);border-radius:14px;padding:14px;margin-top:12px;text-decoration:none;transition:box-shadow .2s}
+.case:hover{box-shadow:0 0 0 1.5px var(--ac)}
+.case .thumbs{flex:none;display:grid;grid-template-columns:repeat(3,56px);gap:5px}
+.case .thumbs img{width:56px;aspect-ratio:3/4;object-fit:cover;border-radius:7px}
+.case b{font:600 15px/1.3 var(--body);color:var(--fg);display:block}.case p{font-size:13px;color:var(--muted);line-height:1.45}
+.case i{font:600 13px var(--body);font-style:normal;color:var(--ac-d);margin-left:auto;white-space:nowrap}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kitlink{display:flex;align-items:center;gap:16px;background:var(--card);border-left:3px solid var(--ac);border-radius:12px;padding:16px 20px;text-decoration:none}
+.kitlink b{font:600 15px var(--body);color:var(--fg)}.kitlink span{color:var(--muted);font-size:13.5px}.kitlink i{margin-left:auto;font:600 13.5px var(--body);font-style:normal;background:var(--ac);color:#fff;padding:10px 16px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.08)}
+.call{display:flex;gap:18px;align-items:center;background:var(--ac-soft);border:1.5px solid var(--ac);border-radius:16px;padding:20px 24px;margin-top:44px}
+.call svg{flex:none}.call b{display:block;font:500 18px/1.3 var(--display);color:var(--fg);margin-bottom:4px}.call p{font-size:14px}
+.call a{color:var(--ac-d);font-weight:600;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;padding:20px 0 44px;border-top:1px solid var(--line);margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.foot a{color:var(--ac-d);text-decoration:none}.foot b{color:var(--fg)}
+@media(max-width:900px){.tiers,.kit{grid-template-columns:1fr 1fr}.tiers{gap:20px 12px}.ideas{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:20px;padding:26px 16px 26px}.hero>img{order:-1}
+  .path,.ideas,.hooks,.offer,.links,.wide,.doc{grid-template-columns:1fr}.exp{gap:8px}.reel b{font-size:12.5px}.reel span{font-size:11.5px}.reel .pic i{width:42px;height:42px;margin:-21px 0 0 -21px}.reel .pic em{font-size:9px;padding:4px 6px;left:6px;top:6px}
+  .steps{grid-template-columns:1fr 1fr}.tiers{grid-template-columns:1fr}
+  .sb{padding:4px 16px}.sb div{grid-template-columns:1fr;gap:4px}
+  .case{flex-wrap:wrap}.case i{margin-left:0}
+  h2{font-size:19px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}.offer{padding:20px}.call{flex-direction:column;align-items:flex-start}}
+/* Telegram */
+.tg{--tg-ac:var(--ac);display:flex;gap:18px;align-items:center}
+.tg-qr{flex:none;width:128px;height:128px;padding:4px;background:#fff;border-radius:14px;display:block;box-shadow:0 0 0 1px var(--line)}
+.tg-qr svg{display:block;width:100%;height:100%}
+.tg-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tg-cap{font:600 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tg-ac)}
+.tg-link{font:500 1.2rem/1.2 var(--display);color:var(--fg);text-decoration:none}
+.tg-link:hover{color:var(--tg-ac)}
+.tg-note{font-size:.85rem;line-height:1.4;color:var(--muted)}
+.tg-card{background:var(--card);border-radius:14px;padding:18px;margin-top:20px}
+</style></head><body>
+
+<div class="top"><header class="hero"><div class="in">
+  <div class="kick">Коммерческое предложение · видеограф</div>
+  <h1>Съёмка <em>открытого урока</em>: рилсы, после которых хочется прийти на занятие</h1>
+  <p class="lead">Снимаю открытый урок так, чтобы зритель за 20 секунд почувствовал атмосферу зала: связка педагога, ученики, которые танцуют её к концу часа, замедления и монтаж в ритм музыки. Съёмка, монтаж, цвет и звук — на мне, Вы получаете готовые ролики.</p>
+  <div class="chips"><span>съёмка + монтаж под ключ</span><span>Sony A7 V · 4K 10-bit</span><span>стабилизатор</span><span>слоумо 50 к/с</span><span>петлички Hollyland</span><span>монтаж в ритм</span><span>лицензионная музыка</span></div>
+  <div class="who"><b>Бровкин Дмитрий</b> · видеограф · Санкт-Петербург · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a></div>
+  <a class="down" href="#hooks"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Хуки, раскадровки, цены и мои работы — ниже</a>
+</div><img src="assets/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"></header></div>
+
+<div class="sheet">
+
+  <div class="gh"><span class="n">01</span><h2>Как начнём</h2></div>
+  <p class="gl">Без долгих согласований: короткий созвон, съёмка открытого урока, потом — пакет на месяц в том стиле, который Вам понравился.</p>
+  <div class="path">
+    <div><span class="num">1</span><b>Созвон 15 минут</b><p>Направление и уровень группы, музыка урока, зал и свет, кого из учеников можно снимать крупно.</p></div>
+    <div><span class="num">2</span><b>Съёмка урока</b><p>Снимаю весь урок до 2 часов: разминку, разбор связки, финальный прогон. Не мешаю педагогу и ученикам.</p></div>
+    <div><span class="num">3</span><b>Готовые рилсы</b><p>2–5 роликов из одного урока разных форматов. Понравится — закрепим стиль серии на месяц вперёд.</p></div>
+  </div>
+
+  <div class="gh"><span class="n">02</span><h2>Что снимем на открытом уроке</h2></div>
+  <p class="gl">Открытый урок — лучший материал для привлечения новых учеников: в нём есть и мастерство педагога, и путь новичка от первого шага до готовой связки.</p>
+  <div class="ideas">
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-3 7M12 13l3 7M7 10l5-2 5 2"/></svg><b>Связка педагога</b><p>Педагог танцует связку целиком с нескольких ракурсов, склейки на доли музыки. Это витрина школы.</p></div>
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h6M14 12h6M17 9l3 3-3 3"/><circle cx="12" cy="12" r="2"/></svg><b>Начало и конец урока</b><p>Первая неуверенная попытка — и та же группа в финальном прогоне. Лучший аргумент «у меня тоже получится».</p></div>
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Замедления</b><p>Вращения, прыжки, волосы и одежда в движении — 50 к/с, плавно и красиво.</p></div>
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><b>Атмосфера и эмоции</b><p>Смех, аплодисменты, «дай пять» после прогона, зал и свет. Зритель видит, что здесь хорошо.</p></div>
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><b>Педагог в кадре</b><p>15–20 секунд о главном: кому подходит направление, с чего начать, что взять на первое занятие.</p></div>
+    <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg><b>Анонс следующего урока</b><p>Нарезка лучших моментов + дата и время следующего открытого урока. Ролик, который приводит людей в зал.</p></div>
+  </div>
+
+  <div class="gh" id="hooks"><span class="n">03</span><h2>Хуки: чем зацепить в первые 2 секунды</h2></div>
+  <p class="gl">В Reels решает первый кадр. Вот варианты начала — на одном уроке снимаем материал сразу под несколько из них.</p>
+  <div class="hooks">
+    <div class="hook"><span class="hn">1</span><b>Сразу результат</b><p>Финальный прогон всей группой, общий план, сильная доля музыки.</p><q>Это они выучили за 1 урок</q></div>
+    <div class="hook"><span class="hn">2</span><b>Было → стало</b><p>Разделённый экран: первая попытка в начале урока и та же ученица в конце.</p><q>Начало урока / конец урока</q></div>
+    <div class="hook"><span class="hn">3</span><b>Вызов зрителю</b><p>Педагог в замедлении делает самое красивое движение связки.</p><q>Повторишь за 15 секунд?</q></div>
+    <div class="hook"><span class="hn">4</span><b>Страх новичка</b><p>Ученица у входа в зал, неуверенный взгляд, затем — уверенно танцует в первом ряду.</p><q>Думала, что не смогу</q></div>
+    <div class="hook"><span class="hn">5</span><b>Взгляд изнутри</b><p>Камера на стабилизаторе входит в зал вместе с учеником: свет, музыка, группа уже двигается.</p><q>Твой первый урок выглядит так</q></div>
+    <div class="hook"><span class="hn">6</span><b>Деталь крупно</b><p>Кроссовки или туфли бьют в доску пола точно в бит, затем отъезд на всю группу.</p><q>Без текста — только звук и ритм</q></div>
+    <div class="hook"><span class="hn">7</span><b>Фраза педагога</b><p>Педагог в кадре, первая фраза — главное правило или частая ошибка.</p><q>Главная ошибка новичков — смотреть под ноги</q></div>
+    <div class="hook"><span class="hn">8</span><b>Час за 20 секунд</b><p>Ускоренная разминка, разбор, прогон — и резкий стоп на финальной позе.</p><q>1 час открытого урока за 20 секунд</q></div>
+  </div>
+
+  <div class="gh"><span class="n">04</span><h2>Примеры раскадровок</h2></div>
+  <h3 class="sbh"><span class="k">Раскадровка 1</span>«Это они выучили за один урок», 20 секунд</h3>
+  <div class="sb">
+    <div><span class="t">0–2 с</span><span><b>Хук.</b> Финальный прогон, вся группа синхронно, общий план — сильная доля музыки.</span><span><i>Текст: «Это они выучили за 1 урок»</i></span></div>
+    <div><span class="t">2–6 с</span><span><b>Начало урока.</b> Педагог показывает движение, ученики пробуют — неуверенно, кто-то смеётся.</span><span><i>Подпись: «19:00 — первая попытка»</i></span></div>
+    <div><span class="t">6–12 с</span><span><b>Разбор.</b> Три быстрых плана: руки педагога, ноги крупно, ученица повторяет перед зеркалом. Склейки на доли.</span><span><i>Звук музыки урока</i></span></div>
+    <div><span class="t">12–18 с</span><span><b>Прогон.</b> Та же связка целиком, проход стабилизатором вдоль первого ряда, замедление на вращении.</span><span><i>Подпись: «20:00 — финал»</i></span></div>
+    <div><span class="t">18–20 с</span><span><b>Призыв.</b> Группа в финальной позе, аплодисменты.</span><span><i>«Следующий открытый урок — дата, запись в директ»</i></span></div>
+  </div>
+
+  <h3 class="sbh"><span class="k">Раскадровка 2</span>«Повторишь за 15 секунд?» — связка педагога, 15 секунд</h3>
+  <div class="sb">
+    <div><span class="t">0–2 с</span><span><b>Хук.</b> Замедление: самое эффектное движение связки, волосы и одежда в движении.</span><span><i>Текст: «Повторишь?»</i></span></div>
+    <div><span class="t">2–11 с</span><span><b>Связка.</b> Педагог танцует целиком, ракурс меняется на каждую фразу музыки: фронт → сбоку → крупно ноги.</span><span><i>Счёт «5, 6, 7, 8» плашкой в такт</i></span></div>
+    <div><span class="t">11–15 с</span><span><b>Финал.</b> Педагог заканчивает и смотрит в камеру, улыбка.</span><span><i>«Сохрани и приходи разучить вживую»</i></span></div>
+  </div>
+
+  <h3 class="sbh"><span class="k">Раскадровка 3</span>«Твой первый урок выглядит так» — приглашение, 25 секунд</h3>
+  <div class="sb">
+    <div><span class="t">0–3 с</span><span><b>Хук.</b> Взгляд изнутри: камера на стабилизаторе открывает дверь и входит в зал, музыка нарастает.</span><span><i>Текст: «Твой первый урок выглядит так»</i></span></div>
+    <div><span class="t">3–8 с</span><span><b>Встреча.</b> Педагог здоровается с группой, лёгкая разминка, улыбки.</span><span><i>Подпись: «Никакой подготовки не нужно»</i></span></div>
+    <div><span class="t">8–14 с</span><span><b>Педагог в кадре.</b> Одна фраза: кому подходит направление и чего не бояться.</span><span><i>Субтитры крупно</i></span></div>
+    <div><span class="t">14–21 с</span><span><b>Танец.</b> Группа танцует связку, замедление в кульминации музыки.</span><span><i>Монтаж в ритм</i></span></div>
+    <div><span class="t">21–25 с</span><span><b>Призыв.</b> Общий план зала, отъезд камеры.</span><span><i>Дата открытого урока, адрес, «запись в директ»</i></span></div>
+  </div>
+
+  <h3 class="sbh"><span class="k">Раскадровка 4</span>Ролик-обзор открытого урока, 60 секунд · 16:9 + вертикаль</h3>
+  <div class="sb">
+    <div><span class="t">0–5 с</span><span><b>Интро.</b> Детали в замедлении: обувь, руки, свет в зеркалах, название школы.</span><span><i>Логотип и название направления</i></span></div>
+    <div><span class="t">5–15 с</span><span><b>Сбор.</b> Ученики приходят, переодеваются, разминка. Живые лица, смех.</span><span><i>Музыка мягко, без слов</i></span></div>
+    <div><span class="t">15–30 с</span><span><b>Педагог.</b> Короткое интервью на две камеры: о школе и о том, кому подойдут занятия; перебивки урока.</span><span><i>Плашка: имя и регалии педагога</i></span></div>
+    <div><span class="t">30–50 с</span><span><b>Урок.</b> Разбор связки и финальный прогон, ракурсы на доли, замедления на сильных движениях.</span><span><i>Монтаж в ритм музыки урока</i></span></div>
+    <div><span class="t">50–60 с</span><span><b>Финал.</b> Аплодисменты, общее фото группы, отъезд камеры.</span><span><i>Расписание, адрес, контакты, QR-код</i></span></div>
+  </div>
+  <p class="sbnote">Это примеры, один из вариантов. Хуки, сценарии и тексты подстроим под Ваше направление, педагога и группу.</p>
+
+  <div class="gh" id="price"><span class="n">05</span><h2>Стоимость</h2></div>
+  <p class="gl">Всё под ключ: съёмка, своя техника, монтаж, цветокоррекция, субтитры, графика, музыка и звук. Цена за готовый рилс — не зависит от числа часов съёмки и монтажа.</p>
+  <div class="tiers">
+    <div class="tier"><span class="k">Открытый урок</span><span class="name">2 Reels</span><span class="tp">8&nbsp;000&nbsp;₽</span><span class="per">4 000 ₽ за рилс</span><ul><li>Съёмка урока до 2 часов</li><li>2 разных формата</li><li>Монтаж под ключ</li><li>Стоимость вычитаем из пакета, если закажете в течение месяца</li></ul></div>
+    <div class="tier"><span class="k">Пакет</span><span class="name">5 Reels</span><span class="tp">17&nbsp;500&nbsp;₽</span><span class="per">3 500 ₽ за рилс</span><ul><li>1 урок или 1 смена</li><li>Единый стиль серии</li><li>Обложки к каждому</li></ul></div>
+    <div class="tier"><span class="k">Пакет</span><span class="name">10 Reels</span><span class="tp">32&nbsp;000&nbsp;₽</span><span class="per">3 200 ₽ за рилс</span><ul><li>2 урока или разные группы</li><li>Несколько направлений</li><li>Контент на месяц вперёд</li></ul></div>
+    <div class="tier hit"><span class="badge">Выгоднее всего</span><span class="k">Пакет</span><span class="name">12 Reels</span><span class="tp">36&nbsp;000&nbsp;₽</span><span class="per">3 000 ₽ за рилс</span><ul><li>2–3 урока за месяц</li><li>3 рилса в неделю</li><li>Моушн-графика в стиле школы</li></ul></div>
+  </div>
+
+  <div class="gh" id="terms"><span class="n">06</span><h2>Что входит и условия</h2></div>
+  <div class="offer">
+    <div class="left">
+      <span class="k">В каждом рилсе</span>
+      <h3>Готово к публикации</h3>
+      <ul>
+        <li>Хук и сценарий — вместе с Вами перед съёмкой</li>
+        <li>Несколько ракурсов, проходы на стабилизаторе, замедления</li>
+        <li>Монтаж в ритм музыки, склейки на доли</li>
+        <li>Цветокоррекция: чистая кожа, сочный свет зала</li>
+        <li>Субтитры, плашки, анимированная графика</li>
+        <li>Вертикаль 9:16 для Reels, Shorts, VK Клипов</li>
+        <li>2 круга правок</li>
+      </ul>
+      <p class="note">Работаю по договору, самозанятый — чек на каждую оплату.</p>
+    </div>
+    <div class="calc">
+      <div class="hd"><span>Формат</span><span>Цена</span></div>
+      <div><span>Открытый урок<i>2 рилса, съёмка до 2 часов</i></span><span>8&nbsp;000&nbsp;₽</span></div>
+      <div><span>5 Reels<i>3&nbsp;500 ₽ × 5</i></span><span>17&nbsp;500&nbsp;₽</span></div>
+      <div><span>10 Reels<i>3&nbsp;200 ₽ × 10</i></span><span>32&nbsp;000&nbsp;₽</span></div>
+      <div><span>12 Reels<i>3&nbsp;000 ₽ × 12</i></span><span>36&nbsp;000&nbsp;₽</span></div>
+      <div><span>Ролик-обзор урока<i>до 60 с, 16:9 + вертикальная версия</i></span><span>от&nbsp;15&nbsp;000&nbsp;₽</span></div>
+      <div><span>Оплата<i>50% в день съёмки по её итогу, 50% по сдаче роликов</i></span><span>50 / 50</span></div>
+    </div>
+  </div>
+  <div class="steps" style="margin-top:22px">
+    <div><b>Открытый урок</b><strong>3–5 дней</strong>От съёмки до готовых роликов</div>
+    <div><b>Пакет</b><strong>около недели</strong>В среднем, зависит от сложности графики</div>
+    <div><b>Правки</b><strong>1–2 дня</strong>На каждый круг</div>
+    <div><b>Исходники</b><strong>на Ваш диск</strong>Высокий битрейт, объём большой</div>
+  </div>
+  <div class="date">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M9 15l2 2 4-4"/></svg>
+    <div><b>Дату урока согласуем заранее</b><p>Бронирую день за Вами. Ученикам лучше сказать о съёмке заранее — так все придут в образе и будут готовы к камере.</p></div>
+  </div>
+
+  <div class="gh" id="kit"><span class="n">07</span><h2>Оборудование — всё своё</h2></div>
+  <div class="kit">
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h1l2-3h8l2 3h1a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2"/><circle cx="12" cy="13" r="3.5"/></svg><b>Камеры</b><p>Sony A7 V — полный кадр, 4K 10-bit, замедления 50 к/с. Вторая камера — второй ракурс на зал.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5M11 8v6M8 11h6"/></svg><b>Оптика</b><p>Светосильные объективы: чистая картинка в зале без вспышек, мягко размытый фон на крупных планах.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg><b>Звук</b><p>Радиопетлички Hollyland для педагога, отдельная чистая запись музыки урока.</p></div>
+    <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12M8 7h8M12 7l-4 6M12 7l4 6"/></svg><b>Стабилизатор</b><p>DJI RS 4 Pro — плавные проходы вдоль группы и вращения вокруг танцующих.</p></div>
+  </div>
+  <div class="inline-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg><span>Полный перечень с фотографиями техники — <a href="#links">по ссылке внизу страницы</a></span></div>
+
+  <div class="gh" id="works"><span class="n">08</span><h2>Мои работы</h2></div>
+  <p class="gl">Рилс с чемпионата по танцам, рекламный рилс и клип в такт музыке. Нажмите на обложку — ролик откроется на YouTube.</p>
+  <div class="exp">
+    <a class="reel" href="https://www.youtube.com/shorts/FNOuaIVyYOc" target="_blank" rel="noopener"><div class="pic"><img src="assets/dance.jpg" alt="Танцовщица на чемпионате по танцам"><em>Танцы</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#6A3FD4"/></svg></i></div><b>Чемпионат России по танцам</b><span>Рилс с чемпионата для канала танцовщицы Дарьи Есауловой</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/MD7Vqr4xX14" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-avito.jpg" alt="Героини рекламного рилса для Авито"><em>Реклама</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#6A3FD4"/></svg></i></div><b>«Стиль ≠ большие деньги» для Авито</b><span>Постановочный рилс: слоумо, переходы, саунд-дизайн</span></a>
+    <a class="reel" href="https://www.youtube.com/shorts/DeftgE3lcsY" target="_blank" rel="noopener"><div class="pic"><img src="assets/sh-or.jpg" alt="Хирург в оптике во время операции"><em>Клип</em><i><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#6A3FD4"/></svg></i></div><b>Склейки в такт музыке</b><span>Шоурил для пластического хирурга: монтаж в бит, замедления</span></a>
+  </div>
+  <div class="wide"><div class="pic"><video src="assets/lkc-intro.mp4" poster="assets/lkc-poster-v2.jpg" controls playsinline preload="none"></video></div><div><span class="k">Заставка мероприятия</span><b>Интро Low Kick Championship</b><p>Открывающая заставка вечернего турнира: замедления, свет зала и графика. Снимал, монтировал, красил и делал графику сам.</p></div></div>
+
+  <div class="gh"><span class="n">09</span><h2>Как я отдаю рилсы</h2></div>
+  <p class="gl">Готовые ролики приходят отдельной страницей: все рилсы в одном месте, удобно смотреть с телефона, скачивать исходники и оставлять правки к каждому.</p>
+  <a class="doc" href="https://tinextreme-alt.github.io/offers/dr-shapovalov/" target="_blank" rel="noopener">
+    <div class="thumbs"><img src="assets/sh-face.jpg" alt="Рилс врача"><img src="assets/sh-or.jpg" alt="Рилс из операционной"><img src="assets/clinic3.jpg" alt="Кадр в клинике"></div>
+    <div><span class="k">Пример · серия рилсов для пластического хирурга</span><b>Страница сдачи работы клиенту</b>
+      <ul><li>Все рилсы серии с обложками и версиями</li><li>Кнопка «Скачать исходник» у каждого ролика</li><li>Поле для правок — уходит мне в Telegram или WhatsApp</li><li>Кадры со съёмки</li></ul>
+      <i>Открыть пример →</i></div>
+  </a>
+  <a class="case" href="https://tinextreme-alt.github.io/offers/avito-reel/" target="_blank" rel="noopener"><div class="thumbs"><img src="assets/av-2.jpg" alt="Кадр рилса для Авито"><img src="assets/av-5.jpg" alt="Кадр рилса для Авито"><img src="assets/av-8.jpg" alt="Кадр рилса для Авито"></div><div><b>Рилс для Авито: версии на выбор</b><p>Варианты одного ролика рядом — выбираете лучший.</p></div><i>Открыть →</i></a>
+
+  <div class="gh" id="links"><span class="n">10</span><h2>Шоу-рил и оборудование</h2></div>
+  <div class="links">
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener"><div><b>Портфолио · шоу-рил</b><br><span>Танцы, реклама, спорт, медицина, интервью</span></div><i>Смотреть →</i></a>
+    <a class="kitlink" href="https://tinextreme-alt.github.io/offers/gear/" target="_blank" rel="noopener"><div><b>Оборудование</b><br><span>Полный перечень техники с фото</span></div><i>Открыть →</i></a>
+  </div>
+
+  <div class="call">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6A3FD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <div><b>Обсудим открытый урок?</b><p>Созвонимся на 10–15 минут в удобное время: <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></p></div>
+  </div>
+
+<div class="tg tg-card"><a class="tg-qr" href="https://t.me/T1nEx" target="_blank" rel="noopener" aria-label="Открыть Telegram @T1nEx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" role="img" aria-label="QR-код Telegram @T1nEx"><rect width="33" height="33" fill="#fff"/><g fill="#111"><circle cx="11.5" cy="2.5" r="0.43"/><circle cx="13.5" cy="2.5" r="0.43"/><circle cx="14.5" cy="2.5" r="0.43"/><circle cx="15.5" cy="2.5" r="0.43"/><circle cx="17.5" cy="2.5" r="0.43"/><circle cx="18.5" cy="2.5" r="0.43"/><circle cx="19.5" cy="2.5" r="0.43"/><circle cx="21.5" cy="2.5" r="0.43"/><circle cx="22.5" cy="2.5" r="0.43"/><circle cx="10.5" cy="3.5" r="0.43"/><circle cx="16.5" cy="3.5" r="0.43"/><circle cx="17.5" cy="3.5" r="0.43"/><circle cx="21.5" cy="3.5" r="0.43"/><circle cx="11.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="4.5" r="0.43"/><circle cx="16.5" cy="4.5" r="0.43"/><circle cx="17.5" cy="4.5" r="0.43"/><circle cx="19.5" cy="4.5" r="0.43"/><circle cx="20.5" cy="4.5" r="0.43"/><circle cx="12.5" cy="5.5" r="0.43"/><circle cx="13.5" cy="5.5" r="0.43"/><circle cx="15.5" cy="5.5" r="0.43"/><circle cx="18.5" cy="5.5" r="0.43"/><circle cx="20.5" cy="5.5" r="0.43"/><circle cx="12.5" cy="6.5" r="0.43"/><circle cx="15.5" cy="6.5" r="0.43"/><circle cx="18.5" cy="6.5" r="0.43"/><circle cx="19.5" cy="6.5" r="0.43"/><circle cx="20.5" cy="6.5" r="0.43"/><circle cx="10.5" cy="7.5" r="0.43"/><circle cx="11.5" cy="7.5" r="0.43"/><circle cx="16.5" cy="7.5" r="0.43"/><circle cx="18.5" cy="7.5" r="0.43"/><circle cx="19.5" cy="7.5" r="0.43"/><circle cx="21.5" cy="7.5" r="0.43"/><circle cx="22.5" cy="7.5" r="0.43"/><circle cx="10.5" cy="8.5" r="0.43"/><circle cx="12.5" cy="8.5" r="0.43"/><circle cx="14.5" cy="8.5" r="0.43"/><circle cx="16.5" cy="8.5" r="0.43"/><circle cx="18.5" cy="8.5" r="0.43"/><circle cx="20.5" cy="8.5" r="0.43"/><circle cx="22.5" cy="8.5" r="0.43"/><circle cx="10.5" cy="9.5" r="0.43"/><circle cx="11.5" cy="9.5" r="0.43"/><circle cx="12.5" cy="9.5" r="0.43"/><circle cx="14.5" cy="9.5" r="0.43"/><circle cx="15.5" cy="9.5" r="0.43"/><circle cx="16.5" cy="9.5" r="0.43"/><circle cx="17.5" cy="9.5" r="0.43"/><circle cx="18.5" cy="9.5" r="0.43"/><circle cx="21.5" cy="9.5" r="0.43"/><circle cx="22.5" cy="9.5" r="0.43"/><circle cx="6.5" cy="10.5" r="0.43"/><circle cx="7.5" cy="10.5" r="0.43"/><circle cx="8.5" cy="10.5" r="0.43"/><circle cx="9.5" cy="10.5" r="0.43"/><circle cx="12.5" cy="10.5" r="0.43"/><circle cx="13.5" cy="10.5" r="0.43"/><circle cx="17.5" cy="10.5" r="0.43"/><circle cx="18.5" cy="10.5" r="0.43"/><circle cx="22.5" cy="10.5" r="0.43"/><circle cx="24.5" cy="10.5" r="0.43"/><circle cx="25.5" cy="10.5" r="0.43"/><circle cx="29.5" cy="10.5" r="0.43"/><circle cx="3.5" cy="11.5" r="0.43"/><circle cx="6.5" cy="11.5" r="0.43"/><circle cx="9.5" cy="11.5" r="0.43"/><circle cx="11.5" cy="11.5" r="0.43"/><circle cx="13.5" cy="11.5" r="0.43"/><circle cx="14.5" cy="11.5" r="0.43"/><circle cx="16.5" cy="11.5" r="0.43"/><circle cx="17.5" cy="11.5" r="0.43"/><circle cx="20.5" cy="11.5" r="0.43"/><circle cx="21.5" cy="11.5" r="0.43"/><circle cx="26.5" cy="11.5" r="0.43"/><circle cx="28.5" cy="11.5" r="0.43"/><circle cx="29.5" cy="11.5" r="0.43"/><circle cx="30.5" cy="11.5" r="0.43"/><circle cx="3.5" cy="12.5" r="0.43"/><circle cx="5.5" cy="12.5" r="0.43"/><circle cx="6.5" cy="12.5" r="0.43"/><circle cx="8.5" cy="12.5" r="0.43"/><circle cx="12.5" cy="12.5" r="0.43"/><circle cx="14.5" cy="12.5" r="0.43"/><circle cx="18.5" cy="12.5" r="0.43"/><circle cx="19.5" cy="12.5" r="0.43"/><circle cx="21.5" cy="12.5" r="0.43"/><circle cx="23.5" cy="12.5" r="0.43"/><circle cx="25.5" cy="12.5" r="0.43"/><circle cx="30.5" cy="12.5" r="0.43"/><circle cx="2.5" cy="13.5" r="0.43"/><circle cx="3.5" cy="13.5" r="0.43"/><circle cx="6.5" cy="13.5" r="0.43"/><circle cx="7.5" cy="13.5" r="0.43"/><circle cx="12.5" cy="13.5" r="0.43"/><circle cx="19.5" cy="13.5" r="0.43"/><circle cx="21.5" cy="13.5" r="0.43"/><circle cx="22.5" cy="13.5" r="0.43"/><circle cx="23.5" cy="13.5" r="0.43"/><circle cx="25.5" cy="13.5" r="0.43"/><circle cx="26.5" cy="13.5" r="0.43"/><circle cx="29.5" cy="13.5" r="0.43"/><circle cx="30.5" cy="13.5" r="0.43"/><circle cx="4.5" cy="14.5" r="0.43"/><circle cx="5.5" cy="14.5" r="0.43"/><circle cx="7.5" cy="14.5" r="0.43"/><circle cx="8.5" cy="14.5" r="0.43"/><circle cx="9.5" cy="14.5" r="0.43"/><circle cx="11.5" cy="14.5" r="0.43"/><circle cx="20.5" cy="14.5" r="0.43"/><circle cx="22.5" cy="14.5" r="0.43"/><circle cx="25.5" cy="14.5" r="0.43"/><circle cx="30.5" cy="14.5" r="0.43"/><circle cx="2.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="15.5" r="0.43"/><circle cx="4.5" cy="15.5" r="0.43"/><circle cx="10.5" cy="15.5" r="0.43"/><circle cx="11.5" cy="15.5" r="0.43"/><circle cx="22.5" cy="15.5" r="0.43"/><circle cx="24.5" cy="15.5" r="0.43"/><circle cx="26.5" cy="15.5" r="0.43"/><circle cx="28.5" cy="15.5" r="0.43"/><circle cx="29.5" cy="15.5" r="0.43"/><circle cx="3.5" cy="16.5" r="0.43"/><circle cx="4.5" cy="16.5" r="0.43"/><circle cx="6.5" cy="16.5" r="0.43"/><circle cx="7.5" cy="16.5" r="0.43"/><circle cx="8.5" cy="16.5" r="0.43"/><circle cx="10.5" cy="16.5" r="0.43"/><circle cx="11.5" cy="16.5" r="0.43"/><circle cx="23.5" cy="16.5" r="0.43"/><circle cx="24.5" cy="16.5" r="0.43"/><circle cx="26.5" cy="16.5" r="0.43"/><circle cx="30.5" cy="16.5" r="0.43"/><circle cx="2.5" cy="17.5" r="0.43"/><circle cx="4.5" cy="17.5" r="0.43"/><circle cx="7.5" cy="17.5" r="0.43"/><circle cx="9.5" cy="17.5" r="0.43"/><circle cx="10.5" cy="17.5" r="0.43"/><circle cx="22.5" cy="17.5" r="0.43"/><circle cx="23.5" cy="17.5" r="0.43"/><circle cx="24.5" cy="17.5" r="0.43"/><circle cx="25.5" cy="17.5" r="0.43"/><circle cx="27.5" cy="17.5" r="0.43"/><circle cx="5.5" cy="18.5" r="0.43"/><circle cx="8.5" cy="18.5" r="0.43"/><circle cx="9.5" cy="18.5" r="0.43"/><circle cx="10.5" cy="18.5" r="0.43"/><circle cx="11.5" cy="18.5" r="0.43"/><circle cx="12.5" cy="18.5" r="0.43"/><circle cx="21.5" cy="18.5" r="0.43"/><circle cx="25.5" cy="18.5" r="0.43"/><circle cx="29.5" cy="18.5" r="0.43"/><circle cx="30.5" cy="18.5" r="0.43"/><circle cx="2.5" cy="19.5" r="0.43"/><circle cx="3.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="19.5" r="0.43"/><circle cx="6.5" cy="19.5" r="0.43"/><circle cx="7.5" cy="19.5" r="0.43"/><circle cx="9.5" cy="19.5" r="0.43"/><circle cx="11.5" cy="19.5" r="0.43"/><circle cx="12.5" cy="19.5" r="0.43"/><circle cx="13.5" cy="19.5" r="0.43"/><circle cx="21.5" cy="19.5" r="0.43"/><circle cx="22.5" cy="19.5" r="0.43"/><circle cx="25.5" cy="19.5" r="0.43"/><circle cx="26.5" cy="19.5" r="0.43"/><circle cx="27.5" cy="19.5" r="0.43"/><circle cx="28.5" cy="19.5" r="0.43"/><circle cx="30.5" cy="19.5" r="0.43"/><circle cx="5.5" cy="20.5" r="0.43"/><circle cx="6.5" cy="20.5" r="0.43"/><circle cx="8.5" cy="20.5" r="0.43"/><circle cx="9.5" cy="20.5" r="0.43"/><circle cx="10.5" cy="20.5" r="0.43"/><circle cx="11.5" cy="20.5" r="0.43"/><circle cx="13.5" cy="20.5" r="0.43"/><circle cx="18.5" cy="20.5" r="0.43"/><circle cx="22.5" cy="20.5" r="0.43"/><circle cx="27.5" cy="20.5" r="0.43"/><circle cx="30.5" cy="20.5" r="0.43"/><circle cx="4.5" cy="21.5" r="0.43"/><circle cx="6.5" cy="21.5" r="0.43"/><circle cx="9.5" cy="21.5" r="0.43"/><circle cx="10.5" cy="21.5" r="0.43"/><circle cx="12.5" cy="21.5" r="0.43"/><circle cx="17.5" cy="21.5" r="0.43"/><circle cx="18.5" cy="21.5" r="0.43"/><circle cx="19.5" cy="21.5" r="0.43"/><circle cx="27.5" cy="21.5" r="0.43"/><circle cx="29.5" cy="21.5" r="0.43"/><circle cx="2.5" cy="22.5" r="0.43"/><circle cx="3.5" cy="22.5" r="0.43"/><circle cx="4.5" cy="22.5" r="0.43"/><circle cx="5.5" cy="22.5" r="0.43"/><circle cx="6.5" cy="22.5" r="0.43"/><circle cx="7.5" cy="22.5" r="0.43"/><circle cx="8.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="22.5" r="0.43"/><circle cx="12.5" cy="22.5" r="0.43"/><circle cx="15.5" cy="22.5" r="0.43"/><circle cx="17.5" cy="22.5" r="0.43"/><circle cx="18.5" cy="22.5" r="0.43"/><circle cx="19.5" cy="22.5" r="0.43"/><circle cx="21.5" cy="22.5" r="0.43"/><circle cx="22.5" cy="22.5" r="0.43"/><circle cx="23.5" cy="22.5" r="0.43"/><circle cx="24.5" cy="22.5" r="0.43"/><circle cx="25.5" cy="22.5" r="0.43"/><circle cx="26.5" cy="22.5" r="0.43"/><circle cx="27.5" cy="22.5" r="0.43"/><circle cx="10.5" cy="23.5" r="0.43"/><circle cx="11.5" cy="23.5" r="0.43"/><circle cx="13.5" cy="23.5" r="0.43"/><circle cx="14.5" cy="23.5" r="0.43"/><circle cx="17.5" cy="23.5" r="0.43"/><circle cx="18.5" cy="23.5" r="0.43"/><circle cx="19.5" cy="23.5" r="0.43"/><circle cx="22.5" cy="23.5" r="0.43"/><circle cx="26.5" cy="23.5" r="0.43"/><circle cx="28.5" cy="23.5" r="0.43"/><circle cx="30.5" cy="23.5" r="0.43"/><circle cx="10.5" cy="24.5" r="0.43"/><circle cx="11.5" cy="24.5" r="0.43"/><circle cx="12.5" cy="24.5" r="0.43"/><circle cx="14.5" cy="24.5" r="0.43"/><circle cx="15.5" cy="24.5" r="0.43"/><circle cx="16.5" cy="24.5" r="0.43"/><circle cx="20.5" cy="24.5" r="0.43"/><circle cx="21.5" cy="24.5" r="0.43"/><circle cx="22.5" cy="24.5" r="0.43"/><circle cx="24.5" cy="24.5" r="0.43"/><circle cx="26.5" cy="24.5" r="0.43"/><circle cx="29.5" cy="24.5" r="0.43"/><circle cx="30.5" cy="24.5" r="0.43"/><circle cx="10.5" cy="25.5" r="0.43"/><circle cx="11.5" cy="25.5" r="0.43"/><circle cx="12.5" cy="25.5" r="0.43"/><circle cx="13.5" cy="25.5" r="0.43"/><circle cx="14.5" cy="25.5" r="0.43"/><circle cx="15.5" cy="25.5" r="0.43"/><circle cx="17.5" cy="25.5" r="0.43"/><circle cx="18.5" cy="25.5" r="0.43"/><circle cx="19.5" cy="25.5" r="0.43"/><circle cx="20.5" cy="25.5" r="0.43"/><circle cx="21.5" cy="25.5" r="0.43"/><circle cx="22.5" cy="25.5" r="0.43"/><circle cx="26.5" cy="25.5" r="0.43"/><circle cx="27.5" cy="25.5" r="0.43"/><circle cx="30.5" cy="25.5" r="0.43"/><circle cx="10.5" cy="26.5" r="0.43"/><circle cx="12.5" cy="26.5" r="0.43"/><circle cx="17.5" cy="26.5" r="0.43"/><circle cx="18.5" cy="26.5" r="0.43"/><circle cx="19.5" cy="26.5" r="0.43"/><circle cx="21.5" cy="26.5" r="0.43"/><circle cx="22.5" cy="26.5" r="0.43"/><circle cx="23.5" cy="26.5" r="0.43"/><circle cx="24.5" cy="26.5" r="0.43"/><circle cx="25.5" cy="26.5" r="0.43"/><circle cx="26.5" cy="26.5" r="0.43"/><circle cx="29.5" cy="26.5" r="0.43"/><circle cx="11.5" cy="27.5" r="0.43"/><circle cx="12.5" cy="27.5" r="0.43"/><circle cx="13.5" cy="27.5" r="0.43"/><circle cx="14.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="27.5" r="0.43"/><circle cx="16.5" cy="27.5" r="0.43"/><circle cx="19.5" cy="27.5" r="0.43"/><circle cx="25.5" cy="27.5" r="0.43"/><circle cx="29.5" cy="27.5" r="0.43"/><circle cx="15.5" cy="28.5" r="0.43"/><circle cx="16.5" cy="28.5" r="0.43"/><circle cx="21.5" cy="28.5" r="0.43"/><circle cx="22.5" cy="28.5" r="0.43"/><circle cx="23.5" cy="28.5" r="0.43"/><circle cx="28.5" cy="28.5" r="0.43"/><circle cx="29.5" cy="28.5" r="0.43"/><circle cx="30.5" cy="28.5" r="0.43"/><circle cx="12.5" cy="29.5" r="0.43"/><circle cx="16.5" cy="29.5" r="0.43"/><circle cx="18.5" cy="29.5" r="0.43"/><circle cx="20.5" cy="29.5" r="0.43"/><circle cx="25.5" cy="29.5" r="0.43"/><circle cx="27.5" cy="29.5" r="0.43"/><circle cx="29.5" cy="29.5" r="0.43"/><circle cx="30.5" cy="29.5" r="0.43"/><circle cx="12.5" cy="30.5" r="0.43"/><circle cx="14.5" cy="30.5" r="0.43"/><circle cx="15.5" cy="30.5" r="0.43"/><circle cx="16.5" cy="30.5" r="0.43"/><circle cx="24.5" cy="30.5" r="0.43"/><circle cx="26.5" cy="30.5" r="0.43"/><circle cx="27.5" cy="30.5" r="0.43"/><circle cx="28.5" cy="30.5" r="0.43"/><circle cx="29.5" cy="30.5" r="0.43"/></g><path fill="#111" fill-rule="evenodd" d="M4.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M26.2 2h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM26.4 3h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="26" y="4" width="3" height="3" rx="1" fill="#111"/><path fill="#111" fill-rule="evenodd" d="M4.2 24h2.6a2.2 2.2 0 0 1 2.2 2.2v2.6a2.2 2.2 0 0 1-2.2 2.2h-2.6a2.2 2.2 0 0 1-2.2-2.2v-2.6a2.2 2.2 0 0 1 2.2-2.2zM4.4 25h2.2a1.4 1.4 0 0 1 1.4 1.4v2.2a1.4 1.4 0 0 1-1.4 1.4h-2.2a1.4 1.4 0 0 1-1.4-1.4v-2.2a1.4 1.4 0 0 1 1.4-1.4z"/><rect x="4" y="26" width="3" height="3" rx="1" fill="#111"/><circle cx="16.5" cy="16.5" r="3.6" fill="#111"/><polygon points="14.623,16.390 18.322,14.954 17.659,18.128 16.583,17.328 16.058,17.852 16.003,17.024 17.494,15.700 15.644,16.804" fill="#fff" stroke="#fff" stroke-width="0.193" stroke-linejoin="round"/></svg></a><div class="tg-txt"><span class="tg-cap">Telegram</span><a class="tg-link" href="https://t.me/T1nEx" target="_blank" rel="noopener">@T1nEx</a><span class="tg-note">Наведите камеру телефона на код или нажмите на ник, чтобы написать мне</span></div></div>
+  <div class="foot"><b>Бровкин Дмитрий</b> · видеограф · <a href="tel:+79817779911">+7 981 777-99-11</a> · <a href="https://wa.me/79817779911" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/T1nEx" target="_blank" rel="noopener">Telegram @T1nEx</a> · <a href="https://vk.ru/t1nex" target="_blank" rel="noopener">ВКонтакте</a></div>
+</div>
+</body></html>
