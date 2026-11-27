@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Шоу-рил · Бровкин Дмитрий</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;600&display=swap"><style>
+﻿<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Шоу-рил · Бровкин Дмитрий</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;600&display=swap"><style>
 /* Каркас и палитра — как у страницы «Оборудование видеографа» */
 :root{--bg:#0B0C10;--card:#14151B;--line:#262832;--fg:#F2F1EC;--muted:#9A9DAB;--ac:#F0824A;--display:'Unbounded',sans-serif;--body:'Golos Text',system-ui,sans-serif}
 *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}
@@ -62,6 +62,13 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.steps div{border-top:2px solid var(--ac);padding-top:10px;font-size:14px}.steps b{display:block;font:500 12px var(--display);color:var(--ac);margin-bottom:4px}
 .kitlink{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#1E2029,#14151B);border-left:3px solid var(--ac);border-radius:12px;padding:18px 22px;text-decoration:none}
 .kitlink b{font:500 16px var(--display)}.kitlink span{color:var(--muted);font-size:14px}.kitlink i{margin-left:auto;font:600 14px var(--body);font-style:normal;background:var(--ac);color:#14151B;padding:11px 18px;border-radius:8px;white-space:nowrap;transition:filter .2s}.kitlink:hover i{filter:brightness(1.12)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case{display:flex;flex-direction:column;gap:8px;background:var(--card);border-radius:14px;padding:14px;text-decoration:none;transition:box-shadow .2s}
+.case:hover{box-shadow:inset 0 0 0 1px var(--ac)}
+.case .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:4px}
+.case .thumbs img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;display:block}
+.case b{font:500 15px/1.3 var(--display);color:var(--fg)}.case p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.45}
+.case i{font:600 13px var(--body);font-style:normal;color:var(--ac);margin-top:auto;padding-top:4px}
 .btn{display:inline-block;margin-top:20px;background:var(--ac);color:#14151B;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:8px;font-size:14px;transition:filter .2s}.btn:hover{filter:brightness(1.12)}
 .foot{color:var(--muted);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--line);margin-top:40px}.foot a{color:var(--ac);text-decoration:none}
 .tg{display:flex;gap:18px;align-items:center}
@@ -75,7 +82,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 .ct-l{display:flex;flex-direction:column;gap:10px}.ct-l .name{font:500 16px var(--display)}.ct-l .note2{color:var(--muted);font-size:14px;margin:0}
 .ct-btns{display:flex;flex-wrap:wrap;gap:10px}.ct-btns .btn{margin-top:4px}
 .btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}.btn.ghost:hover{box-shadow:inset 0 0 0 1px var(--ac);color:var(--ac);filter:none}
-@media(max-width:700px){.ct{grid-template-columns:1fr;padding:18px}.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro{grid-template-columns:1fr}.pics{grid-template-columns:repeat(3,1fr)}.pics.four{grid-template-columns:repeat(6,1fr);gap:14px}.pics.four figure{grid-column:span 2}.pics.four figure:nth-child(4){grid-column:2/span 2}.shorts>.w{flex-basis:calc(50% - 9px)}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
+@media(max-width:700px){.ct{grid-template-columns:1fr;padding:18px}.sheet{padding:0 16px}.hero{grid-template-columns:1fr;gap:18px;padding:24px 16px 6px}.hero .in{order:0}.works,.sc,.intro,.cases{grid-template-columns:1fr}.pics{grid-template-columns:repeat(3,1fr)}.pics.four{grid-template-columns:repeat(6,1fr);gap:14px}.pics.four figure{grid-column:span 2}.pics.four figure:nth-child(4){grid-column:2/span 2}.shorts>.w{flex-basis:calc(50% - 9px)}.frames{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h2{font-size:18px}.kitlink{flex-wrap:wrap}.kitlink i{margin-left:0}}
 </style></head><body>
 
 <header class="hero"><img src="img/author.jpg" alt="Дмитрий Бровкин снимает на камеру со стабилизатором"><div class="in">
@@ -108,6 +115,14 @@ h2{font:700 22px/1.2 var(--display);margin:0}
     <figure data-hd="img/med-10-hd.jpg" tabindex="0" role="button" aria-label="Открыть фото в высоком разрешении"><img src="img/med-10.jpg" alt="Портрет сотрудницы клиники" loading="lazy"></figure>
     <figure data-hd="img/med-8-hd.jpg" tabindex="0" role="button" aria-label="Открыть фото в высоком разрешении"><img src="img/med-8.jpg" alt="Портрет сотрудницы клиники" loading="lazy"></figure>
     <figure data-hd="img/med-17-hd.jpg" tabindex="0" role="button" aria-label="Открыть фото в высоком разрешении"><img src="img/med-17.jpg" alt="Портрет сотрудницы клиники" loading="lazy"></figure>
+  </div>
+
+  <div class="gh"><h2>Как я показываю работу клиентам</h2></div>
+  <p class="gl">Готовые и черновые версии отдаю отдельной страницей: всё в одном месте, удобно смотреть с телефона, давать правки и скачивать файлы.</p>
+  <div class="cases">
+    <a class="case" href="https://tinextreme-alt.github.io/offers/dr-shapovalov/" target="_blank" rel="noopener"><div class="thumbs"><img src="img/sh-face.jpg" alt="Хирург перед операцией" loading="lazy"><img src="img/sh-or.jpg" alt="Хирург в операционной" loading="lazy"><img src="img/clinic3.jpg" alt="Врач у стойки клиники" loading="lazy"></div><span class="tag">Страница для врача</span><b>Серия рилсов для пластического хирурга</b><p>Рабочие версии рилсов, обложки, кадры со съёмки, правки и исходники для скачивания.</p><i>Открыть →</i></a>
+    <a class="case" href="https://tinextreme-alt.github.io/offers/roma-veronika/" target="_blank" rel="noopener"><div class="thumbs"><img src="img/mom-01.jpg" alt="Рома и Вероника" loading="lazy"><img src="img/mom-03.jpg" alt="Рома и Вероника" loading="lazy"><img src="img/mom-04.jpg" alt="Рома и Вероника" loading="lazy"></div><span class="tag">Страница для семьи</span><b>Интервью детей ко Дню матери</b><p>В детском стиле: шуточные «правила просмотра» мелом на доске, видео в телевизоре, фото полароидами и кнопка скачать фильм.</p><i>Открыть →</i></a>
+    <a class="case" href="https://tinextreme-alt.github.io/offers/avito-reel/" target="_blank" rel="noopener"><div class="thumbs"><img src="img/av-2.jpg" alt="Кадр рилса для Авито" loading="lazy"><img src="img/av-5.jpg" alt="Кадр рилса для Авито" loading="lazy"><img src="img/av-8.jpg" alt="Кадр рилса для Авито" loading="lazy"></div><span class="tag">Черновой монтаж</span><b>Рилс для Авито: версии на выбор</b><p>Черновой монтаж и варианты ролика рядом, раскадровка и файлы для скачивания.</p><i>Открыть →</i></a>
   </div>
 
   <div class="gh"><h2>Что входит в работу</h2></div>
@@ -147,6 +162,7 @@ h2{font:700 22px/1.2 var(--display);margin:0}
 // ===== Заполнить здесь. id — код ролика YouTube (из ссылки после v= или youtu.be/) =====
 const REEL = {id:'', text:'Лучшие моменты из проектов за минуту.'};
 const WORKS = [
+  {id:'Xj5c_ihDr48', poster:'img/wk-mom.jpg', tag:'Интервью · семья', title:'Рома и Вероника: интервью ко Дню матери', about:'Дети отвечают на вопросы о маме и бабушках. Две камеры, ведущая за кадром, интро из закулисья, рисунки мелом и анимации поверх кадра, музыка и звуки. Для семьи сделал отдельную страницу с фото и скачиванием фильма.', note:''},
   {id:'MKzVItGNrjQ', tag:'Обучение · бизнес', title:'Мастер-класс по сервису станции биоочистки «Астра 5»', about:'Обучающий ролик для компании Kaesyambo: как обслуживать станцию биологической очистки шаг за шагом.', note:''},
   {id:'ck_jixFOSdY', tag:'Музей · выставка', title:'Иван Яковлевич Билибин', about:'Ролик о мультимедийной выставке, посвящённой творчеству Ивана Билибина, для Государственного мемориального музея обороны и блокады Ленинграда.', note:'Черновая версия монтажа.'},
   {id:'D200MIp57PU', tag:'Спорт · мероприятие', title:'Low Kick Championship, Event #1', about:'Соревнования Low Kick Championship: поединки на ударах ногами, десять боёв формата «до отказа». Снимал весь турнир, сам монтировал, красил и делал графику. Зал с контровым светом, теснота и никаких вторых дублей.', note:'',
@@ -178,7 +194,7 @@ const box=document.getElementById('works');
 // широкие карточки — в конец, чтобы обычные шли парами без дыр
 [...WORKS.filter(w=>!w.wide),...WORKS.filter(w=>w.wide)].forEach(w=>{
   const c=document.createElement('article');c.className='w';
-  c.append(yt(w.id,w.title));
+  c.append(yt(w.id,w.title,false,w.poster));
   const t=document.createElement('div');t.className='tx';
   t.innerHTML=`<span class="tag">${w.tag}</span><b>${w.title}</b><p>${w.about}</p>${w.note?`<p class="cm">${w.note}</p>`:''}<a class="lnk" href="https://youtu.be/${w.id}" target="_blank" rel="noopener">Открыть на YouTube ↗</a>`;
   c.append(t);
