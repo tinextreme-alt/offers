@@ -89,6 +89,7 @@ section{padding:56px 0 8px}
 
 /* кнопка скачать */
 .dlbox{text-align:center;margin-top:52px}
+.ytlink{text-align:center;margin-top:40px;font-family:Caveat,cursive;font-size:24px} .ytlink a{color:#6B6380} .ytlink a:hover{color:var(--rose)}
 .btn{display:inline-flex;align-items:center;gap:14px;font-family:Comfortaa,sans-serif;font-weight:700;font-size:19px;text-decoration:none;color:var(--ink);
   background:var(--mint);border:3.5px solid var(--ink);border-radius:999px;padding:16px 30px;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:7px 7px 0 var(--ink)}
@@ -185,10 +186,11 @@ footer a{color:var(--rose);font-weight:700}
     <div class="h"><h2 class="crayon c-sky">Смотрим!</h2><p>Нажмите на экран — и начнётся самое главное</p></div>
     <div class="tv">
       <svg class="ant crayon" viewBox="0 0 120 50" fill="none" stroke="#3B3350" stroke-width="4" stroke-linecap="round"><path d="M60 48 28 6M60 48 92 6"/><circle cx="28" cy="6" r="5" fill="#F25C8A" stroke="none"/><circle cx="92" cy="6" r="5" fill="#7CC6F2" stroke="none"/></svg>
-      <div class="screen"><img src="img/photo_05.jpg" alt="Рома и Вероника"><div class="soon">Видео уже монтируется!<small>Совсем скоро оно появится здесь</small></div></div>
+      <div class="screen" data-id="Xj5c_ihDr48" role="button" aria-label="Смотреть интервью"><img src="img/photo_05.jpg" alt="Рома и Вероника"><span class="play"><svg width="40" height="40" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg></span></div>
       <span class="legs l"></span><span class="legs r"></span>
     </div>
 
+    <div class="ytlink"><a href="https://youtu.be/Xj5c_ihDr48" target="_blank" rel="noopener">Не включается? Открыть на YouTube →</a></div>
     <div class="dlbox">
       <span class="btn off"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Скачать видео</span><p>Ссылка на Яндекс.Диск появится вместе с видео</p>
     </div>
@@ -218,7 +220,7 @@ document.querySelectorAll('.screen[data-id]').forEach(function(s){
     if(s.querySelector('iframe'))return;
     var f=document.createElement('iframe');
     f.src='https://www.youtube-nocookie.com/embed/'+s.dataset.id+'?autoplay=1&rel=0&playsinline=1';
-    f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';f.allowFullscreen=true;
+    f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';
     s.innerHTML='';s.appendChild(f);
   });
 });
