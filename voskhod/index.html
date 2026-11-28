@@ -7,7 +7,13 @@
 <meta name="description" content="2-комнатная квартира 45 м²: изолированные комнаты 15 и 14,6 м², кухня 7,2 м², балкон, раздельный санузел, капремонт. Стартовая цена 5 200 000 ₽. Показы 24 и 26 декабря.">
 <meta property="og:title" content="«Окна на восход» — 2-комнатная квартира, 45 м²">
 <meta property="og:description" content="Стартовая цена 5 200 000 ₽ или лучшее предложение. Показы 24 и 26 декабря 2026.">
-<meta property="og:image" content="img/DSC02397.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tinextreme-alt.github.io/offers/voskhod/">
+<meta property="og:image" content="https://tinextreme-alt.github.io/offers/voskhod/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1E3A5C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E3A5C'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23D98A63'/%3E%3Cpath d='M16 6v4M7 12l3 2M25 12l-3 2M5 25h22' stroke='%23fff' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
@@ -31,15 +37,46 @@ section{padding:96px 0}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
-.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:slowzoom 18s ease-out forwards}
-@keyframes slowzoom{to{transform:scale(1)}}
+.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.6s ease,transform 9s linear}
+.hero .bgimg.on{opacity:1;transform:scale(1)}
+.dots{position:absolute;z-index:3;right:28px;bottom:28px;display:flex;gap:8px}
+.dots i{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden;position:relative}
+.dots i.on:after{content:"";position:absolute;inset:0;background:#fff;transform-origin:left;animation:bar 6s linear forwards}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* ---------- TOP NAV ---------- */
+.top{position:fixed;z-index:60;left:0;right:0;top:0;transform:translateY(-110%);transition:transform .4s cubic-bezier(.2,.7,.2,1);
+  background:rgba(251,247,242,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.top.show{transform:none}
+.top .wrap{display:flex;align-items:center;gap:26px;height:64px}
+.top .logo{font:800 20px var(--hd);color:var(--navy);text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.top .logo span{color:var(--terra)}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{font:700 13px var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.top nav a:hover{color:var(--terra)}
+.top .tp{font:800 18px var(--hd);color:var(--navy);text-decoration:none;white-space:nowrap}
+.top .btn{padding:12px 18px;font-size:14px}
+
+/* ---------- GALLERY ---------- */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:118px;gap:12px;margin-top:44px}
+.gal button{border:0;padding:0;border-radius:16px;overflow:hidden;cursor:zoom-in;background:#e9e1d6;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .4s}
+.gal button:hover img{transform:scale(1.05)}
+.gal button span{position:absolute;left:12px;bottom:12px;background:rgba(17,32,52,.72);color:#fff;font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:999px;opacity:0;transform:translateY(6px);transition:.3s}
+.gal button:hover span{opacity:1;transform:none}
+
+/* ---------- SPECS ---------- */
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px}
+.sp{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sp span{color:var(--muted)}
+.sp b{font:700 17px var(--hd);color:var(--navy);text-align:right;letter-spacing:.02em}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,32,52,.82) 0%,rgba(17,32,52,.55) 42%,rgba(17,32,52,.05) 75%),linear-gradient(0deg,rgba(17,32,52,.55),transparent 45%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:64px;padding-top:120px}
 .sun{position:absolute;z-index:1;top:-140px;right:8%;width:420px;height:420px;border-radius:50%;
   background:radial-gradient(circle,rgba(255,214,160,.55) 0%,rgba(255,190,130,.18) 40%,transparent 70%);animation:rise 3.2s ease-out both}
 @keyframes rise{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
 .hero h1{font:800 clamp(46px,8vw,104px)/.95 var(--hd);text-transform:uppercase;letter-spacing:-.005em;text-shadow:0 2px 30px rgba(0,0,0,.25)}
-.hero .tag{font:500 italic clamp(20px,2.4vw,28px)/1.2 var(--tx);color:var(--terra2);margin:14px 0 22px}
+.hero .tag{font:500 italic clamp(20px,2.4vw,28px)/1.2 var(--tx);color:#F0A57F;margin:14px 0 22px;text-shadow:0 1px 14px rgba(0,0,0,.45)}
 .hero .sub{font:700 clamp(20px,2.4vw,28px)/1.2 var(--hd);margin-bottom:26px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;max-width:720px}
 .chip{background:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);
@@ -232,6 +269,9 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
   .rc.big:first-child{grid-column:span 2;aspect-ratio:16/10}
   .sale{grid-template-columns:1fr}
   .about{columns:1}
+  .top nav{display:none}
+  .top .tp{margin-left:auto}
+  .gal{grid-auto-rows:84px}
   .agent{grid-template-columns:1fr;gap:34px}
   .aphoto{max-width:420px}
 }
@@ -270,14 +310,32 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
   .astats b{font-size:28px}
   .astats span{font-size:12.5px}
   .qrs{display:none}
+  .top .btn{display:none}
+  .top .wrap{height:56px}
+  .top .logo{font-size:17px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:8px}
+  .gal button{grid-column:auto!important;grid-row:auto!important;aspect-ratio:1/1.05;border-radius:12px}
+  .gal button:first-child{grid-column:span 2!important;aspect-ratio:3/2}
+  .specs{grid-template-columns:1fr}
+  .dots{right:18px;bottom:auto;top:22px}
 }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
+<div class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#">Окна <span>на восход</span></a>
+    <nav><a href="#about">О квартире</a><a href="#plan">Планировка</a><a href="#gallery">Фото</a><a href="#location">Район</a><a href="#sale">Показы</a></nav>
+    <a class="tp" href="tel:+79111176059">+7 911 117-60-59</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</div>
+
 <header class="hero">
-  <img class="bgimg" src="img/DSC02397.jpg" alt="Гостиная с выходом на балкон">
+  <img class="bgimg on" src="img/DSC02397_l.jpg" alt="" fetchpriority="high"><img class="bgimg" src="img/DSC02310_l.jpg" alt="" loading="lazy"><img class="bgimg" src="img/DSC02416_l.jpg" alt="" loading="lazy"><img class="bgimg" src="img/DSC02280_l.jpg" alt="" loading="lazy">
+  <div class="dots" id="dots"></div>
   <div class="sun"></div>
   <div class="wrap">
     <h1>«Окна<br>на восход»</h1>
@@ -432,6 +490,16 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
   </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker rv">Галерея</div>
+    <h2 class="rv">Каждый уголок — при дневном свете</h2>
+    <p class="lead rv">Все снимки квартиры. Нажмите на любой, чтобы открыть крупно.</p>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
 <!-- WHY -->
 <section class="why" id="why">
   <div class="wrap">
@@ -461,8 +529,36 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
   </div>
 </section>
 
+<!-- SPECS -->
+<section id="specs">
+  <div class="wrap">
+    <div class="kicker rv">Характеристики</div>
+    <h2 class="rv">Всё о квартире и доме</h2>
+    <div class="specs rv">
+      <div>
+        <div class="sp"><span>Комнат</span><b>2, изолированные</b></div>
+        <div class="sp"><span>Общая площадь</span><b>45 м²</b></div>
+        <div class="sp"><span>Гостиная / спальня</span><b>15 / 14,6 м²</b></div>
+        <div class="sp"><span>Кухня</span><b>7,2 м²</b></div>
+        <div class="sp"><span>Балкон</span><b>3 м²</b></div>
+        <div class="sp"><span>Санузел</span><b>раздельный</b></div>
+        <div class="sp"><span>Высота потолков</span><b>2,55 м</b></div>
+      </div>
+      <div>
+        <div class="sp"><span>Окна</span><b>на восток · REHAU</b></div>
+        <div class="sp"><span>Ремонт</span><b>капитальный · медная проводка</b></div>
+        <div class="sp"><span>Пол</span><b>паркет «ёлочкой»</b></div>
+        <div class="sp"><span>Дом</span><b>1969 г. · 5 этажей · 6 парадных</b></div>
+        <div class="sp"><span>Собственники</span><b>один</b></div>
+        <div class="sp"><span>Прописанные</span><b>нет</b></div>
+        <div class="sp"><span>Стартовая цена</span><b style="color:var(--terra)">5 200 000 ₽</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- LOCATION -->
-<section id="location">
+<section id="location" style="padding-top:0">
   <div class="wrap">
     <div class="kicker rv">Расположение</div>
     <h2 class="rv">Где находится</h2>
@@ -500,7 +596,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
 <section id="agent" class="agent-sec">
   <div class="wrap">
     <div class="agent rv">
-      <div class="aphoto"><img src="img/agent.jpg" alt="Кириллова Юлия Михайловна"></div>
+      <div class="aphoto"><img src="img/agent.jpg" alt="Кириллова Юлия Михайловна" loading="lazy"></div>
       <div>
         <div class="kicker">Сделку ведёт</div>
         <h2>Кириллова<br>Юлия Михайловна</h2>
@@ -566,7 +662,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px;text-align:center
 </div>
 
 <script>
-const D = {"address": "Санкт-Петербург, ул. Крыленко, 29, корп. 4", "map": "https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D1%80%D1%8B%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%2C%2029%D0%BA4", "tour": "", "rooms": [{"key": "living", "name": "Гостиная", "area": "15 м²", "photos": ["DSC02397", "DSC02416"], "video": "", "text": "Светлая комната с выходом на балкон: обеденная зона у окна и место для дивана и шкафа."}, {"key": "bedroom", "name": "Спальня", "area": "14,6 м²", "photos": ["DSC02310", "DSC02292"], "video": "", "text": "Изолированная тихая комната: кровать у окна, рабочий уголок и место под гардероб."}, {"key": "kitchen", "name": "Кухня", "area": "7,2 м²", "photos": ["DSC02503", "DSC02489"], "video": "", "text": "Большое окно, газовая плита, место для обеденного стола."}, {"key": "hall", "name": "Прихожая", "area": "", "photos": ["DSC02374", "DSC02382"], "video": "", "text": "Коридор с встроенными шкафами и зеркалом, все комнаты — отдельными дверями."}, {"key": "bath", "name": "Санузлы", "area": "раздельные", "photos": ["DSC02339", "DSC02340", "DSC02543", "DSC02364"], "video": "", "text": "Ванная с душевой стойкой и зеркалом с подсветкой, место под стиральную машину; туалет отдельно."}]};
+const D = {"rooms": [{"key": "living", "name": "Гостиная", "area": "15 м²", "photos": ["DSC02397", "DSC02416"], "video": "", "text": "Светлая комната с выходом на балкон: обеденная зона у окна, паркет «ёлочкой», место для дивана и шкафа."}, {"key": "bedroom", "name": "Спальня", "area": "14,6 м²", "photos": ["DSC02310", "DSC02280", "DSC02292"], "video": "", "text": "Изолированная тихая комната: кровать у окна, рабочий уголок и место под гардероб."}, {"key": "kitchen", "name": "Кухня", "area": "7,2 м²", "photos": ["DSC02503", "DSC02489"], "video": "", "text": "Широкое окно, газовая плита, место для обеденного стола."}, {"key": "hall", "name": "Прихожая", "area": "", "photos": ["DSC02374", "DSC02382"], "video": "", "text": "Коридор со встроенными шкафами и зеркалом, у каждой комнаты своя дверь."}, {"key": "bath", "name": "Санузлы", "area": "раздельные", "photos": ["DSC02339", "DSC02340", "DSC02543", "DSC02364"], "video": "", "text": "Ванная с тропическим душем и зеркалом с подсветкой, место под стиральную машину; туалет отдельно."}]};
 const R = Object.fromEntries(D.rooms.map(r => [r.key, r]));
 const CAM = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>';
 const PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg>';
@@ -581,7 +677,7 @@ D.rooms.forEach((r, i) => {
   list.appendChild(b);
   const c = document.createElement('button');
   c.className = 'rc rv' + (i < 2 ? ' big' : ''); c.dataset.room = r.key;
-  c.innerHTML = `<img src="img/${r.photos[0]}${i < 2 ? '' : '_s'}.jpg" alt="${r.name}" loading="${i < 2 ? 'eager' : 'lazy'}">
+  c.innerHTML = `<img src="img/${r.photos[0]}_m.jpg" alt="${r.name}" loading="${i < 2 ? 'eager' : 'lazy'}">
     <div class="pills"><span class="pill">${CAM}${r.photos.length}</span><span class="pill ${r.video ? '' : 'soon'}">${PLAY}${r.video ? 'Видео' : 'Видео скоро'}</span></div>
     <div class="cap"><b>${r.name}${r.area && /м/.test(r.area) ? ' · ' + r.area : ''}</b><span>${r.text}</span></div>`;
   cards.appendChild(c);
@@ -601,8 +697,8 @@ let cur = null, idx = 0, tab = 'photo';
 const rs = document.getElementById('rswitch');
 D.rooms.forEach(r => { const b = document.createElement('button'); b.textContent = r.name; b.onclick = () => openRoom(r.key); b.dataset.k = r.key; rs.appendChild(b); });
 
-function openRoom(k, t) {
-  cur = R[k]; idx = 0; tab = t || 'photo';
+function openRoom(k, t, i) {
+  cur = R[k]; idx = i || 0; tab = t || 'photo';
   document.getElementById('mTitle').innerHTML = cur.name + (cur.area ? `<small>${cur.area}</small>` : '');
   rs.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.k === k));
   M.classList.add('open'); document.body.style.overflow = 'hidden';
@@ -618,12 +714,13 @@ function draw() {
     return;
   }
   const p = cur.photos;
-  stage.innerHTML = `<img src="img/${p[idx]}.jpg" alt="${cur.name}">` +
+  stage.innerHTML = `<img src="img/${p[idx]}_l.jpg" alt="${cur.name}">` +
     (p.length > 1 ? `<button class="nav l" aria-label="Назад">${ARR('M15 5l-7 7 7 7')}</button><button class="nav r" aria-label="Вперёд">${ARR('M9 5l7 7-7 7')}</button>` : '');
   stage.querySelector('.l') && (stage.querySelector('.l').onclick = () => go(-1));
   stage.querySelector('.r') && (stage.querySelector('.r').onclick = () => go(1));
   thumbs.innerHTML = p.map((f, i) => `<img src="img/${f}_s.jpg" class="${i === idx ? 'on' : ''}" data-i="${i}" alt="">`).join('');
   thumbs.querySelectorAll('img').forEach(im => im.onclick = () => { idx = +im.dataset.i; draw(); });
+  if (p.length > 1) new Image().src = `img/${p[(idx + 1) % p.length]}_l.jpg`;
 }
 function go(d) { const n = cur.photos.length; idx = (idx + d + n) % n; draw(); }
 function closeM() { M.classList.remove('open'); stage.innerHTML = ''; document.body.style.overflow = ''; }
@@ -641,7 +738,33 @@ stage.addEventListener('touchend', e => { if (sx === null || tab !== 'photo') re
 stage.addEventListener('click', e => { if (e.target === stage) closeM(); });
 
 // карта
-if (D.map) document.getElementById('mapBtn').innerHTML = `<a class="btn" style="margin-top:22px" href="${D.map}" target="_blank" rel="noopener">Открыть на карте</a>`;
+document.getElementById('mapBtn').innerHTML = `<a class="btn" style="margin-top:22px" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D1%80%D1%8B%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%2C%2029%D0%BA4" target="_blank" rel="noopener">Открыть на карте</a>`;
+
+// галерея: все кадры мозаикой
+const SPAN = [[7,4],[5,4],[4,3],[4,3],[4,3],[3,4],[3,4],[6,4],[6,3],[6,3],[4,4],[4,4],[4,4]];
+const ORDER = ['DSC02397','DSC02310','DSC02416','DSC02280','DSC02292','DSC02374','DSC02382','DSC02503','DSC02489','DSC02340','DSC02339','DSC02364','DSC02543'];
+const where = {}; D.rooms.forEach(r => r.photos.forEach((p, i) => where[p] = [r.key, i, r.name]));
+const gal = document.getElementById('gal');
+ORDER.forEach((p, n) => {
+  const [k, i, name] = where[p], [c, h] = SPAN[n % SPAN.length];
+  const b = document.createElement('button');
+  b.className = 'rv'; b.style.gridColumn = `span ${c}`; b.style.gridRow = `span ${h}`;
+  b.innerHTML = `<img src="img/${p}_m.jpg" alt="${name}" loading="lazy"><span>${name}</span>`;
+  b.onclick = () => openRoom(k, 'photo', i);
+  gal.appendChild(b);
+});
+
+// слайд-шоу шапки
+const hs = [...document.querySelectorAll('.hero .bgimg')], dots = document.getElementById('dots');
+let hi = 0;
+hs.forEach(() => dots.appendChild(document.createElement('i')));
+const setHero = n => { hs[hi].classList.remove('on'); dots.children[hi].classList.remove('on'); hi = n; hs[hi].classList.add('on'); void dots.children[hi].offsetWidth; dots.children[hi].classList.add('on'); };
+setHero(0);
+if (hs.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(() => setHero((hi + 1) % hs.length), 6000);
+
+// верхнее меню
+const top_ = document.getElementById('top');
+addEventListener('scroll', () => top_.classList.toggle('show', scrollY > innerHeight * .85), {passive: true});
 
 // появление при прокрутке
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .12});
