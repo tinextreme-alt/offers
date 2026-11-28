@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07071F">
+<title>ЖК «Новатория» — ход строительства</title>
+<meta name="description" content="ЖК «Новатория» в Новоселье: видеоотчёты со стройплощадки и готовность работ по очередям.">
+<meta property="og:title" content="ЖК «Новатория» — ход строительства">
+<meta property="og:description" content="Видеоотчёты со стройплощадки и готовность работ по очередям.">
+<meta property="og:image" content="img/poster1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+@font-face{font-family:Benzin;src:url(fonts/BENZIN-BOLD.TTF) format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:Benzin;src:url(fonts/BENZIN-SEMIBOLD.TTF) format('truetype');font-weight:600;font-display:swap}
+:root{--bg:#07071F;--bg2:#0E0E2A;--green:#00574A;--green2:#0A6B5C;--fg:#FCFCFC;--muted:#A9AAC0;--line:rgba(252,252,252,.12);--ac:#F8830B;--disp:Benzin,'Golos Text',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--body)}a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(img/hero.jpg) center/cover no-repeat;transform:scale(1.06);animation:drift 18s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,31,.55) 0%,rgba(7,7,31,.15) 35%,rgba(7,7,31,.75) 72%,var(--bg) 100%)}
+.top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:26px 32px;max-width:1264px;margin:0 auto}
+.logo{font:700 15px var(--disp);letter-spacing:.32em}
+.logo i{font-style:normal;color:var(--ac)}
+.nav{display:flex;gap:26px;font-size:14px;color:#D9D9E6}.nav a:hover{color:var(--ac)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:64px;width:100%}
+.kick{font:600 12px var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:22px}
+h1{font:700 clamp(40px,7.4vw,96px)/.98 var(--disp);margin:0 0 22px;letter-spacing:.01em;text-transform:uppercase}
+.lead{max-width:600px;font-size:18px;color:#E4E4EE;margin:0 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 13px var(--disp);letter-spacing:.06em;text-transform:uppercase;padding:17px 26px;border-radius:2px;transition:.2s}
+.btn.pri{background:var(--ac);color:#fff}.btn.pri:hover{background:#ff9530}
+.btn.sec{border:1px solid rgba(252,252,252,.45)}.btn.sec:hover{border-color:var(--fg);background:rgba(252,252,252,.06)}
+.btn svg{width:14px;height:14px}
+.facts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:56px}
+.facts div{padding:22px 24px 0 0}
+.facts b{display:block;font:700 30px var(--disp);color:var(--fg)}.facts b span{color:var(--ac)}
+.facts small{display:block;color:var(--muted);font-size:13.5px;line-height:1.4;margin-top:6px}
+/* sections */
+section{padding:110px 0 0}
+.sh{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:40px;align-items:start}
+.num{font:700 14px var(--disp);color:var(--ac);padding-top:12px;letter-spacing:.1em}
+h2{font:700 clamp(26px,3.6vw,46px)/1.05 var(--disp);margin:0 0 14px;text-transform:uppercase}
+.sub{color:var(--muted);max-width:640px;margin:0}
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.vid{background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column}
+.player{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;overflow:hidden}
+.player img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.player:hover img{transform:scale(1.03)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;right:22px;bottom:56px;width:76px;height:76px;border-radius:50%;background:var(--ac);display:grid;place-items:center;box-shadow:0 10px 40px rgba(248,131,11,.45);transition:.25s}
+.player:hover .play{transform:scale(1.08)}
+.play svg{width:26px;height:26px;margin-left:4px}
+.dur{position:absolute;right:14px;bottom:14px;font:600 12px var(--disp);background:rgba(7,7,31,.8);padding:6px 9px}
+.soon{position:absolute;right:14px;bottom:14px;padding:9px 12px;background:rgba(7,7,31,.85);color:var(--ac);font:600 13px var(--disp);letter-spacing:.12em;text-transform:uppercase}
+.vb{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{font:600 11px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+.vb h3{font:700 19px/1.2 var(--disp);margin:0;text-transform:uppercase}
+.vb p{margin:0;color:#C9CAD9;font-size:15px}
+.vb .yt{margin-top:auto;padding-top:8px;font-size:14px;color:var(--muted);display:inline-flex;gap:8px;align-items:center}.vb .yt:hover{color:var(--fg)}
+.acts{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:auto;padding-top:8px}.acts .yt{margin:0;padding:0}
+.dl{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid var(--ac);color:var(--ac);font:600 11px var(--disp);letter-spacing:.08em;text-transform:uppercase;transition:.2s}
+.dl:hover{background:var(--ac);color:#fff}.dl.off{border-color:var(--line);color:var(--muted);cursor:default}.dl.off:hover{background:none;color:var(--muted)}
+.cm{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:9px}
+.cm label{font:600 11px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
+.cm .lim{font-size:13px;color:var(--fg);margin:-2px 0 0}.cm .lim b{color:var(--ac)}
+.cm textarea{width:100%;resize:vertical;min-height:70px;padding:10px 12px;border:1px solid var(--line);background:rgba(252,252,252,.04);color:var(--fg);font:400 14px/1.45 var(--body);border-radius:0}
+.cm textarea:focus{outline:none;border-color:var(--ac)}.cm textarea::placeholder{color:rgba(252,252,252,.38)}
+.cm-b{display:flex;flex-wrap:wrap;gap:8px}
+.cm-b>*{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;font:600 13px var(--body);cursor:pointer;border:1px solid rgba(252,252,252,.25);background:transparent;color:var(--fg)}
+.cm-b .cm-tg{background:var(--ac);border-color:var(--ac);color:#fff}.cm-b>*:hover{filter:brightness(1.12)}
+.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
+.howto{display:flex;gap:18px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--ac);padding:18px 22px;margin:0 0 24px;font-size:15px;color:#D9D9E6}
+.howto b{color:var(--fg)}.howto svg{flex:none;width:22px;height:22px;color:var(--ac);margin-top:2px}
+.vid.wide{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr}
+.vid.wide .player{aspect-ratio:auto;min-height:300px}
+/* progress */
+.prog{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.pc{background:var(--green);padding:34px 34px 30px;position:relative;overflow:hidden}
+.pc.dark{background:var(--bg2);border:1px solid var(--line)}
+.pc h3{font:700 20px var(--disp);margin:0 0 4px;text-transform:uppercase}
+.pc .note{color:rgba(252,252,252,.7);font-size:14px;margin:0 0 24px}
+.pc .grp{font:600 11px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:rgba(252,252,252,.65);margin:22px 0 10px}
+.row{margin-bottom:14px}
+.row .l{display:flex;justify-content:space-between;gap:16px;font-size:14.5px;margin-bottom:7px}
+.row .l b{font:700 14px var(--disp);color:var(--ac);white-space:nowrap}
+.bar{height:4px;background:rgba(252,252,252,.16)}
+.bar i{display:block;height:100%;width:0;background:var(--ac);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.pc .mark{position:absolute;right:-40px;top:-40px;width:180px;opacity:.08}
+/* about */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.why div{background:var(--bg);padding:30px 26px}
+.why svg{width:34px;height:34px;color:var(--ac);margin-bottom:20px}
+.why b{display:block;font:700 15px/1.25 var(--disp);text-transform:uppercase;margin-bottom:10px}
+.why p{margin:0;color:var(--muted);font-size:14.5px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:8px}
+.gal a{position:relative;overflow:hidden;background:#111}
+.gal a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal a:nth-child(6){grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal a:hover img{transform:scale(1.05)}
+.lb{position:fixed;inset:0;background:rgba(7,7,31,.95);display:none;align-items:center;justify-content:center;z-index:50;padding:24px}
+.lb.on{display:flex}.lb img{max-height:90vh;max-width:100%}
+.lb button{position:absolute;background:none;border:0;color:#fff;font:400 40px/1 var(--body);cursor:pointer;padding:16px}
+.lb .x{top:10px;right:14px}.lb .pv{left:6px;top:50%;transform:translateY(-50%)}.lb .nx{right:6px;top:50%;transform:translateY(-50%)}
+/* cta */
+.cta{margin-top:110px;background:var(--green);position:relative;overflow:hidden}
+.cta .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:70px;position:relative;z-index:1}
+.cta h2{margin-bottom:16px}.cta p{margin:0;color:rgba(252,252,252,.85);font-size:17px;max-width:560px}
+.cta .btns{justify-content:flex-end}
+.cta .mark{position:absolute;right:6%;top:50%;width:420px;transform:translateY(-50%);opacity:.08}
+footer{padding:34px 0 46px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{border-bottom:1px solid var(--line)}footer a:hover{color:var(--fg)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media(max-width:960px){.facts{grid-template-columns:repeat(2,1fr)}.facts div{padding-bottom:16px}.vids,.prog{grid-template-columns:1fr}.vid.wide{grid-template-columns:1fr}.vid.wide .player{aspect-ratio:16/9;min-height:0}
+  .why{grid-template-columns:repeat(2,1fr)}.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.gal a:nth-child(6){grid-column:span 1}.cta .wrap{grid-template-columns:1fr}.cta .btns{justify-content:flex-start}.nav{display:none}}
+@media(max-width:600px){.wrap{padding:0 18px}.top{padding:20px 18px}.sh{grid-template-columns:1fr;gap:4px}.num{padding:0}section{padding-top:80px}
+  .lead{font-size:16px}.facts b{font-size:24px}.pc{padding:26px 20px}.why{grid-template-columns:1fr}.vb{padding:20px}.btn{padding:15px 20px;font-size:12px}.soon{font-size:10px;padding:7px 9px;right:10px;bottom:10px}.play{width:60px;height:60px;right:14px;bottom:48px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="star" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="7" stroke-linecap="round" fill="none"><path d="M50 8v26M50 66v26M8 50h26M66 50h26M20 20l18 18M62 62l18 18M80 20L62 38M38 62L20 80"/></g></symbol>
+</defs></svg>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Фасад ЖК «Новатория»"></div>
+  <div class="top"><div class="logo">НОВАТОРИЯ<i>.</i></div>
+    <nav class="nav"><a href="#video">Видеоотчёты</a><a href="#progress">Готовность</a><a href="#about">О комплексе</a><a href="#gallery">Кадры</a></nav></div>
+  <div class="wrap">
+    <div class="kick">Новоселье · Ленинградская область</div>
+    <h1>ЖК Новатория</h1>
+    <p class="lead">Жилой комплекс комфорт-класса в пригороде Петербурга, рядом лес и Шунгеровский заказник. Стройка идёт полным ходом, и это видно: мы регулярно снимаем отчёты прямо со стройплощадки.</p>
+    <div class="btns">
+      <a class="btn pri" href="#video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l14 8-14 8z"/></svg>Смотреть видеоотчёты</a>
+      <a class="btn sec" href="#progress">Готовность работ</a>
+    </div>
+    <div class="facts">
+      <div><b>95<span>%</span></b><small>монтаж лифтов в&nbsp;первой очереди</small></div>
+      <div><b>90<span>%</span></b><small>чистовая отделка подъездов</small></div>
+      <div><b>93<span>%</span></b><small>кровля корпуса Б «Новатории&nbsp;2»</small></div>
+      <div><b>2</b><small>очереди строятся одновременно</small></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="video"><div class="wrap">
+  <div class="sh rv"><div class="num">01</div><div><h2>Ход строительных работ</h2><p class="sub">Начальник участка Дмитрий Романов показывает, что сделано за месяц: облёты корпусов, подъезды, инженерные системы и двор. Без рендеров — только живые кадры со стройки.</p></div></div>
+  <div class="howto rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg><div>Под каждым роликом — кнопка <b>«Скачать»</b> и поле <b>«Комментарий для правок»</b>: напишите секунду и что поменять, затем отправьте в Telegram или WhatsApp. <b>Не более 2 правок к каждому ролику.</b></div></div>
+  <div class="vids" id="vids"></div>
+</div></section>
+
+<section id="progress"><div class="wrap">
+  <div class="sh rv"><div class="num">02</div><div><h2>Готовность в&nbsp;цифрах</h2><p class="sub">Проценты по видам работ — те же, что в видеоотчётах за октябрь 2026.</p></div></div>
+  <div class="prog">
+    <div class="pc rv"><svg class="mark"><use href="#star"/></svg>
+      <h3>Первая очередь</h3><p class="note">Дома в облицовке, идёт финишная отделка</p>
+      <div class="grp">Квартиры и подъезды</div>
+      <div data-p="Устройство откосов и подоконников|100;Монтаж металлических дверей|100;Укладка напольного керамогранита|100;Слаботочные системы|100;Системы электроснабжения|100;Монтаж лифтового оборудования|95;Чистовая отделка МОП|90"></div>
+      <div class="grp">Двор</div>
+      <div data-p="Благоустройство придомовой территории|85;Устройство наружного освещения|80;Монтаж МАФ|40"></div>
+    </div>
+    <div class="pc dark rv"><svg class="mark"><use href="#star"/></svg>
+      <h3>Новатория 2</h3><p class="note">Вторая очередь: корпуса А и Б</p>
+      <div class="grp">Корпус Б</div>
+      <div data-p="Устройство кровли|93;Монтаж оконных и балконных изделий из ПВХ|90;Противодымная вентиляция, вертикальная часть|68;Монтаж кабельной продукции электроснабжения|5"></div>
+      <div class="grp">Корпус А</div>
+      <div data-p="Противодымная вентиляция, вертикальная часть|77;Хоз-бытовая канализация, вертикальная часть|60;Штукатурный фасад|30;Слаботочные системы|20;Отопление и водоснабжение в полу|15;Полусухая стяжка|5"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="sh rv"><div class="num">03</div><div><h2>Почему Новатория</h2><p class="sub">Квартира у леса — и при этом в пригороде Петербурга.</p></div></div>
+  <div class="why rv">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7z"/></svg><b>Лес рядом</b><p>Комплекс окружён лесом, рядом Шунгеровский заказник — прогулки начинаются от подъезда.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/></svg><b>Комфорт-класс</b><p>Кирпичные фасады, лифты, отделанные подъезды с керамогранитом и благоустроенный двор.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg><b>Пригород Петербурга</b><p>Новоселье — благоустроенный микрорайон рядом с Петербургом, первая очередь комплекса уже на финише.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="1"/><path d="M16 10l5-3v10l-5-3"/></svg><b>Прозрачная стройка</b><p>Регулярные видеоотчёты с площадки и проценты по видам работ. Видно всё, что сделано.</p></div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="sh rv"><div class="num">04</div><div><h2>Кадры со стройки</h2><p class="sub">Из видеоотчётов за октябрь. Нажмите, чтобы открыть крупно.</p></div></div>
+  <div class="gal rv" id="gal"></div>
+</div></section>
+
+<div class="cta rv"><svg class="mark"><use href="#star"/></svg><div class="wrap">
+  <div><h2>Следите за стройкой</h2><p>Новые видеоотчёты выходят по ходу стройки. Сохраните страницу — здесь появляются свежие ролики и проценты готовности.</p></div>
+  <div class="btns"><a class="btn pri" href="#video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l14 8-14 8z"/></svg>К видеоотчётам</a></div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <span>ЖК «Новатория» · Новоселье, Ленинградская область · данные о готовности — октябрь 2026</span>
+  <span>Съёмка и монтаж видеоотчётов — <a href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener">Дмитрий Бровкин</a></span>
+</div></footer>
+
+<div class="lb" id="lb"><button class="x" aria-label="Закрыть">×</button><button class="pv" aria-label="Назад">‹</button><img alt=""><button class="nx" aria-label="Вперёд">›</button></div>
+
+<script>
+// Видео: id — ID ролика на YouTube (пусто — «видео скоро»); dl — полная ссылка на файл в файлообменнике (пусто — «Скачать — скоро»).
+const VIDEOS = [
+  {id:'xjLZg2eoKOU', dl:'', poster:'img/poster1.jpg', dur:'2:07', tag:'Октябрь 2026 · первая очередь', title:'Ход строительных работ', text:'Корпуса в облицовке, отделка подъездов, лифты и благоустройство двора. Готовность по каждому виду работ.'},
+  {id:'', dl:'', poster:'img/poster2.jpg', dur:'1:30', tag:'Октябрь 2026 · Новатория 2', title:'Новатория 2: корпуса А и Б', text:'Вторая очередь: кровля, окна, вентиляция и инженерные системы, штукатурный фасад.'},
+];
+const TEL_WA = '79817779911', TG = 'https://t.me/T1nEx';
+const DL_ICO = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>';
+const TG_ICO = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.5-1.5zM9.4 15l-.4 3.3-1.4-4.6L18 7.2 9.4 15z"/></svg>';
+const WA_ICO = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>';
+const ytIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>';
+const vids = document.getElementById('vids');
+VIDEOS.forEach((v, i) => {
+  const el = document.createElement('article');
+  el.className = 'vid rv' + (VIDEOS.length % 2 && i === VIDEOS.length - 1 ? ' wide' : '');
+  el.innerHTML = `<div class="player"><img src="${v.poster}" alt="${v.title}" loading="lazy">${v.id
+      ? `<div class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 3l15 9-15 9z"/></svg></div><span class="dur">${v.dur}</span>`
+      : '<div class="soon">Видео скоро</div>'}</div>
+    <div class="vb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.dl
+      ? `<a class="dl" href="${v.dl}" target="_blank" rel="noopener">${DL_ICO}Скачать</a>`
+      : `<span class="dl off" title="Ссылка появится, когда файл будет загружен">${DL_ICO}Скачать — скоро</span>`}${v.id
+      ? `<a class="yt" href="https://youtu.be/${v.id}" target="_blank" rel="noopener">${ytIcon}Открыть на YouTube</a>` : ''}</div></div>`;
+  const n = i + 1, key = 'nov-fb-' + n, cm = document.createElement('div'); cm.className = 'cm';
+  cm.innerHTML = `<label for="${key}">Комментарий для правок</label><p class="lim">Не более <b>2 правок</b> к ролику</p><textarea id="${key}" rows="3" placeholder="Например: 0:12 — заменить кадр; 0:45 — поправить процент на плашке"></textarea><div class="cm-b"><button type="button" class="cm-tg">${TG_ICO}Telegram</button><a class="cm-wa" target="_blank" rel="noopener">${WA_ICO}WhatsApp</a></div><span class="cm-st" aria-live="polite"></span>`;
+  const ta = cm.querySelector('textarea'), wa = cm.querySelector('.cm-wa'), st = cm.querySelector('.cm-st');
+  const msg = () => `Правки к ролику ${n} «${v.title}» (${v.tag}):\n${ta.value.trim()}`;
+  const upd = () => { wa.href = `https://wa.me/${TEL_WA}?text=` + encodeURIComponent(msg()); };
+  try { ta.value = localStorage.getItem(key) || ''; } catch (e) {}
+  upd();
+  ta.addEventListener('input', () => { try { localStorage.setItem(key, ta.value); } catch (e) {} upd(); st.textContent = ''; });
+  const empty = e => { if (!ta.value.trim()) { e && e.preventDefault(); st.textContent = 'Сначала напишите, что поправить'; ta.focus(); return true; } return false; };
+  wa.addEventListener('click', empty);
+  cm.querySelector('.cm-tg').addEventListener('click', async () => {
+    if (empty()) return;
+    let ok = false; try { await navigator.clipboard.writeText(msg()); ok = true; } catch (e) {}
+    window.open(TG + '?text=' + encodeURIComponent(msg()), '_blank', 'noopener');
+    st.textContent = ok ? 'Текст скопирован — вставьте его в чат, если он не появился сам' : 'Откроется чат — перешлите туда текст комментария';
+  });
+  el.querySelector('.vb').appendChild(cm);
+  if (v.id) el.querySelector('.player').addEventListener('click', function () {
+    this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="${v.title}"></iframe>`;
+  }, {once: true});
+  vids.appendChild(el);
+});
+// Прогресс
+document.querySelectorAll('[data-p]').forEach(box => {
+  box.innerHTML = box.dataset.p.split(';').map(s => { const [n, p] = s.split('|');
+    return `<div class="row"><div class="l"><span>${n}</span><b>${p}%</b></div><div class="bar"><i data-w="${p}"></i></div></div>`; }).join('');
+});
+// Галерея
+const G = ['r1_122','r1_1','r2_46','r1_116','r2_6','r2_1','r1_61','r2_86','r2_81'];
+const gal = document.getElementById('gal');
+G.forEach((n, i) => { const a = document.createElement('a'); a.href = `img/${n}.jpg`;
+  a.innerHTML = `<img src="img/${n}${i === 0 ? '' : '_s'}.jpg" alt="Кадр со стройки ЖК «Новатория»" loading="lazy">`;
+  a.onclick = e => { e.preventDefault(); show(i); }; gal.appendChild(a); });
+const lb = document.getElementById('lb'), lbi = lb.querySelector('img'); let cur = 0;
+function show(i) { cur = (i + G.length) % G.length; lbi.src = `img/${G[cur]}.jpg`; lb.classList.add('on'); }
+lb.querySelector('.x').onclick = () => lb.classList.remove('on');
+lb.querySelector('.pv').onclick = e => { e.stopPropagation(); show(cur - 1); };
+lb.querySelector('.nx').onclick = e => { e.stopPropagation(); show(cur + 1); };
+lb.onclick = e => { if (e.target === lb) lb.classList.remove('on'); };
+addEventListener('keydown', e => { if (!lb.classList.contains('on')) return;
+  if (e.key === 'Escape') lb.classList.remove('on'); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+// Появление
+const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return;
+  e.target.classList.add('on'); e.target.querySelectorAll('.bar i').forEach(b => b.style.width = b.dataset.w + '%'); io.unobserve(e.target); }), {threshold: .12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
