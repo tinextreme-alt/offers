@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141518">
+<title>Автомойка H2O — Кузнецовская ул., 60, Санкт-Петербург</title>
+<meta name="description" content="Автомойка H2O на Кузнецовской, 60: комплексная мойка по фазам, бережная химия, лаунж с кофе. Работаем круглосуточно.">
+<meta property="og:title" content="Автомойка H2O · Кузнецовская, 60">
+<meta property="og:description" content="Комплексная мойка по фазам, лаунж с кофе, круглосуточно. Санкт-Петербург.">
+<meta property="og:image" content="https://tinextreme-alt.github.io/offers/h2o/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3l25 14.5v29L32 61 7 46.5v-29z' fill='%23F07B24'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='900' font-style='italic' font-size='22' text-anchor='middle' fill='%23fff'%3EH2O%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#141518;--bg2:#1C1E22;--bg3:#24272C;--fg:#F6F6F4;--muted:#A3A6AD;--line:rgba(246,246,244,.10);--ac:#F07B24;--ac2:#FF9440;--moss:#7DBA3C;--disp:Unbounded,'Golos Text',sans-serif;--body:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--body);overflow-x:hidden}
+a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+.sk{display:inline-block;transform:skewX(-9deg)}
+/* соты — фон */
+.hex{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='146' viewBox='0 0 84 146'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2'%3E%3Cpath d='M42 1l41 24v48L42 97 1 73V25z'/%3E%3Cpath d='M42 97v48M1 73L-40 97M83 73l41 24'/%3E%3C/g%3E%3C/svg%3E");background-size:84px 146px}
+/* шапка-панель */
+.bar{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+.bar.solid{background:rgba(20,21,24,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font:800 15px var(--disp);letter-spacing:.06em}
+.logo .mk{font:900 italic 22px var(--disp);color:var(--ac);transform:skewX(-9deg);letter-spacing:0}
+.logo .mk sub{font-size:.55em;vertical-align:-.15em}
+.nav{display:flex;gap:26px;font-size:14px;color:#D4D6DA}.nav a:hover{color:var(--ac)}
+.tel{display:inline-flex;align-items:center;gap:9px;font:600 14px var(--disp);padding:11px 16px;border:1px solid rgba(240,123,36,.5);border-radius:40px;transition:.2s}
+.tel:hover{background:var(--ac);border-color:var(--ac)}.tel svg{width:15px;height:15px;color:var(--ac)}.tel:hover svg{color:#fff}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:110px 0 60px}
+.hero::before{content:"";position:absolute;right:-10%;top:10%;width:60vw;height:60vw;background:radial-gradient(closest-side,rgba(240,123,36,.22),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;width:100%}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border:1px solid var(--line);border-radius:40px;font-size:13.5px;color:#D9DBDF;background:rgba(255,255,255,.03);margin-bottom:26px}
+.chip b{display:inline-flex;align-items:center;gap:5px;font:700 13px var(--disp);color:var(--fg);background:var(--ac);border-radius:30px;padding:4px 10px}
+.chip b svg{width:12px;height:12px}
+h1{margin:0 0 24px;font:900 clamp(44px,7.2vw,104px)/.92 var(--disp);text-transform:uppercase;letter-spacing:-.01em}
+h1 .l1{display:block;font-size:.42em;letter-spacing:.14em;font-weight:800;color:#D9DBDF;margin-bottom:.25em}
+h1 .l2{display:block;color:var(--ac);font-style:italic}
+h1 .l2 sub{font-size:.5em;vertical-align:-.12em}
+.lead{max-width:560px;font-size:18px;color:#DADCE0;margin:0 0 34px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 13px var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:18px 26px;border-radius:40px;transition:.2s;cursor:pointer}
+.btn svg{width:16px;height:16px}
+.btn.pri{background:var(--ac);color:#fff;box-shadow:0 12px 40px rgba(240,123,36,.35)}.btn.pri:hover{background:var(--ac2);transform:translateY(-2px)}
+.btn.sec{border:1px solid rgba(246,246,244,.3)}.btn.sec:hover{border-color:var(--fg);background:rgba(255,255,255,.05)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:34px;margin-top:52px;padding-top:26px;border-top:1px solid var(--line);justify-content:start}
+.facts b{display:block;font:800 26px var(--disp)}.facts b span{color:var(--ac)}
+.facts small{display:block;color:var(--muted);font-size:13.5px;margin-top:4px;line-height:1.35}
+.phone{position:relative;justify-self:center;width:min(360px,100%);aspect-ratio:9/16;border-radius:34px;overflow:hidden;background:#000;
+  box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08),0 0 0 9px #0d0e10,0 0 0 10px rgba(255,255,255,.08)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.phone .tg{position:absolute;left:14px;top:14px;font:700 10.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;background:rgba(20,21,24,.7);backdrop-filter:blur(8px);padding:7px 10px;border-radius:20px}
+.phone .tg i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff3b30;margin-right:7px;animation:rec 1.2s infinite}
+@keyframes rec{50%{opacity:.25}}
+.halo{position:absolute;width:520px;height:520px;right:2%;top:50%;transform:translateY(-50%);pointer-events:none;opacity:.35;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23F07B24' stroke-width='1.4'%3E%3Cpath d='M100 10l78 45v90l-78 45-78-45V55z'/%3E%3Cpath d='M100 34l57 33v66l-57 33-57-33V67z' stroke-opacity='.5'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+/* бегущая строка */
+.ticker{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-flex;gap:46px;padding:20px 0;animation:tick 38s linear infinite;font:800 italic 20px var(--disp);text-transform:uppercase;color:#E6E7EA}
+.ticker span{display:inline-flex;align-items:center;gap:46px}.ticker span::after{content:"";width:12px;height:14px;background:var(--ac);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* секции */
+section{position:relative;padding:120px 0 0}
+.sh{display:grid;grid-template-columns:110px 1fr;gap:24px;margin-bottom:44px;align-items:start}
+.num{font:800 14px var(--disp);color:var(--ac);padding-top:12px;letter-spacing:.1em}
+h2{margin:0 0 14px;font:900 clamp(28px,4vw,52px)/1.02 var(--disp);text-transform:uppercase;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--ac)}
+.sub{color:var(--muted);max-width:660px;margin:0;font-size:16.5px}
+/* фазы */
+.phases{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:ph}
+.ph{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,border-color .35s}
+.ph:hover{transform:translateY(-6px);border-color:rgba(240,123,36,.5)}
+.ph .im{position:relative;aspect-ratio:4/5;overflow:hidden}
+.ph .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.ph:hover .im img{transform:scale(1.06)}
+.ph .im::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,21,24,.9))}
+.ph .n{position:absolute;left:16px;bottom:12px;z-index:1;font:900 italic 46px/1 var(--disp);color:var(--ac)}
+.ph .n small{display:block;font:700 10px var(--disp);letter-spacing:.18em;color:#fff;font-style:normal;margin-bottom:4px}
+.ph .tx{padding:16px 18px 20px}
+.ph b{display:block;font:800 14.5px/1.25 var(--disp);text-transform:uppercase;margin-bottom:8px}
+.ph p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+/* цены */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.plan{position:relative;border-radius:26px;padding:34px 34px 30px;background:var(--bg2);border:1px solid var(--line);overflow:hidden}
+.plan.hot{background:linear-gradient(150deg,#2a1a0e 0%,var(--bg2) 55%);border-color:rgba(240,123,36,.45)}
+.plan .badge{position:absolute;right:22px;top:22px;font:700 10.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;background:var(--ac);padding:7px 11px;border-radius:20px}
+.plan h3{margin:0 0 6px;font:900 24px var(--disp);text-transform:uppercase}
+.plan .from{color:var(--muted);font-size:14.5px;margin:0 0 22px}.plan .from b{font:800 30px var(--disp);color:var(--fg);margin-left:6px}
+.plan ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:9px}
+.plan li{display:flex;gap:11px;font-size:15px;color:#DADCE0}
+.plan li::before{content:"";flex:none;width:9px;height:10px;margin-top:7px;background:var(--ac);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.plan li.plus{color:#fff}.plan li.plus::before{background:var(--moss)}
+.tbl{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.tbl div{background:var(--bg3);padding:12px 10px;text-align:center}
+.tbl small{display:block;color:var(--muted);font-size:12px}.tbl b{font:700 15px var(--disp)}
+.note{margin:18px 0 0;font-size:13.5px;color:var(--muted)}
+/* лаунж */
+.lounge{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.lounge figure{margin:0;position:relative;border-radius:22px;overflow:hidden;background:#000;min-height:260px}
+.lounge figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.lounge figure:hover img{transform:scale(1.05)}
+.lounge figure:first-child{grid-row:span 2}
+.lounge figcaption{position:absolute;left:14px;bottom:14px;font:700 11px var(--disp);letter-spacing:.12em;text-transform:uppercase;background:rgba(20,21,24,.72);backdrop-filter:blur(8px);padding:8px 12px;border-radius:20px}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.perk{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:22px 20px}
+.perk svg{width:30px;height:30px;color:var(--ac);margin-bottom:14px}
+.perk b{display:block;font:800 14px var(--disp);text-transform:uppercase;margin-bottom:6px}.perk p{margin:0;color:var(--muted);font-size:14px}
+/* рилсы — показ работы */
+.howto{display:flex;gap:16px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--ac);border-radius:14px;padding:18px 22px;margin:0 0 24px;font-size:15px;color:#D9DBDF}
+.howto b{color:var(--fg)}.howto svg{flex:none;width:22px;height:22px;color:var(--ac);margin-top:2px}
+.reels{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.reel{display:grid;grid-template-columns:minmax(200px,300px) 1fr;background:var(--bg2);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.player{position:relative;aspect-ratio:9/16;background:#000;cursor:pointer;overflow:hidden}
+.player img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.player:hover img{transform:scale(1.04)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:var(--ac);display:grid;place-items:center;box-shadow:0 10px 40px rgba(240,123,36,.5);transition:.25s}
+.player:hover .play{transform:translate(-50%,-50%) scale(1.08)}.play svg{width:24px;height:24px;margin-left:4px}
+.soon{position:absolute;left:12px;top:12px;padding:8px 11px;background:rgba(20,21,24,.82);color:var(--ac);font:700 10.5px var(--disp);letter-spacing:.12em;text-transform:uppercase;border-radius:20px}
+.rb{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px}
+.tag{font:700 10.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+.rb h3{margin:0;font:800 18px/1.2 var(--disp);text-transform:uppercase}.rb p{margin:0;color:#C9CBD0;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+.dl{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid var(--ac);border-radius:30px;color:var(--ac);font:700 10.5px var(--disp);letter-spacing:.08em;text-transform:uppercase;transition:.2s}
+.dl:hover{background:var(--ac);color:#fff}.dl.off{border-color:var(--line);color:var(--muted);cursor:default}.dl.off:hover{background:none;color:var(--muted)}
+.yt{font-size:14px;color:var(--muted);display:inline-flex;gap:8px;align-items:center}.yt:hover{color:var(--fg)}
+.cm{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:9px}
+.cm label{font:700 10.5px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
+.cm .lim{font-size:13px;margin:-2px 0 0}.cm .lim b{color:var(--ac)}
+.cm textarea{width:100%;resize:vertical;min-height:70px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04);color:var(--fg);font:400 14px/1.45 var(--body)}
+.cm textarea:focus{outline:none;border-color:var(--ac)}.cm textarea::placeholder{color:rgba(246,246,244,.38)}
+.cm-b{display:flex;flex-wrap:wrap;gap:8px}.cm-b>*{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:30px;font:600 13px var(--body);cursor:pointer;border:1px solid rgba(246,246,244,.25);background:transparent;color:var(--fg)}
+.cm-b .cm-tg{background:var(--ac);border-color:var(--ac);color:#fff}.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
+/* галерея */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px}
+.gal a{position:relative;overflow:hidden;background:#000;border-radius:18px}
+.gal a:nth-child(1){grid-column:span 2;grid-row:span 2}.gal a:nth-child(6){grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.gal a:hover img{transform:scale(1.06)}
+.lb{position:fixed;inset:0;background:rgba(12,13,15,.96);display:none;align-items:center;justify-content:center;z-index:60;padding:24px}
+.lb.on{display:flex}.lb img{max-height:90vh;max-width:100%;border-radius:12px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font:400 42px/1 var(--body);cursor:pointer;padding:16px}
+.lb .x{top:10px;right:14px}.lb .pv{left:6px;top:50%;transform:translateY(-50%)}.lb .nx{right:6px;top:50%;transform:translateY(-50%)}
+/* как добраться */
+.where{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.card .fac{aspect-ratio:16/10;overflow:hidden}.card .fac img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.card .in{padding:26px 28px 28px;display:flex;flex-direction:column;gap:16px}
+.addr{font:800 22px/1.2 var(--disp);text-transform:uppercase;margin:0}
+.rows{display:grid;gap:10px;font-size:15px;color:#D9DBDF}
+.rows div{display:flex;gap:12px;align-items:flex-start}.rows svg{flex:none;width:18px;height:18px;color:var(--ac);margin-top:3px}
+.soc{display:flex;flex-wrap:wrap;gap:8px}
+.soc a{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:30px;border:1px solid var(--line);font:600 14px var(--body);transition:.2s}.soc a:hover{border-color:var(--ac);color:var(--ac)}
+.soc svg{width:16px;height:16px}
+.mapbox{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);min-height:460px;background:var(--bg3)}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.05)}
+.qr{display:flex;align-items:center;gap:16px;padding:14px;border-radius:18px;background:#fff;color:#141518;max-width:300px}
+.qr svg{width:92px;height:92px;flex:none}.qr b{display:block;font:800 13px var(--disp);text-transform:uppercase}.qr span{font-size:13px;color:#555}
+/* cta */
+.cta{position:relative;margin-top:120px;background:var(--ac);overflow:hidden}
+.cta .hex{opacity:1;filter:invert(1)}
+.cta .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.cta h2{color:#fff;margin-bottom:12px}.cta p{margin:0;font-size:17px;color:rgba(255,255,255,.92);max-width:560px}
+.cta .btns{justify-content:flex-end}.cta .btn.pri{background:#141518;box-shadow:none}.cta .btn.pri:hover{background:#000}
+.cta .btn.sec{border-color:rgba(255,255,255,.6);color:#fff}
+footer{padding:34px 0 46px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{border-bottom:1px solid var(--line)}footer a:hover{color:var(--fg)}
+/* мобильная кнопка */
+.fab{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;display:none;justify-content:center;gap:10px;font:700 13px var(--disp);text-transform:uppercase;letter-spacing:.05em;background:var(--ac);color:#fff;padding:17px;border-radius:40px;box-shadow:0 14px 40px rgba(0,0,0,.45);transform:translateY(140%);transition:transform .35s}
+.fab.on{transform:none}.fab svg{width:16px;height:16px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media(max-width:1080px){.phases{grid-template-columns:repeat(5,minmax(230px,1fr));overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-right:-32px;padding-right:32px}.ph{scroll-snap-align:start}
+  .reels{grid-template-columns:1fr}.perks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.nav{display:none}.hero{padding-top:92px}.hero .wrap{grid-template-columns:1fr;gap:40px}.phone{width:min(320px,82%)}.halo{display:none}
+  .plans,.where{grid-template-columns:1fr}.lounge{grid-template-columns:1fr 1fr}.lounge figure:first-child{grid-column:span 2;grid-row:auto;min-height:340px}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}.gal a:nth-child(6){grid-row:auto}.cta .wrap{grid-template-columns:1fr}.cta .btns{justify-content:flex-start}.fab{display:flex}footer{padding-bottom:100px}}
+@media(max-width:600px){.wrap{padding:0 18px}.bar .wrap{height:62px}.tel span{display:none}.tel{padding:11px}
+  .sh{grid-template-columns:1fr;gap:4px;margin-bottom:30px}.num{padding:0}section{padding-top:88px}.lead{font-size:16px}
+  .facts{grid-template-columns:repeat(3,1fr);gap:14px}.facts b{font-size:20px}.facts small{font-size:12px}
+  .phases{margin-right:-18px;padding-right:18px;grid-template-columns:repeat(5,74%)}
+  .plan{padding:26px 20px 22px}.plan .badge{position:static;display:inline-block;margin-bottom:14px}.tbl{grid-template-columns:repeat(2,1fr)}
+  .reel{grid-template-columns:1fr}.reel .player{aspect-ratio:4/5}.lounge figure{min-height:200px}.perks{grid-template-columns:1fr 1fr}.perk{padding:18px 16px}
+  .btn{padding:16px 20px;font-size:12px}.card .in{padding:22px 20px}.mapbox{min-height:360px}.ticker div{font-size:16px}}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar"><div class="wrap">
+  <a class="logo" href="#top"><span class="mk">H<sub>2</sub>O</span>АВТОМОЙКА</a>
+  <nav class="nav"><a href="#phases">Как моем</a><a href="#prices">Комплексы</a><a href="#lounge">Лаунж</a><a href="#reels">Рилсы</a><a href="#where">Как добраться</a></nav>
+  <a class="tel" href="tel:+79669399900"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>+7 966 939-99-00</span></a>
+</div></div>
+
+<header class="hero" id="top">
+  <div class="hex"></div><div class="halo"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="chip"><b><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7.1L12 17.3 5.8 21l1.6-7.1L2 9.2l7.1-.6z"/></svg>4,5</b>Яндекс Карты · 856 оценок</div>
+      <h1><span class="l1">Автомойка</span><span class="l2">H<sub>2</sub>O</span></h1>
+      <p class="lead">Комплексная мойка по фазам — от щелочного шампуня до продувки сжатым воздухом. Бережная химия, которая подходит и для керамики. Пока машина моется — кофе в лаунже.</p>
+      <div class="btns">
+        <a class="btn pri" href="tel:+79669399900"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Записаться</a>
+        <a class="btn sec" href="#where">Как добраться</a>
+      </div>
+      <div class="facts">
+        <div><b>24<span>/</span>7</b><small>работаем<br>круглосуточно</small></div>
+        <div><b>5<span>&nbsp;фаз</span></b><small>комплексной<br>мойки</small></div>
+        <div><b>4,5<span>★</span></b><small>рейтинг<br>на Яндексе</small></div>
+      </div>
+    </div>
+    <div class="phone rv"><video src="img/hero_v1.mp4" poster="img/hero_poster.jpg" autoplay muted loop playsinline preload="auto"></video><span class="tg"><i></i>Бокс H2O</span></div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div><span>Активная пена</span><span>Обезжиривание</span><span>Чистка дисков</span><span>Ручная мойка</span><span>Сушка</span><span>Продувка</span><span>Воск</span><span>Чернение резины</span><span>Активная пена</span><span>Обезжиривание</span><span>Чистка дисков</span><span>Ручная мойка</span><span>Сушка</span><span>Продувка</span><span>Воск</span><span>Чернение резины</span></div></div>
+
+<main>
+<section id="phases"><div class="wrap">
+  <div class="sh rv"><div class="num">01</div><div><h2>Мойка <em>по фазам</em></h2><p class="sub">Каждая фаза снимает свой тип загрязнения. Поэтому грязь уходит полностью, а лак не страдает от лишнего трения.</p></div></div>
+  <div class="phases">
+    <article class="ph rv"><div class="im"><img src="img/f1.jpg" alt="Нанесение шампуня" loading="lazy"><div class="n"><small>Фаза</small>01</div></div><div class="tx"><b>Шампунь с&nbsp;щёлочью</b><p>Пена размягчает и снимает дорожную грязь и реагенты.</p></div></article>
+    <article class="ph rv"><div class="im"><img src="img/f2.jpg" alt="Обезжиривание" loading="lazy"><div class="n"><small>Фаза</small>02</div></div><div class="tx"><b>Обезжиривание</b><p>Спецхимия убирает битум, масляную плёнку и налёт.</p></div></article>
+    <article class="ph rv"><div class="im"><img src="img/f3.jpg" alt="Ручная мойка" loading="lazy"><div class="n"><small>Фаза</small>03</div></div><div class="tx"><b>Химический шампунь</b><p>Нейтрализует обезжириватель, чтобы он не застыл. Подходит для керамики. Диски и ручная мойка рукавицей.</p></div></article>
+    <article class="ph rv"><div class="im"><img src="img/f4.jpg" alt="Сушка" loading="lazy"><div class="n"><small>Фаза</small>04</div></div><div class="tx"><b>Сушка</b><p>Мягкие микрофибры — без разводов и капель.</p></div></article>
+    <article class="ph rv"><div class="im"><img src="img/f5.jpg" alt="Продувка" loading="lazy"><div class="n"><small>Фаза</small>05</div></div><div class="tx"><b>Продувка</b><p>Сжатый воздух выгоняет воду из решёток, зеркал и щелей.</p></div></article>
+  </div>
+</div></section>
+
+<section id="prices"><div class="wrap">
+  <div class="sh rv"><div class="num">02</div><div><h2>Комплексы</h2><p class="sub">Цена зависит от класса автомобиля.</p></div></div>
+  <div class="plans">
+    <div class="plan rv"><h3>Люкс «Стандарт»</h3><p class="from">от<b>1 750 ₽</b></p>
+      <ul><li>Бесконтактная мойка кузова</li><li>Ручная деликатная мойка</li><li>Чистка дверных проёмов</li><li>Воск и сушка</li><li>Мойка ковров и стёкол</li><li>Пылесос салона, уборка пластика</li></ul>
+      <div class="tbl"><div><small>Легковой</small><b>1 750</b></div><div><small>Кроссовер</small><b>1 850</b></div><div><small>Джип</small><b>1 950</b></div><div><small>Микроавтобус</small><b>2 200</b></div></div></div>
+    <div class="plan hot rv"><span class="badge">Максимум</span><h3>«Всё включено»</h3><p class="from">от<b>3 000 ₽</b></p>
+      <ul><li>Всё из «Стандарта»</li><li class="plus">Обезжиривание кузова</li><li class="plus">Чистка дисков</li><li class="plus">Чернение резины</li></ul>
+      <div class="tbl"><div><small>Легковой</small><b>3 000</b></div><div><small>Кроссовер</small><b>3 200</b></div><div><small>Джип</small><b>3 500</b></div><div><small>Микроавтобус</small><b>3 700</b></div></div></div>
+  </div>
+  <p class="note rv">Цены — по прайсу H2O на Яндекс Картах. Актуальную стоимость и запись уточняйте у администратора по телефону. Также делают химчистку и полировку.</p>
+</div></section>
+
+<section id="lounge"><div class="wrap">
+  <div class="sh rv"><div class="num">03</div><div><h2>Пока машина <em>моется</em></h2><p class="sub">Лаунж с кофемашиной, рабочим столом и коллекцией моделей на стене. Ждать здесь приятно.</p></div></div>
+  <div class="lounge rv">
+    <figure><img src="img/moss.jpg" alt="Лаунж H2O с логотипом из мха" loading="lazy"><figcaption>Лаунж</figcaption></figure>
+    <figure><img src="img/coffee.jpg" alt="Кофемашина" loading="lazy"><figcaption>Кофе</figcaption></figure>
+    <figure><img src="img/desk.jpg" alt="Стойка администратора H2O" loading="lazy"><figcaption>Стойка и автохимия</figcaption></figure>
+    <figure style="grid-column:span 2"><img src="img/models.jpg" alt="Модели автомобилей на стене" loading="lazy" style="object-position:50% 40%"><figcaption>Коллекция моделей</figcaption></figure>
+  </div>
+  <div class="perks">
+    <div class="perk rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Круглосуточно</b><p>Можно заехать и ночью.</p></div>
+    <div class="perk rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1"/></svg><b>Wi-Fi</b><p>Поработать, пока ждёте.</p></div>
+    <div class="perk rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg><b>Любая оплата</b><p>Карта, наличные, перевод.</p></div>
+    <div class="perk rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2.5 2.5L16 12"/></svg><b>Запись</b><p>Заранее, по телефону или в мессенджере.</p></div>
+  </div>
+</div></section>
+
+<section id="reels"><div class="wrap">
+  <div class="sh rv"><div class="num">04</div><div><h2>Рилсы <em>для H<sub>2</sub>O</em></h2><p class="sub">Вертикальные ролики для соцсетей, снятые на мойке: атмосфера места и полный цикл мойки Audi Q7 «до / после». Сейчас в монтаже.</p></div></div>
+  <div class="howto rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg><div>Когда ролик будет готов, здесь появятся плеер, кнопки скачивания (<b>высокое качество</b> и <b>стандарт для соцсетей</b>) и поле <b>«Комментарий для правок»</b>: напишите секунду и что поменять, затем отправьте в Telegram или WhatsApp. <b>Не более 2 правок к каждому ролику.</b></div></div>
+  <div class="reels" id="reelsList"></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="sh rv"><div class="num">05</div><div><h2>Кадры <em>из бокса</em></h2><p class="sub">Со съёмки рилсов. Нажмите, чтобы открыть крупно.</p></div></div>
+  <div class="gal rv" id="gal"></div>
+</div></section>
+
+<section id="where"><div class="wrap">
+  <div class="sh rv"><div class="num">06</div><div><h2>Как <em>добраться</em></h2><p class="sub">Московский район, недалеко от метро «Электросила» и «Парк Победы».</p></div></div>
+  <div class="where">
+    <div class="card rv">
+      <div class="fac"><img src="img/facade.jpg" alt="Фасад автомойки H2O" loading="lazy"></div>
+      <div class="in">
+        <p class="addr">Кузнецовская ул., 60<br><span style="color:var(--muted);font-size:.68em">Санкт-Петербург, 196105</span></p>
+        <div class="rows">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Круглосуточно</span></div>
+          <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><a href="tel:+79669399900">+7 (966) 939-99-00</a></div>
+        </div>
+        <div class="soc">
+          <a href="https://t.me/carwash2o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.5-1.5zM9.4 15l-.4 3.3-1.4-4.6L18 7.2 9.4 15z"/></svg>Telegram</a>
+          <a href="https://wa.me/79669399900" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>WhatsApp</a>
+          <a href="https://vk.ru/h2o_carwash" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 18c-6 0-9.5-4.1-9.6-11h3c.1 5 2.3 7.1 4.1 7.6V7h2.8v4.3c1.7-.2 3.6-2.2 4.2-4.3h2.8a8.3 8.3 0 0 1-3.8 5.4A8.6 8.6 0 0 1 20.8 18h-3.1a5.4 5.4 0 0 0-4.5-3.9V18z"/></svg>ВКонтакте</a>
+        </div>
+        <div class="btns"><a class="btn pri" href="https://yandex.ru/maps/org/h2o/44989972475/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Маршрут</a></div>
+        <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" class="segno"><path class="qrline" stroke="#141518" d="M1 1.5h7m2 0h1m4 0h1m3 0h7m-25 1h1m5 0h1m5 0h1m5 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m7 0h3m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m1 0h4m3 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h1m1 0h1m1 0h3m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-14 1h1m2 0h3m-16 1h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h2m1 0h2m1 0h1m-20 1h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h4m-23 1h3m2 0h4m4 0h6m1 0h3m-23 1h1m1 0h1m1 0h2m5 0h1m1 0h1m1 0h2m2 0h1m1 0h2m-23 1h2m1 0h2m1 0h1m4 0h3m2 0h1m1 0h1m2 0h4m-25 1h1m3 0h2m4 0h3m1 0h2m1 0h1m1 0h2m1 0h1m-21 1h7m1 0h4m1 0h1m1 0h1m2 0h2m-18 1h2m1 0h2m2 0h1m1 0h4m1 0h2m1 0h3m-24 1h4m1 0h3m1 0h1m2 0h2m1 0h6m1 0h3m-17 1h2m5 0h2m3 0h1m1 0h2m-24 1h7m3 0h1m5 0h1m1 0h1m1 0h1m-21 1h1m5 0h1m2 0h2m1 0h1m1 0h3m3 0h4m-24 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h2m-25 1h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h1m2 0h1m4 0h1m-24 1h1m5 0h1m1 0h2m1 0h1m2 0h1m2 0h3m1 0h3m-24 1h7m2 0h2m6 0h3m1 0h4"/></svg>
+<div><b>Позвонить</b><span>Наведите камеру телефона на код</span></div></div>
+      </div>
+    </div>
+    <div class="mapbox rv"><iframe src="https://yandex.ru/map-widget/v1/org/h2o/44989972475/?z=16" title="Автомойка H2O на карте" loading="lazy" allowfullscreen></iframe></div>
+  </div>
+</div></section>
+
+<div class="cta rv"><div class="hex"></div><div class="wrap">
+  <div><h2>Чистая машина — <span class="sk">сегодня</span></h2><p>Позвоните или напишите — подберём время и комплекс под ваш автомобиль.</p></div>
+  <div class="btns"><a class="btn pri" href="tel:+79669399900">+7 966 939-99-00</a><a class="btn sec" href="https://t.me/carwash2o" target="_blank" rel="noopener">Telegram</a></div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <span>Автомойка H2O · Кузнецовская ул., 60, Санкт-Петербург</span>
+  <span>Съёмка и монтаж — <a href="https://tinextreme-alt.github.io/offers/showreel/" target="_blank" rel="noopener">Дмитрий Бровкин</a></span>
+</div></footer>
+
+<a class="fab" id="fab" href="tel:+79669399900"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Записаться на мойку</a>
+<div class="lb" id="lb"><button class="x" aria-label="Закрыть">×</button><button class="pv" aria-label="Назад">‹</button><img alt=""><button class="nx" aria-label="Вперёд">›</button></div>
+
+<script>
+// Рилсы: id — ID на YouTube (пусто + soon — «в производстве»); dl — файл высокого качества; sm — стандарт для соцсетей.
+const REELS = [
+  {n:1, soon:true, id:'', dl:'', sm:'', poster:'img/reel1.jpg', tag:'Reels · презентация мойки', title:'Автомойка H2O', text:'Атмосфера места: пена и струи в боксе под сотами света, фасад, лаунж и чистая машина на выезде.'},
+  {n:2, soon:true, id:'', dl:'', sm:'', poster:'img/reel2.jpg', tag:'Reels · до / после', title:'Audi Q7 MTR: пять фаз мойки', text:'Грязный кроссовер после трассы — и по шагам: шампунь, обезжиривание, химический шампунь, сушка, продувка. В финале те же детали чистыми.'},
+];
+const TEL_WA = '79817779911', TG = 'https://t.me/T1nEx';
+const DL = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>';
+const list = document.getElementById('reelsList');
+REELS.forEach(v => {
+  const el = document.createElement('article'); el.className = 'reel rv';
+  el.innerHTML = `<div class="player"><img src="${v.poster}" alt="${v.title}" loading="lazy">${v.id
+      ? '<div class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 3l15 9-15 9z"/></svg></div>'
+      : `<div class="soon">${v.soon ? 'В производстве' : 'Видео скоро'}</div>`}</div>
+    <div class="rb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.soon
+      ? '<span class="dl off">Появится в ближайшее время</span>'
+      : (v.dl ? `<a class="dl" href="${v.dl}" target="_blank" rel="noopener">${DL}Высокое качество</a>` : `<span class="dl off">${DL}Скачать — скоро</span>`)
+        + (v.sm ? `<a class="dl" href="${v.sm}" target="_blank" rel="noopener">${DL}Стандарт для соцсетей</a>` : '')
+        + (v.id ? `<a class="yt" href="https://youtube.com/shorts/${v.id}" target="_blank" rel="noopener">Открыть на YouTube</a>` : '')}</div></div>`;
+  if (!v.soon) {
+    const key = 'h2o-fb-' + v.n, cm = document.createElement('div'); cm.className = 'cm';
+    cm.innerHTML = `<label for="${key}">Комментарий для правок</label><p class="lim">Не более <b>2 правок</b> к ролику</p><textarea id="${key}" rows="3" placeholder="Например: 0:05 — заменить кадр; 0:21 — подпись фазы крупнее"></textarea><div class="cm-b"><button type="button" class="cm-tg">Telegram</button><a class="cm-wa" target="_blank" rel="noopener">WhatsApp</a></div><span class="cm-st" aria-live="polite"></span>`;
+    const ta = cm.querySelector('textarea'), wa = cm.querySelector('.cm-wa'), st = cm.querySelector('.cm-st');
+    const msg = () => `Правки к рилсу ${v.n} «${v.title}» (H2O):\n${ta.value.trim()}`;
+    const upd = () => { wa.href = `https://wa.me/${TEL_WA}?text=` + encodeURIComponent(msg()); };
+    try { ta.value = localStorage.getItem(key) || ''; } catch (e) {}
+    upd(); ta.addEventListener('input', () => { try { localStorage.setItem(key, ta.value); } catch (e) {} upd(); st.textContent = ''; });
+    const empty = e => { if (!ta.value.trim()) { e && e.preventDefault(); st.textContent = 'Сначала напишите, что поправить'; ta.focus(); return true; } return false; };
+    wa.addEventListener('click', empty);
+    cm.querySelector('.cm-tg').addEventListener('click', async () => { if (empty()) return; let ok = false;
+      try { await navigator.clipboard.writeText(msg()); ok = true; } catch (e) {}
+      window.open(TG + '?text=' + encodeURIComponent(msg()), '_blank', 'noopener');
+      st.textContent = ok ? 'Текст скопирован — вставьте его в чат, если он не появился сам' : 'Откроется чат — перешлите туда текст комментария'; });
+    el.querySelector('.rb').appendChild(cm);
+  }
+  if (v.id) el.querySelector('.player').addEventListener('click', function () {
+    this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="${v.title}"></iframe>`;
+  }, {once: true});
+  list.appendChild(el);
+});
+// галерея
+const G = ['g1','g2','g3','g4','g5','g6','g7','g8','g9'];
+const gal = document.getElementById('gal');
+G.forEach((n, i) => { const a = document.createElement('a'); a.href = `img/${n}.jpg`;
+  a.innerHTML = `<img src="img/${n}${i === 0 || i === 5 ? '' : '_s'}.jpg" alt="Кадр из бокса автомойки H2O" loading="lazy">`;
+  a.onclick = e => { e.preventDefault(); show(i); }; gal.appendChild(a); });
+const lb = document.getElementById('lb'), lbi = lb.querySelector('img'); let cur = 0;
+function show(i) { cur = (i + G.length) % G.length; lbi.src = `img/${G[cur]}.jpg`; lb.classList.add('on'); }
+lb.querySelector('.x').onclick = () => lb.classList.remove('on');
+lb.querySelector('.pv').onclick = e => { e.stopPropagation(); show(cur - 1); };
+lb.querySelector('.nx').onclick = e => { e.stopPropagation(); show(cur + 1); };
+lb.onclick = e => { if (e.target === lb) lb.classList.remove('on'); };
+addEventListener('keydown', e => { if (!lb.classList.contains('on')) return;
+  if (e.key === 'Escape') lb.classList.remove('on'); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+// панель и мобильная кнопка
+const bar = document.getElementById('bar'), fab = document.getElementById('fab');
+const onScroll = () => { const y = scrollY; bar.classList.toggle('solid', y > 30);
+  fab.classList.toggle('on', y > innerHeight * .8 && y < document.body.scrollHeight - innerHeight * 1.6); };
+addEventListener('scroll', onScroll, {passive: true}); onScroll();
+// появление
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold: .1});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
