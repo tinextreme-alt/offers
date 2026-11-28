@@ -211,7 +211,7 @@ footer a{border-bottom:1px solid var(--line)}footer a:hover{color:var(--fg)}
 // Видео: id — ID ролика на YouTube (пусто — «видео скоро»); dl — ссылка на файл в высоком качестве (пусто — «скоро»); sm — имя файла в папке SOCIAL (стандартное качество для соцсетей, пусто — кнопки нет).
 const SOCIAL = 'https://disk.yandex.ru/d/VQnxvHhazpOS9A/';
 const VIDEOS = [
-  {n:3, id:'VcLHFg3JxGU', dl:'https://disk.yandex.ru/i/h4cJIkIsCBmoRw', poster:'img/poster3.jpg', dur:'1:36', tag:'Ноябрь 2026 · Новатория 2 · новый выпуск', title:'Ход строительных работ: ноябрь', text:'Свежий отчёт со второй очереди. Начальник участка Дмитрий Романов показывает корпуса А и Б: фасады, окна, противодымную вентиляцию, отопление, стяжку и электроснабжение.'},
+  {n:3, id:'VcLHFg3JxGU', dl:'https://disk.yandex.ru/i/h4cJIkIsCBmoRw', sm:'https://disk.yandex.ru/i/0IwRHQIDCbvfUg', poster:'img/poster3.jpg', dur:'1:36', tag:'Ноябрь 2026 · Новатория 2 · новый выпуск', title:'Ход строительных работ: ноябрь', text:'Свежий отчёт со второй очереди. Начальник участка Дмитрий Романов показывает корпуса А и Б: фасады, окна, противодымную вентиляцию, отопление, стяжку и электроснабжение.'},
   {n:1, id:'xjLZg2eoKOU', dl:'https://disk.yandex.ru/i/itgX_89Kv374TA', sm:'Чистовой монтаж ролик 1 (пожато в 2 раза).mov', poster:'img/poster1.jpg', dur:'2:07', tag:'Октябрь 2026 · первая очередь', title:'Ход строительных работ', text:'Корпуса в облицовке, отделка подъездов, лифты и благоустройство двора. Готовность по каждому виду работ.'},
   {n:2, id:'', dl:'https://disk.yandex.ru/i/RB4cDqe0gBaGQw', sm:'Чистовой монтаж ролик 2 (пожато в 2 раза).mov', poster:'img/poster2.jpg', dur:'1:30', tag:'Октябрь 2026 · Новатория 2', title:'Новатория 2: корпуса А и Б', text:'Вторая очередь: кровля, окна, вентиляция и инженерные системы, штукатурный фасад.'},
 ];
@@ -230,7 +230,7 @@ VIDEOS.forEach((v, i) => {
     <div class="vb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.dl
       ? `<a class="dl" href="${v.dl}" target="_blank" rel="noopener" title="Исходный файл для показа и архива">${DL_ICO}Высокое качество</a>`
       : `<span class="dl off" title="Ссылка появится, когда файл будет загружен">${DL_ICO}Скачать — скоро</span>`}${v.sm
-      ? `<a class="dl" href="${SOCIAL}${encodeURIComponent(v.sm)}" target="_blank" rel="noopener" title="Файл полегче — для публикации в соцсетях">${DL_ICO}Стандарт для соцсетей</a>` : ''}${v.id
+      ? `<a class="dl" href="${/^https?:/.test(v.sm) ? v.sm : SOCIAL + encodeURIComponent(v.sm)}" target="_blank" rel="noopener" title="Файл полегче — для публикации в соцсетях">${DL_ICO}Стандарт для соцсетей</a>` : ''}${v.id
       ? `<a class="yt" href="https://youtu.be/${v.id}" target="_blank" rel="noopener">${ytIcon}Открыть на YouTube</a>` : ''}</div></div>`;
   const n = v.n || i + 1, key = 'nov-fb-' + n, cm = document.createElement('div'); cm.className = 'cm';
   cm.innerHTML = `<label for="${key}">Комментарий для правок</label><p class="lim">Не более <b>2 правок</b> к ролику</p><textarea id="${key}" rows="3" placeholder="Например: 0:12 — заменить кадр; 0:45 — поправить процент на плашке"></textarea><div class="cm-b"><button type="button" class="cm-tg">${TG_ICO}Telegram</button><a class="cm-wa" target="_blank" rel="noopener">${WA_ICO}WhatsApp</a></div><span class="cm-st" aria-live="polite"></span>`;
