@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -129,13 +129,13 @@ h2 em{font-style:italic;color:var(--ac)}
 .dl{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid var(--ac);border-radius:30px;color:var(--ac);font:700 10.5px var(--disp);letter-spacing:.08em;text-transform:uppercase;transition:.2s}
 .dl:hover{background:var(--ac);color:#fff}.dl.off{border-color:var(--line);color:var(--muted);cursor:default}.dl.off:hover{background:none;color:var(--muted)}
 .yt{font-size:14px;color:var(--muted);display:inline-flex;gap:8px;align-items:center}.yt:hover{color:var(--fg)}
-.cm{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:9px}
-.cm label{font:700 10.5px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
-.cm .lim{font-size:13px;margin:-2px 0 0}.cm .lim b{color:var(--ac)}
+.cm{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:9px;opacity:.55;transition:opacity .3s}.cm:hover,.cm:focus-within{opacity:1}
+.cm label{font:700 10.5px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cm .lim{font-size:13px;margin:-2px 0 0;color:var(--muted)}.cm .lim b{color:#D9DBDF;font-weight:600}
 .cm textarea{width:100%;resize:vertical;min-height:70px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04);color:var(--fg);font:400 14px/1.45 var(--body)}
 .cm textarea:focus{outline:none;border-color:var(--ac)}.cm textarea::placeholder{color:rgba(246,246,244,.38)}
 .cm-b{display:flex;flex-wrap:wrap;gap:8px}.cm-b>*{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:30px;font:600 13px var(--body);cursor:pointer;border:1px solid rgba(246,246,244,.25);background:transparent;color:var(--fg)}
-.cm-b .cm-tg{background:var(--ac);border-color:var(--ac);color:#fff}.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
+.cm-b>*{color:var(--muted);border-color:var(--line)}.cm-b>*:hover{color:var(--fg);border-color:rgba(246,246,244,.4)}.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
 /* галерея */
 .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px}
 .gal a{position:relative;overflow:hidden;background:#000;border-radius:18px}
@@ -261,7 +261,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="reels"><div class="wrap">
   <div class="sh rv"><div class="num">04</div><div><h2>Рилсы <em>для H<sub>2</sub>O</em></h2><p class="sub">Вертикальные ролики для соцсетей, снятые на мойке: атмосфера места и полный цикл мойки Audi Q7 «до / после». Сейчас в монтаже.</p></div></div>
-  <div class="howto rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg><div>Когда ролик будет готов, здесь появятся плеер, кнопки скачивания (<b>высокое качество</b> и <b>стандарт для соцсетей</b>) и поле <b>«Комментарий для правок»</b>: напишите секунду и что поменять, затем отправьте в Telegram или WhatsApp. <b>Не более 2 правок к каждому ролику.</b></div></div>
+  <div class="howto rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg><div>Когда ролик будет готов, здесь появятся плеер, кнопки скачивания (<b>высокое качество</b> и <b>стандарт для соцсетей</b>) и поле <b>«Комментарий для правок»</b>: напишите секунду и что поменять, затем отправьте в Telegram или WhatsApp. <b>До 2 правок к каждому рилсу сделаем.</b></div></div>
   <div class="reels" id="reelsList"></div>
 </div></section>
 
@@ -312,7 +312,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <script>
 // Рилсы: id — ID на YouTube (пусто + soon — «в производстве»); dl — файл высокого качества; sm — стандарт для соцсетей.
 const REELS = [
-  {n:1, soon:true, id:'', dl:'', sm:'', poster:'img/reel1.jpg', tag:'Reels · презентация мойки', title:'Автомойка H2O', text:'Атмосфера места: пена и струи в боксе под сотами света, фасад, лаунж и чистая машина на выезде.'},
+  {n:1, soon:true, loading:true, id:'', dl:'', sm:'', poster:'img/reel1.jpg', tag:'Reels · видеовизитка мойки', title:'Автомойка H2O', text:'Атмосфера места: пена и струи в боксе под сотами света, фасад, лаунж и чистая машина на выезде.'},
   {n:2, id:'H38VG27HQRw', dl:'https://disk.yandex.ru/d/KqXQ24BCA-u9yA/' + encodeURIComponent('Ауди — монтаж v5 (наезд на логотип).mov'), sm:'', poster:'img/reel2.jpg', tag:'Reels · до / после', title:'Audi Q7 MTR: пять фаз мойки', text:'Грязный кроссовер после трассы — и по шагам: шампунь, обезжиривание, химический шампунь, сушка, продувка. В финале те же детали чистыми.'},
 ];
 const TEL_WA = '79817779911', TG = 'https://t.me/T1nEx';
@@ -322,15 +322,15 @@ REELS.forEach(v => {
   const el = document.createElement('article'); el.className = 'reel rv';
   el.innerHTML = `<div class="player"><img src="${v.poster}" alt="${v.title}" loading="lazy">${v.id
       ? '<div class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 3l15 9-15 9z"/></svg></div>'
-      : `<div class="soon">${v.soon ? 'В производстве' : 'Готов · YouTube скоро'}</div>`}</div>
+      : `<div class="soon">${v.loading ? 'Загружается' : v.soon ? 'В производстве' : 'Готов · YouTube скоро'}</div>`}</div>
     <div class="rb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.soon
-      ? '<span class="dl off">Появится в ближайшее время</span>'
+      ? `<span class="dl off">${v.loading ? 'Загружается — скоро здесь' : 'Появится в ближайшее время'}</span>`
       : (v.dl ? `<a class="dl" href="${v.dl}" target="_blank" rel="noopener">${DL}Скачать исходник</a>` : `<span class="dl off">${DL}Скачать — скоро</span>`)
         + (v.sm ? `<a class="dl" href="${v.sm}" target="_blank" rel="noopener">${DL}Стандарт для соцсетей</a>` : '')
         + (v.id ? `<a class="yt" href="https://youtube.com/shorts/${v.id}" target="_blank" rel="noopener">Открыть на YouTube</a>` : '')}</div></div>`;
   if (!v.soon) {
     const key = 'h2o-fb-' + v.n, cm = document.createElement('div'); cm.className = 'cm';
-    cm.innerHTML = `<label for="${key}">Комментарий для правок</label><p class="lim">Не более <b>2 правок</b> к ролику</p><textarea id="${key}" rows="3" placeholder="Например: 0:05 — заменить кадр; 0:21 — подпись фазы крупнее"></textarea><div class="cm-b"><button type="button" class="cm-tg">Telegram</button><a class="cm-wa" target="_blank" rel="noopener">WhatsApp</a></div><span class="cm-st" aria-live="polite"></span>`;
+    cm.innerHTML = `<label for="${key}">Комментарий для правок</label><p class="lim"><b>До 2 правок</b> к рилсу сделаем</p><textarea id="${key}" rows="3" placeholder="Например: 0:05 — заменить кадр; 0:21 — подпись фазы крупнее"></textarea><div class="cm-b"><button type="button" class="cm-tg">Telegram</button><a class="cm-wa" target="_blank" rel="noopener">WhatsApp</a></div><span class="cm-st" aria-live="polite"></span>`;
     const ta = cm.querySelector('textarea'), wa = cm.querySelector('.cm-wa'), st = cm.querySelector('.cm-st');
     const msg = () => `Правки к рилсу ${v.n} «${v.title}» (H2O):\n${ta.value.trim()}`;
     const upd = () => { wa.href = `https://wa.me/${TEL_WA}?text=` + encodeURIComponent(msg()); };
