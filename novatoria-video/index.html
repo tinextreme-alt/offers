@@ -21,7 +21,7 @@ img{display:block;max-width:100%}
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 /* hero */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url(img/hero.jpg) center/cover no-repeat;transform:scale(1.06);animation:drift 18s ease-out forwards}
+.hero-bg{position:absolute;inset:0;background:url(img/hero2.jpg) center/cover no-repeat;transform:scale(1.06);animation:drift 18s ease-out forwards}
 @keyframes drift{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,31,.55) 0%,rgba(7,7,31,.15) 35%,rgba(7,7,31,.75) 72%,var(--bg) 100%)}
 .top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:26px 32px;max-width:1264px;margin:0 auto}
@@ -75,7 +75,7 @@ h2{font:700 clamp(26px,3.6vw,46px)/1.05 var(--disp);margin:0 0 14px;text-transfo
 .cm-b{display:flex;flex-wrap:wrap;gap:8px}
 .cm-b>*{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;font:600 13px var(--body);cursor:pointer;border:1px solid rgba(252,252,252,.25);background:transparent;color:var(--fg)}
 .cm-b .cm-tg{background:var(--ac);border-color:var(--ac);color:#fff}.cm-b>*:hover{filter:brightness(1.12)}
-.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
+.soon.at-top{top:14px;bottom:auto}.cm-st{font-size:12.5px;color:var(--muted)}.cm-st:empty{display:none}
 .howto{display:flex;gap:18px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--ac);padding:18px 22px;margin:0 0 24px;font-size:15px;color:#D9D9E6}
 .howto b{color:var(--fg)}.howto svg{flex:none;width:22px;height:22px;color:var(--ac);margin-top:2px}
 .vid.wide{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr}
@@ -211,7 +211,9 @@ footer a{border-bottom:1px solid var(--line)}footer a:hover{color:var(--fg)}
 // Видео: id — ID ролика на YouTube (пусто — «видео скоро»); dl — ссылка на файл в высоком качестве (пусто — «скоро»); sm — имя файла в папке SOCIAL (стандартное качество для соцсетей, пусто — кнопки нет).
 const SOCIAL = 'https://disk.yandex.ru/d/VQnxvHhazpOS9A/';
 const VIDEOS = [
-  {n:3, id:'VcLHFg3JxGU', dl:'https://disk.yandex.ru/i/h4cJIkIsCBmoRw', sm:'https://disk.yandex.ru/i/0IwRHQIDCbvfUg', poster:'img/poster3.jpg', dur:'1:36', tag:'Ноябрь 2026 · Новатория 2 · новый выпуск', title:'Ход строительных работ: ноябрь', text:'Свежий отчёт со второй очереди. Начальник участка Дмитрий Романов показывает корпуса А и Б: фасады, окна, противодымную вентиляцию, отопление, стяжку и электроснабжение.'},
+  {n:3, id:'VcLHFg3JxGU', dl:'https://disk.yandex.ru/i/h4cJIkIsCBmoRw', sm:'https://disk.yandex.ru/i/0IwRHQIDCbvfUg', poster:'img/poster3.jpg', dur:'1:36', tag:'Ноябрь 2026 · часть 2 · Новатория 2', title:'Ход строительных работ: ноябрь, часть 2', text:'Свежий отчёт со второй очереди. Начальник участка Дмитрий Романов показывает корпуса А и Б: фасады, окна, противодымную вентиляцию, отопление, стяжку и электроснабжение.'},
+  {n:4, soon:true, id:'', poster:'img/poster4.jpg', tag:'Ноябрь 2026 · часть 1 · первая очередь', title:'Ход строительных работ: ноябрь, часть 1', text:'Первая очередь: готовые дома, отделка и благоустройство двора. Ролик ещё в производстве — появится в ближайшее время.'},
+  {n:5, soon:true, id:'', poster:'img/poster5.jpg', tag:'Инженерные системы', title:'Индивидуальный тепловой пункт', text:'Как устроен ИТП: оборудование, трубопроводы и автоматика, которые дают дому тепло и горячую воду. Ролик ещё в производстве — появится в ближайшее время.'},
   {n:1, id:'xjLZg2eoKOU', dl:'https://disk.yandex.ru/i/itgX_89Kv374TA', sm:'Чистовой монтаж ролик 1 (пожато в 2 раза).mov', poster:'img/poster1.jpg', dur:'2:07', tag:'Октябрь 2026 · первая очередь', title:'Ход строительных работ', text:'Корпуса в облицовке, отделка подъездов, лифты и благоустройство двора. Готовность по каждому виду работ.'},
   {n:2, id:'', dl:'https://disk.yandex.ru/i/RB4cDqe0gBaGQw', sm:'Чистовой монтаж ролик 2 (пожато в 2 раза).mov', poster:'img/poster2.jpg', dur:'1:30', tag:'Октябрь 2026 · Новатория 2', title:'Новатория 2: корпуса А и Б', text:'Вторая очередь: кровля, окна, вентиляция и инженерные системы, штукатурный фасад.'},
 ];
@@ -226,8 +228,8 @@ VIDEOS.forEach((v, i) => {
   el.className = 'vid rv' + (VIDEOS.length % 2 && i === 0 ? ' wide' : '');
   el.innerHTML = `<div class="player"><img src="${v.poster}" alt="${v.title}" loading="lazy">${v.id
       ? `<div class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 3l15 9-15 9z"/></svg></div><span class="dur">${v.dur}</span>`
-      : '<div class="soon">Видео скоро</div>'}</div>
-    <div class="vb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.dl
+      : `<div class="soon${v.soon ? ' at-top' : ''}">${v.soon ? 'В производстве' : 'Видео скоро'}</div>`}</div>
+    <div class="vb"><span class="tag">${v.tag}</span><h3>${v.title}</h3><p>${v.text}</p><div class="acts">${v.soon ? `<span class="dl off">Появится в ближайшее время</span>` : v.dl
       ? `<a class="dl" href="${v.dl}" target="_blank" rel="noopener" title="Исходный файл для показа и архива">${DL_ICO}Высокое качество</a>`
       : `<span class="dl off" title="Ссылка появится, когда файл будет загружен">${DL_ICO}Скачать — скоро</span>`}${v.sm
       ? `<a class="dl" href="${/^https?:/.test(v.sm) ? v.sm : SOCIAL + encodeURIComponent(v.sm)}" target="_blank" rel="noopener" title="Файл полегче — для публикации в соцсетях">${DL_ICO}Стандарт для соцсетей</a>` : ''}${v.id
@@ -248,7 +250,7 @@ VIDEOS.forEach((v, i) => {
     window.open(TG + '?text=' + encodeURIComponent(msg()), '_blank', 'noopener');
     st.textContent = ok ? 'Текст скопирован — вставьте его в чат, если он не появился сам' : 'Откроется чат — перешлите туда текст комментария';
   });
-  el.querySelector('.vb').appendChild(cm);
+  if (!v.soon) el.querySelector('.vb').appendChild(cm);
   if (v.id) el.querySelector('.player').addEventListener('click', function () {
     this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="${v.title}"></iframe>`;
   }, {once: true});
